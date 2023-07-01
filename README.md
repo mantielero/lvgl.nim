@@ -7,9 +7,12 @@ A wrapper of the [Light Versatile Graphic Library (LVGL)](https://lvgl.io/) for 
 - xkbcommon?
 
 ## Status
-Just a Hello World example working on Linux.
+Some examples working on Linux:
 
+- label:
 ![](https://i.imgur.com/DbfLB9b.png)
+- button:
+![](https://i.imgur.com/CYb9WkA.png)
 
 ## Wrapper creation
 The wrapper creation is done using [nimterop](https://github.com/nimterop/nimterop).
