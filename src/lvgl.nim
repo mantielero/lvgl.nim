@@ -11,3 +11,8 @@ const xkbcommon = gorge("pkg-config --libs xkbcommon")
 
 import wrapper/[lvgl,compiles]
 export lvgl
+
+
+# Friedlier API
+import lib/[hal,version]
+export hal, version
