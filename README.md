@@ -21,6 +21,7 @@ It just required:
 
 
 ## TODO
+- [ ] How to deal with callbacks?
 - [ ] Move it to c2nim and individual files.
 - [ ] Make it more friendly
 - [ ] What to do with `src/components/lv_conf.h`? 
