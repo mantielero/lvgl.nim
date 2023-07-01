@@ -8,6 +8,7 @@ A wrapper of the [Light Versatile Graphic Library (LVGL)](https://lvgl.io/) for 
 
 ## Status
 Just a Hello World example working on Linux.
+
 ![](https://i.imgur.com/DbfLB9b.png)
 
 ## Wrapper creation
