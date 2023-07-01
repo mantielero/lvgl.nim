@@ -13,6 +13,8 @@ Some examples working on Linux:
 ![](https://i.imgur.com/DbfLB9b.png)
 - button:
 ![](https://i.imgur.com/CYb9WkA.png)
+- styles:
+![](https://i.imgur.com/aRAqUTP.png)
 
 ## Wrapper creation
 The wrapper creation is done using [nimterop](https://github.com/nimterop/nimterop).
