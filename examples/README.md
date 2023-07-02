@@ -33,3 +33,8 @@ This examples are the ones found [in the manual](https://docs.lvgl.io/master/exa
 - [ex09_styles_outline.nim](https://github.com/mantielero/lvgl.nim/blob/main/examples/ex09_styles_outline.nim)
 
 ![](https://i.imgur.com/zdNGlVB.png)
+
+
+- [ex10_styles_shadow.nim](https://github.com/mantielero/lvgl.nim/blob/main/examples/ex10_styles_shadow.nim)
+
+![](https://i.imgur.com/95QNCY9.png)
