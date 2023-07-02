@@ -42,3 +42,7 @@ This examples are the ones found [in the manual](https://docs.lvgl.io/master/exa
 - [ex11_styles_image.nim](https://github.com/mantielero/lvgl.nim/blob/main/examples/ex11_styles_image.nim) **NOT WORKING**
 
 ![](https://i.imgur.com/FY3Bqyo.png)
+
+- [ex12_styles_arc.nim](https://github.com/mantielero/lvgl.nim/blob/main/examples/ex12_styles_arc.nim)
+
+![](https://i.imgur.com/WWR4k6a.png)
