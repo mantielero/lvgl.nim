@@ -21,6 +21,10 @@ Some examples working on Linux:
 
 ![](https://i.imgur.com/aRAqUTP.png)
 
+- slider:
+
+![](https://i.imgur.com/YuDWE8C.png)
+
 ## Wrapper creation
 The wrapper creation is done using [nimterop](https://github.com/nimterop/nimterop).
 
@@ -36,6 +40,7 @@ It just required:
 - [ ] Make it more friendly
 - [ ] What to do with `src/components/lv_conf.h`? 
 - [ ] Multiplatform?
+- [ ] To understand better: LV_SIZE_CONTENT (see ex06)
 
 ## Some notes
 I added `lvgl` as a submodule:
