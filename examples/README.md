@@ -6,18 +6,22 @@ This examples are the ones found [in the manual](https://docs.lvgl.io/master/exa
 
 ![](https://i.imgur.com/DbfLB9b.png)
 
-- button:
+- [ex03_button.nim](https://github.com/mantielero/lvgl.nim/blob/main/examples/ex03_button.nim):
 
 ![](https://i.imgur.com/CYb9WkA.png)
 
-- styles:
+- [ex04_styles.nim](https://github.com/mantielero/lvgl.nim/blob/main/examples/ex04_styles.nim):
 
 ![](https://i.imgur.com/aRAqUTP.png)
 
-- slider:
+- [ex05_slider.nim](https://github.com/mantielero/lvgl.nim/blob/main/examples/ex05_slider.nim):
 
 ![](https://i.imgur.com/YuDWE8C.png)
 
-- background style:
+- [ex06_styles_size.nim](https://github.com/mantielero/lvgl.nim/blob/main/examples/ex06_styles_size.nim):
+
+![](https://i.imgur.com/rlsRq8R.png)
+
+- [ex07_styles_background.nim](https://github.com/mantielero/lvgl.nim/blob/main/examples/ex07_styles_background.nim)
 
 ![](https://i.imgur.com/rlsRq8R.png)
