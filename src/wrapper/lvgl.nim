@@ -34,7 +34,7 @@
 # const 'LV_IMG_ZOOM_NONE' has unsupported value 'LV_ZOOM_NONE'
 # const 'LV_COLOR_SIZE' has unsupported value 'LV_COLOR_DEPTH'
 {.push hint[ConvFromXtoItselfNotNeeded]: off.}
-import macros
+import macros, os
 
 macro defineEnum(typ: untyped): untyped =
   result = newNimNode(nnkStmtList)
@@ -80,8 +80,10 @@ macro defineEnum(typ: untyped): untyped =
 type va_list* {.importc, header:"<stdarg.h>".} = object
 
 
+const srcDir = currentSourcePath.parentDir().parentDir()
+
 {.pragma: implvglHdr,
-  header: "/home/jose/src/nimlang/lvgl.nim/src/components/lvgl/lvgl.h".}
+  header: srcDir & "/components/lvgl/lvgl.h".}
 {.experimental: "codeReordering".}
 {.passC: "-I../components/lvgl".}
 defineEnum(lv_res_t)         ## ```

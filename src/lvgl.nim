@@ -9,10 +9,12 @@ const wayland = gorge("pkg-config --libs wayland-client")
 const xkbcommon = gorge("pkg-config --libs xkbcommon")
 {.passL:"-lSDL2 -lm " & wayland & " " & xkbcommon & " -lpthread".}
 
-import wrapper/[lvgl,compiles]
+import wrapper/lvgl
+include wrapper/compiles
 export lvgl
 
 
 # Friedlier API
 import lib/[hal,version]
 export hal, version
+
