@@ -7,23 +7,9 @@ A wrapper of the [Light Versatile Graphic Library (LVGL)](https://lvgl.io/) for 
 - xkbcommon?
 
 ## Status
-Some examples working on Linux:
+The wrapper seems to work in Linux. There is no sugar yet, so right now is not very friendly.
 
-- label:
-
-![](https://i.imgur.com/DbfLB9b.png)
-
-- button:
-
-![](https://i.imgur.com/CYb9WkA.png)
-
-- styles:
-
-![](https://i.imgur.com/aRAqUTP.png)
-
-- slider:
-
-![](https://i.imgur.com/YuDWE8C.png)
+You can find some [working examples](https://github.com/mantielero/lvgl.nim/tree/main/examples).
 
 ## Wrapper creation
 The wrapper creation is done using [nimterop](https://github.com/nimterop/nimterop).
@@ -35,12 +21,16 @@ It just required:
 
 
 ## TODO
+- [ ] To reproduce the examples found [in the manual](https://docs.lvgl.io/master/examples.html#get-started).
 - [ ] How to deal with callbacks?
 - [ ] Move it to c2nim and individual files.
 - [ ] Make it more friendly
 - [ ] What to do with `src/components/lv_conf.h`? 
 - [ ] Multiplatform?
 - [ ] To understand better: LV_SIZE_CONTENT (see ex06)
+- [ ] Export to webassembly: 
+  - https://forum.lvgl.io/t/feature-phone-ui-in-lvgl-zig-and-webassembly/11987/5
+  - https://github.com/lupyuen/pinephone-lvgl-zig
 
 ## Some notes
 I added `lvgl` as a submodule:
