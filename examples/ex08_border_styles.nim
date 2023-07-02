@@ -1,3 +1,4 @@
+## Using the border style properties
 import lvgl
 import std/os
 
