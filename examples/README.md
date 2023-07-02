@@ -29,3 +29,7 @@ This examples are the ones found [in the manual](https://docs.lvgl.io/master/exa
 - [ex08_boder_styles.nim](https://github.com/mantielero/lvgl.nim/blob/main/examples/ex08_boder_styles.nim)
 
 ![](https://i.imgur.com/KCXUfUo.png)
+
+- [ex09_styles_outline.nim](https://github.com/mantielero/lvgl.nim/blob/main/examples/ex09_styles_outline.nim)
+
+![](https://i.imgur.com/zdNGlVB.png)
