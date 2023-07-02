@@ -25,3 +25,7 @@ This examples are the ones found [in the manual](https://docs.lvgl.io/master/exa
 - [ex07_styles_background.nim](https://github.com/mantielero/lvgl.nim/blob/main/examples/ex07_styles_background.nim)
 
 ![](https://i.imgur.com/rlsRq8R.png)
+
+- [ex08_boder_styles.nim](https://github.com/mantielero/lvgl.nim/blob/main/examples/ex08_boder_styles.nim)
+
+![](https://i.imgur.com/KCXUfUo.png)
