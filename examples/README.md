@@ -6,7 +6,7 @@ This examples are the ones found [in the manual](https://docs.lvgl.io/master/exa
 
 ![](https://i.imgur.com/DbfLB9b.png)
 
-- [ex03_button.nim](https://github.com/mantielero/lvgl.nim/blob/main/examples/ex03_button.nim):
+- [ex03_button.nim](https://github.com/mantielero/lvgl.nim/blob/main/examples/ex03_button.nim): besides, [ex03_button_v2.nim](https://github.com/mantielero/lvgl.nim/blob/main/examples/ex03_button_v2.nim) shows how to pass user data.
 
 ![](https://i.imgur.com/CYb9WkA.png)
 
