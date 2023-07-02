@@ -20,7 +20,7 @@ This examples are the ones found [in the manual](https://docs.lvgl.io/master/exa
 
 - [ex06_styles_size.nim](https://github.com/mantielero/lvgl.nim/blob/main/examples/ex06_styles_size.nim):
 
-![](https://i.imgur.com/rlsRq8R.png)
+![](https://i.imgur.com/DcNBtUA.png)
 
 - [ex07_styles_background.nim](https://github.com/mantielero/lvgl.nim/blob/main/examples/ex07_styles_background.nim)
 
