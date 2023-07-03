@@ -69,3 +69,8 @@ This examples are the ones found [in the manual](https://docs.lvgl.io/master/exa
 - [ex17_styles_local.nim](https://github.com/mantielero/lvgl.nim/blob/main/examples/ex17_styles_local.nim)
 
 ![](https://i.imgur.com/0eMNk6X.png)
+
+
+- [ex18_styles_to_parts_states.nim](https://github.com/mantielero/lvgl.nim/blob/main/examples/ex18_styles_to_parts_states.nim)
+
+![](https://i.imgur.com/JmEwDFG.png)
