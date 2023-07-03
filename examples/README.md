@@ -64,3 +64,8 @@ This examples are the ones found [in the manual](https://docs.lvgl.io/master/exa
 - [ex16_styles_multiple.nim](https://github.com/mantielero/lvgl.nim/blob/main/examples/ex16_styles_multiple.nim)
 
 ![](https://i.imgur.com/9grRhYo.png)
+
+
+- [ex17_styles_local.nim](https://github.com/mantielero/lvgl.nim/blob/main/examples/ex17_styles_local.nim)
+
+![](https://i.imgur.com/0eMNk6X.png)
