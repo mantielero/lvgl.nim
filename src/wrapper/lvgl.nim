@@ -12124,6 +12124,8 @@ proc lv_line_create*(parent: ptr lv_obj_t): ptr lv_obj_t {.importc, cdecl,
                 ##    @param parent pointer to an object, it will be the parent of the new line
                 ##    @return pointer to the created line
                 ## ```
+#proc lv_line_set_points*(obj: ptr lv_obj_t; points: ptr lv_point_t; point_num: uint16) {.importc, cdecl, implvglHdr.}
+
 proc lv_line_set_points*(obj: ptr lv_obj_t; points: UncheckedArray[lv_point_t];
                          point_num: uint16) {.importc, cdecl, implvglHdr.}
   ## ```
