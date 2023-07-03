@@ -60,3 +60,7 @@ This examples are the ones found [in the manual](https://docs.lvgl.io/master/exa
 - [ex15_transtion.nim](https://github.com/mantielero/lvgl.nim/blob/main/examples/ex15_transtion.nim)
 
 ![](https://i.imgur.com/5YsjQOY.png)
+
+- [ex16_styles_multiple.nim](https://github.com/mantielero/lvgl.nim/blob/main/examples/ex16_styles_multiple.nim)
+
+![](https://i.imgur.com/9grRhYo.png)
