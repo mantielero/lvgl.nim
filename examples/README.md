@@ -50,3 +50,8 @@ This examples are the ones found [in the manual](https://docs.lvgl.io/master/exa
 - [ex13_styles_text.nim](https://github.com/mantielero/lvgl.nim/blob/main/examples/ex13_styles_text.nim)
 
 ![](https://i.imgur.com/Wv0vhnW.png)
+
+
+- [ex14_styles_line.nim](https://github.com/mantielero/lvgl.nim/blob/main/examples/ex13_styles_line.nim)
+
+![](https://i.imgur.com/7cC2Xbc.png)
