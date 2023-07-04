@@ -87,6 +87,9 @@ This examples are the ones found [in the manual](https://docs.lvgl.io/master/exa
 
 ![](https://i.imgur.com/MQhJCR8.png)
 
--[ex22_playback.nim](https://github.com/mantielero/lvgl.nim/blob/main/examples/ex22_playback.nim)
+-[ex22_animation_playback.nim](https://github.com/mantielero/lvgl.nim/blob/main/examples/ex22_animation_playback.nim)
 
 ![](https://i.imgur.com/AwJIfeo.png)
+
+
+- [ex23_animation_timeline.nim](https://github.com/mantielero/lvgl.nim/blob/main/examples/ex23_animation_timeline.nim): **FIXME**
