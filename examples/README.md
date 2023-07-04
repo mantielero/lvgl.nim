@@ -74,3 +74,9 @@ This examples are the ones found [in the manual](https://docs.lvgl.io/master/exa
 - [ex18_styles_to_parts_states.nim](https://github.com/mantielero/lvgl.nim/blob/main/examples/ex18_styles_to_parts_states.nim)
 
 ![](https://i.imgur.com/JmEwDFG.png)
+
+- [ex20_opacity_transformations.nim](https://github.com/mantielero/lvgl.nim/blob/main/examples/ex19_theme_extending.nim): **FIXME**
+
+- [ex20_opacity_transformations.nim](https://github.com/mantielero/lvgl.nim/blob/main/examples/ex19_theme_extending.nim)
+
+![](https://i.imgur.com/yzGoyQo.png)
