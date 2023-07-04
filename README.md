@@ -22,6 +22,8 @@ It just required:
 
 ## TODO
 - [ ] To reproduce the examples found [in the manual](https://docs.lvgl.io/master/examples.html#get-started).
+
+  - [ ] To understand `LV_IMG_DECLARE`
 - [ ] How to deal with callbacks?
 - [ ] Move it to c2nim and individual files.
 - [ ] Make it more friendly
@@ -31,6 +33,7 @@ It just required:
 - [ ] Export to webassembly: 
   - https://forum.lvgl.io/t/feature-phone-ui-in-lvgl-zig-and-webassembly/11987/5
   - https://github.com/lupyuen/pinephone-lvgl-zig
+- [ ] Using dynamic library or [static library](https://stackoverflow.com/questions/9853419/how-to-combine-object-files-o-to-create-static-library-a-for-ios)
 
 ## Some notes
 I added `lvgl` as a submodule:
