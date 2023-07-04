@@ -34,6 +34,7 @@ It just required:
   - https://forum.lvgl.io/t/feature-phone-ui-in-lvgl-zig-and-webassembly/11987/5
   - https://github.com/lupyuen/pinephone-lvgl-zig
 - [ ] Using dynamic library or [static library](https://stackoverflow.com/questions/9853419/how-to-combine-object-files-o-to-create-static-library-a-for-ios)
+- [ ] Importing .png during the compilation process would be great. This would avoid the need for converting them to other formats or even into C code. This could be achieved with: [staticRead](https://nim-lang.org/docs/system.html#staticRead,string).
 
 ## Some notes
 I added `lvgl` as a submodule:
