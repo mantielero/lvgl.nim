@@ -6,6 +6,17 @@ A wrapper of the [Light Versatile Graphic Library (LVGL)](https://lvgl.io/) for 
 - wayland-client?
 - xkbcommon?
 
+## Installation
+WARNING: it is NOT the usual installation
+
+First install as usual:
+```sh
+$ git clone https://github.com/mantielero/lvgl.nim.git
+$ cd lvgl.nim
+$ nimble install
+$ nimble afterInstall
+```
+
 ## Status
 The wrapper seems to work in Linux. There is no sugar yet, so right now is not very friendly.
 
