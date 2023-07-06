@@ -59,12 +59,13 @@ echo "---"
 #var data = cast[ptr UncheckedArray[uint8]](unsafeAddr datac)
 
 
-var img_cogwheel_argb = lv_img_dsc_t( 
-                           data:      datac[0].unsafeAddr, #cast[ptr uint8](datas),
-                           data_size: (len(datac)).uint32
-                           )
+# var img_cogwheel_argb = lv_img_dsc_t( 
+#                            data:      datac[0].unsafeAddr, #cast[ptr uint8](datas),
+#                            data_size: (len(datac)).uint32
+#                            )
 
-
+# {.compile: "img_cogwheel_argb.c".}
+# var img_cogwheel_argb {.importc:"img_cogwheel_argb".}:lv_img_dsc_t
 
 proc main =
   lv_init()
@@ -87,7 +88,9 @@ proc main =
   #
   #var img_cogwheel_argb {.exportc.} :lv_img_dsc_t 
   #var img_cog_wheel_argb = "../src/componentslvgl/examples/assets/img_cogwheel_argb.png".cstring
-  lv_img_set_src(obj, addr(img_cogwheel_argb))
+  #lv_img_set_src(obj, addr(img_cogwheel_argb))
+  var path = "./img_cogwheel_argb.bin".cstring
+  lv_img_set_src(obj, path[0].addr)  
   lv_obj_center(obj)
 
   # Main loop

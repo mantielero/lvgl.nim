@@ -2,3 +2,6 @@ nimcache/
 nimblecache/
 htmldocs/
 examples/cache/
+
+examples/*
+~examples/*.nim
