@@ -9,7 +9,7 @@ A wrapper of the [Light Versatile Graphic Library (LVGL)](https://lvgl.io/) for 
 ## Installation
 Install as usual:
 ```sh
-$ nimble install https://github.com/mantielero/lvgl.nim.git
+$ nimble install https://github.com/mantielero/lvgl.nim
 ```
 
 ## Status
