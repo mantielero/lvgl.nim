@@ -7,14 +7,9 @@ A wrapper of the [Light Versatile Graphic Library (LVGL)](https://lvgl.io/) for 
 - xkbcommon?
 
 ## Installation
-WARNING: it is NOT the usual installation
-
-First install as usual:
+Install as usual:
 ```sh
-$ git clone https://github.com/mantielero/lvgl.nim.git
-$ cd lvgl.nim
-$ nimble install
-$ nimble afterInstall
+$ nimble install https://github.com/mantielero/lvgl.nim.git
 ```
 
 ## Status
