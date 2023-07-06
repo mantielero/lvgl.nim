@@ -22,12 +22,10 @@ srcDir = "src"
 
 after install:
   # creates the object files inside the folder
-  echo "hola"
   var installPath {.global.} = gorge("nimble path lvgl")
   when defined(linux) and defined(amd64):
     var destDir = installPath / "lvgl/linux_x64/"
     mkDir(destDir)  
   var cmd = """nim c -d:release --app:staticlib --nimcache:""" & destDir & " " & installPath & """/lvgl/compiles.nim""" 
-  echo cmd
   exec cmd
   
