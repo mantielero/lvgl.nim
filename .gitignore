@@ -4,4 +4,5 @@ htmldocs/
 examples/cache/
 
 examples/*
-~examples/*.nim
+!examples/*.nim
+examples/prueba.nim

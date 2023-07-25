@@ -81,6 +81,7 @@ This examples are the ones found [in the manual](https://docs.lvgl.io/master/exa
 
 ![](https://i.imgur.com/yzGoyQo.png)
 
+# Animations
 
 - [ex21_animation_start_on_event.nim](https://github.com/mantielero/lvgl.nim/blob/main/examples/ex21_animation_start_on_event.nim)
 
@@ -93,3 +94,9 @@ This examples are the ones found [in the manual](https://docs.lvgl.io/master/exa
 
 
 - [ex23_animation_timeline.nim](https://github.com/mantielero/lvgl.nim/blob/main/examples/ex23_animation_timeline.nim): **FIXME**
+
+# Events
+
+- [ex24_event.nim](https://github.com/mantielero/lvgl.nim/blob/main/examples/ex24_event.nim)
+
+![](https://i.imgur.com/9sQh8OS.png)
