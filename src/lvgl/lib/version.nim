@@ -1,11 +1,11 @@
 import ../lvgl
 import std/strformat
 
-let versionMajor* = lv_version_major
-let versionMinor* = lv_version_minor
-let versionPatch* = lv_version_patch
-let versionInfo*  = lv_version_info
+let versionMajor* = Lvglversionmajor
+let versionMinor* = Lvglversionminor
+let versionPatch* = Lvglversionpatch
+let versionInfo*  = Lvglversioninfo
 
-proc version*():string =
+proc version*():tuple[major,minor,patch:int;info:string] =
   ## returns string with the full version chain
-  &"{versionMajor()}.{versionMinor()}.{versionPatch()}.{versionInfo()}"
+  (versionMajor, versionMinor, versionPatch, versionInfo)
