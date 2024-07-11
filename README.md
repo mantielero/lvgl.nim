@@ -45,6 +45,7 @@ It just required:
 ## Some notes
 I added `lvgl` as a submodule:
 ```sh
-$ git submodule add https://github.com/lvgl/lvgl.git src/components/lvgl
+$ git submodule add https://github.com/lvgl/lvgl.git src/lvgl/submodules/lvgl
+$ git submodule init
 ```
 
