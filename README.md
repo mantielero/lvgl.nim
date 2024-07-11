@@ -62,5 +62,5 @@ The bindings creation just takes:
 $ cd src/lvgl/wrapper
 $ nim --maxLoopIterationsVM:10000000000 c -d:futharkRebuild -d:nodeclguards -d:generateInline create
 ```
-which creates: `lvgl_9_0_0.nim`.
+which creates somehting like: `lvgl_9_0_0.nim`. 
 
