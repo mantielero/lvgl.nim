@@ -6,3 +6,5 @@ examples/cache/
 examples/*
 !examples/*.nim
 examples/prueba.nim
+
+src/lvgl/wrapper/create
