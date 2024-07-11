@@ -60,7 +60,7 @@ $ wget https://raw.githubusercontent.com/lvgl/lv_port_pc_eclipse/master/lv_conf.
 The bindings creation just takes:
 ```
 $ cd src/lvgl/wrapper
-$ nim --maxLoopIterationsVM:10000000000 -d:futharkRebuild -d:nodeclguards c create
+$ nim --maxLoopIterationsVM:10000000000 c -d:futharkRebuild -d:nodeclguards -d:generateInline create
 ```
 which creates: `lvgl_9_0_0.nim`.
 
