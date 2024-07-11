@@ -20,7 +20,6 @@ export version, hal
 #{.passC:"-O3 -I./ " & waylandc & " " & xkbcommonc .}
 #{.push header:"/home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/lvgl.h".}
 import lvgl/lvgl
-#{.pop.}
 export lvgl
 
 # Friendly API

@@ -3306,6 +3306,8 @@ else:
       Lvbtnmatrixbtnnone* = Lvbuttonmatrixbuttonnone ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:33:9
   else:
     let Lvbtnmatrixbtnnone* = Lvbuttonmatrixbuttonnone ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:33:9
+
+{.push header:"/home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/lvgl.h"}
 proc lvobjdelete*(obj: ptr lvobjt): void {.cdecl, importc: "lv_obj_delete".}
 proc lvobjdeleteasync*(obj: ptr lvobjt): void {.cdecl,
     importc: "lv_obj_delete_async".}

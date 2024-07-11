@@ -63,4 +63,11 @@ $ cd src/lvgl/wrapper
 $ nim --maxLoopIterationsVM:10000000000 c -d:futharkRebuild -d:nodeclguards -d:generateInline create
 ```
 which creates somehting like: `lvgl_9_0_0.nim`. 
+## Future
+```
+nim c --cc:clang --clang.exe=emcc --clang.linkerexe=emcc myFile.nim
+```
 
+```
+nim c -r --cc:clang --clang.exe="zigcc" --clang.linkerexe="zigcc" borrame
+```
