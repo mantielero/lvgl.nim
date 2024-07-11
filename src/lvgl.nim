@@ -1,20 +1,29 @@
 import system
-
-const waylandc = gorge("pkg-config --cflags wayland-client")
-const xkbcommonc = gorge("pkg-config --cflags xkbcommon")
-
-{.passC:"-O3 -I./ " & waylandc & " " & xkbcommonc .}
-
-const wayland = gorge("pkg-config --libs wayland-client")
-const xkbcommon = gorge("pkg-config --libs xkbcommon")
-{.passL:"-lSDL2 -lm " & wayland & " " & xkbcommon & " -lpthread".}
-{.passL:"-L./lvgl/linux_x64/"}
-import lvgl/lvgl
-include lvgl/links
-export lvgl
+#{.passC:"-I./lvgl/submodules/lvgl/src/".}
 
 
-# Friedlier API
-import lvgl/lib/[hal,version]
-export hal, version
+# math, SDL2 and pthread needed
+{.passC:"-Ilvgl/submodules/lvgl"}
+{.passL:"-lm -lSDL2 -lpthread".}
+#{.passL:"-L./ -I./"}
 
+
+import lvgl/lib/[version, hal]
+export version, hal
+
+#{.passC:"-Ilvgl/submodules/lvgl/libs/thorvg"}
+#{.passL:"-L./"}
+
+#const waylandc = gorge("pkg-config --cflags wayland-client")
+#const xkbcommonc = gorge("pkg-config --cflags xkbcommon")
+
+#{.passC:"-O3 -I./ " & waylandc & " " & xkbcommonc .}
+#{.push header:"/home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/lvgl.h".}
+import lvgl/wrapper/lvgl_9_0_0
+#{.pop.}
+export lvgl_9_0_0
+
+# Friendly API
+
+
+include lvgl/wrapper/compiles
