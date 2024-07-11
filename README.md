@@ -49,3 +49,18 @@ $ git submodule add https://github.com/lvgl/lvgl.git src/lvgl/submodules/lvgl
 $ git submodule init
 ```
 
+[Configuration](https://docs.lvgl.io/master/porting/project.html#configuration-file)
+
+For the moment we will do:
+```
+$ cd src/submodules
+$ wget https://raw.githubusercontent.com/lvgl/lv_port_pc_eclipse/master/lv_conf.h
+```
+
+The bindings creation just takes:
+```
+$ cd src/lvgl/wrapper
+$ nim --maxLoopIterationsVM:10000000000 -d:futharkRebuild -d:nodeclguards c create
+```
+which creates: `lvgl_9_0_0.nim`.
+
