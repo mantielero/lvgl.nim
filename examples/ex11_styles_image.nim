@@ -75,22 +75,22 @@ proc main =
   lv_style_init(addr(style))
   ## Set a background color and a radius
   lv_style_set_radius(addr(style), 5)
-  lv_style_set_bg_opa(addr(style), LV_OPA_COVER)
+  lv_style_set_bg_opa(addr(style), LV_OPA_COVER.lv_opa_t)
   lv_style_set_bg_color(addr(style), lv_palette_lighten(LV_PALETTE_GREY, 3))
   lv_style_set_border_width(addr(style), 2)
   lv_style_set_border_color(addr(style), lv_palette_main(LV_PALETTE_BLUE))
-  lv_style_set_img_recolor(addr(style), lv_palette_main(LV_PALETTE_BLUE))
-  lv_style_set_img_recolor_opa(addr(style), LV_OPA_50)
-  lv_style_set_transform_angle(addr(style), 300)
+  lv_style_set_image_recolor(addr(style), lv_palette_main(LV_PALETTE_BLUE))  
+  lv_style_set_image_recolor_opa(addr(style), LV_OPA_50.lv_opa_t)
+  lv_style_set_transform_rotation(addr(style), 300)
   ## Create an object with the new style
-  var obj: ptr lv_obj_t = lv_img_create(lv_scr_act())
+  var obj: ptr lv_obj_t = lv_image_create(lv_screen_active())
   lv_obj_add_style(obj, addr(style), 0)
   #
   #var img_cogwheel_argb {.exportc.} :lv_img_dsc_t 
   #var img_cog_wheel_argb = "../src/componentslvgl/examples/assets/img_cogwheel_argb.png".cstring
   #lv_img_set_src(obj, addr(img_cogwheel_argb))
-  var path = "./img_cogwheel_argb.bin".cstring
-  lv_img_set_src(obj, path[0].addr)  
+  var path = "./img_cogwheel_argb.bin".cstring    # FIXME: <<<<<<<<<<<<<<<<
+  lv_image_set_src(obj, path[0].addr)  
   lv_obj_center(obj)
 
   # Main loop

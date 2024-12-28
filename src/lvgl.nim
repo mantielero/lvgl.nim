@@ -3,7 +3,6 @@ import system
 
 
 # math, SDL2 and pthread needed
-{.passC:"-Ilvgl/submodules/lvgl"}
 {.passL:"-lm -lSDL2 -lpthread".}
 #{.passL:"-L./ -I./"}
 
@@ -23,6 +22,4 @@ import lvgl/lvgl
 export lvgl
 
 # Friendly API
-
-
 include lvgl/wrapper/compiles

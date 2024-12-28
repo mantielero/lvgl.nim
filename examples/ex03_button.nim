@@ -21,12 +21,12 @@ proc main =
   lv_init()
   halInit(400,300)
 
-  let btn = lv_btn_create(lv_scr_act()) # Add a button the current screen
+  let btn = lv_button_create(lv_screen_active()) # Add a button the current screen
   btn.lv_obj_set_pos(10, 10)            # Set its position
   btn.lv_obj_set_size(120, 50)          # Set its size
   #let btn_event_cb = gen()
   #let btn_event_cb = btn_event_cb_gen()
-  btn.lv_obj_add_event(btn_event_cb, LV_EVENT_ALL, cast[pointer](nil)) # Assign a callback to the button
+  var res:ptr struct_lv_event_dsc_t = btn.lv_obj_add_event_cb(btn_event_cb, LV_EVENT_ALL, cast[pointer](nil)) # Assign a callback to the button
 
   let label = lv_label_create(btn)      # Add a label to the button
   label.lv_label_set_text( "Button")    # Set the labels text

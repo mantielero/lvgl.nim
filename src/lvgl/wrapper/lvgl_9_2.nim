@@ -1,236 +1,432 @@
 
 const
-  internal_LV_STR_SYMBOL_BULLET* = cuint(0)
+  LV_OPA_TRANSP* = cuint(0)
 const
-  internal_LV_STR_SYMBOL_AUDIO* = cuint(1)
+  LV_OPA_0* = cuint(0)
 const
-  internal_LV_STR_SYMBOL_VIDEO* = cuint(2)
+  LV_OPA_10* = cuint(25)
 const
-  internal_LV_STR_SYMBOL_LIST* = cuint(3)
+  LV_OPA_20* = cuint(51)
 const
-  internal_LV_STR_SYMBOL_OK* = cuint(4)
+  LV_OPA_30* = cuint(76)
 const
-  internal_LV_STR_SYMBOL_CLOSE* = cuint(5)
+  LV_OPA_40* = cuint(102)
 const
-  internal_LV_STR_SYMBOL_POWER* = cuint(6)
+  LV_OPA_50* = cuint(127)
 const
-  internal_LV_STR_SYMBOL_SETTINGS* = cuint(7)
+  LV_OPA_60* = cuint(153)
 const
-  internal_LV_STR_SYMBOL_HOME* = cuint(8)
+  LV_OPA_70* = cuint(178)
 const
-  internal_LV_STR_SYMBOL_DOWNLOAD* = cuint(9)
+  LV_OPA_80* = cuint(204)
 const
-  internal_LV_STR_SYMBOL_DRIVE* = cuint(10)
+  LV_OPA_90* = cuint(229)
 const
-  internal_LV_STR_SYMBOL_REFRESH* = cuint(11)
+  LV_OPA_100* = cuint(255)
 const
-  internal_LV_STR_SYMBOL_MUTE* = cuint(12)
+  LV_OPA_COVER* = cuint(255)
 const
-  internal_LV_STR_SYMBOL_VOLUME_MID* = cuint(13)
+  LV_STR_SYMBOL_BULLET* = cuint(0)
 const
-  internal_LV_STR_SYMBOL_VOLUME_MAX* = cuint(14)
+  LV_STR_SYMBOL_AUDIO* = cuint(1)
 const
-  internal_LV_STR_SYMBOL_IMAGE* = cuint(15)
+  LV_STR_SYMBOL_VIDEO* = cuint(2)
 const
-  internal_LV_STR_SYMBOL_TINT* = cuint(16)
+  LV_STR_SYMBOL_LIST* = cuint(3)
 const
-  internal_LV_STR_SYMBOL_PREV* = cuint(17)
+  LV_STR_SYMBOL_OK* = cuint(4)
 const
-  internal_LV_STR_SYMBOL_PLAY* = cuint(18)
+  LV_STR_SYMBOL_CLOSE* = cuint(5)
 const
-  internal_LV_STR_SYMBOL_PAUSE* = cuint(19)
+  LV_STR_SYMBOL_POWER* = cuint(6)
 const
-  internal_LV_STR_SYMBOL_STOP* = cuint(20)
+  LV_STR_SYMBOL_SETTINGS* = cuint(7)
 const
-  internal_LV_STR_SYMBOL_NEXT* = cuint(21)
+  LV_STR_SYMBOL_HOME* = cuint(8)
 const
-  internal_LV_STR_SYMBOL_EJECT* = cuint(22)
+  LV_STR_SYMBOL_DOWNLOAD* = cuint(9)
 const
-  internal_LV_STR_SYMBOL_LEFT* = cuint(23)
+  LV_STR_SYMBOL_DRIVE* = cuint(10)
 const
-  internal_LV_STR_SYMBOL_RIGHT* = cuint(24)
+  LV_STR_SYMBOL_REFRESH* = cuint(11)
 const
-  internal_LV_STR_SYMBOL_PLUS* = cuint(25)
+  LV_STR_SYMBOL_MUTE* = cuint(12)
 const
-  internal_LV_STR_SYMBOL_MINUS* = cuint(26)
+  LV_STR_SYMBOL_VOLUME_MID* = cuint(13)
 const
-  internal_LV_STR_SYMBOL_EYE_OPEN* = cuint(27)
+  LV_STR_SYMBOL_VOLUME_MAX* = cuint(14)
 const
-  internal_LV_STR_SYMBOL_EYE_CLOSE* = cuint(28)
+  LV_STR_SYMBOL_IMAGE* = cuint(15)
 const
-  internal_LV_STR_SYMBOL_WARNING* = cuint(29)
+  LV_STR_SYMBOL_TINT* = cuint(16)
 const
-  internal_LV_STR_SYMBOL_SHUFFLE* = cuint(30)
+  LV_STR_SYMBOL_PREV* = cuint(17)
 const
-  internal_LV_STR_SYMBOL_UP* = cuint(31)
+  LV_STR_SYMBOL_PLAY* = cuint(18)
 const
-  internal_LV_STR_SYMBOL_DOWN* = cuint(32)
+  LV_STR_SYMBOL_PAUSE* = cuint(19)
 const
-  internal_LV_STR_SYMBOL_LOOP* = cuint(33)
+  LV_STR_SYMBOL_STOP* = cuint(20)
 const
-  internal_LV_STR_SYMBOL_DIRECTORY* = cuint(34)
+  LV_STR_SYMBOL_NEXT* = cuint(21)
 const
-  internal_LV_STR_SYMBOL_UPLOAD* = cuint(35)
+  LV_STR_SYMBOL_EJECT* = cuint(22)
 const
-  internal_LV_STR_SYMBOL_CALL* = cuint(36)
+  LV_STR_SYMBOL_LEFT* = cuint(23)
 const
-  internal_LV_STR_SYMBOL_CUT* = cuint(37)
+  LV_STR_SYMBOL_RIGHT* = cuint(24)
 const
-  internal_LV_STR_SYMBOL_COPY* = cuint(38)
+  LV_STR_SYMBOL_PLUS* = cuint(25)
 const
-  internal_LV_STR_SYMBOL_SAVE* = cuint(39)
+  LV_STR_SYMBOL_MINUS* = cuint(26)
 const
-  internal_LV_STR_SYMBOL_BARS* = cuint(40)
+  LV_STR_SYMBOL_EYE_OPEN* = cuint(27)
 const
-  internal_LV_STR_SYMBOL_ENVELOPE* = cuint(41)
+  LV_STR_SYMBOL_EYE_CLOSE* = cuint(28)
 const
-  internal_LV_STR_SYMBOL_CHARGE* = cuint(42)
+  LV_STR_SYMBOL_WARNING* = cuint(29)
 const
-  internal_LV_STR_SYMBOL_PASTE* = cuint(43)
+  LV_STR_SYMBOL_SHUFFLE* = cuint(30)
 const
-  internal_LV_STR_SYMBOL_BELL* = cuint(44)
+  LV_STR_SYMBOL_UP* = cuint(31)
 const
-  internal_LV_STR_SYMBOL_KEYBOARD* = cuint(45)
+  LV_STR_SYMBOL_DOWN* = cuint(32)
 const
-  internal_LV_STR_SYMBOL_GPS* = cuint(46)
+  LV_STR_SYMBOL_LOOP* = cuint(33)
 const
-  internal_LV_STR_SYMBOL_FILE* = cuint(47)
+  LV_STR_SYMBOL_DIRECTORY* = cuint(34)
 const
-  internal_LV_STR_SYMBOL_WIFI* = cuint(48)
+  LV_STR_SYMBOL_UPLOAD* = cuint(35)
 const
-  internal_LV_STR_SYMBOL_BATTERY_FULL* = cuint(49)
+  LV_STR_SYMBOL_CALL* = cuint(36)
 const
-  internal_LV_STR_SYMBOL_BATTERY_3* = cuint(50)
+  LV_STR_SYMBOL_CUT* = cuint(37)
 const
-  internal_LV_STR_SYMBOL_BATTERY_2* = cuint(51)
+  LV_STR_SYMBOL_COPY* = cuint(38)
 const
-  internal_LV_STR_SYMBOL_BATTERY_1* = cuint(52)
+  LV_STR_SYMBOL_SAVE* = cuint(39)
 const
-  internal_LV_STR_SYMBOL_BATTERY_EMPTY* = cuint(53)
+  LV_STR_SYMBOL_BARS* = cuint(40)
 const
-  internal_LV_STR_SYMBOL_USB* = cuint(54)
+  LV_STR_SYMBOL_ENVELOPE* = cuint(41)
 const
-  internal_LV_STR_SYMBOL_BLUETOOTH* = cuint(55)
+  LV_STR_SYMBOL_CHARGE* = cuint(42)
 const
-  internal_LV_STR_SYMBOL_TRASH* = cuint(56)
+  LV_STR_SYMBOL_PASTE* = cuint(43)
 const
-  internal_LV_STR_SYMBOL_EDIT* = cuint(57)
+  LV_STR_SYMBOL_BELL* = cuint(44)
 const
-  internal_LV_STR_SYMBOL_BACKSPACE* = cuint(58)
+  LV_STR_SYMBOL_KEYBOARD* = cuint(45)
 const
-  internal_LV_STR_SYMBOL_SD_CARD* = cuint(59)
+  LV_STR_SYMBOL_GPS* = cuint(46)
 const
-  internal_LV_STR_SYMBOL_NEW_LINE* = cuint(60)
+  LV_STR_SYMBOL_FILE* = cuint(47)
 const
-  internal_LV_STR_SYMBOL_DUMMY* = cuint(61)
+  LV_STR_SYMBOL_WIFI* = cuint(48)
 const
-  LV_SCALE_MODE_HORIZONTAL_TOP* = cuint(0)
+  LV_STR_SYMBOL_BATTERY_FULL* = cuint(49)
 const
-  LV_SCALE_MODE_HORIZONTAL_BOTTOM* = cuint(1)
+  LV_STR_SYMBOL_BATTERY_3* = cuint(50)
 const
-  LV_SCALE_MODE_VERTICAL_LEFT* = cuint(2)
+  LV_STR_SYMBOL_BATTERY_2* = cuint(51)
 const
-  LV_SCALE_MODE_VERTICAL_RIGHT* = cuint(4)
+  LV_STR_SYMBOL_BATTERY_1* = cuint(52)
 const
-  LV_SCALE_MODE_ROUND_INNER* = cuint(8)
+  LV_STR_SYMBOL_BATTERY_EMPTY* = cuint(53)
 const
-  LV_SCALE_MODE_ROUND_OUTER* = cuint(16)
+  LV_STR_SYMBOL_USB* = cuint(54)
 const
-  internal_LV_SCALE_MODE_LAST* = cuint(17)
+  LV_STR_SYMBOL_BLUETOOTH* = cuint(55)
+const
+  LV_STR_SYMBOL_TRASH* = cuint(56)
+const
+  LV_STR_SYMBOL_EDIT* = cuint(57)
+const
+  LV_STR_SYMBOL_BACKSPACE* = cuint(58)
+const
+  LV_STR_SYMBOL_SD_CARD* = cuint(59)
+const
+  LV_STR_SYMBOL_NEW_LINE* = cuint(60)
+const
+  LV_STR_SYMBOL_DUMMY* = cuint(61)
+const
+  LV_STYLE_PROP_INV* = cuint(0)
+const
+  LV_STYLE_WIDTH* = cuint(1)
+const
+  LV_STYLE_HEIGHT* = cuint(2)
+const
+  LV_STYLE_LENGTH* = cuint(3)
+const
+  LV_STYLE_MIN_WIDTH* = cuint(4)
+const
+  LV_STYLE_MAX_WIDTH* = cuint(5)
+const
+  LV_STYLE_MIN_HEIGHT* = cuint(6)
+const
+  LV_STYLE_MAX_HEIGHT* = cuint(7)
+const
+  LV_STYLE_X* = cuint(8)
+const
+  LV_STYLE_Y* = cuint(9)
+const
+  LV_STYLE_ALIGN* = cuint(10)
+const
+  LV_STYLE_RADIUS* = cuint(12)
+const
+  LV_STYLE_PAD_TOP* = cuint(16)
+const
+  LV_STYLE_PAD_BOTTOM* = cuint(17)
+const
+  LV_STYLE_PAD_LEFT* = cuint(18)
+const
+  LV_STYLE_PAD_RIGHT* = cuint(19)
+const
+  LV_STYLE_PAD_ROW* = cuint(20)
+const
+  LV_STYLE_PAD_COLUMN* = cuint(21)
+const
+  LV_STYLE_LAYOUT* = cuint(22)
+const
+  LV_STYLE_MARGIN_TOP* = cuint(24)
+const
+  LV_STYLE_MARGIN_BOTTOM* = cuint(25)
+const
+  LV_STYLE_MARGIN_LEFT* = cuint(26)
+const
+  LV_STYLE_MARGIN_RIGHT* = cuint(27)
+const
+  LV_STYLE_BG_COLOR* = cuint(28)
+const
+  LV_STYLE_BG_OPA* = cuint(29)
+const
+  LV_STYLE_BG_GRAD_DIR* = cuint(32)
+const
+  LV_STYLE_BG_MAIN_STOP* = cuint(33)
+const
+  LV_STYLE_BG_GRAD_STOP* = cuint(34)
+const
+  LV_STYLE_BG_GRAD_COLOR* = cuint(35)
+const
+  LV_STYLE_BG_MAIN_OPA* = cuint(36)
+const
+  LV_STYLE_BG_GRAD_OPA* = cuint(37)
+const
+  LV_STYLE_BG_GRAD* = cuint(38)
+const
+  LV_STYLE_BASE_DIR* = cuint(39)
+const
+  LV_STYLE_BG_IMAGE_SRC* = cuint(40)
+const
+  LV_STYLE_BG_IMAGE_OPA* = cuint(41)
+const
+  LV_STYLE_BG_IMAGE_RECOLOR* = cuint(42)
+const
+  LV_STYLE_BG_IMAGE_RECOLOR_OPA* = cuint(43)
+const
+  LV_STYLE_BG_IMAGE_TILED* = cuint(44)
+const
+  LV_STYLE_CLIP_CORNER* = cuint(45)
+const
+  LV_STYLE_BORDER_WIDTH* = cuint(48)
+const
+  LV_STYLE_BORDER_COLOR* = cuint(49)
+const
+  LV_STYLE_BORDER_OPA* = cuint(50)
+const
+  LV_STYLE_BORDER_SIDE* = cuint(52)
+const
+  LV_STYLE_BORDER_POST* = cuint(53)
+const
+  LV_STYLE_OUTLINE_WIDTH* = cuint(56)
+const
+  LV_STYLE_OUTLINE_COLOR* = cuint(57)
+const
+  LV_STYLE_OUTLINE_OPA* = cuint(58)
+const
+  LV_STYLE_OUTLINE_PAD* = cuint(59)
+const
+  LV_STYLE_SHADOW_WIDTH* = cuint(60)
+const
+  LV_STYLE_SHADOW_COLOR* = cuint(61)
+const
+  LV_STYLE_SHADOW_OPA* = cuint(62)
+const
+  LV_STYLE_SHADOW_OFFSET_X* = cuint(64)
+const
+  LV_STYLE_SHADOW_OFFSET_Y* = cuint(65)
+const
+  LV_STYLE_SHADOW_SPREAD* = cuint(66)
+const
+  LV_STYLE_IMAGE_OPA* = cuint(68)
+const
+  LV_STYLE_IMAGE_RECOLOR* = cuint(69)
+const
+  LV_STYLE_IMAGE_RECOLOR_OPA* = cuint(70)
+const
+  LV_STYLE_LINE_WIDTH* = cuint(72)
+const
+  LV_STYLE_LINE_DASH_WIDTH* = cuint(73)
+const
+  LV_STYLE_LINE_DASH_GAP* = cuint(74)
+const
+  LV_STYLE_LINE_ROUNDED* = cuint(75)
+const
+  LV_STYLE_LINE_COLOR* = cuint(76)
+const
+  LV_STYLE_LINE_OPA* = cuint(77)
+const
+  LV_STYLE_ARC_WIDTH* = cuint(80)
+const
+  LV_STYLE_ARC_ROUNDED* = cuint(81)
+const
+  LV_STYLE_ARC_COLOR* = cuint(82)
+const
+  LV_STYLE_ARC_OPA* = cuint(83)
+const
+  LV_STYLE_ARC_IMAGE_SRC* = cuint(84)
+const
+  LV_STYLE_TEXT_COLOR* = cuint(88)
+const
+  LV_STYLE_TEXT_OPA* = cuint(89)
+const
+  LV_STYLE_TEXT_FONT* = cuint(90)
+const
+  LV_STYLE_TEXT_LETTER_SPACE* = cuint(91)
+const
+  LV_STYLE_TEXT_LINE_SPACE* = cuint(92)
+const
+  LV_STYLE_TEXT_DECOR* = cuint(93)
+const
+  LV_STYLE_TEXT_ALIGN* = cuint(94)
+const
+  LV_STYLE_OPA* = cuint(95)
+const
+  LV_STYLE_OPA_LAYERED* = cuint(96)
+const
+  LV_STYLE_COLOR_FILTER_DSC* = cuint(97)
+const
+  LV_STYLE_COLOR_FILTER_OPA* = cuint(98)
+const
+  LV_STYLE_ANIM* = cuint(99)
+const
+  LV_STYLE_ANIM_DURATION* = cuint(100)
+const
+  LV_STYLE_TRANSITION* = cuint(102)
+const
+  LV_STYLE_BLEND_MODE* = cuint(103)
+const
+  LV_STYLE_TRANSFORM_WIDTH* = cuint(104)
+const
+  LV_STYLE_TRANSFORM_HEIGHT* = cuint(105)
+const
+  LV_STYLE_TRANSLATE_X* = cuint(106)
+const
+  LV_STYLE_TRANSLATE_Y* = cuint(107)
+const
+  LV_STYLE_TRANSFORM_SCALE_X* = cuint(108)
+const
+  LV_STYLE_TRANSFORM_SCALE_Y* = cuint(109)
+const
+  LV_STYLE_TRANSFORM_ROTATION* = cuint(110)
+const
+  LV_STYLE_TRANSFORM_PIVOT_X* = cuint(111)
+const
+  LV_STYLE_TRANSFORM_PIVOT_Y* = cuint(112)
+const
+  LV_STYLE_TRANSFORM_SKEW_X* = cuint(113)
+const
+  LV_STYLE_TRANSFORM_SKEW_Y* = cuint(114)
+const
+  LV_STYLE_BITMAP_MASK_SRC* = cuint(115)
+const
+  LV_STYLE_ROTARY_SENSITIVITY* = cuint(116)
+const
+  LV_STYLE_FLEX_FLOW* = cuint(125)
+const
+  LV_STYLE_FLEX_MAIN_PLACE* = cuint(126)
+const
+  LV_STYLE_FLEX_CROSS_PLACE* = cuint(127)
+const
+  LV_STYLE_FLEX_TRACK_PLACE* = cuint(128)
+const
+  LV_STYLE_FLEX_GROW* = cuint(129)
+const
+  LV_STYLE_GRID_COLUMN_ALIGN* = cuint(130)
+const
+  LV_STYLE_GRID_ROW_ALIGN* = cuint(131)
+const
+  LV_STYLE_GRID_ROW_DSC_ARRAY* = cuint(132)
+const
+  LV_STYLE_GRID_COLUMN_DSC_ARRAY* = cuint(133)
+const
+  LV_STYLE_GRID_CELL_COLUMN_POS* = cuint(134)
+const
+  LV_STYLE_GRID_CELL_COLUMN_SPAN* = cuint(135)
+const
+  LV_STYLE_GRID_CELL_X_ALIGN* = cuint(136)
+const
+  LV_STYLE_GRID_CELL_ROW_POS* = cuint(137)
+const
+  LV_STYLE_GRID_CELL_ROW_SPAN* = cuint(138)
+const
+  LV_STYLE_GRID_CELL_Y_ALIGN* = cuint(139)
+const
+  LV_STYLE_LAST_BUILT_IN_PROP* = cuint(140)
+const
+  LV_STYLE_NUM_BUILT_IN_PROPS* = cuint(141)
+const
+  LV_STYLE_PROP_ANY* = cuint(255)
+const
+  LV_STYLE_PROP_CONST* = cuint(255)
+const
+  LV_STATE_DEFAULT* = cuint(0)
+const
+  LV_STATE_CHECKED* = cuint(1)
+const
+  LV_STATE_FOCUSED* = cuint(2)
+const
+  LV_STATE_FOCUS_KEY* = cuint(4)
+const
+  LV_STATE_EDITED* = cuint(8)
+const
+  LV_STATE_HOVERED* = cuint(16)
+const
+  LV_STATE_PRESSED* = cuint(32)
+const
+  LV_STATE_SCROLLED* = cuint(64)
+const
+  LV_STATE_DISABLED* = cuint(128)
+const
+  LV_STATE_USER_1* = cuint(4096)
+const
+  LV_STATE_USER_2* = cuint(8192)
+const
+  LV_STATE_USER_3* = cuint(16384)
+const
+  LV_STATE_USER_4* = cuint(32768)
+const
+  LV_STATE_ANY* = cuint(65535)
+const
+  LV_PART_MAIN* = cuint(0)
+const
+  LV_PART_SCROLLBAR* = cuint(65536)
+const
+  LV_PART_INDICATOR* = cuint(131072)
+const
+  LV_PART_KNOB* = cuint(196608)
+const
+  LV_PART_SELECTED* = cuint(262144)
+const
+  LV_PART_ITEMS* = cuint(327680)
+const
+  LV_PART_CURSOR* = cuint(393216)
+const
+  LV_PART_CUSTOM_FIRST* = cuint(524288)
+const
+  LV_PART_ANY* = cuint(983040)
 const
   LV_PART_TEXTAREA_PLACEHOLDER* = cuint(524288)
-const
-  LV_VECTOR_FILL_NONZERO* = cuint(0)
-const
-  LV_VECTOR_FILL_EVENODD* = cuint(1)
-const
-  LV_VECTOR_STROKE_CAP_BUTT* = cuint(0)
-const
-  LV_VECTOR_STROKE_CAP_SQUARE* = cuint(1)
-const
-  LV_VECTOR_STROKE_CAP_ROUND* = cuint(2)
-const
-  LV_VECTOR_STROKE_JOIN_MITER* = cuint(0)
-const
-  LV_VECTOR_STROKE_JOIN_BEVEL* = cuint(1)
-const
-  LV_VECTOR_STROKE_JOIN_ROUND* = cuint(2)
-const
-  LV_VECTOR_PATH_QUALITY_MEDIUM* = cuint(0)
-const
-  LV_VECTOR_PATH_QUALITY_HIGH* = cuint(1)
-const
-  LV_VECTOR_PATH_QUALITY_LOW* = cuint(2)
-const
-  LV_VECTOR_BLEND_SRC_OVER* = cuint(0)
-const
-  LV_VECTOR_BLEND_SRC_IN* = cuint(1)
-const
-  LV_VECTOR_BLEND_DST_OVER* = cuint(2)
-const
-  LV_VECTOR_BLEND_DST_IN* = cuint(3)
-const
-  LV_VECTOR_BLEND_SCREEN* = cuint(4)
-const
-  LV_VECTOR_BLEND_MULTIPLY* = cuint(5)
-const
-  LV_VECTOR_BLEND_NONE* = cuint(6)
-const
-  LV_VECTOR_BLEND_ADDITIVE* = cuint(7)
-const
-  LV_VECTOR_BLEND_SUBTRACTIVE* = cuint(8)
-const
-  LV_VECTOR_PATH_OP_MOVE_TO* = cuint(0)
-const
-  LV_VECTOR_PATH_OP_LINE_TO* = cuint(1)
-const
-  LV_VECTOR_PATH_OP_QUAD_TO* = cuint(2)
-const
-  LV_VECTOR_PATH_OP_CUBIC_TO* = cuint(3)
-const
-  LV_VECTOR_PATH_OP_CLOSE* = cuint(4)
-const
-  LV_VECTOR_DRAW_STYLE_SOLID* = cuint(0)
-const
-  LV_VECTOR_DRAW_STYLE_PATTERN* = cuint(1)
-const
-  LV_VECTOR_DRAW_STYLE_GRADIENT* = cuint(2)
-const
-  LV_VECTOR_GRADIENT_SPREAD_PAD* = cuint(0)
-const
-  LV_VECTOR_GRADIENT_SPREAD_REPEAT* = cuint(1)
-const
-  LV_VECTOR_GRADIENT_SPREAD_REFLECT* = cuint(2)
-const
-  LV_VECTOR_GRADIENT_STYLE_LINEAR* = cuint(0)
-const
-  LV_VECTOR_GRADIENT_STYLE_RADIAL* = cuint(1)
-const
-  LV_DRAW_SW_MASK_RES_TRANSP* = cuint(0)
-const
-  LV_DRAW_SW_MASK_RES_FULL_COVER* = cuint(1)
-const
-  LV_DRAW_SW_MASK_RES_CHANGED* = cuint(2)
-const
-  LV_DRAW_SW_MASK_RES_UNKNOWN* = cuint(3)
-const
-  LV_DRAW_SW_MASK_TYPE_LINE* = cuint(0)
-const
-  LV_DRAW_SW_MASK_TYPE_ANGLE* = cuint(1)
-const
-  LV_DRAW_SW_MASK_TYPE_RADIUS* = cuint(2)
-const
-  LV_DRAW_SW_MASK_TYPE_FADE* = cuint(3)
-const
-  LV_DRAW_SW_MASK_TYPE_MAP* = cuint(4)
-const
-  LV_DRAW_SW_MASK_LINE_SIDE_LEFT* = cuint(0)
-const
-  LV_DRAW_SW_MASK_LINE_SIDE_RIGHT* = cuint(1)
-const
-  LV_DRAW_SW_MASK_LINE_SIDE_TOP* = cuint(2)
-const
-  LV_DRAW_SW_MASK_LINE_SIDE_BOTTOM* = cuint(3)
 type
   enum_lv_result_t* {.size: sizeof(cuint).} = enum
     LV_RESULT_INVALID = 0, LV_RESULT_OK = 1
@@ -255,15 +451,6 @@ type
   enum_lv_dir_t* {.size: sizeof(cuint).} = enum
     LV_DIR_NONE = 0, LV_DIR_LEFT = 1, LV_DIR_RIGHT = 2, LV_DIR_HOR = 3,
     LV_DIR_TOP = 4, LV_DIR_BOTTOM = 8, LV_DIR_VER = 12, LV_DIR_ALL = 15
-type
-  enum_lv_opa_t* {.size: sizeof(cuint).} = enum
-    LV_OPA_TRANSP = 0, LV_OPA_10 = 25, LV_OPA_20 = 51, LV_OPA_30 = 76,
-    LV_OPA_40 = 102, LV_OPA_50 = 127, LV_OPA_60 = 153, LV_OPA_70 = 178,
-    LV_OPA_80 = 204, LV_OPA_90 = 229, LV_OPA_100 = 255
-const
-  LV_OPA_0* = enum_lv_opa_t.LV_OPA_TRANSP
-const
-  LV_OPA_COVER* = enum_lv_opa_t.LV_OPA_100
 type
   enum_lv_color_format_t* {.size: sizeof(cuint).} = enum
     LV_COLOR_FORMAT_UNKNOWN = 0, LV_COLOR_FORMAT_RAW = 1,
@@ -295,8 +482,8 @@ type
     LV_PALETTE_GREEN = 9, LV_PALETTE_LIGHT_GREEN = 10, LV_PALETTE_LIME = 11,
     LV_PALETTE_YELLOW = 12, LV_PALETTE_AMBER = 13, LV_PALETTE_ORANGE = 14,
     LV_PALETTE_DEEP_ORANGE = 15, LV_PALETTE_BROWN = 16,
-    LV_PALETTE_BLUE_GREY = 17, LV_PALETTE_GREY = 18,
-    internal_LV_PALETTE_LAST = 19, LV_PALETTE_NONE = 255
+    LV_PALETTE_BLUE_GREY = 17, LV_PALETTE_GREY = 18, LV_PALETTE_LAST = 19,
+    LV_PALETTE_NONE = 255
 type
   enum_lv_image_flags_t* {.size: sizeof(cuint).} = enum
     LV_IMAGE_FLAGS_PREMULTIPLIED = 1, LV_IMAGE_FLAGS_COMPRESSED = 8,
@@ -333,7 +520,8 @@ type
     LV_FONT_KERNING_NORMAL = 0, LV_FONT_KERNING_NONE = 1
 type
   enum_lv_text_flag_t* {.size: sizeof(cuint).} = enum
-    LV_TEXT_FLAG_NONE = 0, LV_TEXT_FLAG_EXPAND = 1, LV_TEXT_FLAG_FIT = 2
+    LV_TEXT_FLAG_NONE = 0, LV_TEXT_FLAG_EXPAND = 1, LV_TEXT_FLAG_FIT = 2,
+    LV_TEXT_FLAG_BREAK_ALL = 4
 type
   enum_lv_text_align_t* {.size: sizeof(cuint).} = enum
     LV_TEXT_ALIGN_AUTO = 0, LV_TEXT_ALIGN_LEFT = 1, LV_TEXT_ALIGN_CENTER = 2,
@@ -345,7 +533,7 @@ type
 type
   enum_lv_layout_t* {.size: sizeof(cuint).} = enum
     LV_LAYOUT_NONE = 0, LV_LAYOUT_FLEX = 1, LV_LAYOUT_GRID = 2,
-    internal_LV_LAYOUT_LAST = 3
+    LV_LAYOUT_LAST = 3
 type
   enum_lv_flex_align_t* {.size: sizeof(cuint).} = enum
     LV_FLEX_ALIGN_START = 0, LV_FLEX_ALIGN_END = 1, LV_FLEX_ALIGN_CENTER = 2,
@@ -384,62 +572,6 @@ type
     LV_GRAD_EXTEND_PAD = 0, LV_GRAD_EXTEND_REPEAT = 1,
     LV_GRAD_EXTEND_REFLECT = 2
 type
-  enum_lv_style_prop_t* {.size: sizeof(cuint).} = enum
-    LV_STYLE_PROP_INV = 0, LV_STYLE_WIDTH = 1, LV_STYLE_HEIGHT = 2,
-    LV_STYLE_LENGTH = 3, LV_STYLE_MIN_WIDTH = 4, LV_STYLE_MAX_WIDTH = 5,
-    LV_STYLE_MIN_HEIGHT = 6, LV_STYLE_MAX_HEIGHT = 7, LV_STYLE_X = 8,
-    LV_STYLE_Y = 9, LV_STYLE_ALIGN = 10, LV_STYLE_RADIUS = 12,
-    LV_STYLE_PAD_TOP = 16, LV_STYLE_PAD_BOTTOM = 17, LV_STYLE_PAD_LEFT = 18,
-    LV_STYLE_PAD_RIGHT = 19, LV_STYLE_PAD_ROW = 20, LV_STYLE_PAD_COLUMN = 21,
-    LV_STYLE_LAYOUT = 22, LV_STYLE_MARGIN_TOP = 24, LV_STYLE_MARGIN_BOTTOM = 25,
-    LV_STYLE_MARGIN_LEFT = 26, LV_STYLE_MARGIN_RIGHT = 27,
-    LV_STYLE_BG_COLOR = 28, LV_STYLE_BG_OPA = 29, LV_STYLE_BG_GRAD_DIR = 32,
-    LV_STYLE_BG_MAIN_STOP = 33, LV_STYLE_BG_GRAD_STOP = 34,
-    LV_STYLE_BG_GRAD_COLOR = 35, LV_STYLE_BG_MAIN_OPA = 36,
-    LV_STYLE_BG_GRAD_OPA = 37, LV_STYLE_BG_GRAD = 38, LV_STYLE_BASE_DIR = 39,
-    LV_STYLE_BG_IMAGE_SRC = 40, LV_STYLE_BG_IMAGE_OPA = 41,
-    LV_STYLE_BG_IMAGE_RECOLOR = 42, LV_STYLE_BG_IMAGE_RECOLOR_OPA = 43,
-    LV_STYLE_BG_IMAGE_TILED = 44, LV_STYLE_CLIP_CORNER = 45,
-    LV_STYLE_BORDER_WIDTH = 48, LV_STYLE_BORDER_COLOR = 49,
-    LV_STYLE_BORDER_OPA = 50, LV_STYLE_BORDER_SIDE = 52,
-    LV_STYLE_BORDER_POST = 53, LV_STYLE_OUTLINE_WIDTH = 56,
-    LV_STYLE_OUTLINE_COLOR = 57, LV_STYLE_OUTLINE_OPA = 58,
-    LV_STYLE_OUTLINE_PAD = 59, LV_STYLE_SHADOW_WIDTH = 60,
-    LV_STYLE_SHADOW_COLOR = 61, LV_STYLE_SHADOW_OPA = 62,
-    LV_STYLE_SHADOW_OFFSET_X = 64, LV_STYLE_SHADOW_OFFSET_Y = 65,
-    LV_STYLE_SHADOW_SPREAD = 66, LV_STYLE_IMAGE_OPA = 68,
-    LV_STYLE_IMAGE_RECOLOR = 69, LV_STYLE_IMAGE_RECOLOR_OPA = 70,
-    LV_STYLE_LINE_WIDTH = 72, LV_STYLE_LINE_DASH_WIDTH = 73,
-    LV_STYLE_LINE_DASH_GAP = 74, LV_STYLE_LINE_ROUNDED = 75,
-    LV_STYLE_LINE_COLOR = 76, LV_STYLE_LINE_OPA = 77, LV_STYLE_ARC_WIDTH = 80,
-    LV_STYLE_ARC_ROUNDED = 81, LV_STYLE_ARC_COLOR = 82, LV_STYLE_ARC_OPA = 83,
-    LV_STYLE_ARC_IMAGE_SRC = 84, LV_STYLE_TEXT_COLOR = 88,
-    LV_STYLE_TEXT_OPA = 89, LV_STYLE_TEXT_FONT = 90,
-    LV_STYLE_TEXT_LETTER_SPACE = 91, LV_STYLE_TEXT_LINE_SPACE = 92,
-    LV_STYLE_TEXT_DECOR = 93, LV_STYLE_TEXT_ALIGN = 94, LV_STYLE_OPA = 95,
-    LV_STYLE_OPA_LAYERED = 96, LV_STYLE_COLOR_FILTER_DSC = 97,
-    LV_STYLE_COLOR_FILTER_OPA = 98, LV_STYLE_ANIM = 99,
-    LV_STYLE_ANIM_DURATION = 100, LV_STYLE_TRANSITION = 102,
-    LV_STYLE_BLEND_MODE = 103, LV_STYLE_TRANSFORM_WIDTH = 104,
-    LV_STYLE_TRANSFORM_HEIGHT = 105, LV_STYLE_TRANSLATE_X = 106,
-    LV_STYLE_TRANSLATE_Y = 107, LV_STYLE_TRANSFORM_SCALE_X = 108,
-    LV_STYLE_TRANSFORM_SCALE_Y = 109, LV_STYLE_TRANSFORM_ROTATION = 110,
-    LV_STYLE_TRANSFORM_PIVOT_X = 111, LV_STYLE_TRANSFORM_PIVOT_Y = 112,
-    LV_STYLE_TRANSFORM_SKEW_X = 113, LV_STYLE_TRANSFORM_SKEW_Y = 114,
-    LV_STYLE_BITMAP_MASK_SRC = 115, LV_STYLE_ROTARY_SENSITIVITY = 116,
-    LV_STYLE_FLEX_FLOW = 125, LV_STYLE_FLEX_MAIN_PLACE = 126,
-    LV_STYLE_FLEX_CROSS_PLACE = 127, LV_STYLE_FLEX_TRACK_PLACE = 128,
-    LV_STYLE_FLEX_GROW = 129, LV_STYLE_GRID_COLUMN_ALIGN = 130,
-    LV_STYLE_GRID_ROW_ALIGN = 131, LV_STYLE_GRID_ROW_DSC_ARRAY = 132,
-    LV_STYLE_GRID_COLUMN_DSC_ARRAY = 133, LV_STYLE_GRID_CELL_COLUMN_POS = 134,
-    LV_STYLE_GRID_CELL_COLUMN_SPAN = 135, LV_STYLE_GRID_CELL_X_ALIGN = 136,
-    LV_STYLE_GRID_CELL_ROW_POS = 137, LV_STYLE_GRID_CELL_ROW_SPAN = 138,
-    LV_STYLE_GRID_CELL_Y_ALIGN = 139,
-    internal_LV_STYLE_LAST_BUILT_IN_PROP = 140,
-    internal_LV_STYLE_NUM_BUILT_IN_PROPS = 141, LV_STYLE_PROP_ANY = 255
-const
-  internal_LV_STYLE_PROP_CONST* = enum_lv_style_prop_t.LV_STYLE_PROP_ANY
-type
   enum_lv_style_res_t* {.size: sizeof(cuint).} = enum
     LV_STYLE_RES_NOT_FOUND = 0, LV_STYLE_RES_FOUND = 1
 type
@@ -471,8 +603,8 @@ type
     LV_EVENT_REFR_READY = 55, LV_EVENT_RENDER_START = 56,
     LV_EVENT_RENDER_READY = 57, LV_EVENT_FLUSH_START = 58,
     LV_EVENT_FLUSH_FINISH = 59, LV_EVENT_FLUSH_WAIT_START = 60,
-    LV_EVENT_FLUSH_WAIT_FINISH = 61, LV_EVENT_VSYNC = 62,
-    internal_LV_EVENT_LAST = 63, LV_EVENT_PREPROCESS = 32768
+    LV_EVENT_FLUSH_WAIT_FINISH = 61, LV_EVENT_VSYNC = 62, LV_EVENT_LAST = 63,
+    LV_EVENT_PREPROCESS = 32768
 type
   enum_lv_fs_res_t* {.size: sizeof(cuint).} = enum
     LV_FS_RES_OK = 0, LV_FS_RES_HW_ERR = 1, LV_FS_RES_FS_ERR = 2,
@@ -492,12 +624,13 @@ type
     LV_IMAGE_SRC_UNKNOWN = 3
 type
   enum_lv_draw_task_type_t* {.size: sizeof(cuint).} = enum
-    LV_DRAW_TASK_TYPE_FILL = 0, LV_DRAW_TASK_TYPE_BORDER = 1,
-    LV_DRAW_TASK_TYPE_BOX_SHADOW = 2, LV_DRAW_TASK_TYPE_LABEL = 3,
-    LV_DRAW_TASK_TYPE_IMAGE = 4, LV_DRAW_TASK_TYPE_LAYER = 5,
-    LV_DRAW_TASK_TYPE_LINE = 6, LV_DRAW_TASK_TYPE_ARC = 7,
-    LV_DRAW_TASK_TYPE_TRIANGLE = 8, LV_DRAW_TASK_TYPE_MASK_RECTANGLE = 9,
-    LV_DRAW_TASK_TYPE_MASK_BITMAP = 10, LV_DRAW_TASK_TYPE_VECTOR = 11
+    LV_DRAW_TASK_TYPE_NONE = 0, LV_DRAW_TASK_TYPE_FILL = 1,
+    LV_DRAW_TASK_TYPE_BORDER = 2, LV_DRAW_TASK_TYPE_BOX_SHADOW = 3,
+    LV_DRAW_TASK_TYPE_LABEL = 4, LV_DRAW_TASK_TYPE_IMAGE = 5,
+    LV_DRAW_TASK_TYPE_LAYER = 6, LV_DRAW_TASK_TYPE_LINE = 7,
+    LV_DRAW_TASK_TYPE_ARC = 8, LV_DRAW_TASK_TYPE_TRIANGLE = 9,
+    LV_DRAW_TASK_TYPE_MASK_RECTANGLE = 10, LV_DRAW_TASK_TYPE_MASK_BITMAP = 11,
+    LV_DRAW_TASK_TYPE_VECTOR = 12
 type
   enum_lv_draw_task_state_t* {.size: sizeof(cuint).} = enum
     LV_DRAW_TASK_STATE_WAITING = 0, LV_DRAW_TASK_STATE_QUEUED = 1,
@@ -542,10 +675,8 @@ type
     LV_SCROLL_SNAP_CENTER = 3
 type
   enum_lv_style_state_cmp_t* {.size: sizeof(cuint).} = enum
-    internal_LV_STYLE_STATE_CMP_SAME = 0,
-    internal_LV_STYLE_STATE_CMP_DIFF_REDRAW = 1,
-    internal_LV_STYLE_STATE_CMP_DIFF_DRAW_PAD = 2,
-    internal_LV_STYLE_STATE_CMP_DIFF_LAYOUT = 3
+    LV_STYLE_STATE_CMP_SAME = 0, LV_STYLE_STATE_CMP_DIFF_REDRAW = 1,
+    LV_STYLE_STATE_CMP_DIFF_DRAW_PAD = 2, LV_STYLE_STATE_CMP_DIFF_LAYOUT = 3
 type
   enum_lv_layer_type_t* {.size: sizeof(cuint).} = enum
     LV_LAYER_TYPE_NONE = 0, LV_LAYER_TYPE_SIMPLE = 1,
@@ -584,18 +715,6 @@ type
   enum_lv_cover_res_t* {.size: sizeof(cuint).} = enum
     LV_COVER_RES_COVER = 0, LV_COVER_RES_NOT_COVER = 1, LV_COVER_RES_MASKED = 2
 type
-  enum_lv_state_t* {.size: sizeof(cuint).} = enum
-    LV_STATE_DEFAULT = 0, LV_STATE_CHECKED = 1, LV_STATE_FOCUSED = 2,
-    LV_STATE_FOCUS_KEY = 4, LV_STATE_EDITED = 8, LV_STATE_HOVERED = 16,
-    LV_STATE_PRESSED = 32, LV_STATE_SCROLLED = 64, LV_STATE_DISABLED = 128,
-    LV_STATE_USER_1 = 4096, LV_STATE_USER_2 = 8192, LV_STATE_USER_3 = 16384,
-    LV_STATE_USER_4 = 32768, LV_STATE_ANY = 65535
-type
-  enum_lv_part_t* {.size: sizeof(cuint).} = enum
-    LV_PART_MAIN = 0, LV_PART_SCROLLBAR = 65536, LV_PART_INDICATOR = 131072,
-    LV_PART_KNOB = 196608, LV_PART_SELECTED = 262144, LV_PART_ITEMS = 327680,
-    LV_PART_CURSOR = 393216, LV_PART_CUSTOM_FIRST = 524288, LV_PART_ANY = 983040
-type
   enum_lv_obj_flag_t* {.size: sizeof(cuint).} = enum
     LV_OBJ_FLAG_HIDDEN = 1, LV_OBJ_FLAG_CLICKABLE = 2,
     LV_OBJ_FLAG_CLICK_FOCUSABLE = 4, LV_OBJ_FLAG_CHECKABLE = 8,
@@ -624,16 +743,13 @@ type
 const
   LV_FONT_FMT_TXT_COMPRESSED_NO_PREFILTER* = enum_lv_font_fmt_txt_bitmap_format_t.LV_FONT_FMT_TXT_COMPRESSED
 type
-  enum_lv_font_fmt_rle_state_t* {.size: sizeof(cuint).} = enum
-    RLE_STATE_SINGLE = 0, RLE_STATE_REPEATED = 1, RLE_STATE_COUNTER = 2
-type
   enum_lv_image_align_t* {.size: sizeof(cuint).} = enum
     LV_IMAGE_ALIGN_DEFAULT = 0, LV_IMAGE_ALIGN_TOP_LEFT = 1,
     LV_IMAGE_ALIGN_TOP_MID = 2, LV_IMAGE_ALIGN_TOP_RIGHT = 3,
     LV_IMAGE_ALIGN_BOTTOM_LEFT = 4, LV_IMAGE_ALIGN_BOTTOM_MID = 5,
     LV_IMAGE_ALIGN_BOTTOM_RIGHT = 6, LV_IMAGE_ALIGN_LEFT_MID = 7,
     LV_IMAGE_ALIGN_RIGHT_MID = 8, LV_IMAGE_ALIGN_CENTER = 9,
-    internal_LV_IMAGE_ALIGN_AUTO_TRANSFORM = 10, LV_IMAGE_ALIGN_STRETCH = 11,
+    LV_IMAGE_ALIGN_AUTO_TRANSFORM = 10, LV_IMAGE_ALIGN_STRETCH = 11,
     LV_IMAGE_ALIGN_TILE = 12
 type
   enum_lv_animimg_part_t* {.size: sizeof(cuint).} = enum
@@ -654,13 +770,12 @@ type
     LV_BAR_ORIENTATION_VERTICAL = 2
 type
   enum_lv_buttonmatrix_ctrl_t* {.size: sizeof(cuint).} = enum
-    internal_LV_BUTTONMATRIX_WIDTH = 15, LV_BUTTONMATRIX_CTRL_HIDDEN = 16,
-    LV_BUTTONMATRIX_CTRL_NO_REPEAT = 32, LV_BUTTONMATRIX_CTRL_DISABLED = 64,
-    LV_BUTTONMATRIX_CTRL_CHECKABLE = 128, LV_BUTTONMATRIX_CTRL_CHECKED = 256,
-    LV_BUTTONMATRIX_CTRL_CLICK_TRIG = 512, LV_BUTTONMATRIX_CTRL_POPOVER = 1024,
-    internal_LV_BUTTONMATRIX_CTRL_RESERVED_1 = 2048,
-    internal_LV_BUTTONMATRIX_CTRL_RESERVED_2 = 4096,
-    internal_LV_BUTTONMATRIX_CTRL_RESERVED_3 = 8192,
+    LV_BUTTONMATRIX_CTRL_HIDDEN = 16, LV_BUTTONMATRIX_CTRL_NO_REPEAT = 32,
+    LV_BUTTONMATRIX_CTRL_DISABLED = 64, LV_BUTTONMATRIX_CTRL_CHECKABLE = 128,
+    LV_BUTTONMATRIX_CTRL_CHECKED = 256, LV_BUTTONMATRIX_CTRL_CLICK_TRIG = 512,
+    LV_BUTTONMATRIX_CTRL_POPOVER = 1024, LV_BUTTONMATRIX_CTRL_RESERVED_1 = 2048,
+    LV_BUTTONMATRIX_CTRL_RESERVED_2 = 4096,
+    LV_BUTTONMATRIX_CTRL_RESERVED_3 = 8192,
     LV_BUTTONMATRIX_CTRL_CUSTOM_1 = 16384, LV_BUTTONMATRIX_CTRL_CUSTOM_2 = 32768
 type
   enum_lv_chart_type_t* {.size: sizeof(cuint).} = enum
@@ -673,15 +788,14 @@ type
   enum_lv_chart_axis_t* {.size: sizeof(cuint).} = enum
     LV_CHART_AXIS_PRIMARY_Y = 0, LV_CHART_AXIS_SECONDARY_Y = 1,
     LV_CHART_AXIS_PRIMARY_X = 2, LV_CHART_AXIS_SECONDARY_X = 4,
-    internal_LV_CHART_AXIS_LAST = 5
+    LV_CHART_AXIS_LAST = 5
 type
   enum_lv_imagebutton_state_t* {.size: sizeof(cuint).} = enum
     LV_IMAGEBUTTON_STATE_RELEASED = 0, LV_IMAGEBUTTON_STATE_PRESSED = 1,
     LV_IMAGEBUTTON_STATE_DISABLED = 2,
     LV_IMAGEBUTTON_STATE_CHECKED_RELEASED = 3,
     LV_IMAGEBUTTON_STATE_CHECKED_PRESSED = 4,
-    LV_IMAGEBUTTON_STATE_CHECKED_DISABLED = 5,
-    internal_LV_IMAGEBUTTON_STATE_NUM = 6
+    LV_IMAGEBUTTON_STATE_CHECKED_DISABLED = 5, LV_IMAGEBUTTON_STATE_NUM = 6
 type
   enum_lv_keyboard_mode_t* {.size: sizeof(cuint).} = enum
     LV_KEYBOARD_MODE_TEXT_LOWER = 0, LV_KEYBOARD_MODE_TEXT_UPPER = 1,
@@ -699,17 +813,23 @@ type
   enum_lv_roller_mode_t* {.size: sizeof(cuint).} = enum
     LV_ROLLER_MODE_NORMAL = 0, LV_ROLLER_MODE_INFINITE = 1
 type
+  enum_lv_scale_mode_t* {.size: sizeof(cuint).} = enum
+    LV_SCALE_MODE_HORIZONTAL_TOP = 0, LV_SCALE_MODE_HORIZONTAL_BOTTOM = 1,
+    LV_SCALE_MODE_VERTICAL_LEFT = 2, LV_SCALE_MODE_VERTICAL_RIGHT = 4,
+    LV_SCALE_MODE_ROUND_INNER = 8, LV_SCALE_MODE_ROUND_OUTER = 16,
+    LV_SCALE_MODE_LAST = 17
+type
   enum_lv_slider_mode_t* {.size: sizeof(cuint).} = enum
     LV_SLIDER_MODE_NORMAL = 0, LV_SLIDER_MODE_SYMMETRICAL = 1,
     LV_SLIDER_MODE_RANGE = 2
 type
   enum_lv_span_overflow_t* {.size: sizeof(cuint).} = enum
     LV_SPAN_OVERFLOW_CLIP = 0, LV_SPAN_OVERFLOW_ELLIPSIS = 1,
-    internal_LV_SPAN_OVERFLOW_LAST = 2
+    LV_SPAN_OVERFLOW_LAST = 2
 type
   enum_lv_span_mode_t* {.size: sizeof(cuint).} = enum
     LV_SPAN_MODE_FIXED = 0, LV_SPAN_MODE_EXPAND = 1, LV_SPAN_MODE_BREAK = 2,
-    internal_LV_SPAN_MODE_LAST = 3
+    LV_SPAN_MODE_LAST = 3
 type
   enum_lv_table_cell_ctrl_t* {.size: sizeof(cuint).} = enum
     LV_TABLE_CELL_CTRL_MERGE_RIGHT = 1, LV_TABLE_CELL_CTRL_TEXT_CROP = 2,
@@ -739,155 +859,363 @@ type
     LV_EXPLORER_PICTURES_DIR = 2, LV_EXPLORER_VIDEO_DIR = 3,
     LV_EXPLORER_DOCS_DIR = 4, LV_EXPLORER_FS_DIR = 5
 type
-  compiler_FILE_private* = object
+  enum_lv_vector_fill_t* {.size: sizeof(cuint).} = enum
+    LV_VECTOR_FILL_NONZERO = 0, LV_VECTOR_FILL_EVENODD = 1
 type
-  struct_lv_indev_t* = object
+  enum_lv_vector_stroke_cap_t* {.size: sizeof(cuint).} = enum
+    LV_VECTOR_STROKE_CAP_BUTT = 0, LV_VECTOR_STROKE_CAP_SQUARE = 1,
+    LV_VECTOR_STROKE_CAP_ROUND = 2
 type
-  struct_lv_cache_entry_t* = object
+  enum_lv_vector_stroke_join_t* {.size: sizeof(cuint).} = enum
+    LV_VECTOR_STROKE_JOIN_MITER = 0, LV_VECTOR_STROKE_JOIN_BEVEL = 1,
+    LV_VECTOR_STROKE_JOIN_ROUND = 2
 type
-  LV_COORD_MAX* = object
+  enum_lv_vector_path_quality_t* {.size: sizeof(cuint).} = enum
+    LV_VECTOR_PATH_QUALITY_MEDIUM = 0, LV_VECTOR_PATH_QUALITY_HIGH = 1,
+    LV_VECTOR_PATH_QUALITY_LOW = 2
 type
-  struct_lv_display_t* = object
+  enum_lv_vector_blend_t* {.size: sizeof(cuint).} = enum
+    LV_VECTOR_BLEND_SRC_OVER = 0, LV_VECTOR_BLEND_SRC_IN = 1,
+    LV_VECTOR_BLEND_DST_OVER = 2, LV_VECTOR_BLEND_DST_IN = 3,
+    LV_VECTOR_BLEND_SCREEN = 4, LV_VECTOR_BLEND_MULTIPLY = 5,
+    LV_VECTOR_BLEND_NONE = 6, LV_VECTOR_BLEND_ADDITIVE = 7,
+    LV_VECTOR_BLEND_SUBTRACTIVE = 8
 type
-  struct_snippet_stack* = object
+  enum_lv_vector_path_op_t* {.size: sizeof(cuint).} = enum
+    LV_VECTOR_PATH_OP_MOVE_TO = 0, LV_VECTOR_PATH_OP_LINE_TO = 1,
+    LV_VECTOR_PATH_OP_QUAD_TO = 2, LV_VECTOR_PATH_OP_CUBIC_TO = 3,
+    LV_VECTOR_PATH_OP_CLOSE = 4
 type
-  compiler_LINE_private* = object
+  enum_lv_vector_draw_style_t* {.size: sizeof(cuint).} = enum
+    LV_VECTOR_DRAW_STYLE_SOLID = 0, LV_VECTOR_DRAW_STYLE_PATTERN = 1,
+    LV_VECTOR_DRAW_STYLE_GRADIENT = 2
 type
-  LV_DRAW_BUF_DEFINE_STATIC* = object
+  enum_lv_vector_gradient_spread_t* {.size: sizeof(cuint).} = enum
+    LV_VECTOR_GRADIENT_SPREAD_PAD = 0, LV_VECTOR_GRADIENT_SPREAD_REPEAT = 1,
+    LV_VECTOR_GRADIENT_SPREAD_REFLECT = 2
 type
-  struct_lv_monkey* = object
+  enum_lv_vector_gradient_style_t* {.size: sizeof(cuint).} = enum
+    LV_VECTOR_GRADIENT_STYLE_LINEAR = 0, LV_VECTOR_GRADIENT_STYLE_RADIAL = 1
 type
-  struct_lv_anim_timeline_t* = object
+  enum_lv_draw_sw_mask_res_t* {.size: sizeof(cuint).} = enum
+    LV_DRAW_SW_MASK_RES_TRANSP = 0, LV_DRAW_SW_MASK_RES_FULL_COVER = 1,
+    LV_DRAW_SW_MASK_RES_CHANGED = 2, LV_DRAW_SW_MASK_RES_UNKNOWN = 3
+type
+  enum_lv_draw_sw_mask_type_t* {.size: sizeof(cuint).} = enum
+    LV_DRAW_SW_MASK_TYPE_LINE = 0, LV_DRAW_SW_MASK_TYPE_ANGLE = 1,
+    LV_DRAW_SW_MASK_TYPE_RADIUS = 2, LV_DRAW_SW_MASK_TYPE_FADE = 3,
+    LV_DRAW_SW_MASK_TYPE_MAP = 4
+type
+  enum_lv_draw_sw_mask_line_side_t* {.size: sizeof(cuint).} = enum
+    LV_DRAW_SW_MASK_LINE_SIDE_LEFT = 0, LV_DRAW_SW_MASK_LINE_SIDE_RIGHT = 1,
+    LV_DRAW_SW_MASK_LINE_SIDE_TOP = 2, LV_DRAW_SW_MASK_LINE_SIDE_BOTTOM = 3
+type
+  struct_lv_image_decoder_args_t* = object
+type
+  struct_lv_rb_node_t* = object
+type
+  struct_lv_image_header_cache_data_t* = object
+type
+  struct_lv_span_t* = object
+type
+  struct_lv_imagebutton_t* = object
+type
+  struct_lv_table_cell_t* = object
+type
+  struct_lv_xkb_t* = object
+type
+  struct_lv_draw_buf_handlers_t* = object
+type
+  lv_area_join* = object
+type
+  struct_lv_draw_sw_mask_map_param_t* = object
+type
+  struct_lv_table_t* = object
+type
+  struct_lv_chart_t* = object
+type
+  struct_lv_fs_file_cache_t* = object
+type
+  struct_lv_matrix_t* = object
+type
+  struct_lv_sysmon_backend_data_t* = object
+type
+  struct_lv_monkey_t* = object
+type
+  struct_lv_draw_mask_t* = object
+type
+  struct_lv_file_explorer_t* = object
 type
   struct_lv_fragment_manager_t* = object
 type
-  lv_result_t* = uint8       ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:63:17
-  lv_uintptr_t* = uintptr_t  ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:68:19
+  struct_lv_line_t* = object
+type
+  struct_lv_theme_t* = object
+type
+  struct_lv_draw_glyph_dsc_t* = object
+type
+  struct_lv_observer_t* = object
+type
+  struct_lv_libinput_event_t* = object
+type
+  struct_lv_freetype_outline_event_param_t* = object
+type
+  struct_lv_cover_check_info_t* = object
+type
+  struct_lv_anim_timeline_t* = object
+type
+  struct_lv_imagebutton_src_info_t* = object
+type
+  LV_LL_READ* = object
+type
+  struct_lv_gif_t* = object
+type
+  struct_lv_win_t* = object
+type
+  LV_FLEX_WRAP* = object
+type
+  struct_lv_vector_gradient_t* = object
+type
+  struct_lv_vector_path_t* = object
+type
+  LV_COORD_MAX* = object
+type
+  struct_lv_draw_sw_blend_dsc_t* = object
+type
+  struct_lv_ffmpeg_player_t* = object
+type
+  struct_lv_indev_t* = object
+type
+  struct_lv_dropdown_t* = object
+type
+  struct_lv_textarea_t* = object
+type
+  struct_lv_vector_stroke_dsc_t* = object
+type
+  struct_lv_image_cache_data_t* = object
+type
+  struct_lv_vector_draw_dsc_t* = object
+type
+  struct_lv_tileview_tile_t* = object
+type
+  lv_event_mark_deleted* = object
+type
+  struct_lv_chart_cursor_t* = object
+type
+  struct_lv_event_t* = object
+type
+  struct_lv_timer_t* = object
+type
+  struct_lv_menu_history_t* = object
+type
+  struct_lv_draw_sw_blend_image_dsc_t* = object
+type
+  struct_lv_obj_style_t* = object
+type
+  struct_lv_libinput_t* = object
+type
+  struct_lv_calendar_t* = object
+type
+  compiler_FILE_private* = object
+type
+  struct_lv_scale_t* = object
+type
+  struct_lv_vector_fill_dsc_t* = object
+type
+  struct_lv_menu_page_t* = object
+type
+  struct_lv_qrcode_t* = object
+type
+  struct_lv_draw_sw_mask_radius_param_t* = object
+type
+  struct_lv_ime_pinyin_t* = object
+type
+  struct_lv_tileview_t* = object
+type
+  struct_lv_group_t* = object
+type
+  lv_area_intersect* = object
+type
+  struct_lv_dropdown_list_t* = object
+type
+  struct_lv_button_t* = object
+type
+  struct_lv_draw_sw_mask_common_dsc_t* = object
+type
+  struct_lv_glfw_window_t* = object
+type
+  struct_lv_image_decoder_dsc_t* = object
+type
+  struct_lv_switch_t* = object
+type
+  struct_lv_canvas_t* = object
+type
+  lv_indev_scroll_handler* = object
+type
+  struct_lv_barcode_t* = object
+type
+  lv_obj_scroll_by_raw* = object
+type
+  struct_lv_image_decoder_t* = object
+type
+  struct_lv_rlottie_t* = object
+type
+  struct_lv_animimg_t* = object
+type
+  lv_display_refr_timer* = object
+type
+  LV_FLEX_COLUMN* = object
+type
+  struct_lv_fs_path_ex_t* = object
+type
+  struct_lv_draw_sw_mask_line_param_t* = object
+type
+  struct_lv_glfw_texture_t* = object
+type
+  LV_LL_READ_BACK* = object
+type
+  struct_lv_draw_sw_mask_fade_param_t* = object
+type
+  lv_inv_area* = object
+type
+  struct_lv_obj_spec_attr_t* = object
+type
+  struct_lv_draw_sw_blend_fill_dsc_t* = object
+type
+  struct_lv_obj_t* = object
+type
+  struct_lv_scale_section_t* = object
+type
+  struct_lv_obj_class_t* = object
+type
+  struct_lv_spinbox_t* = object
+type
+  struct_lv_freetype_outline_vector_t* = object
+type
+  struct_lv_arc_t* = object
+type
+  struct_lv_menu_t* = object
+type
+  struct_lv_chart_series_t* = object
+type
+  struct_lv_vector_dsc_t* = object
+type
+  lv_image_buf_get_transformed_area* = object
+type
+  struct_lv_image_t* = object
+type
+  struct_lv_draw_vector_task_dsc_t* = object
+type
+  struct_lv_roller_t* = object
+type
+  struct_lv_draw_sw_mask_angle_param_t* = object
+type
+  struct_lv_tabview_t* = object
+type
+  lv_area_is_equal* = object
+type
+  struct_lv_draw_label_hint_t* = object
+type
+  struct_lv_label_t* = object
+type
+  struct_lv_draw_sw_unit_t* = object
+type
+  struct_lv_menu_load_page_event_data_t* = object
+type
+  struct_lv_bar_t* = object
+type
+  lv_obj_get_ext_draw_size* = object
+type
+  struct_lv_fragment_managed_states_t* = object
+type
+  lv_area_is_in* = object
+type
+  struct_lv_rb_t* = object
+type
+  compiler_LINE_private* = object
+type
+  struct_lv_slider_t* = object
+type
+  struct_lv_grad_t* = object
+type
+  struct_lv_draw_image_sup_t* = object
+type
+  struct_lv_cache_entry_t* = object
+type
+  struct_lv_obj_style_transition_dsc_t* = object
+type
+  struct_lv_spangroup_t* = object
+type
+  LV_DRAW_BUF_DEFINE_STATIC* = object
+type
+  struct_lv_event_dsc_t* = object
+type
+  struct_lv_draw_mask_rect_dsc_t* = object
+type
+  struct_lv_led_t* = object
+type
+  LV_FLEX_REVERSE* = object
+type
+  struct_lv_bar_anim_t* = object
+type
+  struct_lv_msgbox_t* = object
+type
+  struct_lv_buttonmatrix_t* = object
+type
+  struct_lv_keyboard_t* = object
+type
+  struct_lv_display_t* = object
+type
+  struct_lv_draw_unit_t* = object
+type
+  struct_lv_hit_test_info_t* = object
+type
+  lv_area_is_point_on* = object
+type
+  struct_lv_draw_task_t* = object
+type
+  struct_lv_profiler_builtin_config_t* = object
+type
+  struct_lv_checkbox_t* = object
+type
+  lv_obj_t* = struct_lv_obj_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:89:25
+  lv_obj_class_t* = struct_lv_obj_class_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:98:31
+  lv_event_t* = struct_lv_event_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:110:27
+  lv_event_code_t* = enum_lv_event_code_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../misc/lv_event.h:114:3
+  lv_anim_t* = struct_lv_anim_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:116:26
+  lv_display_t* = struct_lv_display_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:102:29
+  lv_timer_t* = struct_lv_timer_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:112:27
+  lv_result_t* = enum_lv_result_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:58:3
+  lv_uintptr_t* = uintptr_t  ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:62:19
   uintptr_t* = culong        ## Generated based on /usr/include/stdint.h:79:27
-  lv_intptr_t* = intptr_t    ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:69:18
+  lv_intptr_t* = intptr_t    ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:63:18
   intptr_t* = clong          ## Generated based on /usr/include/stdint.h:76:19
-  lv_value_precise_t* = int32 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:87:17
-  lv_obj_t* = struct_lv_obj_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:96:26
-  struct_lv_obj_t* {.pure, inheritable, bycopy.} = object
-    class_p*: ptr lv_obj_class_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/lv_obj.h:217:8
-    parent*: ptr lv_obj_t
-    spec_attr*: ptr internal_lv_obj_spec_attr_t
-    styles*: ptr internal_lv_obj_style_t
-    user_data*: pointer
-    coords*: lv_area_t
-    flags*: lv_obj_flag_t
-    state*: lv_state_t
-    layout_inv*: uint16
-    readjust_scroll_after_layout*: uint16
-    scr_layout_inv*: uint16
-    skip_trans*: uint16
-    style_cnt*: uint16
-    h_layout*: uint16
-    w_layout*: uint16
-    is_deleting*: uint16
-  lv_state_t* = uint16       ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:103:18
-  lv_part_t* = uint32        ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:104:18
-  lv_obj_flag_t* = uint32    ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:105:18
-  lv_obj_class_t* = struct_lv_obj_class_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:109:32
-  struct_lv_obj_class_t* {.pure, inheritable, bycopy.} = object
-    base_class*: ptr lv_obj_class_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/lv_obj_class.h:50:8
-    constructor_cb*: proc (a0: ptr lv_obj_class_t; a1: ptr lv_obj_t): void {.
-        cdecl.}
-    destructor_cb*: proc (a0: ptr lv_obj_class_t; a1: ptr lv_obj_t): void {.
-        cdecl.}
-    event_cb*: proc (a0: ptr lv_obj_class_t; a1: ptr lv_event_t): void {.cdecl.}
-    user_data*: pointer
-    name*: cstring
-    width_def*: int32
-    height_def*: int32
-    editable*: uint32
-    group_def*: uint32
-    instance_size*: uint32
-    theme_inheritable*: uint32
-  lv_group_t* = struct_lv_group_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:112:28
-  struct_lv_group_t* {.pure, inheritable, bycopy.} = object
-    obj_ll*: lv_ll_t         ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../indev/../core/lv_group.h:51:8
-    obj_focus*: ptr ptr lv_obj_t
-    focus_cb*: lv_group_focus_cb_t
-    edge_cb*: lv_group_edge_cb_t
-    user_data*: pointer
-    frozen*: uint8
-    editing*: uint8
-    refocus_policy*: uint8
-    wrap*: uint8
-  lv_key_t* = uint8          ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:117:17
-  lv_display_t* = struct_lv_display_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:121:30
-  lv_layer_t* = struct_lv_layer_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:124:28
+  lv_value_precise_t* = int32 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:81:17
+  lv_state_t* = uint16       ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:91:18
+  lv_part_t* = uint32        ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:92:18
+  lv_opa_t* = uint8          ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:94:17
+  lv_style_prop_t* = uint8   ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:96:17
+  lv_group_t* = struct_lv_group_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:100:27
+  lv_layer_t* = struct_lv_layer_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:104:27
   struct_lv_layer_t* {.pure, inheritable, bycopy.} = object
-    draw_buf*: ptr lv_draw_buf_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/lv_draw.h:147:8
+    draw_buf*: ptr lv_draw_buf_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/lv_draw.h:70:8
     buf_area*: lv_area_t
     color_format*: lv_color_format_t
     internal_clip_area*: lv_area_t
+    phy_clip_area*: lv_area_t
     draw_task_head*: ptr lv_draw_task_t
     parent*: ptr lv_layer_t
     next*: ptr lv_layer_t
     all_tasks_added*: bool
     user_data*: pointer
-  lv_draw_unit_t* = struct_lv_draw_unit_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:126:32
-  struct_lv_draw_unit_t* {.pure, inheritable, bycopy.} = object
-    next*: ptr lv_draw_unit_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/lv_draw.h:105:8
-    target_layer*: ptr lv_layer_t
-    clip_area*: ptr lv_area_t
-    dispatch_cb*: proc (a0: ptr lv_draw_unit_t; a1: ptr lv_layer_t): int32 {.
-        cdecl.}
-    evaluate_cb*: proc (a0: ptr lv_draw_unit_t; a1: ptr lv_draw_task_t): int32 {.
-        cdecl.}
-    delete_cb*: proc (a0: ptr lv_draw_unit_t): int32 {.cdecl.}
-  lv_draw_task_t* = struct_lv_draw_task_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:128:32
-  struct_lv_draw_task_t* {.pure, inheritable, bycopy.} = object
-    next*: ptr lv_draw_task_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/lv_draw.h:57:8
-    type_field*: lv_draw_task_type_t
-    area*: lv_area_t
-    internal_real_area*: lv_area_t
-    clip_area_original*: lv_area_t
-    clip_area*: lv_area_t
-    state*: cint
-    draw_dsc*: pointer
-    preferred_draw_unit_id*: uint8
-    preference_score*: uint8
-  lv_indev_t* = struct_lv_indev_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:131:28
-  lv_event_t* = struct_lv_event_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:134:28
-  struct_lv_event_t* {.pure, inheritable, bycopy.} = object
-    current_target*: pointer ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../misc/lv_event.h:124:8
-    original_target*: pointer
-    code*: lv_event_code_t
-    user_data*: pointer
-    param*: pointer
-    prev*: ptr lv_event_t
-    deleted*: uint8
-    stop_processing*: uint8
-    stop_bubbling*: uint8
-  lv_timer_t* = struct_lv_timer_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:137:28
-  struct_lv_timer_t* {.pure, inheritable, bycopy.} = object
-    period*: uint32          ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_timer.h:46:8
-    last_run*: uint32
-    timer_cb*: lv_timer_cb_t
-    user_data*: pointer
-    repeat_count*: int32
-    paused*: uint32
-    auto_delete*: uint32
-  lv_theme_t* = struct_lv_theme_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:140:28
-  struct_lv_theme_t* {.pure, inheritable, bycopy.} = object
-    apply_cb*: lv_theme_apply_cb_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/themes/lv_theme.h:28:8
-    parent*: ptr lv_theme_t
-    user_data*: pointer
-    disp*: ptr lv_display_t
-    color_primary*: lv_color_t
-    color_secondary*: lv_color_t
-    font_small*: ptr lv_font_t
-    font_normal*: ptr lv_font_t
-    font_large*: ptr lv_font_t
-    flags*: uint32
-  lv_anim_t* = struct_lv_anim_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:143:27
+  lv_draw_unit_t* = struct_lv_draw_unit_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:105:31
+  lv_draw_task_t* = struct_lv_draw_task_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:106:31
+  lv_indev_t* = struct_lv_indev_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:108:27
+  lv_theme_t* = struct_lv_theme_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:114:27
   struct_lv_anim_t_parameter_t* {.union, bycopy.} = object
     bezier3*: lv_anim_bezier3_para_t
   struct_lv_anim_t* {.pure, inheritable, bycopy.} = object
-    var_field*: pointer      ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_anim.h:130:8
+    var_field*: pointer      ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_anim.h:124:8
     exec_cb*: lv_anim_exec_xcb_t
     custom_exec_cb*: lv_anim_custom_exec_cb_t
     start_cb*: lv_anim_start_cb_t
@@ -907,43 +1235,178 @@ type
     repeat_cnt*: uint32
     parameter*: struct_lv_anim_t_parameter_t
     last_timer_run*: uint32
-    playback_now*: uint8
-    run_round*: uint8
-    start_cb_called*: uint8
-    early_apply*: uint8
-  lv_font_t* = struct_lv_font_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:146:27
+    playback_now* {.bitsize: 1'i64.}: uint8
+    run_round* {.bitsize: 1'i64.}: uint8
+    start_cb_called* {.bitsize: 1'i64.}: uint8
+    early_apply* {.bitsize: 1'i64.}: uint8
+  lv_font_t* = struct_lv_font_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:118:26
   struct_lv_font_t* {.pure, inheritable, bycopy.} = object
     get_glyph_dsc*: proc (a0: ptr lv_font_t; a1: ptr lv_font_glyph_dsc_t;
-                          a2: uint32; a3: uint32): bool {.cdecl.} ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_font.h:106:8
+                          a2: uint32; a3: uint32): bool {.cdecl.} ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_font.h:88:8
     get_glyph_bitmap*: proc (a0: ptr lv_font_glyph_dsc_t; a1: ptr lv_draw_buf_t): pointer {.
         cdecl.}
     release_glyph*: proc (a0: ptr lv_font_t; a1: ptr lv_font_glyph_dsc_t): void {.
         cdecl.}
     line_height*: int32
     base_line*: int32
-    subpx*: uint8
-    kerning*: uint8
+    subpx* {.bitsize: 2'i64.}: uint8
+    kerning* {.bitsize: 1'i64.}: uint8
     underline_position*: int8
     underline_thickness*: int8
     dsc*: pointer
     fallback*: ptr lv_font_t
     user_data*: pointer
-  lv_image_decoder_t* = struct_lv_image_decoder_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:149:36
-  struct_lv_image_decoder_t* {.pure, inheritable, bycopy.} = object
-    info_cb*: lv_image_decoder_info_f_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/lv_image_decoder.h:106:8
-    open_cb*: lv_image_decoder_open_f_t
-    get_area_cb*: lv_image_decoder_get_area_cb_t
-    close_cb*: lv_image_decoder_close_f_t
-    name*: cstring
+  lv_image_decoder_t* = struct_lv_image_decoder_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:120:35
+  lv_image_decoder_dsc_t* = struct_lv_image_decoder_dsc_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:122:39
+  lv_fragment_t* = struct_lv_fragment_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:124:30
+  struct_lv_fragment_t* {.pure, inheritable, bycopy.} = object
+    cls*: ptr lv_fragment_class_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/others/fragment/lv_fragment.h:30:8
+    managed*: ptr lv_fragment_managed_states_t
+    child_manager*: ptr lv_fragment_manager_t
+    obj*: ptr lv_obj_t
+  lv_fragment_class_t* = struct_lv_fragment_class_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:125:36
+  struct_lv_fragment_class_t* {.pure, inheritable, bycopy.} = object
+    constructor_cb*: proc (a0: ptr lv_fragment_t; a1: pointer): void {.cdecl.} ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/others/fragment/lv_fragment.h:52:8
+    destructor_cb*: proc (a0: ptr lv_fragment_t): void {.cdecl.}
+    attached_cb*: proc (a0: ptr lv_fragment_t): void {.cdecl.}
+    detached_cb*: proc (a0: ptr lv_fragment_t): void {.cdecl.}
+    create_obj_cb*: proc (a0: ptr lv_fragment_t; a1: ptr lv_obj_t): ptr lv_obj_t {.
+        cdecl.}
+    obj_created_cb*: proc (a0: ptr lv_fragment_t; a1: ptr lv_obj_t): void {.
+        cdecl.}
+    obj_will_delete_cb*: proc (a0: ptr lv_fragment_t; a1: ptr lv_obj_t): void {.
+        cdecl.}
+    obj_deleted_cb*: proc (a0: ptr lv_fragment_t; a1: ptr lv_obj_t): void {.
+        cdecl.}
+    event_cb*: proc (a0: ptr lv_fragment_t; a1: cint; a2: pointer): bool {.cdecl.}
+    instance_size*: csize_t
+  lv_fragment_managed_states_t* = struct_lv_fragment_managed_states_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:126:45
+  lv_profiler_builtin_config_t* = struct_lv_profiler_builtin_config_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:128:45
+  lv_rb_node_t* = struct_lv_rb_node_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:130:29
+  lv_rb_t* = struct_lv_rb_t  ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:132:24
+  lv_color_filter_dsc_t* = struct_lv_color_filter_dsc_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:134:38
+  struct_lv_color_filter_dsc_t* {.pure, inheritable, bycopy.} = object
+    filter_cb*: lv_color_filter_cb_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/../draw/../misc/lv_color_op.h:33:8
     user_data*: pointer
-  lv_prop_id_t* = uint32     ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:151:18
-  lv_sysmon_backend_data_t* = struct_lv_sysmon_backend_data_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:161:42
-  struct_lv_sysmon_backend_data_t* {.pure, inheritable, bycopy.} = object
-    subject*: lv_subject_t   ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/others/sysmon/lv_sysmon.h:38:8
-    timer*: ptr lv_timer_t
-  lv_mem_pool_t* = pointer   ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/stdlib/lv_mem.h:30:16
+  lv_event_dsc_t* = struct_lv_event_dsc_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:136:31
+  lv_fs_file_cache_t* = struct_lv_fs_file_cache_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:138:35
+  lv_fs_path_ex_t* = struct_lv_fs_path_ex_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:140:32
+  lv_image_decoder_args_t* = struct_lv_image_decoder_args_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:142:40
+  lv_image_cache_data_t* = struct_lv_image_cache_data_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:144:38
+  lv_image_header_cache_data_t* = struct_lv_image_header_cache_data_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:146:45
+  lv_draw_mask_t* = struct_lv_draw_mask_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:148:31
+  lv_grad_t* = struct_lv_grad_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:150:26
+  lv_draw_label_hint_t* = struct_lv_draw_label_hint_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:152:37
+  lv_draw_glyph_dsc_t* = struct_lv_draw_glyph_dsc_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:154:36
+  lv_draw_image_sup_t* = struct_lv_draw_image_sup_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:156:36
+  lv_draw_mask_rect_dsc_t* = struct_lv_draw_mask_rect_dsc_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:158:40
+  lv_obj_style_t* = struct_lv_obj_style_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:160:31
+  lv_obj_style_transition_dsc_t* = struct_lv_obj_style_transition_dsc_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:162:46
+  lv_hit_test_info_t* = struct_lv_hit_test_info_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:164:35
+  lv_cover_check_info_t* = struct_lv_cover_check_info_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:166:38
+  lv_obj_spec_attr_t* = struct_lv_obj_spec_attr_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:168:35
+  lv_image_t* = struct_lv_image_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:170:27
+  lv_animimg_t* = struct_lv_animimg_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:172:29
+  lv_arc_t* = struct_lv_arc_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:174:25
+  lv_label_t* = struct_lv_label_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:176:27
+  lv_bar_anim_t* = struct_lv_bar_anim_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:178:30
+  lv_bar_t* = struct_lv_bar_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:180:25
+  lv_button_t* = struct_lv_button_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:182:28
+  lv_buttonmatrix_t* = struct_lv_buttonmatrix_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:184:34
+  lv_calendar_t* = struct_lv_calendar_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:186:30
+  lv_canvas_t* = struct_lv_canvas_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:188:28
+  lv_chart_series_t* = struct_lv_chart_series_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:190:34
+  lv_chart_cursor_t* = struct_lv_chart_cursor_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:192:34
+  lv_chart_t* = struct_lv_chart_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:194:27
+  lv_checkbox_t* = struct_lv_checkbox_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:196:30
+  lv_dropdown_t* = struct_lv_dropdown_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:198:30
+  lv_dropdown_list_t* = struct_lv_dropdown_list_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:200:35
+  lv_imagebutton_src_info_t* = struct_lv_imagebutton_src_info_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:202:42
+  lv_imagebutton_t* = struct_lv_imagebutton_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:204:33
+  lv_keyboard_t* = struct_lv_keyboard_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:206:30
+  lv_led_t* = struct_lv_led_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:208:25
+  lv_line_t* = struct_lv_line_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:210:26
+  lv_menu_load_page_event_data_t* = struct_lv_menu_load_page_event_data_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:212:47
+  lv_menu_history_t* = struct_lv_menu_history_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:214:34
+  lv_menu_t* = struct_lv_menu_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:216:26
+  lv_menu_page_t* = struct_lv_menu_page_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:218:31
+  lv_msgbox_t* = struct_lv_msgbox_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:220:28
+  lv_roller_t* = struct_lv_roller_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:222:28
+  lv_scale_section_t* = struct_lv_scale_section_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:224:35
+  lv_scale_t* = struct_lv_scale_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:226:27
+  lv_slider_t* = struct_lv_slider_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:228:28
+  lv_span_t* = struct_lv_span_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:230:26
+  lv_spangroup_t* = struct_lv_spangroup_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:232:31
+  lv_textarea_t* = struct_lv_textarea_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:234:30
+  lv_spinbox_t* = struct_lv_spinbox_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:236:29
+  lv_switch_t* = struct_lv_switch_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:238:28
+  lv_table_cell_t* = struct_lv_table_cell_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:240:32
+  lv_table_t* = struct_lv_table_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:242:27
+  lv_tabview_t* = struct_lv_tabview_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:244:29
+  lv_tileview_t* = struct_lv_tileview_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:246:30
+  lv_tileview_tile_t* = struct_lv_tileview_tile_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:248:35
+  lv_win_t* = struct_lv_win_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:250:25
+  lv_observer_t* = struct_lv_observer_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:252:30
+  lv_monkey_config_t* = struct_lv_monkey_config_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:254:35
+  struct_lv_monkey_config_t_period_range_t* {.pure, inheritable, bycopy.} = object
+    min*: uint32
+    max*: uint32
+  struct_lv_monkey_config_t_input_range_t* {.pure, inheritable, bycopy.} = object
+    min*: int32
+    max*: int32
+  struct_lv_monkey_config_t* {.pure, inheritable, bycopy.} = object
+    type_field*: lv_indev_type_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/others/monkey/lv_monkey.h:30:8
+    period_range*: struct_lv_monkey_config_t_period_range_t
+    input_range*: struct_lv_monkey_config_t_input_range_t
+  lv_ime_pinyin_t* = struct_lv_ime_pinyin_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:256:32
+  lv_file_explorer_t* = struct_lv_file_explorer_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:258:35
+  lv_barcode_t* = struct_lv_barcode_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:260:29
+  lv_gif_t* = struct_lv_gif_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:262:25
+  lv_qrcode_t* = struct_lv_qrcode_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:264:28
+  lv_freetype_outline_vector_t* = struct_lv_freetype_outline_vector_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:266:45
+  lv_freetype_outline_event_param_t* = struct_lv_freetype_outline_event_param_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:268:50
+  lv_fpoint_t* = struct_lv_fpoint_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:270:28
+  struct_lv_fpoint_t* {.pure, inheritable, bycopy.} = object
+    x*: cfloat               ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/draw/lv_draw_vector.h:89:8
+    y*: cfloat
+  lv_matrix_t* = struct_lv_matrix_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:272:28
+  lv_vector_path_t* = struct_lv_vector_path_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:274:33
+  lv_vector_gradient_t* = struct_lv_vector_gradient_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:276:37
+  lv_vector_fill_dsc_t* = struct_lv_vector_fill_dsc_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:278:37
+  lv_vector_stroke_dsc_t* = struct_lv_vector_stroke_dsc_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:280:39
+  lv_vector_draw_dsc_t* = struct_lv_vector_draw_dsc_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:282:37
+  lv_draw_vector_task_dsc_t* = struct_lv_draw_vector_task_dsc_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:284:42
+  lv_vector_dsc_t* = struct_lv_vector_dsc_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:286:32
+  lv_xkb_t* = struct_lv_xkb_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:288:25
+  lv_libinput_event_t* = struct_lv_libinput_event_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:290:36
+  lv_libinput_t* = struct_lv_libinput_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:292:30
+  lv_draw_sw_unit_t* = struct_lv_draw_sw_unit_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:294:34
+  lv_draw_sw_mask_common_dsc_t* = struct_lv_draw_sw_mask_common_dsc_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:296:45
+  lv_draw_sw_mask_line_param_t* = struct_lv_draw_sw_mask_line_param_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:298:45
+  lv_draw_sw_mask_angle_param_t* = struct_lv_draw_sw_mask_angle_param_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:300:46
+  lv_draw_sw_mask_radius_param_t* = struct_lv_draw_sw_mask_radius_param_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:302:47
+  lv_draw_sw_mask_fade_param_t* = struct_lv_draw_sw_mask_fade_param_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:304:45
+  lv_draw_sw_mask_map_param_t* = struct_lv_draw_sw_mask_map_param_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:306:44
+  lv_draw_sw_blend_dsc_t* = struct_lv_draw_sw_blend_dsc_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:308:39
+  lv_draw_sw_blend_fill_dsc_t* = struct_lv_draw_sw_blend_fill_dsc_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:310:44
+  lv_draw_sw_blend_image_dsc_t* = struct_lv_draw_sw_blend_image_dsc_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:312:45
+  lv_draw_buf_handlers_t* = struct_lv_draw_buf_handlers_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:314:39
+  lv_rlottie_t* = struct_lv_rlottie_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:316:29
+  lv_ffmpeg_player_t* = struct_lv_ffmpeg_player_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:318:35
+  lv_glfw_window_t* = struct_lv_glfw_window_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:320:33
+  lv_glfw_texture_t* = struct_lv_glfw_texture_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:321:34
+  lv_prop_id_t* = uint32     ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:323:18
+  lv_draw_buf_t* = struct_lv_draw_buf_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:325:30
+  struct_lv_draw_buf_t* {.pure, inheritable, bycopy.} = object
+    header*: lv_image_header_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/../draw/lv_draw_buf.h:88:8
+    data_size*: uint32
+    data*: ptr uint8
+    unaligned_data*: pointer
+    handlers*: ptr lv_draw_buf_handlers_t
+  lv_sysmon_backend_data_t* = struct_lv_sysmon_backend_data_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_types.h:333:41
+  lv_mem_pool_t* = pointer   ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/stdlib/lv_mem.h:30:16
   struct_lv_mem_monitor_t* {.pure, inheritable, bycopy.} = object
-    total_size*: csize_t     ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/stdlib/lv_mem.h:35:9
+    total_size*: csize_t     ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/stdlib/lv_mem.h:35:9
     free_cnt*: csize_t
     free_size*: csize_t
     free_biggest_size*: csize_t
@@ -951,154 +1414,110 @@ type
     max_used*: csize_t
     used_pct*: uint8
     frag_pct*: uint8
-  lv_mem_monitor_t* = struct_lv_mem_monitor_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/stdlib/lv_mem.h:44:3
-  lv_log_level_t* = int8     ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_log.h:41:16
-  lv_log_print_g_cb_t* = proc (a0: lv_log_level_t; a1: cstring): void {.cdecl.} ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_log.h:60:16
-  lv_tick_get_cb_t* = proc (): uint32 {.cdecl.} ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/../tick/lv_tick.h:30:20
-  lv_delay_cb_t* = proc (a0: uint32): void {.cdecl.} ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/../tick/lv_tick.h:32:16
-  struct_lv_tick_state_t* {.pure, inheritable, bycopy.} = object
-    sys_time*: uint32        ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/../tick/lv_tick.h:34:9
-    sys_irq_flag*: uint8
-    tick_get_cb*: lv_tick_get_cb_t
-    delay_cb*: lv_delay_cb_t
-  lv_tick_state_t* = struct_lv_tick_state_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/../tick/lv_tick.h:39:3
-  lv_ll_node_t* = uint8      ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_ll.h:28:17
+  lv_mem_monitor_t* = struct_lv_mem_monitor_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/stdlib/lv_mem.h:44:3
+  lv_log_level_t* = int8     ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_log.h:41:16
+  lv_log_print_g_cb_t* = proc (a0: lv_log_level_t; a1: cstring): void {.cdecl.} ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_log.h:60:16
+  lv_tick_get_cb_t* = proc (): uint32 {.cdecl.} ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/../tick/lv_tick.h:30:20
+  lv_delay_cb_t* = proc (a0: uint32): void {.cdecl.} ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/../tick/lv_tick.h:32:16
+  lv_ll_node_t* = uint8      ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_ll.h:28:17
   struct_lv_ll_t* {.pure, inheritable, bycopy.} = object
-    n_size*: uint32          ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_ll.h:31:9
+    n_size*: uint32          ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_ll.h:31:9
     head*: ptr lv_ll_node_t
     tail*: ptr lv_ll_node_t
-  lv_ll_t* = struct_lv_ll_t  ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_ll.h:35:3
-  lv_timer_cb_t* = proc (a0: ptr lv_timer_t): void {.cdecl.} ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_timer.h:36:16
-  lv_timer_handler_resume_cb_t* = proc (a0: pointer): void {.cdecl.} ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_timer.h:41:16
-  struct_lv_timer_state_t* {.pure, inheritable, bycopy.} = object
-    timer_ll*: lv_ll_t       ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_timer.h:56:9
-    lv_timer_run*: bool
-    idle_last*: uint8
-    timer_deleted*: bool
-    timer_created*: bool
-    timer_time_until_next*: uint32
-    already_running*: bool
-    periodic_last_tick*: uint32
-    busy_time*: uint32
-    idle_period_start*: uint32
-    run_cnt*: uint32
-    resume_cb*: lv_timer_handler_resume_cb_t
-    resume_data*: pointer
-  lv_timer_state_t* = struct_lv_timer_state_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_timer.h:73:3
+  lv_ll_t* = struct_lv_ll_t  ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_ll.h:35:3
+  lv_timer_cb_t* = proc (a0: ptr lv_timer_t): void {.cdecl.} ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_timer.h:36:16
+  lv_timer_handler_resume_cb_t* = proc (a0: pointer): void {.cdecl.} ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_timer.h:41:16
   struct_lv_sqrt_res_t* {.pure, inheritable, bycopy.} = object
-    i*: uint16               ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_math.h:39:9
+    i*: uint16               ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_math.h:39:9
     f*: uint16
-  lv_sqrt_res_t* = struct_lv_sqrt_res_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_math.h:42:3
+  lv_sqrt_res_t* = struct_lv_sqrt_res_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_math.h:42:3
   struct_lv_array_t* {.pure, inheritable, bycopy.} = object
-    data*: ptr uint8         ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_array.h:31:9
+    data*: ptr uint8         ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_array.h:35:9
     size*: uint32
     capacity*: uint32
     element_size*: uint32
-  lv_array_t* = struct_lv_array_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_array.h:36:3
-  lv_async_cb_t* = proc (a0: pointer): void {.cdecl.} ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_async.h:30:16
-  lv_anim_enable_t* = enum_lv_anim_enable_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_anim.h:86:3
-  struct_lv_anim_state_t* {.pure, inheritable, bycopy.} = object
-    anim_list_changed*: bool ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_anim.h:88:9
-    anim_run_round*: bool
-    timer*: ptr lv_timer_t
-    anim_ll*: lv_ll_t
-  lv_anim_state_t* = struct_lv_anim_state_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_anim.h:93:3
-  lv_anim_path_cb_t* = proc (a0: ptr lv_anim_t): int32 {.cdecl.} ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_anim.h:96:19
-  lv_anim_exec_xcb_t* = proc (a0: pointer; a1: int32): void {.cdecl.} ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_anim.h:104:16
-  lv_anim_custom_exec_cb_t* = proc (a0: ptr lv_anim_t; a1: int32): void {.cdecl.} ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_anim.h:108:16
-  lv_anim_completed_cb_t* = proc (a0: ptr lv_anim_t): void {.cdecl.} ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_anim.h:111:16
-  lv_anim_start_cb_t* = proc (a0: ptr lv_anim_t): void {.cdecl.} ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_anim.h:114:16
-  lv_anim_get_value_cb_t* = proc (a0: ptr lv_anim_t): int32 {.cdecl.} ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_anim.h:117:19
-  lv_anim_deleted_cb_t* = proc (a0: ptr lv_anim_t): void {.cdecl.} ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_anim.h:120:16
+  lv_array_t* = struct_lv_array_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_array.h:40:3
+  lv_async_cb_t* = proc (a0: pointer): void {.cdecl.} ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_async.h:30:16
+  lv_anim_enable_t* = enum_lv_anim_enable_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_anim.h:86:3
+  lv_anim_path_cb_t* = proc (a0: ptr lv_anim_t): int32 {.cdecl.} ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_anim.h:89:19
+  lv_anim_exec_xcb_t* = proc (a0: pointer; a1: int32): void {.cdecl.} ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_anim.h:97:16
+  lv_anim_custom_exec_cb_t* = proc (a0: ptr lv_anim_t; a1: int32): void {.cdecl.} ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_anim.h:101:16
+  lv_anim_completed_cb_t* = proc (a0: ptr lv_anim_t): void {.cdecl.} ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_anim.h:104:16
+  lv_anim_start_cb_t* = proc (a0: ptr lv_anim_t): void {.cdecl.} ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_anim.h:107:16
+  lv_anim_get_value_cb_t* = proc (a0: ptr lv_anim_t): int32 {.cdecl.} ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_anim.h:110:19
+  lv_anim_deleted_cb_t* = proc (a0: ptr lv_anim_t): void {.cdecl.} ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_anim.h:113:16
   struct_lv_anim_bezier3_para_t* {.pure, inheritable, bycopy.} = object
-    x1*: int16               ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_anim.h:122:16
+    x1*: int16               ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_anim.h:116:9
     y1*: int16
     x2*: int16
     y2*: int16
-  lv_anim_bezier3_para_t* = struct_lv_anim_bezier3_para_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_anim.h:127:3
-  lv_anim_timeline_t* = struct_lv_anim_timeline_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_anim_timeline.h:28:36
-  lv_rb_color_t* = enum_lv_rb_color_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_rb.h:31:3
-  struct_lv_rb_node_t* {.pure, inheritable, bycopy.} = object
-    parent*: ptr struct_lv_rb_node_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_rb.h:33:16
-    left*: ptr struct_lv_rb_node_t
-    right*: ptr struct_lv_rb_node_t
-    color*: lv_rb_color_t
-    data*: pointer
-  lv_rb_node_t* = struct_lv_rb_node_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_rb.h:39:3
-  lv_rb_compare_res_t* = int8 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_rb.h:41:16
+  lv_anim_bezier3_para_t* = struct_lv_anim_bezier3_para_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_anim.h:121:3
+  lv_anim_timeline_t* = struct_lv_anim_timeline_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_anim_timeline.h:28:35
+  lv_rb_color_t* = enum_lv_rb_color_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_rb.h:31:3
+  lv_rb_compare_res_t* = int8 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_rb.h:33:16
   lv_rb_compare_t* = proc (a0: pointer; a1: pointer): lv_rb_compare_res_t {.
-      cdecl.}                ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_rb.h:43:31
-  struct_lv_rb_t* {.pure, inheritable, bycopy.} = object
-    root*: ptr lv_rb_node_t  ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_rb.h:45:9
-    compare*: lv_rb_compare_t
-    size*: csize_t
-  lv_rb_t* = struct_lv_rb_t  ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_rb.h:49:3
+      cdecl.}                ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_rb.h:35:31
   struct_lv_point_t* {.pure, inheritable, bycopy.} = object
-    x*: int32                ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../draw/../misc/lv_area.h:31:9
+    x*: int32                ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/../draw/../misc/lv_area.h:31:9
     y*: int32
-  lv_point_t* = struct_lv_point_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../draw/../misc/lv_area.h:34:3
+  lv_point_t* = struct_lv_point_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/../draw/../misc/lv_area.h:34:3
   struct_lv_point_precise_t* {.pure, inheritable, bycopy.} = object
-    x*: lv_value_precise_t   ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../draw/../misc/lv_area.h:36:9
+    x*: lv_value_precise_t   ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/../draw/../misc/lv_area.h:36:9
     y*: lv_value_precise_t
-  lv_point_precise_t* = struct_lv_point_precise_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../draw/../misc/lv_area.h:39:3
+  lv_point_precise_t* = struct_lv_point_precise_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/../draw/../misc/lv_area.h:39:3
   struct_lv_area_t* {.pure, inheritable, bycopy.} = object
-    x1*: int32               ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../draw/../misc/lv_area.h:42:9
+    x1*: int32               ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/../draw/../misc/lv_area.h:42:9
     y1*: int32
     x2*: int32
     y2*: int32
-  lv_area_t* = struct_lv_area_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../draw/../misc/lv_area.h:47:3
-  lv_align_t* = uint8        ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../draw/../misc/lv_area.h:80:17
-  lv_dir_t* = uint8          ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../draw/../misc/lv_area.h:97:17
-  lv_opa_t* = uint8          ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../draw/../misc/lv_color.h:59:17
+  lv_area_t* = struct_lv_area_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/../draw/../misc/lv_area.h:47:3
+  lv_align_t* = enum_lv_align_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/../draw/../misc/lv_area.h:75:3
+  lv_dir_t* = enum_lv_dir_t  ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/../draw/../misc/lv_area.h:86:3
   struct_lv_color_t* {.pure, inheritable, bycopy.} = object
-    blue*: uint8             ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../draw/../misc/lv_color.h:89:9
+    blue*: uint8             ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/../draw/../misc/lv_color.h:97:9
     green*: uint8
     red*: uint8
-  lv_color_t* = struct_lv_color_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../draw/../misc/lv_color.h:93:3
+  lv_color_t* = struct_lv_color_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/../draw/../misc/lv_color.h:101:3
   struct_lv_color16_t* {.pure, inheritable, bycopy.} = object
-    blue*: uint16            ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../draw/../misc/lv_color.h:95:9
-    green*: uint16
-    red*: uint16
-  lv_color16_t* = struct_lv_color16_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../draw/../misc/lv_color.h:99:3
+    blue* {.bitsize: 5'i64.}: uint16 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/../draw/../misc/lv_color.h:103:9
+    green* {.bitsize: 6'i64.}: uint16
+    red* {.bitsize: 5'i64.}: uint16
+  lv_color16_t* = struct_lv_color16_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/../draw/../misc/lv_color.h:107:3
   struct_lv_color32_t* {.pure, inheritable, bycopy.} = object
-    blue*: uint8             ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../draw/../misc/lv_color.h:101:9
+    blue*: uint8             ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/../draw/../misc/lv_color.h:109:9
     green*: uint8
     red*: uint8
     alpha*: uint8
-  lv_color32_t* = struct_lv_color32_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../draw/../misc/lv_color.h:106:3
+  lv_color32_t* = struct_lv_color32_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/../draw/../misc/lv_color.h:114:3
   struct_lv_color_hsv_t* {.pure, inheritable, bycopy.} = object
-    h*: uint16               ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../draw/../misc/lv_color.h:108:9
+    h*: uint16               ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/../draw/../misc/lv_color.h:116:9
     s*: uint8
     v*: uint8
-  lv_color_hsv_t* = struct_lv_color_hsv_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../draw/../misc/lv_color.h:112:3
+  lv_color_hsv_t* = struct_lv_color_hsv_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/../draw/../misc/lv_color.h:120:3
   struct_lv_color16a_t* {.pure, inheritable, bycopy.} = object
-    lumi*: uint8             ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../draw/../misc/lv_color.h:114:9
+    lumi*: uint8             ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/../draw/../misc/lv_color.h:122:9
     alpha*: uint8
-  lv_color16a_t* = struct_lv_color16a_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../draw/../misc/lv_color.h:117:3
-  lv_color_format_t* = uint8 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../draw/../misc/lv_color.h:184:17
-  lv_palette_t* = enum_lv_palette_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../draw/../misc/lv_palette.h:48:3
+  lv_color16a_t* = struct_lv_color16a_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/../draw/../misc/lv_color.h:125:3
+  lv_color_format_t* = enum_lv_color_format_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/../draw/../misc/lv_color.h:193:3
+  lv_palette_t* = enum_lv_palette_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/../draw/../misc/lv_palette.h:48:3
   lv_color_filter_cb_t* = proc (a0: ptr struct_lv_color_filter_dsc_t;
                                 a1: lv_color_t; a2: lv_opa_t): lv_color_t {.
-      cdecl.}                ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../draw/../misc/lv_color_op.h:31:22
-  struct_lv_color_filter_dsc_t* {.pure, inheritable, bycopy.} = object
-    filter_cb*: lv_color_filter_cb_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../draw/../misc/lv_color_op.h:33:16
-    user_data*: pointer
-  lv_color_filter_dsc_t* = struct_lv_color_filter_dsc_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../draw/../misc/lv_color_op.h:36:3
-  lv_image_flags_t* = enum_lv_image_flags_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../draw/lv_image_dsc.h:69:3
-  lv_image_compress_t* = enum_lv_image_compress_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../draw/lv_image_dsc.h:75:3
+      cdecl.}                ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/../draw/../misc/lv_color_op.h:31:22
+  lv_image_flags_t* = enum_lv_image_flags_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/../draw/lv_image_dsc.h:69:3
+  lv_image_compress_t* = enum_lv_image_compress_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/../draw/lv_image_dsc.h:75:3
   struct_lv_image_header_t* {.pure, inheritable, bycopy.} = object
-    magic*: uint32           ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../draw/lv_image_dsc.h:88:9
-    cf*: uint32
-    flags*: uint32
-    w*: uint32
-    h*: uint32
-    stride*: uint32
-    reserved_2*: uint32
-  lv_image_header_t* = struct_lv_image_header_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../draw/lv_image_dsc.h:97:3
+    magic* {.bitsize: 8'i64.}: uint32 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/../draw/lv_image_dsc.h:88:9
+    cf* {.bitsize: 8'i64.}: uint32
+    flags* {.bitsize: 16'i64.}: uint32
+    w* {.bitsize: 16'i64.}: uint32
+    h* {.bitsize: 16'i64.}: uint32
+    stride* {.bitsize: 16'i64.}: uint32
+    reserved_2* {.bitsize: 16'i64.}: uint32
+  lv_image_header_t* = struct_lv_image_header_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/../draw/lv_image_dsc.h:97:3
   struct_lv_yuv_plane_t* {.pure, inheritable, bycopy.} = object
-    buf*: pointer            ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../draw/lv_image_dsc.h:100:9
+    buf*: pointer            ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/../draw/lv_image_dsc.h:100:9
     stride*: uint32
-  lv_yuv_plane_t* = struct_lv_yuv_plane_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../draw/lv_image_dsc.h:103:3
+  lv_yuv_plane_t* = struct_lv_yuv_plane_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/../draw/lv_image_dsc.h:103:3
   union_lv_yuv_buf_t_planar_t* {.pure, inheritable, bycopy.} = object
     y*: lv_yuv_plane_t
     u*: lv_yuv_plane_t
@@ -1107,61 +1526,47 @@ type
     y*: lv_yuv_plane_t
     uv*: lv_yuv_plane_t
   union_lv_yuv_buf_t* {.union, bycopy.} = object
-    yuv*: lv_yuv_plane_t     ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../draw/lv_image_dsc.h:105:9
+    yuv*: lv_yuv_plane_t     ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/../draw/lv_image_dsc.h:105:9
     planar*: union_lv_yuv_buf_t_planar_t
     semi_planar*: union_lv_yuv_buf_t_semi_planar_t
-  lv_yuv_buf_t* = union_lv_yuv_buf_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../draw/lv_image_dsc.h:116:3
+  lv_yuv_buf_t* = union_lv_yuv_buf_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/../draw/lv_image_dsc.h:116:3
   struct_lv_image_dsc_t* {.pure, inheritable, bycopy.} = object
-    header*: lv_image_header_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../draw/lv_image_dsc.h:122:9
+    header*: lv_image_header_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/../draw/lv_image_dsc.h:122:9
     data_size*: uint32
     data*: ptr uint8
     reserved*: pointer
-  lv_image_dsc_t* = struct_lv_image_dsc_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../draw/lv_image_dsc.h:127:3
-  struct_lv_draw_buf_t* {.pure, inheritable, bycopy.} = object
-    header*: lv_image_header_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../draw/lv_draw_buf.h:33:9
-    data_size*: uint32
-    data*: ptr uint8
-    unaligned_data*: pointer
-  lv_draw_buf_t* = struct_lv_draw_buf_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../draw/lv_draw_buf.h:38:3
+  lv_image_dsc_t* = struct_lv_image_dsc_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/../draw/lv_image_dsc.h:127:3
   lv_draw_buf_malloc_cb* = proc (a0: csize_t; a1: lv_color_format_t): pointer {.
-      cdecl.}                ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../draw/lv_draw_buf.h:84:18
-  lv_draw_buf_free_cb* = proc (a0: pointer): void {.cdecl.} ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../draw/lv_draw_buf.h:86:16
+      cdecl.}                ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/../draw/lv_draw_buf.h:78:18
+  lv_draw_buf_free_cb* = proc (a0: pointer): void {.cdecl.} ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/../draw/lv_draw_buf.h:80:16
   lv_draw_buf_align_cb* = proc (a0: pointer; a1: lv_color_format_t): pointer {.
-      cdecl.}                ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../draw/lv_draw_buf.h:88:18
+      cdecl.}                ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/../draw/lv_draw_buf.h:82:18
   lv_draw_buf_cache_operation_cb* = proc (a0: ptr lv_draw_buf_t;
-      a1: ptr lv_area_t): void {.cdecl.} ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../draw/lv_draw_buf.h:90:16
+      a1: ptr lv_area_t): void {.cdecl.} ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/../draw/lv_draw_buf.h:84:16
   lv_draw_buf_width_to_stride_cb* = proc (a0: uint32; a1: lv_color_format_t): uint32 {.
-      cdecl.}                ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../draw/lv_draw_buf.h:92:20
-  struct_lv_draw_buf_handlers_t* {.pure, inheritable, bycopy.} = object
-    buf_malloc_cb*: lv_draw_buf_malloc_cb ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../draw/lv_draw_buf.h:94:9
-    buf_free_cb*: lv_draw_buf_free_cb
-    align_pointer_cb*: lv_draw_buf_align_cb
-    invalidate_cache_cb*: lv_draw_buf_cache_operation_cb
-    flush_cache_cb*: lv_draw_buf_cache_operation_cb
-    width_to_stride_cb*: lv_draw_buf_width_to_stride_cb
-  lv_draw_buf_handlers_t* = struct_lv_draw_buf_handlers_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../draw/lv_draw_buf.h:101:3
-  lv_mutex_t* = cint         ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../misc/cache/../../osal/lv_os_none.h:25:13
-  lv_thread_t* = cint        ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../misc/cache/../../osal/lv_os_none.h:26:13
-  lv_thread_sync_t* = cint   ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../misc/cache/../../osal/lv_os_none.h:27:13
-  lv_thread_prio_t* = enum_lv_thread_prio_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../misc/cache/../../osal/lv_os.h:55:3
-  lv_cache_reserve_cond_res_t* = enum_lv_cache_reserve_cond_res_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../misc/cache/lv_cache_private.h:35:3
-  lv_cache_ops_t* = struct_lv_cache_ops_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../misc/cache/lv_cache_private.h:42:32
+      cdecl.}                ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/../draw/lv_draw_buf.h:86:20
+  lv_mutex_t* = cint         ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../misc/cache/../../osal/lv_os_none.h:25:13
+  lv_thread_t* = cint        ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../misc/cache/../../osal/lv_os_none.h:26:13
+  lv_thread_sync_t* = cint   ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../misc/cache/../../osal/lv_os_none.h:27:13
+  lv_thread_prio_t* = enum_lv_thread_prio_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../misc/cache/../../osal/lv_os.h:55:3
+  lv_cache_reserve_cond_res_t* = enum_lv_cache_reserve_cond_res_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../misc/cache/lv_cache_private.h:35:3
+  lv_cache_ops_t* = struct_lv_cache_ops_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../misc/cache/lv_cache_private.h:42:31
   struct_lv_cache_ops_t* {.pure, inheritable, bycopy.} = object
-    compare_cb*: lv_cache_compare_cb_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../misc/cache/lv_cache_private.h:113:8
+    compare_cb*: lv_cache_compare_cb_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../misc/cache/lv_cache_private.h:113:8
     create_cb*: lv_cache_create_cb_t
     free_cb*: lv_cache_free_cb_t
-  lv_cache_t* = struct_lv_cache_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../misc/cache/lv_cache_private.h:43:28
+  lv_cache_t* = struct_lv_cache_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../misc/cache/lv_cache_private.h:43:27
   struct_lv_cache_t* {.pure, inheritable, bycopy.} = object
-    clz*: ptr lv_cache_class_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../misc/cache/lv_cache_private.h:122:8
+    clz*: ptr lv_cache_class_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../misc/cache/lv_cache_private.h:122:8
     node_size*: uint32
     max_size*: uint32
     size*: uint32
     ops*: lv_cache_ops_t
     lock*: lv_mutex_t
     name*: cstring
-  lv_cache_class_t* = struct_lv_cache_class_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../misc/cache/lv_cache_private.h:44:34
+  lv_cache_class_t* = struct_lv_cache_class_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../misc/cache/lv_cache_private.h:44:33
   struct_lv_cache_class_t* {.pure, inheritable, bycopy.} = object
-    alloc_cb*: lv_cache_alloc_cb_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../misc/cache/lv_cache_private.h:144:8
+    alloc_cb*: lv_cache_alloc_cb_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../misc/cache/lv_cache_private.h:146:8
     init_cb*: lv_cache_init_cb_t
     destroy_cb*: lv_cache_destroy_cb_t
     get_cb*: lv_cache_get_cb_t
@@ -1171,117 +1576,105 @@ type
     drop_all_cb*: lv_cache_drop_all_cb_t
     get_victim_cb*: lv_cache_get_victim_cb
     reserve_cond_cb*: lv_cache_reserve_cond_cb
-  lv_cache_entry_t* = struct_lv_cache_entry_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../misc/cache/lv_cache_private.h:45:34
-  lv_cache_compare_res_t* = int8 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../misc/cache/lv_cache_private.h:47:16
-  lv_cache_create_cb_t* = proc (a0: pointer; a1: pointer): bool {.cdecl.} ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../misc/cache/lv_cache_private.h:48:16
-  lv_cache_free_cb_t* = proc (a0: pointer; a1: pointer): void {.cdecl.} ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../misc/cache/lv_cache_private.h:49:16
+  lv_cache_entry_t* = struct_lv_cache_entry_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../misc/cache/lv_cache_private.h:45:33
+  lv_cache_compare_res_t* = int8 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../misc/cache/lv_cache_private.h:47:16
+  lv_cache_create_cb_t* = proc (a0: pointer; a1: pointer): bool {.cdecl.} ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../misc/cache/lv_cache_private.h:48:16
+  lv_cache_free_cb_t* = proc (a0: pointer; a1: pointer): void {.cdecl.} ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../misc/cache/lv_cache_private.h:49:16
   lv_cache_compare_cb_t* = proc (a0: pointer; a1: pointer): lv_cache_compare_res_t {.
-      cdecl.}                ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../misc/cache/lv_cache_private.h:50:34
-  lv_cache_alloc_cb_t* = proc (): pointer {.cdecl.} ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../misc/cache/lv_cache_private.h:56:18
-  lv_cache_init_cb_t* = proc (a0: ptr lv_cache_t): bool {.cdecl.} ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../misc/cache/lv_cache_private.h:62:16
-  lv_cache_destroy_cb_t* = proc (a0: ptr lv_cache_t; a1: pointer): void {.cdecl.} ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../misc/cache/lv_cache_private.h:67:16
+      cdecl.}                ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../misc/cache/lv_cache_private.h:50:34
+  lv_cache_alloc_cb_t* = proc (): pointer {.cdecl.} ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../misc/cache/lv_cache_private.h:56:18
+  lv_cache_init_cb_t* = proc (a0: ptr lv_cache_t): bool {.cdecl.} ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../misc/cache/lv_cache_private.h:62:16
+  lv_cache_destroy_cb_t* = proc (a0: ptr lv_cache_t; a1: pointer): void {.cdecl.} ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../misc/cache/lv_cache_private.h:67:16
   lv_cache_get_cb_t* = proc (a0: ptr lv_cache_t; a1: pointer; a2: pointer): ptr lv_cache_entry_t {.
-      cdecl.}                ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../misc/cache/lv_cache_private.h:73:30
+      cdecl.}                ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../misc/cache/lv_cache_private.h:73:30
   lv_cache_add_cb_t* = proc (a0: ptr lv_cache_t; a1: pointer; a2: pointer): ptr lv_cache_entry_t {.
-      cdecl.}                ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../misc/cache/lv_cache_private.h:80:30
+      cdecl.}                ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../misc/cache/lv_cache_private.h:80:30
   lv_cache_remove_cb_t* = proc (a0: ptr lv_cache_t; a1: ptr lv_cache_entry_t;
-                                a2: pointer): void {.cdecl.} ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../misc/cache/lv_cache_private.h:86:16
+                                a2: pointer): void {.cdecl.} ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../misc/cache/lv_cache_private.h:86:16
   lv_cache_drop_cb_t* = proc (a0: ptr lv_cache_t; a1: pointer; a2: pointer): void {.
-      cdecl.}                ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../misc/cache/lv_cache_private.h:91:16
-  lv_cache_drop_all_cb_t* = proc (a0: ptr lv_cache_t; a1: pointer): void {.cdecl.} ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../misc/cache/lv_cache_private.h:96:16
+      cdecl.}                ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../misc/cache/lv_cache_private.h:91:16
+  lv_cache_drop_all_cb_t* = proc (a0: ptr lv_cache_t; a1: pointer): void {.cdecl.} ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../misc/cache/lv_cache_private.h:96:16
   lv_cache_get_victim_cb* = proc (a0: ptr lv_cache_t; a1: pointer): ptr lv_cache_entry_t {.
-      cdecl.}                ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../misc/cache/lv_cache_private.h:101:30
+      cdecl.}                ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../misc/cache/lv_cache_private.h:101:30
   lv_cache_reserve_cond_cb* = proc (a0: ptr lv_cache_t; a1: pointer;
                                     a2: csize_t; a3: pointer): lv_cache_reserve_cond_res_t {.
-      cdecl.}                ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../misc/cache/lv_cache_private.h:107:39
-  lv_cache_slot_size_t* = struct_lv_cache_slot_size_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../misc/cache/lv_cache_private.h:164:38
+      cdecl.}                ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../misc/cache/lv_cache_private.h:107:39
+  lv_cache_slot_size_t* = struct_lv_cache_slot_size_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../misc/cache/lv_cache_private.h:166:37
   struct_lv_cache_slot_size_t* {.pure, inheritable, bycopy.} = object
-    size*: csize_t           ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../misc/cache/lv_cache_private.h:171:8
-  lv_font_glyph_format_t* = uint8 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_font.h:57:17
+    size*: csize_t           ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../misc/cache/lv_cache_private.h:174:8
+  lv_font_glyph_format_t* = enum_lv_font_glyph_format_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_font.h:52:3
   struct_lv_font_glyph_dsc_t_gid_t* {.union, bycopy.} = object
     index*: uint32
     src*: pointer
   struct_lv_font_glyph_dsc_t* {.pure, inheritable, bycopy.} = object
-    resolved_font*: ptr lv_font_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_font.h:61:9
+    resolved_font*: ptr lv_font_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_font.h:55:9
     adv_w*: uint16
     box_w*: uint16
     box_h*: uint16
     ofs_x*: int16
     ofs_y*: int16
     format*: lv_font_glyph_format_t
-    is_placeholder*: uint8
+    is_placeholder* {.bitsize: 1'i64.}: uint8
     gid*: struct_lv_font_glyph_dsc_t_gid_t
     entry*: ptr lv_cache_entry_t
-  lv_font_glyph_dsc_t* = struct_lv_font_glyph_dsc_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_font.h:77:3
-  lv_font_subpx_t* = uint8   ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_font.h:90:17
-  lv_font_kerning_t* = uint8 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_font.h:102:17
-  lv_text_flag_t* = uint8    ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/lv_text.h:47:17
-  lv_text_align_t* = uint8   ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/lv_text.h:61:17
-  lv_base_dir_t* = uint8     ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/lv_bidi.h:43:17
-  lv_layout_update_cb_t* = proc (a0: ptr lv_obj_t; a1: pointer): void {.cdecl.} ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../layouts/lv_layout.h:27:16
-  struct_lv_layout_dsc_t* {.pure, inheritable, bycopy.} = object
-    cb*: lv_layout_update_cb_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../layouts/lv_layout.h:28:9
-    user_data*: pointer
-  lv_layout_dsc_t* = struct_lv_layout_dsc_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../layouts/lv_layout.h:31:3
-  lv_layout_t* = enum_lv_layout_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../layouts/lv_layout.h:45:3
-  lv_flex_align_t* = enum_lv_flex_align_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../layouts/flex/lv_flex.h:42:3
-  lv_flex_flow_t* = enum_lv_flex_flow_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../layouts/flex/lv_flex.h:53:3
-  lv_grid_align_t* = enum_lv_grid_align_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../layouts/grid/lv_grid.h:51:3
-  lv_blend_mode_t* = uint8   ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/lv_style.h:90:17
-  lv_text_decor_t* = uint8   ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/lv_style.h:106:17
-  lv_border_side_t* = uint8  ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/lv_style.h:126:17
-  lv_grad_dir_t* = uint8     ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/lv_style.h:155:17
-  lv_grad_type_t* = uint8    ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/lv_style.h:156:17
-  lv_grad_extend_t* = uint8  ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/lv_style.h:157:17
+  lv_font_glyph_dsc_t* = struct_lv_font_glyph_dsc_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_font.h:71:3
+  lv_font_subpx_t* = enum_lv_font_subpx_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_font.h:79:3
+  lv_font_kerning_t* = enum_lv_font_kerning_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_font.h:85:3
+  lv_text_flag_t* = enum_lv_text_flag_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/lv_text.h:46:3
+  lv_text_align_t* = enum_lv_text_align_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/lv_text.h:54:3
+  lv_base_dir_t* = enum_lv_base_dir_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/lv_bidi.h:38:3
+  lv_layout_update_cb_t* = proc (a0: ptr lv_obj_t; a1: pointer): void {.cdecl.} ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../layouts/lv_layout.h:27:16
+  lv_layout_t* = enum_lv_layout_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../layouts/lv_layout.h:41:3
+  lv_flex_align_t* = enum_lv_flex_align_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../layouts/flex/lv_flex.h:42:3
+  lv_flex_flow_t* = enum_lv_flex_flow_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../layouts/flex/lv_flex.h:53:3
+  lv_grid_align_t* = enum_lv_grid_align_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../layouts/grid/lv_grid.h:51:3
+  lv_blend_mode_t* = enum_lv_blend_mode_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/lv_style.h:83:3
+  lv_text_decor_t* = enum_lv_text_decor_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/lv_style.h:93:3
+  lv_border_side_t* = enum_lv_border_side_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/lv_style.h:107:3
+  lv_grad_dir_t* = enum_lv_grad_dir_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/lv_style.h:119:3
+  lv_grad_extend_t* = enum_lv_grad_extend_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/lv_style.h:128:3
   struct_lv_gradient_stop_t* {.pure, inheritable, bycopy.} = object
-    color*: lv_color_t       ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/lv_style.h:163:9
+    color*: lv_color_t       ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/lv_style.h:133:9
     opa*: lv_opa_t
     frac*: uint8
-  lv_gradient_stop_t* = struct_lv_gradient_stop_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/lv_style.h:167:3
+  lv_gradient_stop_t* = struct_lv_gradient_stop_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/lv_style.h:137:3
   struct_lv_grad_dsc_t* {.pure, inheritable, bycopy.} = object
-    stops*: array[2'i64, lv_gradient_stop_t] ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/lv_style.h:170:9
+    stops*: array[2'i64, lv_gradient_stop_t] ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/lv_style.h:140:9
     stops_count*: uint8
-    dir*: lv_grad_dir_t
-    extend*: lv_grad_extend_t
-  lv_grad_dsc_t* = struct_lv_grad_dsc_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/lv_style.h:202:3
+    dir* {.bitsize: 3'i64.}: lv_grad_dir_t
+    extend* {.bitsize: 2'i64.}: lv_grad_extend_t
+  lv_grad_dsc_t* = struct_lv_grad_dsc_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/lv_style.h:172:3
   union_lv_style_value_t* {.union, bycopy.} = object
-    num*: int32              ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/lv_style.h:207:9
+    num*: int32              ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/lv_style.h:177:9
     ptr_field*: pointer
     color*: lv_color_t
-  lv_style_value_t* = union_lv_style_value_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/lv_style.h:211:3
-  lv_style_prop_t* = uint8   ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/lv_style.h:373:17
-  lv_style_res_t* = uint8    ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/lv_style.h:384:17
+  lv_style_value_t* = union_lv_style_value_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/lv_style.h:181:3
+  lv_style_res_t* = enum_lv_style_res_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/lv_style.h:343:3
   struct_lv_style_transition_dsc_t* {.pure, inheritable, bycopy.} = object
-    props*: ptr lv_style_prop_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/lv_style.h:390:9
+    props*: ptr lv_style_prop_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/lv_style.h:348:9
     user_data*: pointer
     path_xcb*: lv_anim_path_cb_t
     time*: uint32
     delay*: uint32
-  lv_style_transition_dsc_t* = struct_lv_style_transition_dsc_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/lv_style.h:396:3
+  lv_style_transition_dsc_t* = struct_lv_style_transition_dsc_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/lv_style.h:354:3
   struct_lv_style_const_prop_t* {.pure, inheritable, bycopy.} = object
-    prop_ptr*: ptr lv_style_prop_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/lv_style.h:401:9
+    prop*: lv_style_prop_t   ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/lv_style.h:359:9
     value*: lv_style_value_t
-  lv_style_const_prop_t* = struct_lv_style_const_prop_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/lv_style.h:404:3
+  lv_style_const_prop_t* = struct_lv_style_const_prop_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/lv_style.h:362:3
   struct_lv_style_t* {.pure, inheritable, bycopy.} = object
-    sentinel*: uint32        ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/lv_style.h:409:9
+    sentinel*: uint32        ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/lv_style.h:367:9
     values_and_props*: pointer
     has_group*: uint32
     prop_cnt*: uint8
-  lv_style_t* = struct_lv_style_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/lv_style.h:419:3
-  lv_event_cb_t* = proc (a0: ptr lv_event_t): void {.cdecl.} ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../misc/lv_event.h:29:16
-  struct_lv_event_dsc_t* {.pure, inheritable, bycopy.} = object
-    cb*: lv_event_cb_t       ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../misc/lv_event.h:31:9
-    user_data*: pointer
-    filter*: uint32
-  lv_event_dsc_t* = struct_lv_event_dsc_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../misc/lv_event.h:35:3
-  lv_event_code_t* = enum_lv_event_code_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../misc/lv_event.h:120:3
-  lv_event_list_t* = lv_array_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../misc/lv_event.h:122:20
-  lv_fs_res_t* = uint8       ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/../misc/lv_fs.h:53:17
-  lv_fs_mode_t* = uint8      ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/../misc/lv_fs.h:67:17
-  lv_fs_whence_t* = enum_lv_fs_whence_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/../misc/lv_fs.h:77:3
-  lv_fs_drv_t* = struct_lv_fs_drv_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/../misc/lv_fs.h:80:29
+  lv_style_t* = struct_lv_style_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/lv_style.h:377:3
+  lv_event_cb_t* = proc (a0: ptr lv_event_t): void {.cdecl.} ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../misc/lv_event.h:29:16
+  lv_event_list_t* = lv_array_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../misc/lv_event.h:116:20
+  lv_fs_res_t* = enum_lv_fs_res_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/../misc/lv_fs.h:48:3
+  lv_fs_mode_t* = enum_lv_fs_mode_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/../misc/lv_fs.h:56:3
+  lv_fs_whence_t* = enum_lv_fs_whence_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/../misc/lv_fs.h:65:3
+  lv_fs_drv_t* = struct_lv_fs_drv_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/../misc/lv_fs.h:68:28
   struct_lv_fs_drv_t* {.pure, inheritable, bycopy.} = object
-    letter*: cschar          ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/../misc/lv_fs.h:81:8
+    letter*: cschar          ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/../misc/lv_fs.h:69:8
     cache_size*: uint32
     ready_cb*: proc (a0: ptr lv_fs_drv_t): bool {.cdecl.}
     open_cb*: proc (a0: ptr lv_fs_drv_t; a1: cstring; a2: lv_fs_mode_t): pointer {.
@@ -1300,104 +1693,57 @@ type
                         a3: uint32): lv_fs_res_t {.cdecl.}
     dir_close_cb*: proc (a0: ptr lv_fs_drv_t; a1: pointer): lv_fs_res_t {.cdecl.}
     user_data*: pointer
-  struct_lv_fs_file_cache_t* {.pure, inheritable, bycopy.} = object
-    start*: uint32           ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/../misc/lv_fs.h:100:9
-    end_field*: uint32
-    file_position*: uint32
-    buffer*: pointer
-  lv_fs_file_cache_t* = struct_lv_fs_file_cache_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/../misc/lv_fs.h:105:3
   struct_lv_fs_file_t* {.pure, inheritable, bycopy.} = object
-    file_d*: pointer         ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/../misc/lv_fs.h:107:9
+    file_d*: pointer         ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/../misc/lv_fs.h:88:9
     drv*: ptr lv_fs_drv_t
     cache*: ptr lv_fs_file_cache_t
-  lv_fs_file_t* = struct_lv_fs_file_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/../misc/lv_fs.h:111:3
-  struct_lv_fs_path_ex_t* {.pure, inheritable, bycopy.} = object
-    path*: array[4'i64, cschar] ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/../misc/lv_fs.h:114:9
-    buffer*: pointer
-    size*: uint32
-  lv_fs_path_ex_t* = struct_lv_fs_path_ex_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/../misc/lv_fs.h:118:3
+  lv_fs_file_t* = struct_lv_fs_file_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/../misc/lv_fs.h:92:3
   struct_lv_fs_dir_t* {.pure, inheritable, bycopy.} = object
-    dir_d*: pointer          ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/../misc/lv_fs.h:120:9
+    dir_d*: pointer          ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/../misc/lv_fs.h:95:9
     drv*: ptr lv_fs_drv_t
-  lv_fs_dir_t* = struct_lv_fs_dir_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/../misc/lv_fs.h:123:3
-  lv_image_src_t* = uint8    ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/lv_image_decoder.h:44:17
-  lv_image_decoder_dsc_t* = struct_lv_image_decoder_dsc_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/lv_image_decoder.h:49:40
-  struct_lv_image_decoder_dsc_t* {.pure, inheritable, bycopy.} = object
-    decoder*: ptr lv_image_decoder_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/lv_image_decoder.h:137:8
-    args*: lv_image_decoder_args_t
-    src*: pointer
-    src_type*: lv_image_src_t
-    header*: lv_image_header_t
-    decoded*: ptr lv_draw_buf_t
-    palette*: ptr lv_color32_t
-    palette_size*: uint32
-    time_to_open*: uint32
-    error_msg*: cstring
-    cache*: ptr lv_cache_t
-    cache_entry*: ptr lv_cache_entry_t
-    user_data*: pointer
-  struct_lv_image_decoder_args_t* {.pure, inheritable, bycopy.} = object
-    stride_align*: bool      ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/lv_image_decoder.h:60:16
-    premultiply*: bool
-    no_cache*: bool
-    use_indexed*: bool
-    flush_cache*: bool
-  lv_image_decoder_args_t* = struct_lv_image_decoder_args_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/lv_image_decoder.h:66:3
-  lv_image_decoder_info_f_t* = proc (a0: ptr lv_image_decoder_t; a1: pointer;
+  lv_fs_dir_t* = struct_lv_fs_dir_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/../misc/lv_fs.h:98:3
+  lv_image_src_t* = enum_lv_image_src_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/lv_image_decoder.h:39:3
+  lv_image_decoder_info_f_t* = proc (a0: ptr lv_image_decoder_t;
+                                     a1: ptr lv_image_decoder_dsc_t;
                                      a2: ptr lv_image_header_t): lv_result_t {.
-      cdecl.}                ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/lv_image_decoder.h:75:23
+      cdecl.}                ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/lv_image_decoder.h:48:23
   lv_image_decoder_open_f_t* = proc (a0: ptr lv_image_decoder_t;
                                      a1: ptr lv_image_decoder_dsc_t): lv_result_t {.
-      cdecl.}                ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/lv_image_decoder.h:83:23
+      cdecl.}                ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/lv_image_decoder.h:56:23
   lv_image_decoder_get_area_cb_t* = proc (a0: ptr lv_image_decoder_t;
       a1: ptr lv_image_decoder_dsc_t; a2: ptr lv_area_t; a3: ptr lv_area_t): lv_result_t {.
-      cdecl.}                ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/lv_image_decoder.h:95:23
+      cdecl.}                ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/lv_image_decoder.h:68:23
   lv_image_decoder_close_f_t* = proc (a0: ptr lv_image_decoder_t;
                                       a1: ptr lv_image_decoder_dsc_t): void {.
-      cdecl.}                ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/lv_image_decoder.h:104:16
-  struct_lv_image_decoder_cache_data_t* {.pure, inheritable, bycopy.} = object
-    slot*: lv_cache_slot_size_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/lv_image_decoder.h:117:16
-    src*: pointer
-    src_type*: lv_image_src_t
-    decoded*: ptr lv_draw_buf_t
-    decoder*: ptr lv_image_decoder_t
-    user_data*: pointer
-  lv_image_cache_data_t* = struct_lv_image_decoder_cache_data_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/lv_image_decoder.h:126:3
-  struct_lv_image_decoder_header_cache_data_t* {.pure, inheritable, bycopy.} = object
-    src*: pointer            ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/lv_image_decoder.h:128:16
-    src_type*: lv_image_src_t
-    header*: lv_image_header_t
-    decoder*: ptr lv_image_decoder_t
-  lv_image_header_cache_data_t* = struct_lv_image_decoder_header_cache_data_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/lv_image_decoder.h:134:3
-  lv_draw_task_type_t* = enum_lv_draw_task_type_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/lv_draw.h:48:3
-  lv_draw_task_state_t* = enum_lv_draw_task_state_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/lv_draw.h:55:3
-  struct_lv_draw_mask_t* {.pure, inheritable, bycopy.} = object
-    user_data*: pointer      ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/lv_draw.h:101:9
-  lv_draw_mask_t* = struct_lv_draw_mask_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/lv_draw.h:103:3
+      cdecl.}                ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/lv_image_decoder.h:77:16
+  lv_draw_task_type_t* = enum_lv_draw_task_type_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/lv_draw.h:61:3
+  lv_draw_task_state_t* = enum_lv_draw_task_state_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/lv_draw.h:68:3
   struct_lv_draw_dsc_base_t* {.pure, inheritable, bycopy.} = object
-    obj*: ptr lv_obj_t       ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/lv_draw.h:177:9
+    obj*: ptr lv_obj_t       ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/lv_draw.h:110:9
     part*: lv_part_t
     id1*: uint32
     id2*: uint32
     layer*: ptr lv_layer_t
     dsc_size*: csize_t
     user_data*: pointer
-  lv_draw_dsc_base_t* = struct_lv_draw_dsc_base_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/lv_draw.h:185:3
-  struct_lv_draw_global_info_t* {.pure, inheritable, bycopy.} = object
-    unit_head*: ptr lv_draw_unit_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/lv_draw.h:187:9
-    used_memory_for_layers_kb*: uint32
-    dispatch_req*: cint
-    circle_cache_mutex*: lv_mutex_t
-    task_running*: bool
-  lv_draw_global_info_t* = struct_lv_draw_global_info_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/lv_draw.h:197:3
-  lv_grad_color_t* = lv_color_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/sw/lv_draw_sw_gradient.h:37:20
-  struct_lv_gradient_cache_t* {.pure, inheritable, bycopy.} = object
-    color_map*: ptr lv_color_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/sw/lv_draw_sw_gradient.h:39:16
-    opa_map*: ptr lv_opa_t
-    size*: uint32
-  lv_grad_t* = struct_lv_gradient_cache_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/sw/lv_draw_sw_gradient.h:43:3
+  lv_draw_dsc_base_t* = struct_lv_draw_dsc_base_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/lv_draw.h:118:3
+  lv_display_rotation_t* = enum_lv_display_rotation_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/lv_display.h:39:3
+  lv_display_render_mode_t* = enum_lv_display_render_mode_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/lv_display.h:60:3
+  lv_screen_load_anim_t* = enum_lv_screen_load_anim_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/lv_display.h:79:3
+  lv_display_flush_cb_t* = proc (a0: ptr lv_display_t; a1: ptr lv_area_t;
+                                 a2: ptr uint8): void {.cdecl.} ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/lv_display.h:81:16
+  lv_display_flush_wait_cb_t* = proc (a0: ptr lv_display_t): void {.cdecl.} ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/lv_display.h:82:16
+  lv_obj_tree_walk_res_t* = enum_lv_obj_tree_walk_res_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/lv_obj_tree.h:32:3
+  lv_obj_tree_walk_cb_t* = proc (a0: ptr lv_obj_t; a1: pointer): lv_obj_tree_walk_res_t {.
+      cdecl.}                ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/lv_obj_tree.h:34:34
+  lv_obj_point_transform_flag_t* = enum_lv_obj_point_transform_flag_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/lv_obj_pos.h:38:3
+  lv_scrollbar_mode_t* = enum_lv_scrollbar_mode_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/lv_obj_scroll.h:36:3
+  lv_scroll_snap_t* = enum_lv_scroll_snap_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/lv_obj_scroll.h:44:3
+  lv_style_state_cmp_t* = enum_lv_style_state_cmp_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/lv_obj_style.h:33:3
+  lv_style_selector_t* = uint32 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/lv_obj_style.h:35:18
+  lv_grad_color_t* = lv_color_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../draw/sw/lv_draw_sw_gradient.h:37:20
   struct_lv_draw_rect_dsc_t* {.pure, inheritable, bycopy.} = object
-    base*: lv_draw_dsc_base_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/lv_draw_rect.h:32:9
+    base*: lv_draw_dsc_base_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../draw/lv_draw_rect.h:32:9
     radius*: int32
     bg_opa*: lv_opa_t
     bg_color*: lv_color_t
@@ -1411,8 +1757,8 @@ type
     border_color*: lv_color_t
     border_width*: int32
     border_opa*: lv_opa_t
-    border_side*: lv_border_side_t
-    border_post*: uint8
+    border_side* {.bitsize: 5'i64.}: lv_border_side_t
+    border_post* {.bitsize: 1'i64.}: uint8
     outline_color*: lv_color_t
     outline_width*: int32
     outline_pad*: int32
@@ -1423,24 +1769,24 @@ type
     shadow_offset_y*: int32
     shadow_spread*: int32
     shadow_opa*: lv_opa_t
-  lv_draw_rect_dsc_t* = struct_lv_draw_rect_dsc_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/lv_draw_rect.h:70:3
+  lv_draw_rect_dsc_t* = struct_lv_draw_rect_dsc_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../draw/lv_draw_rect.h:70:3
   struct_lv_draw_fill_dsc_t* {.pure, inheritable, bycopy.} = object
-    base*: lv_draw_dsc_base_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/lv_draw_rect.h:72:9
+    base*: lv_draw_dsc_base_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../draw/lv_draw_rect.h:72:9
     radius*: int32
     opa*: lv_opa_t
     color*: lv_color_t
     grad*: lv_grad_dsc_t
-  lv_draw_fill_dsc_t* = struct_lv_draw_fill_dsc_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/lv_draw_rect.h:80:3
+  lv_draw_fill_dsc_t* = struct_lv_draw_fill_dsc_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../draw/lv_draw_rect.h:80:3
   struct_lv_draw_border_dsc_t* {.pure, inheritable, bycopy.} = object
-    base*: lv_draw_dsc_base_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/lv_draw_rect.h:82:9
+    base*: lv_draw_dsc_base_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../draw/lv_draw_rect.h:82:9
     radius*: int32
     color*: lv_color_t
     width*: int32
     opa*: lv_opa_t
-    side*: lv_border_side_t
-  lv_draw_border_dsc_t* = struct_lv_draw_border_dsc_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/lv_draw_rect.h:92:3
+    side* {.bitsize: 5'i64.}: lv_border_side_t
+  lv_draw_border_dsc_t* = struct_lv_draw_border_dsc_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../draw/lv_draw_rect.h:92:3
   struct_lv_draw_box_shadow_dsc_t* {.pure, inheritable, bycopy.} = object
-    base*: lv_draw_dsc_base_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/lv_draw_rect.h:94:9
+    base*: lv_draw_dsc_base_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../draw/lv_draw_rect.h:94:9
     radius*: int32
     color*: lv_color_t
     width*: int32
@@ -1448,15 +1794,10 @@ type
     ofs_x*: int32
     ofs_y*: int32
     opa*: lv_opa_t
-    bg_cover*: uint8
-  lv_draw_box_shadow_dsc_t* = struct_lv_draw_box_shadow_dsc_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/lv_draw_rect.h:106:3
-  struct_lv_draw_label_hint_t* {.pure, inheritable, bycopy.} = object
-    line_start*: int32       ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/lv_draw_label.h:36:16
-    y*: int32
-    coord_y*: int32
-  lv_draw_label_hint_t* = struct_lv_draw_label_hint_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/lv_draw_label.h:46:3
+    bg_cover* {.bitsize: 1'i64.}: uint8
+  lv_draw_box_shadow_dsc_t* = struct_lv_draw_box_shadow_dsc_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../draw/lv_draw_rect.h:106:3
   struct_lv_draw_label_dsc_t* {.pure, inheritable, bycopy.} = object
-    base*: lv_draw_dsc_base_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/lv_draw_label.h:48:9
+    base*: lv_draw_dsc_base_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../draw/lv_draw_label.h:32:9
     text*: cstring
     font*: ptr lv_font_t
     sel_start*: uint32
@@ -1472,32 +1813,17 @@ type
     bidi_dir*: lv_base_dir_t
     align*: lv_text_align_t
     flag*: lv_text_flag_t
-    decor*: lv_text_decor_t
-    blend_mode*: lv_blend_mode_t
-    text_local*: uint8
+    decor* {.bitsize: 3'i64.}: lv_text_decor_t
+    blend_mode* {.bitsize: 3'i64.}: lv_blend_mode_t
+    text_local* {.bitsize: 1'i64.}: uint8
     hint*: ptr lv_draw_label_hint_t
-  lv_draw_label_dsc_t* = struct_lv_draw_label_dsc_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/lv_draw_label.h:73:3
-  struct_lv_draw_glyph_dsc_t* {.pure, inheritable, bycopy.} = object
-    glyph_data*: pointer     ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/lv_draw_label.h:75:9
-    format*: lv_font_glyph_format_t
-    letter_coords*: ptr lv_area_t
-    bg_coords*: ptr lv_area_t
-    g*: ptr lv_font_glyph_dsc_t
-    color*: lv_color_t
-    opa*: lv_opa_t
-    internal_draw_buf*: ptr lv_draw_buf_t
-  lv_draw_glyph_dsc_t* = struct_lv_draw_glyph_dsc_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/lv_draw_label.h:84:3
+  lv_draw_label_dsc_t* = struct_lv_draw_label_dsc_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../draw/lv_draw_label.h:57:3
   lv_draw_glyph_cb_t* = proc (a0: ptr lv_draw_unit_t;
                               a1: ptr lv_draw_glyph_dsc_t;
                               a2: ptr lv_draw_fill_dsc_t; a3: ptr lv_area_t): void {.
-      cdecl.}                ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/lv_draw_label.h:98:15
-  struct_lv_draw_image_sup_t* {.pure, inheritable, bycopy.} = object
-    alpha_color*: lv_color_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/lv_draw_image.h:33:9
-    palette*: ptr lv_color32_t
-    palette_size*: uint32
-  lv_draw_image_sup_t* = struct_lv_draw_image_sup_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/lv_draw_image.h:37:3
+      cdecl.}                ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../draw/lv_draw_label.h:71:15
   struct_lv_draw_image_dsc_t* {.pure, inheritable, bycopy.} = object
-    base*: lv_draw_dsc_base_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/lv_draw_image.h:39:16
+    base*: lv_draw_dsc_base_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../draw/lv_draw_image.h:29:16
     src*: pointer
     header*: lv_image_header_t
     rotation*: int32
@@ -1509,21 +1835,35 @@ type
     recolor*: lv_color_t
     recolor_opa*: lv_opa_t
     opa*: lv_opa_t
-    blend_mode*: lv_blend_mode_t
-    antialias*: uint16
-    tile*: uint16
+    blend_mode* {.bitsize: 4'i64.}: lv_blend_mode_t
+    antialias* {.bitsize: 1'i64.}: uint16
+    tile* {.bitsize: 1'i64.}: uint16
     sup*: ptr lv_draw_image_sup_t
     image_area*: lv_area_t
     clip_radius*: int32
     bitmap_mask_src*: ptr lv_image_dsc_t
-  lv_draw_image_dsc_t* = struct_lv_draw_image_dsc_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/lv_draw_image.h:72:3
+  lv_draw_image_dsc_t* = struct_lv_draw_image_dsc_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../draw/lv_draw_image.h:62:3
   lv_draw_image_core_cb* = proc (a0: ptr lv_draw_unit_t;
                                  a1: ptr lv_draw_image_dsc_t;
                                  a2: ptr lv_image_decoder_dsc_t;
                                  a3: ptr lv_draw_image_sup_t; a4: ptr lv_area_t;
-                                 a5: ptr lv_area_t): void {.cdecl.} ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/lv_draw_image.h:83:16
+                                 a5: ptr lv_area_t): void {.cdecl.} ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../draw/lv_draw_image.h:73:16
+  struct_lv_draw_line_dsc_t* {.pure, inheritable, bycopy.} = object
+    base*: lv_draw_dsc_base_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../draw/lv_draw_line.h:28:9
+    p1*: lv_point_precise_t
+    p2*: lv_point_precise_t
+    color*: lv_color_t
+    width*: int32
+    dash_width*: int32
+    dash_gap*: int32
+    opa*: lv_opa_t
+    blend_mode* {.bitsize: 2'i64.}: lv_blend_mode_t
+    round_start* {.bitsize: 1'i64.}: uint8
+    round_end* {.bitsize: 1'i64.}: uint8
+    raw_end* {.bitsize: 1'i64.}: uint8
+  lv_draw_line_dsc_t* = struct_lv_draw_line_dsc_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../draw/lv_draw_line.h:42:3
   struct_lv_draw_arc_dsc_t* {.pure, inheritable, bycopy.} = object
-    base*: lv_draw_dsc_base_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/lv_draw_arc.h:29:9
+    base*: lv_draw_dsc_base_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../draw/lv_draw_arc.h:29:9
     color*: lv_color_t
     width*: int32
     start_angle*: lv_value_precise_t
@@ -1532,706 +1872,148 @@ type
     radius*: uint16
     img_src*: pointer
     opa*: lv_opa_t
-    rounded*: uint8
-  lv_draw_arc_dsc_t* = struct_lv_draw_arc_dsc_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/lv_draw_arc.h:41:3
-  struct_lv_draw_line_dsc_t* {.pure, inheritable, bycopy.} = object
-    base*: lv_draw_dsc_base_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/lv_draw_line.h:28:9
-    p1*: lv_point_precise_t
-    p2*: lv_point_precise_t
-    color*: lv_color_t
-    width*: int32
-    dash_width*: int32
-    dash_gap*: int32
-    opa*: lv_opa_t
-    blend_mode*: lv_blend_mode_t
-    round_start*: uint8
-    round_end*: uint8
-    raw_end*: uint8
-  lv_draw_line_dsc_t* = struct_lv_draw_line_dsc_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/lv_draw_line.h:42:3
-  struct_lv_draw_triangle_dsc_t* {.pure, inheritable, bycopy.} = object
-    base*: lv_draw_dsc_base_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/lv_draw_triangle.h:25:9
-    bg_opa*: lv_opa_t
-    bg_color*: lv_color_t
-    bg_grad*: lv_grad_dsc_t
-    p*: array[3'i64, lv_point_precise_t]
-  lv_draw_triangle_dsc_t* = struct_lv_draw_triangle_dsc_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/lv_draw_triangle.h:33:3
-  struct_lv_draw_mask_rect_dsc_t* {.pure, inheritable, bycopy.} = object
-    base*: lv_draw_dsc_base_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/lv_draw_mask.h:28:9
-    area*: lv_area_t
-    radius*: int32
-  lv_draw_mask_rect_dsc_t* = struct_lv_draw_mask_rect_dsc_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/lv_draw_mask.h:33:3
-  lv_display_rotation_t* = enum_lv_display_rotation_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/lv_display.h:39:3
-  lv_display_render_mode_t* = enum_lv_display_render_mode_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/lv_display.h:60:3
-  lv_screen_load_anim_t* = enum_lv_screen_load_anim_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/lv_display.h:79:3
-  lv_display_flush_cb_t* = proc (a0: ptr lv_display_t; a1: ptr lv_area_t;
-                                 a2: ptr uint8): void {.cdecl.} ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/lv_display.h:81:16
-  lv_display_flush_wait_cb_t* = proc (a0: ptr lv_display_t): void {.cdecl.} ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/lv_display.h:82:16
-  lv_obj_tree_walk_res_t* = enum_lv_obj_tree_walk_res_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/lv_obj_tree.h:32:3
-  lv_obj_tree_walk_cb_t* = proc (a0: ptr lv_obj_t; a1: pointer): lv_obj_tree_walk_res_t {.
-      cdecl.}                ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/lv_obj_tree.h:34:34
-  lv_obj_point_transform_flag_t* = enum_lv_obj_point_transform_flag_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/lv_obj_pos.h:38:3
-  lv_scrollbar_mode_t* = uint8 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/lv_obj_scroll.h:41:17
-  lv_scroll_snap_t* = uint8  ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/lv_obj_scroll.h:55:17
-  internal_lv_style_state_cmp_t* = enum_lv_style_state_cmp_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/lv_obj_style.h:45:3
-  lv_style_selector_t* = uint32 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/lv_obj_style.h:47:18
-  struct_lv_obj_style_t* {.pure, inheritable, bycopy.} = object
-    style*: ptr lv_style_t   ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/lv_obj_style.h:49:9
-    selector*: uint32
-    is_local*: uint32
-    is_trans*: uint32
-  internal_lv_obj_style_t* = struct_lv_obj_style_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/lv_obj_style.h:54:3
-  struct_lv_obj_style_transition_dsc_t* {.pure, inheritable, bycopy.} = object
-    time*: uint16            ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/lv_obj_style.h:56:9
-    delay*: uint16
-    selector*: lv_style_selector_t
-    prop*: lv_style_prop_t
-    path_cb*: lv_anim_path_cb_t
-    user_data*: pointer
-  internal_lv_obj_style_transition_dsc_t* = struct_lv_obj_style_transition_dsc_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/lv_obj_style.h:63:3
-  lv_layer_type_t* = enum_lv_layer_type_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/lv_obj_draw.h:31:3
-  lv_obj_class_editable_t* = enum_lv_obj_class_editable_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/lv_obj_class.h:32:3
-  lv_obj_class_group_def_t* = enum_lv_obj_class_group_def_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/lv_obj_class.h:38:3
-  lv_obj_class_theme_inheritable_t* = enum_lv_obj_class_theme_inheritable_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/lv_obj_class.h:43:3
+    rounded* {.bitsize: 1'i64.}: uint8
+  lv_draw_arc_dsc_t* = struct_lv_draw_arc_dsc_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../draw/lv_draw_arc.h:41:3
+  lv_layer_type_t* = enum_lv_layer_type_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/lv_obj_draw.h:35:3
+  lv_obj_class_editable_t* = enum_lv_obj_class_editable_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/lv_obj_class.h:32:3
+  lv_obj_class_group_def_t* = enum_lv_obj_class_group_def_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/lv_obj_class.h:38:3
+  lv_obj_class_theme_inheritable_t* = enum_lv_obj_class_theme_inheritable_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/lv_obj_class.h:43:3
   lv_obj_class_event_cb_t* = proc (a0: ptr lv_obj_class_t; a1: ptr lv_event_t): void {.
-      cdecl.}                ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/lv_obj_class.h:45:16
-  lv_group_focus_cb_t* = proc (a0: ptr lv_group_t): void {.cdecl.} ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../indev/../core/lv_group.h:44:16
-  lv_group_edge_cb_t* = proc (a0: ptr lv_group_t; a1: bool): void {.cdecl.} ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../indev/../core/lv_group.h:45:16
-  lv_group_refocus_policy_t* = enum_lv_group_refocus_policy_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../indev/../core/lv_group.h:73:3
-  lv_indev_type_t* = enum_lv_indev_type_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../indev/lv_indev.h:36:3
-  lv_indev_state_t* = enum_lv_indev_state_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../indev/lv_indev.h:42:3
-  lv_indev_mode_t* = enum_lv_indev_mode_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../indev/lv_indev.h:48:3
+      cdecl.}                ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/lv_obj_class.h:45:16
+  lv_key_t* = enum_lv_key_t  ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../indev/../core/lv_group.h:38:3
+  lv_group_focus_cb_t* = proc (a0: ptr lv_group_t): void {.cdecl.} ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../indev/../core/lv_group.h:44:16
+  lv_group_edge_cb_t* = proc (a0: ptr lv_group_t; a1: bool): void {.cdecl.} ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../indev/../core/lv_group.h:45:16
+  lv_group_refocus_policy_t* = enum_lv_group_refocus_policy_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../indev/../core/lv_group.h:50:3
+  lv_indev_type_t* = enum_lv_indev_type_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../indev/lv_indev.h:36:3
+  lv_indev_state_t* = enum_lv_indev_state_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../indev/lv_indev.h:42:3
+  lv_indev_mode_t* = enum_lv_indev_mode_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../indev/lv_indev.h:48:3
   struct_lv_indev_data_t* {.pure, inheritable, bycopy.} = object
-    point*: lv_point_t       ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../indev/lv_indev.h:51:9
+    point*: lv_point_t       ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../indev/lv_indev.h:51:9
     key*: uint32
     btn_id*: uint32
     enc_diff*: int16
     state*: lv_indev_state_t
     continue_reading*: bool
-  lv_indev_data_t* = struct_lv_indev_data_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../indev/lv_indev.h:59:3
+  lv_indev_data_t* = struct_lv_indev_data_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../indev/lv_indev.h:59:3
   lv_indev_read_cb_t* = proc (a0: ptr lv_indev_t; a1: ptr lv_indev_data_t): void {.
-      cdecl.}                ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../indev/lv_indev.h:61:16
-  struct_lv_hit_test_info_t* {.pure, inheritable, bycopy.} = object
-    point*: ptr lv_point_t   ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/lv_obj_event.h:35:9
-    res*: bool
-  lv_hit_test_info_t* = struct_lv_hit_test_info_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/lv_obj_event.h:38:3
-  lv_cover_res_t* = enum_lv_cover_res_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/lv_obj_event.h:45:3
-  struct_lv_cover_check_info_t* {.pure, inheritable, bycopy.} = object
-    res*: lv_cover_res_t     ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/lv_obj_event.h:52:9
-    area*: ptr lv_area_t
-  lv_cover_check_info_t* = struct_lv_cover_check_info_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/lv_obj_event.h:55:3
-  internal_lv_obj_flag_t* = enum_lv_obj_flag_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/lv_obj.h:128:3
-  struct_lv_obj_spec_attr_t* {.pure, inheritable, bycopy.} = object
-    children*: ptr ptr lv_obj_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/lv_obj.h:199:9
-    group_p*: ptr lv_group_t
-    event_list*: lv_event_list_t
-    scroll*: lv_point_t
-    ext_click_pad*: int32
-    ext_draw_size*: int32
-    child_cnt*: uint16
-    scrollbar_mode*: uint16
-    scroll_snap_x*: uint16
-    scroll_snap_y*: uint16
-    scroll_dir*: uint16
-    layer_type*: uint16
-  internal_lv_obj_spec_attr_t* = struct_lv_obj_spec_attr_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/lv_obj.h:215:3
+      cdecl.}                ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../indev/lv_indev.h:61:16
+  lv_cover_res_t* = enum_lv_cover_res_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/lv_obj_event.h:33:3
+  lv_obj_flag_t* = enum_lv_obj_flag_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/lv_obj.h:128:3
   struct_lv_font_fmt_txt_glyph_dsc_t* {.pure, inheritable, bycopy.} = object
-    bitmap_index*: uint32    ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/font/lv_font_fmt_txt.h:28:9
+    bitmap_index*: uint32    ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/font/lv_font_fmt_txt.h:28:9
     adv_w*: uint32
     box_w*: uint16
     box_h*: uint16
     ofs_x*: int16
     ofs_y*: int16
-  lv_font_fmt_txt_glyph_dsc_t* = struct_lv_font_fmt_txt_glyph_dsc_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/font/lv_font_fmt_txt.h:44:3
-  lv_font_fmt_txt_cmap_type_t* = uint8 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/font/lv_font_fmt_txt.h:57:17
+  lv_font_fmt_txt_glyph_dsc_t* = struct_lv_font_fmt_txt_glyph_dsc_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/font/lv_font_fmt_txt.h:44:3
+  lv_font_fmt_txt_cmap_type_t* = enum_lv_font_fmt_txt_cmap_type_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/font/lv_font_fmt_txt.h:52:3
   struct_lv_font_fmt_txt_cmap_t* {.pure, inheritable, bycopy.} = object
-    range_start*: uint32     ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/font/lv_font_fmt_txt.h:65:9
+    range_start*: uint32     ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/font/lv_font_fmt_txt.h:59:9
     range_length*: uint16
     glyph_id_start*: uint16
     unicode_list*: ptr uint16
     glyph_id_ofs_list*: pointer
     list_length*: uint16
     type_field*: lv_font_fmt_txt_cmap_type_t
-  lv_font_fmt_txt_cmap_t* = struct_lv_font_fmt_txt_cmap_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/font/lv_font_fmt_txt.h:115:3
+  lv_font_fmt_txt_cmap_t* = struct_lv_font_fmt_txt_cmap_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/font/lv_font_fmt_txt.h:109:3
   struct_lv_font_fmt_txt_kern_pair_t* {.pure, inheritable, bycopy.} = object
-    glyph_ids*: pointer      ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/font/lv_font_fmt_txt.h:118:9
+    glyph_ids*: pointer      ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/font/lv_font_fmt_txt.h:112:9
     values*: ptr int8
-    pair_cnt*: uint32
-    glyph_ids_size*: uint32
-  lv_font_fmt_txt_kern_pair_t* = struct_lv_font_fmt_txt_kern_pair_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/font/lv_font_fmt_txt.h:130:3
+    pair_cnt* {.bitsize: 30'i64.}: uint32
+    glyph_ids_size* {.bitsize: 2'i64.}: uint32
+  lv_font_fmt_txt_kern_pair_t* = struct_lv_font_fmt_txt_kern_pair_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/font/lv_font_fmt_txt.h:124:3
   struct_lv_font_fmt_txt_kern_classes_t* {.pure, inheritable, bycopy.} = object
-    class_pair_values*: ptr int8 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/font/lv_font_fmt_txt.h:133:9
+    class_pair_values*: ptr int8 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/font/lv_font_fmt_txt.h:127:9
     left_class_mapping*: ptr uint8
     right_class_mapping*: ptr uint8
     left_class_cnt*: uint8
     right_class_cnt*: uint8
-  lv_font_fmt_txt_kern_classes_t* = struct_lv_font_fmt_txt_kern_classes_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/font/lv_font_fmt_txt.h:147:3
-  lv_font_fmt_txt_bitmap_format_t* = enum_lv_font_fmt_txt_bitmap_format_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/font/lv_font_fmt_txt.h:154:3
+  lv_font_fmt_txt_kern_classes_t* = struct_lv_font_fmt_txt_kern_classes_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/font/lv_font_fmt_txt.h:141:3
+  lv_font_fmt_txt_bitmap_format_t* = enum_lv_font_fmt_txt_bitmap_format_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/font/lv_font_fmt_txt.h:148:3
   struct_lv_font_fmt_txt_dsc_t* {.pure, inheritable, bycopy.} = object
-    glyph_bitmap*: ptr uint8 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/font/lv_font_fmt_txt.h:157:9
+    glyph_bitmap*: ptr uint8 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/font/lv_font_fmt_txt.h:151:9
     glyph_dsc*: ptr lv_font_fmt_txt_glyph_dsc_t
     cmaps*: ptr lv_font_fmt_txt_cmap_t
     kern_dsc*: pointer
     kern_scale*: uint16
-    cmap_num*: uint16
-    bpp*: uint16
-    kern_classes*: uint16
-    bitmap_format*: uint16
-  lv_font_fmt_txt_dsc_t* = struct_lv_font_fmt_txt_dsc_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/font/lv_font_fmt_txt.h:192:3
-  lv_font_fmt_rle_state_t* = enum_lv_font_fmt_rle_state_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/font/lv_font_fmt_txt.h:199:3
-  struct_lv_font_fmt_rle_t* {.pure, inheritable, bycopy.} = object
-    rdp*: uint32             ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/font/lv_font_fmt_txt.h:201:9
-    in_field*: ptr uint8
-    bpp*: uint8
-    prev_v*: uint8
-    count*: uint8
-    state*: lv_font_fmt_rle_state_t
-  lv_font_fmt_rle_t* = struct_lv_font_fmt_rle_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/font/lv_font_fmt_txt.h:208:3
-  struct_lv_image_t* {.pure, inheritable, bycopy.} = object
-    obj*: lv_obj_t           ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/animimage/../image/lv_image.h:40:9
-    src*: pointer
-    bitmap_mask_src*: ptr lv_image_dsc_t
-    offset*: lv_point_t
-    w*: int32
-    h*: int32
-    rotation*: uint32
-    scale_x*: uint32
-    scale_y*: uint32
-    pivot*: lv_point_t
-    src_type*: uint32
-    cf*: uint32
-    antialias*: uint32
-    align*: uint32
-    blend_mode*: uint32
-  lv_image_t* = struct_lv_image_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/animimage/../image/lv_image.h:56:3
-  lv_image_align_t* = uint8  ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/animimage/../image/lv_image.h:82:17
-  struct_lv_animimg_t* {.pure, inheritable, bycopy.} = object
-    img*: lv_image_t         ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/animimage/lv_animimage.h:36:9
-    anim*: lv_anim_t
-    dsc*: ptr pointer
-    pic_count*: int8
-  lv_animimg_t* = struct_lv_animimg_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/animimage/lv_animimage.h:42:3
-  lv_animimg_part_t* = uint8 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/animimage/lv_animimage.h:52:17
-  lv_arc_mode_t* = uint8     ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/arc/lv_arc.h:38:17
-  struct_lv_arc_t* {.pure, inheritable, bycopy.} = object
-    obj*: lv_obj_t           ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/arc/lv_arc.h:41:9
-    rotation*: int32
-    indic_angle_start*: lv_value_precise_t
-    indic_angle_end*: lv_value_precise_t
-    bg_angle_start*: lv_value_precise_t
-    bg_angle_end*: lv_value_precise_t
-    value*: int32
-    min_value*: int32
-    max_value*: int32
-    dragging*: uint32
-    type_field*: uint32
-    min_close*: uint32
-    in_out*: uint32
-    chg_rate*: uint32
-    last_tick*: uint32
-    last_angle*: lv_value_precise_t
-    knob_offset*: int16
-  lv_arc_t* = struct_lv_arc_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/arc/lv_arc.h:59:3
-  lv_label_long_mode_t* = uint8 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/bar/../label/lv_label.h:59:17
-  struct_lv_label_t_dot_t* {.union, bycopy.} = object
-    tmp_ptr*: cstring
-    tmp*: array[4'i64, cschar]
-  struct_lv_label_t* {.pure, inheritable, bycopy.} = object
-    obj*: lv_obj_t           ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/bar/../label/lv_label.h:62:9
-    text*: cstring
-    dot*: struct_lv_label_t_dot_t
-    dot_end*: uint32
-    hint*: lv_draw_label_hint_t
-    sel_start*: uint32
-    sel_end*: uint32
-    size_cache*: lv_point_t
-    offset*: lv_point_t
-    long_mode*: lv_label_long_mode_t
-    static_txt*: uint8
-    expand*: uint8
-    dot_tmp_alloc*: uint8
-    invalid_size_cache*: uint8
-  lv_label_t* = struct_lv_label_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/bar/../label/lv_label.h:87:3
-  lv_bar_mode_t* = uint8     ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/bar/lv_bar.h:39:17
-  lv_bar_orientation_t* = uint8 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/bar/lv_bar.h:50:17
-  struct_lv_bar_anim_t* {.pure, inheritable, bycopy.} = object
-    bar*: ptr lv_obj_t       ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/bar/lv_bar.h:53:9
-    anim_start*: int32
-    anim_end*: int32
-    anim_state*: int32
-  internal_lv_bar_anim_t* = struct_lv_bar_anim_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/bar/lv_bar.h:58:3
-  struct_lv_bar_t* {.pure, inheritable, bycopy.} = object
-    obj*: lv_obj_t           ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/bar/lv_bar.h:60:9
-    cur_value*: int32
-    min_value*: int32
-    max_value*: int32
-    start_value*: int32
-    indic_area*: lv_area_t
-    val_reversed*: bool
-    cur_value_anim*: internal_lv_bar_anim_t
-    start_value_anim*: internal_lv_bar_anim_t
-    mode*: lv_bar_mode_t
-    orientation*: lv_bar_orientation_t
-  lv_bar_t* = struct_lv_bar_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/bar/lv_bar.h:72:3
-  struct_lv_button_t* {.pure, inheritable, bycopy.} = object
-    obj*: lv_obj_t           ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/button/lv_button.h:29:9
-  lv_button_t* = struct_lv_button_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/button/lv_button.h:31:3
-  lv_buttonmatrix_ctrl_t* = uint32 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/buttonmatrix/lv_buttonmatrix.h:53:18
+    cmap_num* {.bitsize: 9'i64.}: uint16
+    bpp* {.bitsize: 4'i64.}: uint16
+    kern_classes* {.bitsize: 1'i64.}: uint16
+    bitmap_format* {.bitsize: 2'i64.}: uint16
+  lv_font_fmt_txt_dsc_t* = struct_lv_font_fmt_txt_dsc_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/font/lv_font_fmt_txt.h:186:3
+  lv_image_align_t* = enum_lv_image_align_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/animimage/../image/lv_image.h:56:3
+  lv_animimg_part_t* = enum_lv_animimg_part_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/animimage/lv_animimage.h:39:3
+  lv_arc_mode_t* = enum_lv_arc_mode_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/arc/lv_arc.h:33:3
+  lv_label_long_mode_t* = enum_lv_label_long_mode_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/bar/../label/lv_label.h:54:3
+  lv_bar_mode_t* = enum_lv_bar_mode_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/bar/lv_bar.h:35:3
+  lv_bar_orientation_t* = enum_lv_bar_orientation_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/bar/lv_bar.h:41:3
+  lv_buttonmatrix_ctrl_t* = enum_lv_buttonmatrix_ctrl_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/buttonmatrix/lv_buttonmatrix.h:47:3
   lv_buttonmatrix_button_draw_cb_t* = proc (a0: ptr lv_obj_t; a1: uint32;
-      a2: ptr lv_area_t; a3: ptr lv_area_t): bool {.cdecl.} ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/buttonmatrix/lv_buttonmatrix.h:56:16
-  struct_lv_buttonmatrix_t* {.pure, inheritable, bycopy.} = object
-    obj*: lv_obj_t           ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/buttonmatrix/lv_buttonmatrix.h:60:9
-    map_p*: ptr cstring
-    button_areas*: ptr lv_area_t
-    ctrl_bits*: ptr lv_buttonmatrix_ctrl_t
-    btn_cnt*: uint32
-    row_cnt*: uint32
-    btn_id_sel*: uint32
-    one_check*: uint32
-  lv_buttonmatrix_t* = struct_lv_buttonmatrix_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/buttonmatrix/lv_buttonmatrix.h:69:3
+      a2: ptr lv_area_t; a3: ptr lv_area_t): bool {.cdecl.} ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/buttonmatrix/lv_buttonmatrix.h:49:16
   struct_lv_calendar_date_t* {.pure, inheritable, bycopy.} = object
-    year*: uint16            ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/calendar/lv_calendar.h:31:9
+    year*: uint16            ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/calendar/lv_calendar.h:31:9
     month*: int8
     day*: int8
-  lv_calendar_date_t* = struct_lv_calendar_date_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/calendar/lv_calendar.h:35:3
-  struct_lv_calendar_t* {.pure, inheritable, bycopy.} = object
-    obj*: lv_obj_t           ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/calendar/lv_calendar.h:38:9
-    btnm*: ptr lv_obj_t
-    today*: lv_calendar_date_t
-    showed_date*: lv_calendar_date_t
-    highlighted_dates*: ptr lv_calendar_date_t
-    highlighted_dates_num*: csize_t
-    map*: array[56'i64, cstring]
-    use_chinese_calendar*: bool
-    nums*: array[42'i64, array[20'i64, cschar]]
-  lv_calendar_t* = struct_lv_calendar_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/calendar/lv_calendar.h:60:3
-  struct_lv_canvas_t* {.pure, inheritable, bycopy.} = object
-    img*: lv_image_t         ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/canvas/lv_canvas.h:33:9
-    draw_buf*: ptr lv_draw_buf_t
-    static_buf*: lv_draw_buf_t
-  lv_canvas_t* = struct_lv_canvas_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/canvas/lv_canvas.h:37:3
-  lv_chart_type_t* = uint8   ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/chart/lv_chart.h:46:17
-  lv_chart_update_mode_t* = uint8 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/chart/lv_chart.h:60:17
-  lv_chart_axis_t* = uint8   ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/chart/lv_chart.h:77:17
-  struct_lv_chart_series_t* {.pure, inheritable, bycopy.} = object
-    x_points*: ptr int32     ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/chart/lv_chart.h:83:9
-    y_points*: ptr int32
-    color*: lv_color_t
-    start_point*: uint32
-    hidden*: uint32
-    x_ext_buf_assigned*: uint32
-    y_ext_buf_assigned*: uint32
-    x_axis_sec*: uint32
-    y_axis_sec*: uint32
-  lv_chart_series_t* = struct_lv_chart_series_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/chart/lv_chart.h:93:3
-  struct_lv_chart_cursor_t* {.pure, inheritable, bycopy.} = object
-    pos*: lv_point_t         ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/chart/lv_chart.h:95:9
-    point_id*: int32
-    color*: lv_color_t
-    ser*: ptr lv_chart_series_t
-    dir*: lv_dir_t
-    pos_set*: uint32
-  lv_chart_cursor_t* = struct_lv_chart_cursor_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/chart/lv_chart.h:102:3
-  struct_lv_chart_t* {.pure, inheritable, bycopy.} = object
-    obj*: lv_obj_t           ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/chart/lv_chart.h:104:9
-    series_ll*: lv_ll_t
-    cursor_ll*: lv_ll_t
-    ymin*: array[2'i64, int32]
-    ymax*: array[2'i64, int32]
-    xmin*: array[2'i64, int32]
-    xmax*: array[2'i64, int32]
-    pressed_point_id*: int32
-    hdiv_cnt*: uint32
-    vdiv_cnt*: uint32
-    point_cnt*: uint32
-    type_field*: lv_chart_type_t
-    update_mode*: lv_chart_update_mode_t
-  lv_chart_t* = struct_lv_chart_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/chart/lv_chart.h:118:3
-  struct_lv_checkbox_t* {.pure, inheritable, bycopy.} = object
-    obj*: lv_obj_t           ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/checkbox/lv_checkbox.h:29:9
-    txt*: cstring
-    static_txt*: uint32
-  lv_checkbox_t* = struct_lv_checkbox_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/checkbox/lv_checkbox.h:33:3
-  struct_lv_dropdown_t* {.pure, inheritable, bycopy.} = object
-    obj*: lv_obj_t           ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/dropdown/lv_dropdown.h:38:9
-    list*: ptr lv_obj_t
-    text*: cstring
-    symbol*: pointer
-    options*: cstring
-    option_cnt*: uint32
-    sel_opt_id*: uint32
-    sel_opt_id_orig*: uint32
-    pr_opt_id*: uint32
-    dir*: lv_dir_t
-    static_txt*: uint8
-    selected_highlight*: uint8
-  lv_dropdown_t* = struct_lv_dropdown_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/dropdown/lv_dropdown.h:51:3
-  struct_lv_dropdown_list_t* {.pure, inheritable, bycopy.} = object
-    obj*: lv_obj_t           ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/dropdown/lv_dropdown.h:53:9
-    dropdown*: ptr lv_obj_t
-  lv_dropdown_list_t* = struct_lv_dropdown_list_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/dropdown/lv_dropdown.h:56:3
-  lv_imagebutton_state_t* = enum_lv_imagebutton_state_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/imagebutton/lv_imagebutton.h:31:3
-  struct_lv_imagebutton_src_info_t* {.pure, inheritable, bycopy.} = object
-    img_src*: pointer        ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/imagebutton/lv_imagebutton.h:33:9
-    header*: lv_image_header_t
-  lv_imagebutton_src_info_t* = struct_lv_imagebutton_src_info_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/imagebutton/lv_imagebutton.h:36:3
-  struct_lv_imagebutton_t* {.pure, inheritable, bycopy.} = object
-    obj*: lv_obj_t           ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/imagebutton/lv_imagebutton.h:42:9
-    src_mid*: array[6'i64, lv_imagebutton_src_info_t]
-    src_left*: array[6'i64, lv_imagebutton_src_info_t]
-    src_right*: array[6'i64, lv_imagebutton_src_info_t]
-  lv_imagebutton_t* = struct_lv_imagebutton_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/imagebutton/lv_imagebutton.h:47:3
-  lv_keyboard_mode_t* = uint8 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/keyboard/lv_keyboard.h:56:17
-  struct_lv_keyboard_t* {.pure, inheritable, bycopy.} = object
-    btnm*: lv_buttonmatrix_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/keyboard/lv_keyboard.h:60:9
-    ta*: ptr lv_obj_t
-    mode*: lv_keyboard_mode_t
-    popovers*: uint8
-  lv_keyboard_t* = struct_lv_keyboard_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/keyboard/lv_keyboard.h:65:3
-  struct_lv_led_t* {.pure, inheritable, bycopy.} = object
-    obj*: lv_obj_t           ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/led/lv_led.h:38:9
-    color*: lv_color_t
-    bright*: uint8
-  lv_led_t* = struct_lv_led_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/led/lv_led.h:42:3
-  struct_lv_line_t_point_array_t* {.union, bycopy.} = object
-    constant*: ptr lv_point_precise_t
-    mut*: ptr lv_point_precise_t
-  struct_lv_line_t* {.pure, inheritable, bycopy.} = object
-    obj*: lv_obj_t           ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/line/lv_line.h:28:9
-    point_array*: struct_lv_line_t_point_array_t
-    point_num*: uint32
-    y_inv*: uint32
-    point_array_is_mutable*: uint32
-  lv_line_t* = struct_lv_line_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/line/lv_line.h:37:3
-  lv_menu_mode_header_t* = uint8 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/menu/lv_menu.h:40:17
-  lv_menu_mode_root_back_button_t* = uint8 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/menu/lv_menu.h:51:17
-  struct_lv_menu_load_page_event_data_t* {.pure, inheritable, bycopy.} = object
-    menu*: ptr lv_obj_t      ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/menu/lv_menu.h:58:5
-    page*: ptr lv_obj_t
-  lv_menu_load_page_event_data_t* = struct_lv_menu_load_page_event_data_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/menu/lv_menu.h:63:3
-  struct_lv_menu_history_t* {.pure, inheritable, bycopy.} = object
-    page*: ptr lv_obj_t      ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/menu/lv_menu.h:65:9
-  lv_menu_history_t* = struct_lv_menu_history_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/menu/lv_menu.h:67:3
-  struct_lv_menu_t* {.pure, inheritable, bycopy.} = object
-    obj*: lv_obj_t           ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/menu/lv_menu.h:69:9
-    storage*: ptr lv_obj_t
-    main*: ptr lv_obj_t
-    main_page*: ptr lv_obj_t
-    main_header*: ptr lv_obj_t
-    main_header_back_btn*: ptr lv_obj_t
-    main_header_title*: ptr lv_obj_t
-    sidebar*: ptr lv_obj_t
-    sidebar_page*: ptr lv_obj_t
-    sidebar_header*: ptr lv_obj_t
-    sidebar_header_back_btn*: ptr lv_obj_t
-    sidebar_header_title*: ptr lv_obj_t
-    selected_tab*: ptr lv_obj_t
-    history_ll*: lv_ll_t
-    cur_depth*: uint8
-    prev_depth*: uint8
-    sidebar_generated*: uint8
-    mode_header*: lv_menu_mode_header_t
-    mode_root_back_btn*: lv_menu_mode_root_back_button_t
-  lv_menu_t* = struct_lv_menu_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/menu/lv_menu.h:91:3
-  struct_lv_menu_page_t* {.pure, inheritable, bycopy.} = object
-    obj*: lv_obj_t           ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/menu/lv_menu.h:93:9
-    title*: cstring
-    static_title*: bool
-  lv_menu_page_t* = struct_lv_menu_page_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/menu/lv_menu.h:97:3
-  struct_lv_msgbox_t* {.pure, inheritable, bycopy.} = object
-    obj*: lv_obj_t           ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/msgbox/lv_msgbox.h:37:9
-    header*: ptr lv_obj_t
-    content*: ptr lv_obj_t
-    footer*: ptr lv_obj_t
-    title*: ptr lv_obj_t
-  lv_msgbox_t* = struct_lv_msgbox_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/msgbox/lv_msgbox.h:43:3
-  lv_roller_mode_t* = uint8  ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/roller/lv_roller.h:44:17
-  struct_lv_roller_t* {.pure, inheritable, bycopy.} = object
-    obj*: lv_obj_t           ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/roller/lv_roller.h:47:9
-    option_cnt*: uint32
-    sel_opt_id*: uint32
-    sel_opt_id_ori*: uint32
-    inf_page_cnt*: uint32
-    mode*: lv_roller_mode_t
-    moved*: uint32
-  lv_roller_t* = struct_lv_roller_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/roller/lv_roller.h:55:3
-  lv_scale_mode_t* = uint32  ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/scale/lv_scale.h:56:18
-  struct_lv_scale_section_t* {.pure, inheritable, bycopy.} = object
-    main_style*: ptr lv_style_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/scale/lv_scale.h:58:9
-    indicator_style*: ptr lv_style_t
-    items_style*: ptr lv_style_t
-    minor_range*: int32
-    major_range*: int32
-    first_tick_idx_in_section*: uint32
-    last_tick_idx_in_section*: uint32
-    first_tick_idx_is_major*: uint32
-    last_tick_idx_is_major*: uint32
-    first_tick_in_section_width*: int32
-    last_tick_in_section_width*: int32
-    first_tick_in_section*: lv_point_t
-    last_tick_in_section*: lv_point_t
-  lv_scale_section_t* = struct_lv_scale_section_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/scale/lv_scale.h:72:3
-  struct_lv_scale_t* {.pure, inheritable, bycopy.} = object
-    obj*: lv_obj_t           ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/scale/lv_scale.h:74:9
-    section_ll*: lv_ll_t
-    txt_src*: ptr cstring
-    mode*: lv_scale_mode_t
-    range_min*: int32
-    range_max*: int32
-    total_tick_count*: uint32
-    major_tick_every*: uint32
-    label_enabled*: uint32
-    post_draw*: uint32
-    draw_ticks_on_top*: uint32
-    angle_range*: uint32
-    rotation*: int32
-    custom_label_cnt*: int32
-    last_tick_width*: int32
-    first_tick_width*: int32
-  lv_scale_t* = struct_lv_scale_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/scale/lv_scale.h:93:3
-  lv_slider_mode_t* = uint8  ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/slider/lv_slider.h:41:17
-  struct_lv_slider_t* {.pure, inheritable, bycopy.} = object
-    bar*: lv_bar_t           ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/slider/lv_slider.h:44:9
-    left_knob_area*: lv_area_t
-    right_knob_area*: lv_area_t
-    pressed_point*: lv_point_t
-    value_to_set*: ptr int32
-    dragging*: uint8
-    left_knob_focus*: uint8
-  lv_slider_t* = struct_lv_slider_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/slider/lv_slider.h:52:3
-  lv_span_overflow_t* = uint32 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/span/lv_span.h:40:18
-  lv_span_mode_t* = uint32   ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/span/lv_span.h:53:18
-  struct_lv_span_t* {.pure, inheritable, bycopy.} = object
-    txt*: cstring            ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/span/lv_span.h:56:9
-    spangroup*: ptr lv_obj_t
-    style*: lv_style_t
-    static_flag*: uint32
-  lv_span_t* = struct_lv_span_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/span/lv_span.h:61:3
-  struct_lv_spangroup_t* {.pure, inheritable, bycopy.} = object
-    obj*: lv_obj_t           ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/span/lv_span.h:64:9
-    lines*: int32
-    indent*: int32
-    cache_w*: int32
-    cache_h*: int32
-    child_ll*: lv_ll_t
-    mode*: uint32
-    overflow*: uint32
-    refresh*: uint32
-  lv_spangroup_t* = struct_lv_spangroup_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/span/lv_span.h:74:3
-  struct_lv_textarea_t_cursor_t* {.pure, inheritable, bycopy.} = object
-    valid_x*: int32
-    pos*: uint32
-    area*: lv_area_t
-    txt_byte_pos*: uint32
-    show*: uint8
-    click_pos*: uint8
-  struct_lv_textarea_t* {.pure, inheritable, bycopy.} = object
-    obj*: lv_obj_t           ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/spinbox/../textarea/lv_textarea.h:37:9
-    label*: ptr lv_obj_t
-    placeholder_txt*: cstring
-    pwd_tmp*: cstring
-    pwd_bullet*: cstring
-    accepted_chars*: cstring
-    max_length*: uint32
-    pwd_show_time*: uint32
-    cursor*: struct_lv_textarea_t_cursor_t
-    sel_start*: uint32
-    sel_end*: uint32
-    text_sel_in_prog*: uint8
-    text_sel_en*: uint8
-    pwd_mode*: uint8
-    one_line*: uint8
-  lv_textarea_t* = struct_lv_textarea_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/spinbox/../textarea/lv_textarea.h:64:3
-  struct_lv_spinbox_t* {.pure, inheritable, bycopy.} = object
-    ta*: lv_textarea_t       ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/spinbox/lv_spinbox.h:35:9
-    value*: int32
-    range_max*: int32
-    range_min*: int32
-    step*: int32
-    digit_count*: uint32
-    dec_point_pos*: uint32
-    rollover*: uint32
-    digit_step_dir*: uint32
-  lv_spinbox_t* = struct_lv_spinbox_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/spinbox/lv_spinbox.h:46:3
-  struct_lv_switch_t* {.pure, inheritable, bycopy.} = object
-    obj*: lv_obj_t           ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/switch/lv_switch.h:33:9
-    anim_state*: int32
-  lv_switch_t* = struct_lv_switch_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/switch/lv_switch.h:36:3
-  lv_table_cell_ctrl_t* = uint32 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/table/lv_table.h:48:18
-  struct_lv_table_cell_t* {.pure, inheritable, bycopy.} = object
-    ctrl*: lv_table_cell_ctrl_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/table/lv_table.h:52:9
-    user_data*: pointer
-    txt*: array[1'i64, cschar]
-  lv_table_cell_t* = struct_lv_table_cell_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/table/lv_table.h:56:3
-  struct_lv_table_t* {.pure, inheritable, bycopy.} = object
-    obj*: lv_obj_t           ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/table/lv_table.h:59:9
-    col_cnt*: uint32
-    row_cnt*: uint32
-    cell_data*: ptr ptr lv_table_cell_t
-    row_h*: ptr int32
-    col_w*: ptr int32
-    col_act*: uint32
-    row_act*: uint32
-  lv_table_t* = struct_lv_table_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/table/lv_table.h:68:3
-  struct_lv_tabview_t* {.pure, inheritable, bycopy.} = object
-    obj*: lv_obj_t           ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/tabview/lv_tabview.h:29:9
-    tab_cur*: uint32
-    tab_pos*: lv_dir_t
-  lv_tabview_t* = struct_lv_tabview_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/tabview/lv_tabview.h:33:3
-  struct_lv_tileview_t* {.pure, inheritable, bycopy.} = object
-    obj*: lv_obj_t           ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/tileview/lv_tileview.h:27:9
-    tile_act*: ptr lv_obj_t
-  lv_tileview_t* = struct_lv_tileview_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/tileview/lv_tileview.h:30:3
-  struct_lv_tileview_tile_t* {.pure, inheritable, bycopy.} = object
-    obj*: lv_obj_t           ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/tileview/lv_tileview.h:32:9
-    dir*: lv_dir_t
-  lv_tileview_tile_t* = struct_lv_tileview_tile_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/tileview/lv_tileview.h:35:3
-  struct_lv_win_t* {.pure, inheritable, bycopy.} = object
-    obj*: lv_obj_t           ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/win/lv_win.h:25:9
-  lv_win_t* = struct_lv_win_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/win/lv_win.h:27:3
-  lv_observer_t* = struct_lv_observer_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/others/sysmon/../../others/observer/lv_observer.h:29:31
-  struct_lv_observer_t* {.pure, inheritable, bycopy.} = object
-    subject*: ptr lv_subject_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/others/sysmon/../../others/observer/lv_observer.h:73:8
-    cb*: lv_observer_cb_t
-    target*: pointer
-    user_data*: pointer
-    auto_free_user_data*: uint32
-    notified*: uint32
-    for_obj*: uint32
-  lv_subject_type_t* = enum_lv_subject_type_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/others/sysmon/../../others/observer/lv_observer.h:39:3
+  lv_calendar_date_t* = struct_lv_calendar_date_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/calendar/lv_calendar.h:35:3
+  lv_chart_type_t* = enum_lv_chart_type_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/chart/lv_chart.h:41:3
+  lv_chart_update_mode_t* = enum_lv_chart_update_mode_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/chart/lv_chart.h:49:3
+  lv_chart_axis_t* = enum_lv_chart_axis_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/chart/lv_chart.h:60:3
+  lv_imagebutton_state_t* = enum_lv_imagebutton_state_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/imagebutton/lv_imagebutton.h:31:3
+  lv_keyboard_mode_t* = enum_lv_keyboard_mode_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/keyboard/lv_keyboard.h:51:3
+  lv_menu_mode_header_t* = enum_lv_menu_mode_header_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/menu/lv_menu.h:35:3
+  lv_menu_mode_root_back_button_t* = enum_lv_menu_mode_root_back_button_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/menu/lv_menu.h:40:3
+  lv_roller_mode_t* = enum_lv_roller_mode_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/roller/lv_roller.h:39:3
+  lv_scale_mode_t* = enum_lv_scale_mode_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/scale/lv_scale.h:55:3
+  lv_slider_mode_t* = enum_lv_slider_mode_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/slider/lv_slider.h:36:3
+  lv_span_overflow_t* = enum_lv_span_overflow_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/span/lv_span.h:35:3
+  lv_span_mode_t* = enum_lv_span_mode_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/span/lv_span.h:42:3
+  lv_table_cell_ctrl_t* = enum_lv_table_cell_ctrl_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/table/lv_table.h:43:3
+  lv_subject_type_t* = enum_lv_subject_type_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/others/sysmon/../../others/observer/lv_observer.h:39:3
   union_lv_subject_value_t* {.union, bycopy.} = object
-    num*: int32              ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/others/sysmon/../../others/observer/lv_observer.h:44:9
-    pointer*: pointer
+    num*: int32              ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/others/sysmon/../../others/observer/lv_observer.h:44:9
+    pointer_field*: pointer
     color*: lv_color_t
-  lv_subject_value_t* = union_lv_subject_value_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/others/sysmon/../../others/observer/lv_observer.h:48:3
+  lv_subject_value_t* = union_lv_subject_value_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/others/sysmon/../../others/observer/lv_observer.h:48:3
   struct_lv_subject_t* {.pure, inheritable, bycopy.} = object
-    subs_ll*: lv_ll_t        ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/others/sysmon/../../others/observer/lv_observer.h:53:9
-    type_field*: uint32
-    size*: uint32
+    subs_ll*: lv_ll_t        ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/others/sysmon/../../others/observer/lv_observer.h:53:9
+    type_field* {.bitsize: 4'i64.}: uint32
+    size* {.bitsize: 28'i64.}: uint32
     value*: lv_subject_value_t
     prev_value*: lv_subject_value_t
-    notify_restart_query*: uint32
+    notify_restart_query* {.bitsize: 1'i64.}: uint32
     user_data*: pointer
-  lv_subject_t* = struct_lv_subject_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/others/sysmon/../../others/observer/lv_observer.h:61:3
+  lv_subject_t* = struct_lv_subject_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/others/sysmon/../../others/observer/lv_observer.h:61:3
   lv_observer_cb_t* = proc (a0: ptr lv_observer_t; a1: ptr lv_subject_t): void {.
-      cdecl.}                ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/others/sysmon/../../others/observer/lv_observer.h:68:16
-  lv_monkey_t* = struct_lv_monkey ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/others/monkey/lv_monkey.h:28:27
-  struct_lv_monkey_config_t_period_range_t* {.pure, inheritable, bycopy.} = object
-    min*: uint32
-    max*: uint32
-  struct_lv_monkey_config_t_input_range_t* {.pure, inheritable, bycopy.} = object
-    min*: int32
-    max*: int32
-  struct_lv_monkey_config_t* {.pure, inheritable, bycopy.} = object
-    type_field*: lv_indev_type_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/others/monkey/lv_monkey.h:30:9
-    period_range*: struct_lv_monkey_config_t_period_range_t
-    input_range*: struct_lv_monkey_config_t_input_range_t
-  lv_monkey_config_t* = struct_lv_monkey_config_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/others/monkey/lv_monkey.h:47:3
-  internal_keep_pedantic_happy* = cint ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/others/gridnav/lv_gridnav.h:20:13
-  lv_gridnav_ctrl_t* = enum_lv_gridnav_ctrl_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/others/gridnav/lv_gridnav.h:95:3
-  lv_fragment_manager_t* = struct_lv_fragment_manager_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/others/fragment/lv_fragment.h:28:39
-  lv_fragment_t* = struct_lv_fragment_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/others/fragment/lv_fragment.h:30:31
-  struct_lv_fragment_t* {.pure, inheritable, bycopy.} = object
-    cls*: ptr lv_fragment_class_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/others/fragment/lv_fragment.h:34:8
-    managed*: ptr lv_fragment_managed_states_t
-    child_manager*: ptr lv_fragment_manager_t
-    obj*: ptr lv_obj_t
-  lv_fragment_class_t* = struct_lv_fragment_class_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/others/fragment/lv_fragment.h:31:37
-  struct_lv_fragment_class_t* {.pure, inheritable, bycopy.} = object
-    constructor_cb*: proc (a0: ptr lv_fragment_t; a1: pointer): void {.cdecl.} ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/others/fragment/lv_fragment.h:56:8
-    destructor_cb*: proc (a0: ptr lv_fragment_t): void {.cdecl.}
-    attached_cb*: proc (a0: ptr lv_fragment_t): void {.cdecl.}
-    detached_cb*: proc (a0: ptr lv_fragment_t): void {.cdecl.}
-    create_obj_cb*: proc (a0: ptr lv_fragment_t; a1: ptr lv_obj_t): ptr lv_obj_t {.
-        cdecl.}
-    obj_created_cb*: proc (a0: ptr lv_fragment_t; a1: ptr lv_obj_t): void {.
-        cdecl.}
-    obj_will_delete_cb*: proc (a0: ptr lv_fragment_t; a1: ptr lv_obj_t): void {.
-        cdecl.}
-    obj_deleted_cb*: proc (a0: ptr lv_fragment_t; a1: ptr lv_obj_t): void {.
-        cdecl.}
-    event_cb*: proc (a0: ptr lv_fragment_t; a1: cint; a2: pointer): bool {.cdecl.}
-    instance_size*: csize_t
-  lv_fragment_managed_states_t* = struct_lv_fragment_managed_states_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/others/fragment/lv_fragment.h:32:46
-  struct_lv_fragment_managed_states_t* {.pure, inheritable, bycopy.} = object
-    cls*: ptr lv_fragment_class_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/others/fragment/lv_fragment.h:130:8
-    manager*: ptr lv_fragment_manager_t
-    container*: ptr ptr lv_obj_t
-    instance*: ptr lv_fragment_t
-    obj_created*: bool
-    destroying_obj*: bool
-    in_stack*: bool
+      cdecl.}                ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/others/sysmon/../../others/observer/lv_observer.h:68:16
+  lv_monkey_t* = struct_lv_monkey_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/others/monkey/lv_monkey.h:28:28
+  lv_gridnav_ctrl_t* = enum_lv_gridnav_ctrl_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/others/gridnav/lv_gridnav.h:55:3
+  lv_fragment_manager_t* = struct_lv_fragment_manager_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/others/fragment/lv_fragment.h:28:38
   lv_imgfont_get_path_cb_t* = proc (a0: ptr lv_font_t; a1: uint32; a2: uint32;
-                                    a3: ptr int32; a4: pointer): pointer {.cdecl.} ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/others/imgfont/lv_imgfont.h:30:24
-  lv_ime_pinyin_mode_t* = enum_lv_ime_pinyin_mode_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/others/ime/lv_ime_pinyin.h:33:3
+                                    a3: ptr int32; a4: pointer): pointer {.cdecl.} ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/others/imgfont/lv_imgfont.h:30:24
+  lv_ime_pinyin_mode_t* = enum_lv_ime_pinyin_mode_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/others/ime/lv_ime_pinyin.h:33:3
   struct_lv_pinyin_dict_t* {.pure, inheritable, bycopy.} = object
-    py*: cstring             ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/others/ime/lv_ime_pinyin.h:36:9
+    py*: cstring             ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/others/ime/lv_ime_pinyin.h:36:9
     py_mb*: cstring
-  lv_pinyin_dict_t* = struct_lv_pinyin_dict_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/others/ime/lv_ime_pinyin.h:39:3
+  lv_pinyin_dict_t* = struct_lv_pinyin_dict_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/others/ime/lv_ime_pinyin.h:39:3
   struct_ime_pinyin_k9_py_str_t* {.pure, inheritable, bycopy.} = object
-    py_str*: array[7'i64, cschar] ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/others/ime/lv_ime_pinyin.h:42:9
-  ime_pinyin_k9_py_str_t* = struct_ime_pinyin_k9_py_str_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/others/ime/lv_ime_pinyin.h:44:3
-  struct_lv_ime_pinyin_t* {.pure, inheritable, bycopy.} = object
-    obj*: lv_obj_t           ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/others/ime/lv_ime_pinyin.h:47:9
-    kb*: ptr lv_obj_t
-    cand_panel*: ptr lv_obj_t
-    dict*: ptr lv_pinyin_dict_t
-    k9_legal_py_ll*: lv_ll_t
-    cand_str*: cstring
-    input_char*: array[16'i64, cschar]
-    k9_input_str*: array[8'i64, cschar]
-    k9_py_ll_pos*: uint16
-    k9_legal_py_count*: uint16
-    k9_input_str_len*: uint16
-    ta_count*: uint16
-    cand_num*: uint16
-    py_page*: uint16
-    py_num*: array[26'i64, uint16]
-    py_pos*: array[26'i64, uint16]
-    mode*: lv_ime_pinyin_mode_t
-  lv_ime_pinyin_t* = struct_lv_ime_pinyin_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/others/ime/lv_ime_pinyin.h:67:3
-  lv_file_explorer_sort_t* = enum_lv_file_explorer_sort_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/others/file_explorer/lv_file_explorer.h:32:3
-  lv_file_explorer_dir_t* = enum_lv_file_explorer_dir_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/others/file_explorer/lv_file_explorer.h:42:3
-  struct_lv_file_explorer_t* {.pure, inheritable, bycopy.} = object
-    obj*: lv_obj_t           ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/others/file_explorer/lv_file_explorer.h:46:9
-    cont*: ptr lv_obj_t
-    head_area*: ptr lv_obj_t
-    browser_area*: ptr lv_obj_t
-    file_table*: ptr lv_obj_t
-    path_label*: ptr lv_obj_t
-    quick_access_area*: ptr lv_obj_t
-    list_device*: ptr lv_obj_t
-    list_places*: ptr lv_obj_t
-    home_dir*: cstring
-    music_dir*: cstring
-    pictures_dir*: cstring
-    video_dir*: cstring
-    docs_dir*: cstring
-    fs_dir*: cstring
-    sel_fn*: cstring
-    current_path*: array[128'i64, cschar]
-    sort*: lv_file_explorer_sort_t
-  lv_file_explorer_t* = struct_lv_file_explorer_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/others/file_explorer/lv_file_explorer.h:67:3
-  struct_lv_barcode_t* {.pure, inheritable, bycopy.} = object
-    canvas*: lv_canvas_t     ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/libs/barcode/lv_barcode.h:32:9
-    dark_color*: lv_color_t
-    light_color*: lv_color_t
-    scale*: uint16
-    direction*: lv_dir_t
-    tiled*: bool
-  lv_barcode_t* = struct_lv_barcode_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/libs/barcode/lv_barcode.h:39:3
+    py_str*: array[7'i64, cschar] ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/others/ime/lv_ime_pinyin.h:42:9
+  ime_pinyin_k9_py_str_t* = struct_ime_pinyin_k9_py_str_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/others/ime/lv_ime_pinyin.h:44:3
+  lv_file_explorer_sort_t* = enum_lv_file_explorer_sort_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/others/file_explorer/lv_file_explorer.h:32:3
+  lv_file_explorer_dir_t* = enum_lv_file_explorer_dir_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/others/file_explorer/lv_file_explorer.h:42:3
   struct_gd_Palette* {.pure, inheritable, bycopy.} = object
-    size*: cint              ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/libs/gif/gifdec.h:13:16
+    size*: cint              ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/libs/gif/gifdec.h:13:16
     colors*: array[768'i64, uint8]
-  gd_Palette* = struct_gd_Palette ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/libs/gif/gifdec.h:16:3
+  gd_Palette* = struct_gd_Palette ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/libs/gif/gifdec.h:16:3
   struct_gd_GCE* {.pure, inheritable, bycopy.} = object
-    delay*: uint16           ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/libs/gif/gifdec.h:18:16
+    delay*: uint16           ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/libs/gif/gifdec.h:18:16
     tindex*: uint8
     disposal*: uint8
     input*: cint
     transparency*: cint
-  gd_GCE* = struct_gd_GCE    ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/libs/gif/gifdec.h:24:3
+  gd_GCE* = struct_gd_GCE    ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/libs/gif/gifdec.h:24:3
   struct_gd_GIF* {.pure, inheritable, bycopy.} = object
-    fd*: lv_fs_file_t        ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/libs/gif/gifdec.h:28:16
+    fd*: lv_fs_file_t        ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/libs/gif/gifdec.h:28:16
     data*: cstring
     is_file*: uint8
     f_rw_p*: uint32
@@ -2257,507 +2039,313 @@ type
     bgindex*: uint8
     canvas*: ptr uint8
     frame*: ptr uint8
-  gd_GIF* = struct_gd_GIF    ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/libs/gif/gifdec.h:53:3
-  struct_lv_gif_t* {.pure, inheritable, bycopy.} = object
-    img*: lv_image_t         ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/libs/gif/lv_gif.h:30:9
-    gif*: ptr gd_GIF
-    timer*: ptr lv_timer_t
-    imgdsc*: lv_image_dsc_t
-    last_call*: uint32
-  lv_gif_t* = struct_lv_gif_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/libs/gif/lv_gif.h:36:3
-  struct_lv_qrcode_t* {.pure, inheritable, bycopy.} = object
-    canvas*: lv_canvas_t     ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/libs/qrcode/lv_qrcode.h:28:9
-    dark_color*: lv_color_t
-    light_color*: lv_color_t
-  lv_qrcode_t* = struct_lv_qrcode_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/libs/qrcode/lv_qrcode.h:32:3
-  lv_vector_fill_t* = uint8  ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/draw/lv_draw_vector.h:28:17
-  lv_vector_stroke_cap_t* = uint8 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/draw/lv_draw_vector.h:35:17
-  lv_vector_stroke_join_t* = uint8 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/draw/lv_draw_vector.h:42:17
-  lv_vector_path_quality_t* = uint8 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/draw/lv_draw_vector.h:49:17
-  lv_vector_blend_t* = uint8 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/draw/lv_draw_vector.h:62:17
-  lv_vector_path_op_t* = uint8 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/draw/lv_draw_vector.h:71:17
-  lv_vector_draw_style_t* = uint8 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/draw/lv_draw_vector.h:78:17
-  lv_vector_gradient_spread_t* = uint8 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/draw/lv_draw_vector.h:85:17
-  lv_vector_gradient_style_t* = uint8 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/draw/lv_draw_vector.h:91:17
-  struct_lv_fpoint_t* {.pure, inheritable, bycopy.} = object
-    x*: cfloat               ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/draw/lv_draw_vector.h:93:9
-    y*: cfloat
-  lv_fpoint_t* = struct_lv_fpoint_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/draw/lv_draw_vector.h:96:3
-  struct_lv_matrix_t* {.pure, inheritable, bycopy.} = object
-    m*: array[3'i64, array[3'i64, cfloat]] ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/draw/lv_draw_vector.h:98:9
-  lv_matrix_t* = struct_lv_matrix_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/draw/lv_draw_vector.h:100:3
-  struct_lv_vector_path_t* {.pure, inheritable, bycopy.} = object
-    quality*: lv_vector_path_quality_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/draw/lv_draw_vector.h:102:9
-    ops*: lv_array_t
-    points*: lv_array_t
-  lv_vector_path_t* = struct_lv_vector_path_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/draw/lv_draw_vector.h:106:3
-  struct_lv_vector_gradient_t* {.pure, inheritable, bycopy.} = object
-    style*: lv_vector_gradient_style_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/draw/lv_draw_vector.h:108:9
-    stops*: array[2'i64, lv_gradient_stop_t]
-    stops_count*: uint16
-    x1*: cfloat
-    y1*: cfloat
-    x2*: cfloat
-    y2*: cfloat
-    cx*: cfloat
-    cy*: cfloat
-    cr*: cfloat
-    spread*: lv_vector_gradient_spread_t
-  lv_vector_gradient_t* = struct_lv_vector_gradient_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/draw/lv_draw_vector.h:120:3
-  struct_lv_vector_fill_dsc_t* {.pure, inheritable, bycopy.} = object
-    style*: lv_vector_draw_style_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/draw/lv_draw_vector.h:122:9
-    color*: lv_color32_t
-    opa*: lv_opa_t
-    fill_rule*: lv_vector_fill_t
-    img_dsc*: lv_draw_image_dsc_t
-    gradient*: lv_vector_gradient_t
-    matrix*: lv_matrix_t
-  lv_vector_fill_dsc_t* = struct_lv_vector_fill_dsc_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/draw/lv_draw_vector.h:130:3
-  struct_lv_vector_stroke_dsc_t* {.pure, inheritable, bycopy.} = object
-    style*: lv_vector_draw_style_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/draw/lv_draw_vector.h:132:9
-    color*: lv_color32_t
-    opa*: lv_opa_t
-    width*: cfloat
-    dash_pattern*: lv_array_t
-    cap*: lv_vector_stroke_cap_t
-    join*: lv_vector_stroke_join_t
-    miter_limit*: uint16
-    gradient*: lv_vector_gradient_t
-    matrix*: lv_matrix_t
-  lv_vector_stroke_dsc_t* = struct_lv_vector_stroke_dsc_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/draw/lv_draw_vector.h:143:3
-  struct_lv_vector_draw_dsc_t* {.pure, inheritable, bycopy.} = object
-    fill_dsc*: lv_vector_fill_dsc_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/draw/lv_draw_vector.h:145:9
-    stroke_dsc*: lv_vector_stroke_dsc_t
-    matrix*: lv_matrix_t
-    blend_mode*: lv_vector_blend_t
-    scissor_area*: lv_area_t
-  lv_vector_draw_dsc_t* = struct_lv_vector_draw_dsc_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/draw/lv_draw_vector.h:151:3
-  struct_lv_draw_vector_task_dsc_t* {.pure, inheritable, bycopy.} = object
-    base*: lv_draw_dsc_base_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/draw/lv_draw_vector.h:153:9
-    task_list*: ptr lv_ll_t
-  lv_draw_vector_task_dsc_t* = struct_lv_draw_vector_task_dsc_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/draw/lv_draw_vector.h:156:3
-  struct_lv_vector_dsc_t* {.pure, inheritable, bycopy.} = object
-    layer*: ptr lv_layer_t   ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/draw/lv_draw_vector.h:158:9
-    current_dsc*: lv_vector_draw_dsc_t
-    tasks*: lv_draw_vector_task_dsc_t
-  lv_vector_dsc_t* = struct_lv_vector_dsc_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/draw/lv_draw_vector.h:163:3
+  gd_GIF* = struct_gd_GIF    ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/libs/gif/gifdec.h:53:3
+  lv_vector_fill_t* = enum_lv_vector_fill_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/draw/lv_draw_vector.h:32:3
+  lv_vector_stroke_cap_t* = enum_lv_vector_stroke_cap_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/draw/lv_draw_vector.h:38:3
+  lv_vector_stroke_join_t* = enum_lv_vector_stroke_join_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/draw/lv_draw_vector.h:44:3
+  lv_vector_path_quality_t* = enum_lv_vector_path_quality_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/draw/lv_draw_vector.h:50:3
+  lv_vector_blend_t* = enum_lv_vector_blend_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/draw/lv_draw_vector.h:62:3
+  lv_vector_path_op_t* = enum_lv_vector_path_op_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/draw/lv_draw_vector.h:70:3
+  lv_vector_draw_style_t* = enum_lv_vector_draw_style_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/draw/lv_draw_vector.h:76:3
+  lv_vector_gradient_spread_t* = enum_lv_vector_gradient_spread_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/draw/lv_draw_vector.h:82:3
+  lv_vector_gradient_style_t* = enum_lv_vector_gradient_style_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/draw/lv_draw_vector.h:87:3
   vector_draw_task_cb* = proc (a0: pointer; a1: ptr lv_vector_path_t;
-                               a2: ptr lv_vector_draw_dsc_t): void {.cdecl.} ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/draw/lv_draw_vector.h:596:16
-  lv_theme_apply_cb_t* = proc (a0: ptr lv_theme_t; a1: ptr lv_obj_t): void {.
-      cdecl.}                ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/themes/lv_theme.h:26:16
-  lv_coord_t* = int32        ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:49:37
-  lv_res_t* = lv_result_t    ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:50:37
-  lv_img_dsc_t* = lv_image_dsc_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:51:37
-  lv_disp_t* = lv_display_t  ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:52:37
-  lv_disp_rotation_t* = lv_display_rotation_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:53:37
-  lv_disp_render_t* = lv_display_render_mode_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:54:37
-  lv_anim_ready_cb_t* = lv_anim_completed_cb_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:55:37
-  lv_scr_load_anim_t* = lv_screen_load_anim_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:56:37
-  lv_btnmatrix_ctrl_t* = lv_buttonmatrix_ctrl_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:59:37
-  struct_lv_draw_sw_unit_t* {.pure, inheritable, bycopy.} = object
-    base_unit*: lv_draw_unit_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../draw/sw/lv_draw_sw.h:34:9
-    task_act*: ptr lv_draw_task_t
-    idx*: uint32
-  lv_draw_sw_unit_t* = struct_lv_draw_sw_unit_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../draw/sw/lv_draw_sw.h:44:3
-  lv_draw_sw_mask_res_t* = uint8 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../draw/sw/blend/../lv_draw_sw_mask.h:42:17
-  lv_draw_sw_mask_type_t* = uint8 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../draw/sw/blend/../lv_draw_sw_mask.h:54:17
+                               a2: ptr lv_vector_draw_dsc_t): void {.cdecl.} ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/draw/lv_draw_vector.h:481:16
+  struct_lv_draw_triangle_dsc_t* {.pure, inheritable, bycopy.} = object
+    base*: lv_draw_dsc_base_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/draw/sw/../lv_draw_triangle.h:25:9
+    bg_opa*: lv_opa_t
+    bg_color*: lv_color_t
+    bg_grad*: lv_grad_dsc_t
+    p*: array[3'i64, lv_point_precise_t]
+  lv_draw_triangle_dsc_t* = struct_lv_draw_triangle_dsc_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/draw/sw/../lv_draw_triangle.h:33:3
+  lv_draw_sw_mask_res_t* = enum_lv_draw_sw_mask_res_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/draw/sw/blend/../lv_draw_sw_mask.h:40:3
+  lv_draw_sw_mask_type_t* = enum_lv_draw_sw_mask_type_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/draw/sw/blend/../lv_draw_sw_mask.h:50:3
+  lv_draw_sw_mask_line_side_t* = enum_lv_draw_sw_mask_line_side_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/draw/sw/blend/../lv_draw_sw_mask.h:57:3
   lv_draw_sw_mask_xcb_t* = proc (a0: ptr lv_opa_t; a1: int32; a2: int32;
                                  a3: int32; a4: pointer): lv_draw_sw_mask_res_t {.
-      cdecl.}                ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../draw/sw/blend/../lv_draw_sw_mask.h:67:33
-  lv_draw_sw_mask_line_side_t* = uint8 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../draw/sw/blend/../lv_draw_sw_mask.h:71:17
-  struct_lv_draw_sw_mask_common_dsc_t* {.pure, inheritable, bycopy.} = object
-    cb*: lv_draw_sw_mask_xcb_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../draw/sw/blend/../lv_draw_sw_mask.h:73:9
-    type_field*: lv_draw_sw_mask_type_t
-  internal_lv_draw_sw_mask_common_dsc_t* = struct_lv_draw_sw_mask_common_dsc_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../draw/sw/blend/../lv_draw_sw_mask.h:76:3
-  struct_lv_draw_sw_mask_line_param_t_cfg_t* {.pure, inheritable, bycopy.} = object
-    p1*: lv_point_t
-    p2*: lv_point_t
-    side*: lv_draw_sw_mask_line_side_t
-  struct_lv_draw_sw_mask_line_param_t* {.pure, inheritable, bycopy.} = object
-    dsc*: internal_lv_draw_sw_mask_common_dsc_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../draw/sw/blend/../lv_draw_sw_mask.h:78:9
-    cfg*: struct_lv_draw_sw_mask_line_param_t_cfg_t
-    origo*: lv_point_t
-    xy_steep*: int32
-    yx_steep*: int32
-    steep*: int32
-    spx*: int32
-    flat*: uint8
-    inv*: uint8
-  lv_draw_sw_mask_line_param_t* = struct_lv_draw_sw_mask_line_param_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../draw/sw/blend/../lv_draw_sw_mask.h:114:3
-  struct_lv_draw_sw_mask_angle_param_t_cfg_t* {.pure, inheritable, bycopy.} = object
-    vertex_p*: lv_point_t
-    start_angle*: int32
-    end_angle*: int32
-  struct_lv_draw_sw_mask_angle_param_t* {.pure, inheritable, bycopy.} = object
-    dsc*: internal_lv_draw_sw_mask_common_dsc_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../draw/sw/blend/../lv_draw_sw_mask.h:116:9
-    cfg*: struct_lv_draw_sw_mask_angle_param_t_cfg_t
-    start_line*: lv_draw_sw_mask_line_param_t
-    end_line*: lv_draw_sw_mask_line_param_t
-    delta_deg*: uint16
-  lv_draw_sw_mask_angle_param_t* = struct_lv_draw_sw_mask_angle_param_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../draw/sw/blend/../lv_draw_sw_mask.h:129:3
-  struct_lv_draw_sw_mask_radius_circle_dsc_t* {.pure, inheritable, bycopy.} = object
-    buf*: ptr uint8          ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../draw/sw/blend/../lv_draw_sw_mask.h:131:9
-    cir_opa*: ptr lv_opa_t
-    x_start_on_y*: ptr uint16
-    opa_start_on_y*: ptr uint16
-    life*: int32
-    used_cnt*: uint32
-    radius*: int32
-  internal_lv_draw_sw_mask_radius_circle_dsc_t* = struct_lv_draw_sw_mask_radius_circle_dsc_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../draw/sw/blend/../lv_draw_sw_mask.h:139:3
-  internal_lv_draw_sw_mask_radius_circle_dsc_arr_t* = array[4'i64,
-      internal_lv_draw_sw_mask_radius_circle_dsc_t] ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../draw/sw/blend/../lv_draw_sw_mask.h:141:46
-  struct_lv_draw_sw_mask_radius_param_t_cfg_t* {.pure, inheritable, bycopy.} = object
-    rect*: lv_area_t
-    radius*: int32
-    outer*: uint8
-  struct_lv_draw_sw_mask_radius_param_t* {.pure, inheritable, bycopy.} = object
-    dsc*: internal_lv_draw_sw_mask_common_dsc_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../draw/sw/blend/../lv_draw_sw_mask.h:143:9
-    cfg*: struct_lv_draw_sw_mask_radius_param_t_cfg_t
-    circle*: ptr internal_lv_draw_sw_mask_radius_circle_dsc_t
-  lv_draw_sw_mask_radius_param_t* = struct_lv_draw_sw_mask_radius_param_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../draw/sw/blend/../lv_draw_sw_mask.h:155:3
-  struct_lv_draw_sw_mask_fade_param_t_cfg_t* {.pure, inheritable, bycopy.} = object
-    coords*: lv_area_t
-    y_top*: int32
-    y_bottom*: int32
-    opa_top*: lv_opa_t
-    opa_bottom*: lv_opa_t
-  struct_lv_draw_sw_mask_fade_param_t* {.pure, inheritable, bycopy.} = object
-    dsc*: internal_lv_draw_sw_mask_common_dsc_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../draw/sw/blend/../lv_draw_sw_mask.h:157:9
-    cfg*: struct_lv_draw_sw_mask_fade_param_t_cfg_t
-  lv_draw_sw_mask_fade_param_t* = struct_lv_draw_sw_mask_fade_param_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../draw/sw/blend/../lv_draw_sw_mask.h:169:3
-  struct_lv_draw_sw_mask_map_param_t_cfg_t* {.pure, inheritable, bycopy.} = object
-    coords*: lv_area_t
-    map*: ptr lv_opa_t
-  struct_lv_draw_sw_mask_map_param_t* {.pure, inheritable, bycopy.} = object
-    dsc*: internal_lv_draw_sw_mask_common_dsc_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../draw/sw/blend/../lv_draw_sw_mask.h:171:16
-    cfg*: struct_lv_draw_sw_mask_map_param_t_cfg_t
-  lv_draw_sw_mask_map_param_t* = struct_lv_draw_sw_mask_map_param_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../draw/sw/blend/../lv_draw_sw_mask.h:179:3
-  struct_lv_draw_sw_blend_dsc_t* {.pure, inheritable, bycopy.} = object
-    blend_area*: ptr lv_area_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../draw/sw/blend/lv_draw_sw_blend.h:31:9
-    src_buf*: pointer
-    src_stride*: uint32
-    src_color_format*: lv_color_format_t
-    src_area*: ptr lv_area_t
-    opa*: lv_opa_t
-    color*: lv_color_t
-    mask_buf*: ptr lv_opa_t
-    mask_res*: lv_draw_sw_mask_res_t
-    mask_area*: ptr lv_area_t
-    mask_stride*: int32
-    blend_mode*: lv_blend_mode_t
-  lv_draw_sw_blend_dsc_t* = struct_lv_draw_sw_blend_dsc_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../draw/sw/blend/lv_draw_sw_blend.h:45:3
-  struct_lv_draw_sw_blend_fill_dsc_t* {.pure, inheritable, bycopy.} = object
-    dest_buf*: pointer       ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../draw/sw/blend/lv_draw_sw_blend.h:47:9
-    dest_w*: int32
-    dest_h*: int32
-    dest_stride*: int32
-    mask_buf*: ptr lv_opa_t
-    mask_stride*: int32
-    color*: lv_color_t
-    opa*: lv_opa_t
-  internal_lv_draw_sw_blend_fill_dsc_t* = struct_lv_draw_sw_blend_fill_dsc_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../draw/sw/blend/lv_draw_sw_blend.h:56:3
-  struct_lv_draw_sw_blend_image_dsc_t* {.pure, inheritable, bycopy.} = object
-    dest_buf*: pointer       ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../draw/sw/blend/lv_draw_sw_blend.h:58:9
-    dest_w*: int32
-    dest_h*: int32
-    dest_stride*: int32
-    mask_buf*: ptr lv_opa_t
-    mask_stride*: int32
-    src_buf*: pointer
-    src_stride*: int32
-    src_color_format*: lv_color_format_t
-    opa*: lv_opa_t
-    blend_mode*: lv_blend_mode_t
-  internal_lv_draw_sw_blend_image_dsc_t* = struct_lv_draw_sw_blend_image_dsc_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../draw/sw/blend/lv_draw_sw_blend.h:70:3
-  lv_tlsf_t* = pointer       ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../stdlib/builtin/lv_tlsf.h:54:16
-  lv_pool_t* = pointer       ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../stdlib/builtin/lv_tlsf.h:55:16
-  struct_lv_tlsf_state_t* {.pure, inheritable, bycopy.} = object
-    tlsf*: lv_tlsf_t         ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../stdlib/builtin/lv_tlsf.h:57:9
-    cur_used*: csize_t
-    max_used*: csize_t
-    pool_ll*: lv_ll_t
-  lv_tlsf_state_t* = struct_lv_tlsf_state_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../stdlib/builtin/lv_tlsf.h:65:3
-  lv_tlsf_walker* = proc (a0: pointer; a1: csize_t; a2: cint; a3: pointer): void {.
-      cdecl.}                ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../stdlib/builtin/lv_tlsf.h:95:16
-  struct_lv_global_t* {.pure, inheritable, bycopy.} = object
-    inited*: bool            ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/lv_global.h:68:16
-    deinit_in_progress*: bool
-    disp_ll*: lv_ll_t
-    disp_refresh*: ptr lv_display_t
-    disp_default*: ptr lv_display_t
-    style_trans_ll*: lv_ll_t
-    style_refresh*: bool
-    style_custom_table_size*: uint32
-    style_last_custom_prop_id*: uint32
-    style_custom_prop_flag_lookup_table*: ptr uint8
-    group_ll*: lv_ll_t
-    group_default*: ptr lv_group_t
-    indev_ll*: lv_ll_t
-    indev_active*: ptr lv_indev_t
-    indev_obj_active*: ptr lv_obj_t
-    layout_count*: uint32
-    layout_list*: ptr lv_layout_dsc_t
-    layout_update_mutex*: bool
-    memory_zero*: uint32
-    math_rand_seed*: uint32
-    event_header*: ptr lv_event_t
-    event_last_register_id*: uint32
-    timer_state*: lv_timer_state_t
-    anim_state*: lv_anim_state_t
-    tick_state*: lv_tick_state_t
-    draw_buf_handlers*: lv_draw_buf_handlers_t
-    font_draw_buf_handlers*: lv_draw_buf_handlers_t
-    image_cache_draw_buf_handlers*: lv_draw_buf_handlers_t
-    img_decoder_ll*: lv_ll_t
-    img_cache*: ptr lv_cache_t
-    img_header_cache*: ptr lv_cache_t
-    draw_info*: lv_draw_global_info_t
-    sw_circle_cache*: internal_lv_draw_sw_mask_radius_circle_dsc_arr_t
-    custom_log_print_cb*: lv_log_print_g_cb_t
-    log_last_log_time*: uint32
-    theme_simple*: pointer
-    theme_default*: pointer
-    theme_mono*: pointer
-    tlsf_state*: lv_tlsf_state_t
-    fsdrv_ll*: lv_ll_t
-    stdio_fs_drv*: lv_fs_drv_t
-    font_fmt_rle*: lv_font_fmt_rle_t
-    span_snippet_stack*: ptr struct_snippet_stack
-    fe_list_button_style*: lv_style_t
-    ime_cand_len*: csize_t
-    user_data*: pointer
-  lv_global_t* = struct_lv_global_t ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/lv_global.h:215:3
+      cdecl.}                ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/draw/sw/blend/../lv_draw_sw_mask.h:63:33
+  lv_theme_apply_cb_t* = proc (a0: ptr lv_theme_t; a1: ptr lv_obj_t): void {.
+      cdecl.}                ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/themes/lv_theme.h:26:16
+  lv_coord_t* = int32        ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:49:37
+  lv_res_t* = lv_result_t    ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:50:37
+  lv_img_dsc_t* = lv_image_dsc_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:51:37
+  lv_disp_t* = lv_display_t  ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:52:37
+  lv_disp_rotation_t* = lv_display_rotation_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:53:37
+  lv_disp_render_t* = lv_display_render_mode_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:54:37
+  lv_anim_ready_cb_t* = lv_anim_completed_cb_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:55:37
+  lv_scr_load_anim_t* = lv_screen_load_anim_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:56:37
+  lv_btnmatrix_ctrl_t* = lv_buttonmatrix_ctrl_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:59:37
 when 9 is static:
   const
-    LVGL_VERSION_MAJOR* = 9  ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/lv_version.h:9:9
+    LVGL_VERSION_MAJOR* = 9  ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/lv_version.h:9:9
 else:
-  let LVGL_VERSION_MAJOR* = 9 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/lv_version.h:9:9
-when 1 is static:
-  const
-    LVGL_VERSION_MINOR* = 1  ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/lv_version.h:10:9
-else:
-  let LVGL_VERSION_MINOR* = 1 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/lv_version.h:10:9
-when 1 is static:
-  const
-    LVGL_VERSION_PATCH* = 1  ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/lv_version.h:11:9
-else:
-  let LVGL_VERSION_PATCH* = 1 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/lv_version.h:11:9
-when "dev" is static:
-  const
-    LVGL_VERSION_INFO* = "dev" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/lv_version.h:12:9
-else:
-  let LVGL_VERSION_INFO* = "dev" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/lv_version.h:12:9
-when 0 is static:
-  const
-    LV_OS_NONE* = 0          ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:12:9
-else:
-  let LV_OS_NONE* = 0        ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:12:9
-when 1 is static:
-  const
-    LV_OS_PTHREAD* = 1       ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:13:9
-else:
-  let LV_OS_PTHREAD* = 1     ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:13:9
+  let LVGL_VERSION_MAJOR* = 9 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/lv_version.h:9:9
 when 2 is static:
   const
-    LV_OS_FREERTOS* = 2      ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:14:9
+    LVGL_VERSION_MINOR* = 2  ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/lv_version.h:10:9
 else:
-  let LV_OS_FREERTOS* = 2    ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:14:9
+  let LVGL_VERSION_MINOR* = 2 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/lv_version.h:10:9
+when 2 is static:
+  const
+    LVGL_VERSION_PATCH* = 2  ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/lv_version.h:11:9
+else:
+  let LVGL_VERSION_PATCH* = 2 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/lv_version.h:11:9
+when "" is static:
+  const
+    LVGL_VERSION_INFO* = ""  ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/lv_version.h:12:9
+else:
+  let LVGL_VERSION_INFO* = "" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/lv_version.h:12:9
+when 0 is static:
+  const
+    LV_OS_NONE* = 0          ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:12:9
+else:
+  let LV_OS_NONE* = 0        ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:12:9
+when 1 is static:
+  const
+    LV_OS_PTHREAD* = 1       ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:13:9
+else:
+  let LV_OS_PTHREAD* = 1     ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:13:9
+when 2 is static:
+  const
+    LV_OS_FREERTOS* = 2      ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:14:9
+else:
+  let LV_OS_FREERTOS* = 2    ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:14:9
 when 3 is static:
   const
-    LV_OS_CMSIS_RTOS2* = 3   ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:15:9
+    LV_OS_CMSIS_RTOS2* = 3   ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:15:9
 else:
-  let LV_OS_CMSIS_RTOS2* = 3 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:15:9
+  let LV_OS_CMSIS_RTOS2* = 3 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:15:9
 when 4 is static:
   const
-    LV_OS_RTTHREAD* = 4      ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:16:9
+    LV_OS_RTTHREAD* = 4      ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:16:9
 else:
-  let LV_OS_RTTHREAD* = 4    ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:16:9
+  let LV_OS_RTTHREAD* = 4    ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:16:9
 when 5 is static:
   const
-    LV_OS_WINDOWS* = 5       ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:17:9
+    LV_OS_WINDOWS* = 5       ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:17:9
 else:
-  let LV_OS_WINDOWS* = 5     ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:17:9
+  let LV_OS_WINDOWS* = 5     ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:17:9
 when 6 is static:
   const
-    LV_OS_MQX* = 6           ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:18:9
+    LV_OS_MQX* = 6           ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:18:9
 else:
-  let LV_OS_MQX* = 6         ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:18:9
+  let LV_OS_MQX* = 6         ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:18:9
 when 255 is static:
   const
-    LV_OS_CUSTOM* = 255      ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:19:9
+    LV_OS_CUSTOM* = 255      ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:19:9
 else:
-  let LV_OS_CUSTOM* = 255    ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:19:9
+  let LV_OS_CUSTOM* = 255    ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:19:9
 when 0 is static:
   const
-    LV_STDLIB_BUILTIN* = 0   ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:21:9
+    LV_STDLIB_BUILTIN* = 0   ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:21:9
 else:
-  let LV_STDLIB_BUILTIN* = 0 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:21:9
+  let LV_STDLIB_BUILTIN* = 0 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:21:9
 when 1 is static:
   const
-    LV_STDLIB_CLIB* = 1      ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:22:9
+    LV_STDLIB_CLIB* = 1      ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:22:9
 else:
-  let LV_STDLIB_CLIB* = 1    ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:22:9
+  let LV_STDLIB_CLIB* = 1    ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:22:9
 when 2 is static:
   const
-    LV_STDLIB_MICROPYTHON* = 2 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:23:9
+    LV_STDLIB_MICROPYTHON* = 2 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:23:9
 else:
-  let LV_STDLIB_MICROPYTHON* = 2 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:23:9
+  let LV_STDLIB_MICROPYTHON* = 2 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:23:9
 when 3 is static:
   const
-    LV_STDLIB_RTTHREAD* = 3  ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:24:9
+    LV_STDLIB_RTTHREAD* = 3  ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:24:9
 else:
-  let LV_STDLIB_RTTHREAD* = 3 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:24:9
+  let LV_STDLIB_RTTHREAD* = 3 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:24:9
 when 255 is static:
   const
-    LV_STDLIB_CUSTOM* = 255  ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:25:9
+    LV_STDLIB_CUSTOM* = 255  ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:25:9
 else:
-  let LV_STDLIB_CUSTOM* = 255 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:25:9
+  let LV_STDLIB_CUSTOM* = 255 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:25:9
 when 0 is static:
   const
-    LV_DRAW_SW_ASM_NONE* = 0 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:27:9
+    LV_DRAW_SW_ASM_NONE* = 0 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:27:9
 else:
-  let LV_DRAW_SW_ASM_NONE* = 0 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:27:9
+  let LV_DRAW_SW_ASM_NONE* = 0 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:27:9
 when 1 is static:
   const
-    LV_DRAW_SW_ASM_NEON* = 1 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:28:9
+    LV_DRAW_SW_ASM_NEON* = 1 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:28:9
 else:
-  let LV_DRAW_SW_ASM_NEON* = 1 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:28:9
+  let LV_DRAW_SW_ASM_NEON* = 1 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:28:9
 when 2 is static:
   const
-    LV_DRAW_SW_ASM_HELIUM* = 2 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:29:9
+    LV_DRAW_SW_ASM_HELIUM* = 2 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:29:9
 else:
-  let LV_DRAW_SW_ASM_HELIUM* = 2 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:29:9
+  let LV_DRAW_SW_ASM_HELIUM* = 2 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:29:9
 when 255 is static:
   const
-    LV_DRAW_SW_ASM_CUSTOM* = 255 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:30:9
+    LV_DRAW_SW_ASM_CUSTOM* = 255 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:30:9
 else:
-  let LV_DRAW_SW_ASM_CUSTOM* = 255 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:30:9
+  let LV_DRAW_SW_ASM_CUSTOM* = 255 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:30:9
+when 0 is static:
+  const
+    LV_DRAW_TRANSFORM_USE_MATRIX* = 0 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:322:17
+else:
+  let LV_DRAW_TRANSFORM_USE_MATRIX* = 0 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:322:17
 when 1 is static:
   const
-    LV_DRAW_SW_SUPPORT_RGB565* = 1 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:349:18
+    LV_DRAW_SW_SUPPORT_RGB565* = 1 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:379:18
 else:
-  let LV_DRAW_SW_SUPPORT_RGB565* = 1 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:349:18
+  let LV_DRAW_SW_SUPPORT_RGB565* = 1 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:379:18
 when 1 is static:
   const
-    LV_DRAW_SW_SUPPORT_RGB565A8* = 1 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:360:18
+    LV_DRAW_SW_SUPPORT_RGB565A8* = 1 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:390:18
 else:
-  let LV_DRAW_SW_SUPPORT_RGB565A8* = 1 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:360:18
+  let LV_DRAW_SW_SUPPORT_RGB565A8* = 1 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:390:18
 when 1 is static:
   const
-    LV_DRAW_SW_SUPPORT_RGB888* = 1 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:371:18
+    LV_DRAW_SW_SUPPORT_RGB888* = 1 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:401:18
 else:
-  let LV_DRAW_SW_SUPPORT_RGB888* = 1 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:371:18
+  let LV_DRAW_SW_SUPPORT_RGB888* = 1 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:401:18
 when 1 is static:
   const
-    LV_DRAW_SW_SUPPORT_XRGB8888* = 1 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:382:18
+    LV_DRAW_SW_SUPPORT_XRGB8888* = 1 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:412:18
 else:
-  let LV_DRAW_SW_SUPPORT_XRGB8888* = 1 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:382:18
+  let LV_DRAW_SW_SUPPORT_XRGB8888* = 1 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:412:18
 when 1 is static:
   const
-    LV_DRAW_SW_SUPPORT_ARGB8888* = 1 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:393:18
+    LV_DRAW_SW_SUPPORT_ARGB8888* = 1 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:423:18
 else:
-  let LV_DRAW_SW_SUPPORT_ARGB8888* = 1 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:393:18
+  let LV_DRAW_SW_SUPPORT_ARGB8888* = 1 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:423:18
 when 1 is static:
   const
-    LV_DRAW_SW_SUPPORT_L8* = 1 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:404:18
+    LV_DRAW_SW_SUPPORT_L8* = 1 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:434:18
 else:
-  let LV_DRAW_SW_SUPPORT_L8* = 1 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:404:18
+  let LV_DRAW_SW_SUPPORT_L8* = 1 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:434:18
 when 1 is static:
   const
-    LV_DRAW_SW_SUPPORT_AL88* = 1 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:415:18
+    LV_DRAW_SW_SUPPORT_AL88* = 1 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:445:18
 else:
-  let LV_DRAW_SW_SUPPORT_AL88* = 1 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:415:18
+  let LV_DRAW_SW_SUPPORT_AL88* = 1 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:445:18
 when 1 is static:
   const
-    LV_DRAW_SW_SUPPORT_A8* = 1 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:426:18
+    LV_DRAW_SW_SUPPORT_A8* = 1 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:456:18
 else:
-  let LV_DRAW_SW_SUPPORT_A8* = 1 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:426:18
-when 0 is static:
-  const
-    LV_USE_DRAW_ARM2D_SYNC* = 0 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:450:21
-else:
-  let LV_USE_DRAW_ARM2D_SYNC* = 0 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:450:21
-when 0 is static:
-  const
-    LV_USE_NATIVE_HELIUM_ASM* = 0 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:459:21
-else:
-  let LV_USE_NATIVE_HELIUM_ASM* = 0 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:459:21
-when 0 is static:
-  const
-    LV_USE_DRAW_SW_COMPLEX_GRADIENTS* = 0 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:525:21
-else:
-  let LV_USE_DRAW_SW_COMPLEX_GRADIENTS* = 0 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:525:21
-when 0 is static:
-  const
-    LV_IMAGE_HEADER_CACHE_DEF_CNT* = 0 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:992:17
-else:
-  let LV_IMAGE_HEADER_CACHE_DEF_CNT* = 0 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:992:17
-when 0 is static:
-  const
-    LV_USE_OBJ_ID* = 0       ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/../../lv_conf.h:286:9
-else:
-  let LV_USE_OBJ_ID* = 0     ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/../../lv_conf.h:286:9
+  let LV_DRAW_SW_SUPPORT_A8* = 1 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:456:18
 when 1 is static:
   const
-    LV_USE_OBJ_PROPERTY_NAME* = 1 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:1079:17
+    LV_DRAW_SW_SUPPORT_I1* = 1 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:467:18
 else:
-  let LV_USE_OBJ_PROPERTY_NAME* = 1 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:1079:17
+  let LV_DRAW_SW_SUPPORT_I1* = 1 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:467:18
 when 0 is static:
   const
-    LV_FONT_SIMSUN_14_CJK* = 0 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:1450:17
+    LV_USE_DRAW_ARM2D_SYNC* = 0 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:491:21
 else:
-  let LV_FONT_SIMSUN_14_CJK* = 0 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:1450:17
+  let LV_USE_DRAW_ARM2D_SYNC* = 0 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:491:21
 when 0 is static:
   const
-    LV_USE_CALENDAR_CHINESE* = 0 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:1769:21
+    LV_USE_NATIVE_HELIUM_ASM* = 0 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:500:21
 else:
-  let LV_USE_CALENDAR_CHINESE* = 0 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:1769:21
+  let LV_USE_NATIVE_HELIUM_ASM* = 0 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:500:21
 when 0 is static:
   const
-    LV_USE_LOTTIE* = 0       ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:1941:17
+    LV_USE_DRAW_SW_COMPLEX_GRADIENTS* = 0 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:566:21
 else:
-  let LV_USE_LOTTIE* = 0     ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:1941:17
+  let LV_USE_DRAW_SW_COMPLEX_GRADIENTS* = 0 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:566:21
 when 0 is static:
   const
-    LV_USE_FS_LITTLEFS* = 0  ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:2388:17
+    LV_USE_PXP* = 0          ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:635:17
 else:
-  let LV_USE_FS_LITTLEFS* = 0 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:2388:17
+  let LV_USE_PXP* = 0        ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:635:17
 when 0 is static:
   const
-    LV_USE_FS_ARDUINO_ESP_LITTLEFS* = 0 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:2406:17
+    LV_IMAGE_HEADER_CACHE_DEF_CNT* = 0 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:1095:17
 else:
-  let LV_USE_FS_ARDUINO_ESP_LITTLEFS* = 0 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:2406:17
+  let LV_IMAGE_HEADER_CACHE_DEF_CNT* = 0 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:1095:17
 when 0 is static:
   const
-    LV_USE_FS_ARDUINO_SD* = 0 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:2424:17
+    LV_USE_OBJ_ID* = 0       ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/../../lv_conf.h:286:9
 else:
-  let LV_USE_FS_ARDUINO_SD* = 0 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:2424:17
+  let LV_USE_OBJ_ID* = 0     ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/../../lv_conf.h:286:9
+when 1 is static:
+  const
+    LV_USE_OBJ_PROPERTY_NAME* = 1 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:1182:17
+else:
+  let LV_USE_OBJ_PROPERTY_NAME* = 1 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:1182:17
+when 0 is static:
+  const
+    LV_USE_MATRIX* = 0       ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:1382:17
+else:
+  let LV_USE_MATRIX* = 0     ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:1382:17
+when 0 is static:
+  const
+    LV_USE_PRIVATE_API* = 0  ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:1391:17
+else:
+  let LV_USE_PRIVATE_API* = 0 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:1391:17
+when 0 is static:
+  const
+    LV_FONT_SIMSUN_14_CJK* = 0 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:1572:17
+else:
+  let LV_FONT_SIMSUN_14_CJK* = 0 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:1572:17
+when 0 is static:
+  const
+    LV_USE_CALENDAR_CHINESE* = 0 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:1891:21
+else:
+  let LV_USE_CALENDAR_CHINESE* = 0 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:1891:21
+when 0 is static:
+  const
+    LV_USE_LOTTIE* = 0       ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:2063:17
+else:
+  let LV_USE_LOTTIE* = 0     ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:2063:17
+when 0 is static:
+  const
+    LV_USE_FS_LITTLEFS* = 0  ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:2519:17
+else:
+  let LV_USE_FS_LITTLEFS* = 0 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:2519:17
+when 0 is static:
+  const
+    LV_USE_FS_ARDUINO_ESP_LITTLEFS* = 0 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:2537:17
+else:
+  let LV_USE_FS_ARDUINO_ESP_LITTLEFS* = 0 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:2537:17
+when 0 is static:
+  const
+    LV_USE_FS_ARDUINO_SD* = 0 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:2555:17
+else:
+  let LV_USE_FS_ARDUINO_SD* = 0 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:2555:17
 when 256 is static:
   const
-    LV_TINY_TTF_CACHE_GLYPH_CNT* = 256 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:2604:21
+    LV_TINY_TTF_CACHE_GLYPH_CNT* = 256 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:2721:21
 else:
-  let LV_TINY_TTF_CACHE_GLYPH_CNT* = 256 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:2604:21
+  let LV_TINY_TTF_CACHE_GLYPH_CNT* = 256 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:2721:21
 proc lv_timer_get_idle*(): uint32 {.cdecl, importc: "lv_timer_get_idle".}
+when 1 is static:
+  const
+    LV_SDL_ACCELERATED* = 1  ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:3144:21
+else:
+  let LV_SDL_ACCELERATED* = 1 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:3144:21
 when 0 is static:
   const
-    LV_SDL_MOUSEWHEEL_MODE_ENCODER* = 0 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/drivers/sdl/lv_sdl_window.h:27:9
+    LV_SDL_MOUSEWHEEL_MODE_ENCODER* = 0 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/drivers/sdl/lv_sdl_window.h:27:9
 else:
-  let LV_SDL_MOUSEWHEEL_MODE_ENCODER* = 0 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/drivers/sdl/lv_sdl_window.h:27:9
+  let LV_SDL_MOUSEWHEEL_MODE_ENCODER* = 0 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/drivers/sdl/lv_sdl_window.h:27:9
 when 0 is static:
   const
-    LV_USE_LIBINPUT* = 0     ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:3238:17
+    LV_USE_WAYLAND* = 0      ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:3238:17
 else:
-  let LV_USE_LIBINPUT* = 0   ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:3238:17
+  let LV_USE_WAYLAND* = 0    ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:3238:17
 when 0 is static:
   const
-    LV_USE_RENESAS_GLCDC* = 0 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:3314:17
+    LV_USE_LIBINPUT* = 0     ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:3392:17
 else:
-  let LV_USE_RENESAS_GLCDC* = 0 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:3314:17
+  let LV_USE_LIBINPUT* = 0   ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:3392:17
 when 0 is static:
   const
-    LV_USE_OPENGLES* = 0     ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:3332:17
+    LV_USE_RENESAS_GLCDC* = 0 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:3468:17
 else:
-  let LV_USE_OPENGLES* = 0   ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:3332:17
+  let LV_USE_RENESAS_GLCDC* = 0 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:3468:17
+when 0 is static:
+  const
+    LV_USE_OPENGLES* = 0     ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:3486:17
+else:
+  let LV_USE_OPENGLES* = 0   ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:3486:17
+when 0 is static:
+  const
+    LV_USE_QNX* = 0          ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:3508:17
+else:
+  let LV_USE_QNX* = 0        ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_conf_internal.h:3508:17
 when "d" is static:
   const
     PRId32* = "d"            ## Generated based on /usr/include/inttypes.h:56:10
@@ -2780,478 +2368,483 @@ else:
   let PRIX32_const* = "X"    ## Generated based on /usr/include/inttypes.h:136:10
 when 0 is static:
   const
-    LV_LOG_LEVEL_TRACE* = 0  ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_log.h:26:9
+    LV_LOG_LEVEL_TRACE* = 0  ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_log.h:26:9
 else:
-  let LV_LOG_LEVEL_TRACE* = 0 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_log.h:26:9
+  let LV_LOG_LEVEL_TRACE* = 0 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_log.h:26:9
 when 1 is static:
   const
-    LV_LOG_LEVEL_INFO* = 1   ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_log.h:27:9
+    LV_LOG_LEVEL_INFO* = 1   ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_log.h:27:9
 else:
-  let LV_LOG_LEVEL_INFO* = 1 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_log.h:27:9
+  let LV_LOG_LEVEL_INFO* = 1 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_log.h:27:9
 when 2 is static:
   const
-    LV_LOG_LEVEL_WARN* = 2   ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_log.h:28:9
+    LV_LOG_LEVEL_WARN* = 2   ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_log.h:28:9
 else:
-  let LV_LOG_LEVEL_WARN* = 2 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_log.h:28:9
+  let LV_LOG_LEVEL_WARN* = 2 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_log.h:28:9
 when 3 is static:
   const
-    LV_LOG_LEVEL_ERROR* = 3  ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_log.h:29:9
+    LV_LOG_LEVEL_ERROR* = 3  ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_log.h:29:9
 else:
-  let LV_LOG_LEVEL_ERROR* = 3 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_log.h:29:9
+  let LV_LOG_LEVEL_ERROR* = 3 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_log.h:29:9
 when 4 is static:
   const
-    LV_LOG_LEVEL_USER* = 4   ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_log.h:30:9
+    LV_LOG_LEVEL_USER* = 4   ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_log.h:30:9
 else:
-  let LV_LOG_LEVEL_USER* = 4 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_log.h:30:9
+  let LV_LOG_LEVEL_USER* = 4 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_log.h:30:9
 when 5 is static:
   const
-    LV_LOG_LEVEL_NONE* = 5   ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_log.h:31:9
+    LV_LOG_LEVEL_NONE* = 5   ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_log.h:31:9
 else:
-  let LV_LOG_LEVEL_NONE* = 5 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_log.h:31:9
+  let LV_LOG_LEVEL_NONE* = 5 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_log.h:31:9
 when 6 is static:
   const
-    internal_LV_LOG_LEVEL_NUM* = 6 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_log.h:32:9
+    LV_LOG_LEVEL_NUM* = 6    ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_log.h:32:9
 else:
-  let internal_LV_LOG_LEVEL_NUM* = 6 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_log.h:32:9
+  let LV_LOG_LEVEL_NUM* = 6  ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_log.h:32:9
 when 4294967295 is static:
   const
-    LV_NO_TIMER_READY* = 4294967295'i64 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_timer.h:27:9
+    LV_NO_TIMER_READY* = 4294967295'i64 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_timer.h:27:9
 else:
-  let LV_NO_TIMER_READY* = 4294967295'i64 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_timer.h:27:9
+  let LV_NO_TIMER_READY* = 4294967295'i64 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_timer.h:27:9
 when 32768 is static:
   const
-    LV_TRIGO_SIN_MAX* = 32768 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_math.h:22:9
+    LV_TRIGO_SIN_MAX* = 32768 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_math.h:22:9
 else:
-  let LV_TRIGO_SIN_MAX* = 32768 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_math.h:22:9
+  let LV_TRIGO_SIN_MAX* = 32768 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_math.h:22:9
 when 15 is static:
   const
-    LV_TRIGO_SHIFT* = 15     ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_math.h:23:9
+    LV_TRIGO_SHIFT* = 15     ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_math.h:23:9
 else:
-  let LV_TRIGO_SHIFT* = 15   ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_math.h:23:9
+  let LV_TRIGO_SHIFT* = 15   ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_math.h:23:9
 when 10 is static:
   const
-    LV_BEZIER_VAL_SHIFT* = 10 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_math.h:25:9
+    LV_BEZIER_VAL_SHIFT* = 10 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_math.h:25:9
 else:
-  let LV_BEZIER_VAL_SHIFT* = 10 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_math.h:25:9
+  let LV_BEZIER_VAL_SHIFT* = 10 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_math.h:25:9
 when 4 is static:
   const
-    LV_ARRAY_DEFAULT_CAPACITY* = 4 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_array.h:23:9
+    LV_ARRAY_DEFAULT_CAPACITY* = 4 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_array.h:23:9
 else:
-  let LV_ARRAY_DEFAULT_CAPACITY* = 4 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_array.h:23:9
+  let LV_ARRAY_DEFAULT_CAPACITY* = 4 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_array.h:23:9
+when 2 is static:
+  const
+    LV_ARRAY_DEFAULT_SHRINK_RATIO* = 2 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_array.h:27:9
+else:
+  let LV_ARRAY_DEFAULT_SHRINK_RATIO* = 2 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_array.h:27:9
 when 4294967295 is static:
   const
-    LV_ANIM_REPEAT_INFINITE* = 4294967295'i64 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_anim.h:26:9
+    LV_ANIM_REPEAT_INFINITE* = 4294967295'i64 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_anim.h:26:9
 else:
-  let LV_ANIM_REPEAT_INFINITE* = 4294967295'i64 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_anim.h:26:9
+  let LV_ANIM_REPEAT_INFINITE* = 4294967295'i64 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_anim.h:26:9
 when 4294967295 is static:
   const
-    LV_ANIM_PLAYTIME_INFINITE* = 4294967295'i64 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_anim.h:27:9
+    LV_ANIM_PLAYTIME_INFINITE* = 4294967295'i64 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_anim.h:27:9
 else:
-  let LV_ANIM_PLAYTIME_INFINITE* = 4294967295'i64 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_anim.h:27:9
+  let LV_ANIM_PLAYTIME_INFINITE* = 4294967295'i64 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_anim.h:27:9
 when 65535 is static:
   const
-    LV_ANIM_TIMELINE_PROGRESS_MAX* = 65535 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_anim_timeline.h:22:9
+    LV_ANIM_TIMELINE_PROGRESS_MAX* = 65535 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_anim_timeline.h:22:9
 else:
-  let LV_ANIM_TIMELINE_PROGRESS_MAX* = 65535 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_anim_timeline.h:22:9
-when "\\xE2\\x80\\xA2" is static:
-  const
-    LV_SYMBOL_BULLET* = "\\xE2\\x80\\xA2" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:14:9
-else:
-  let LV_SYMBOL_BULLET* = "\\xE2\\x80\\xA2" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:14:9
-when "\\xEF\\x80\\x81" is static:
-  const
-    LV_SYMBOL_AUDIO* = "\\xEF\\x80\\x81" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:35:9
-else:
-  let LV_SYMBOL_AUDIO* = "\\xEF\\x80\\x81" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:35:9
-when "\\xEF\\x80\\x88" is static:
-  const
-    LV_SYMBOL_VIDEO* = "\\xEF\\x80\\x88" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:39:9
-else:
-  let LV_SYMBOL_VIDEO* = "\\xEF\\x80\\x88" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:39:9
-when "\\xEF\\x80\\x8B" is static:
-  const
-    LV_SYMBOL_LIST* = "\\xEF\\x80\\x8B" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:43:9
-else:
-  let LV_SYMBOL_LIST* = "\\xEF\\x80\\x8B" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:43:9
-when "\\xEF\\x80\\x8C" is static:
-  const
-    LV_SYMBOL_OK* = "\\xEF\\x80\\x8C" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:47:9
-else:
-  let LV_SYMBOL_OK* = "\\xEF\\x80\\x8C" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:47:9
-when "\\xEF\\x80\\x8D" is static:
-  const
-    LV_SYMBOL_CLOSE* = "\\xEF\\x80\\x8D" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:51:9
-else:
-  let LV_SYMBOL_CLOSE* = "\\xEF\\x80\\x8D" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:51:9
-when "\\xEF\\x80\\x91" is static:
-  const
-    LV_SYMBOL_POWER* = "\\xEF\\x80\\x91" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:55:9
-else:
-  let LV_SYMBOL_POWER* = "\\xEF\\x80\\x91" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:55:9
-when "\\xEF\\x80\\x93" is static:
-  const
-    LV_SYMBOL_SETTINGS* = "\\xEF\\x80\\x93" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:59:9
-else:
-  let LV_SYMBOL_SETTINGS* = "\\xEF\\x80\\x93" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:59:9
-when "\\xEF\\x80\\x95" is static:
-  const
-    LV_SYMBOL_HOME* = "\\xEF\\x80\\x95" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:63:9
-else:
-  let LV_SYMBOL_HOME* = "\\xEF\\x80\\x95" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:63:9
-when "\\xEF\\x80\\x99" is static:
-  const
-    LV_SYMBOL_DOWNLOAD* = "\\xEF\\x80\\x99" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:67:9
-else:
-  let LV_SYMBOL_DOWNLOAD* = "\\xEF\\x80\\x99" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:67:9
-when "\\xEF\\x80\\x9C" is static:
-  const
-    LV_SYMBOL_DRIVE* = "\\xEF\\x80\\x9C" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:71:9
-else:
-  let LV_SYMBOL_DRIVE* = "\\xEF\\x80\\x9C" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:71:9
-when "\\xEF\\x80\\xA1" is static:
-  const
-    LV_SYMBOL_REFRESH* = "\\xEF\\x80\\xA1" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:75:9
-else:
-  let LV_SYMBOL_REFRESH* = "\\xEF\\x80\\xA1" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:75:9
-when "\\xEF\\x80\\xA6" is static:
-  const
-    LV_SYMBOL_MUTE* = "\\xEF\\x80\\xA6" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:79:9
-else:
-  let LV_SYMBOL_MUTE* = "\\xEF\\x80\\xA6" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:79:9
-when "\\xEF\\x80\\xA7" is static:
-  const
-    LV_SYMBOL_VOLUME_MID* = "\\xEF\\x80\\xA7" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:83:9
-else:
-  let LV_SYMBOL_VOLUME_MID* = "\\xEF\\x80\\xA7" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:83:9
-when "\\xEF\\x80\\xA8" is static:
-  const
-    LV_SYMBOL_VOLUME_MAX* = "\\xEF\\x80\\xA8" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:87:9
-else:
-  let LV_SYMBOL_VOLUME_MAX* = "\\xEF\\x80\\xA8" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:87:9
-when "\\xEF\\x80\\xBE" is static:
-  const
-    LV_SYMBOL_IMAGE* = "\\xEF\\x80\\xBE" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:91:9
-else:
-  let LV_SYMBOL_IMAGE* = "\\xEF\\x80\\xBE" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:91:9
-when "\\xEF\\x81\\x83" is static:
-  const
-    LV_SYMBOL_TINT* = "\\xEF\\x81\\x83" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:95:9
-else:
-  let LV_SYMBOL_TINT* = "\\xEF\\x81\\x83" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:95:9
-when "\\xEF\\x81\\x88" is static:
-  const
-    LV_SYMBOL_PREV* = "\\xEF\\x81\\x88" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:99:9
-else:
-  let LV_SYMBOL_PREV* = "\\xEF\\x81\\x88" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:99:9
-when "\\xEF\\x81\\x8B" is static:
-  const
-    LV_SYMBOL_PLAY* = "\\xEF\\x81\\x8B" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:103:9
-else:
-  let LV_SYMBOL_PLAY* = "\\xEF\\x81\\x8B" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:103:9
-when "\\xEF\\x81\\x8C" is static:
-  const
-    LV_SYMBOL_PAUSE* = "\\xEF\\x81\\x8C" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:107:9
-else:
-  let LV_SYMBOL_PAUSE* = "\\xEF\\x81\\x8C" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:107:9
-when "\\xEF\\x81\\x8D" is static:
-  const
-    LV_SYMBOL_STOP* = "\\xEF\\x81\\x8D" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:111:9
-else:
-  let LV_SYMBOL_STOP* = "\\xEF\\x81\\x8D" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:111:9
-when "\\xEF\\x81\\x91" is static:
-  const
-    LV_SYMBOL_NEXT* = "\\xEF\\x81\\x91" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:115:9
-else:
-  let LV_SYMBOL_NEXT* = "\\xEF\\x81\\x91" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:115:9
-when "\\xEF\\x81\\x92" is static:
-  const
-    LV_SYMBOL_EJECT* = "\\xEF\\x81\\x92" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:119:9
-else:
-  let LV_SYMBOL_EJECT* = "\\xEF\\x81\\x92" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:119:9
-when "\\xEF\\x81\\x93" is static:
-  const
-    LV_SYMBOL_LEFT* = "\\xEF\\x81\\x93" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:123:9
-else:
-  let LV_SYMBOL_LEFT* = "\\xEF\\x81\\x93" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:123:9
-when "\\xEF\\x81\\x94" is static:
-  const
-    LV_SYMBOL_RIGHT* = "\\xEF\\x81\\x94" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:127:9
-else:
-  let LV_SYMBOL_RIGHT* = "\\xEF\\x81\\x94" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:127:9
-when "\\xEF\\x81\\xA7" is static:
-  const
-    LV_SYMBOL_PLUS* = "\\xEF\\x81\\xA7" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:131:9
-else:
-  let LV_SYMBOL_PLUS* = "\\xEF\\x81\\xA7" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:131:9
-when "\\xEF\\x81\\xA8" is static:
-  const
-    LV_SYMBOL_MINUS* = "\\xEF\\x81\\xA8" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:135:9
-else:
-  let LV_SYMBOL_MINUS* = "\\xEF\\x81\\xA8" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:135:9
-when "\\xEF\\x81\\xAE" is static:
-  const
-    LV_SYMBOL_EYE_OPEN* = "\\xEF\\x81\\xAE" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:139:9
-else:
-  let LV_SYMBOL_EYE_OPEN* = "\\xEF\\x81\\xAE" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:139:9
-when "\\xEF\\x81\\xB0" is static:
-  const
-    LV_SYMBOL_EYE_CLOSE* = "\\xEF\\x81\\xB0" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:143:9
-else:
-  let LV_SYMBOL_EYE_CLOSE* = "\\xEF\\x81\\xB0" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:143:9
-when "\\xEF\\x81\\xB1" is static:
-  const
-    LV_SYMBOL_WARNING* = "\\xEF\\x81\\xB1" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:147:9
-else:
-  let LV_SYMBOL_WARNING* = "\\xEF\\x81\\xB1" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:147:9
-when "\\xEF\\x81\\xB4" is static:
-  const
-    LV_SYMBOL_SHUFFLE* = "\\xEF\\x81\\xB4" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:151:9
-else:
-  let LV_SYMBOL_SHUFFLE* = "\\xEF\\x81\\xB4" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:151:9
-when "\\xEF\\x81\\xB7" is static:
-  const
-    LV_SYMBOL_UP* = "\\xEF\\x81\\xB7" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:155:9
-else:
-  let LV_SYMBOL_UP* = "\\xEF\\x81\\xB7" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:155:9
-when "\\xEF\\x81\\xB8" is static:
-  const
-    LV_SYMBOL_DOWN* = "\\xEF\\x81\\xB8" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:159:9
-else:
-  let LV_SYMBOL_DOWN* = "\\xEF\\x81\\xB8" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:159:9
-when "\\xEF\\x81\\xB9" is static:
-  const
-    LV_SYMBOL_LOOP* = "\\xEF\\x81\\xB9" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:163:9
-else:
-  let LV_SYMBOL_LOOP* = "\\xEF\\x81\\xB9" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:163:9
-when "\\xEF\\x81\\xBB" is static:
-  const
-    LV_SYMBOL_DIRECTORY* = "\\xEF\\x81\\xBB" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:167:9
-else:
-  let LV_SYMBOL_DIRECTORY* = "\\xEF\\x81\\xBB" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:167:9
-when "\\xEF\\x82\\x93" is static:
-  const
-    LV_SYMBOL_UPLOAD* = "\\xEF\\x82\\x93" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:171:9
-else:
-  let LV_SYMBOL_UPLOAD* = "\\xEF\\x82\\x93" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:171:9
-when "\\xEF\\x82\\x95" is static:
-  const
-    LV_SYMBOL_CALL* = "\\xEF\\x82\\x95" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:175:9
-else:
-  let LV_SYMBOL_CALL* = "\\xEF\\x82\\x95" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:175:9
-when "\\xEF\\x83\\x84" is static:
-  const
-    LV_SYMBOL_CUT* = "\\xEF\\x83\\x84" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:179:9
-else:
-  let LV_SYMBOL_CUT* = "\\xEF\\x83\\x84" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:179:9
-when "\\xEF\\x83\\x85" is static:
-  const
-    LV_SYMBOL_COPY* = "\\xEF\\x83\\x85" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:183:9
-else:
-  let LV_SYMBOL_COPY* = "\\xEF\\x83\\x85" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:183:9
-when "\\xEF\\x83\\x87" is static:
-  const
-    LV_SYMBOL_SAVE* = "\\xEF\\x83\\x87" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:187:9
-else:
-  let LV_SYMBOL_SAVE* = "\\xEF\\x83\\x87" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:187:9
-when "\\xEF\\x83\\x89" is static:
-  const
-    LV_SYMBOL_BARS* = "\\xEF\\x83\\x89" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:191:9
-else:
-  let LV_SYMBOL_BARS* = "\\xEF\\x83\\x89" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:191:9
-when "\\xEF\\x83\\xA0" is static:
-  const
-    LV_SYMBOL_ENVELOPE* = "\\xEF\\x83\\xA0" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:195:9
-else:
-  let LV_SYMBOL_ENVELOPE* = "\\xEF\\x83\\xA0" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:195:9
-when "\\xEF\\x83\\xA7" is static:
-  const
-    LV_SYMBOL_CHARGE* = "\\xEF\\x83\\xA7" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:199:9
-else:
-  let LV_SYMBOL_CHARGE* = "\\xEF\\x83\\xA7" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:199:9
-when "\\xEF\\x83\\xAA" is static:
-  const
-    LV_SYMBOL_PASTE* = "\\xEF\\x83\\xAA" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:203:9
-else:
-  let LV_SYMBOL_PASTE* = "\\xEF\\x83\\xAA" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:203:9
-when "\\xEF\\x83\\xB3" is static:
-  const
-    LV_SYMBOL_BELL* = "\\xEF\\x83\\xB3" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:207:9
-else:
-  let LV_SYMBOL_BELL* = "\\xEF\\x83\\xB3" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:207:9
-when "\\xEF\\x84\\x9C" is static:
-  const
-    LV_SYMBOL_KEYBOARD* = "\\xEF\\x84\\x9C" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:211:9
-else:
-  let LV_SYMBOL_KEYBOARD* = "\\xEF\\x84\\x9C" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:211:9
-when "\\xEF\\x84\\xA4" is static:
-  const
-    LV_SYMBOL_GPS* = "\\xEF\\x84\\xA4" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:215:9
-else:
-  let LV_SYMBOL_GPS* = "\\xEF\\x84\\xA4" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:215:9
-when "\\xEF\\x85\\x9B" is static:
-  const
-    LV_SYMBOL_FILE* = "\\xEF\\x85\\x9B" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:219:9
-else:
-  let LV_SYMBOL_FILE* = "\\xEF\\x85\\x9B" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:219:9
-when "\\xEF\\x87\\xAB" is static:
-  const
-    LV_SYMBOL_WIFI* = "\\xEF\\x87\\xAB" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:223:9
-else:
-  let LV_SYMBOL_WIFI* = "\\xEF\\x87\\xAB" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:223:9
-when "\\xEF\\x89\\x80" is static:
-  const
-    LV_SYMBOL_BATTERY_FULL* = "\\xEF\\x89\\x80" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:227:9
-else:
-  let LV_SYMBOL_BATTERY_FULL* = "\\xEF\\x89\\x80" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:227:9
-when "\\xEF\\x89\\x81" is static:
-  const
-    LV_SYMBOL_BATTERY_3* = "\\xEF\\x89\\x81" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:231:9
-else:
-  let LV_SYMBOL_BATTERY_3* = "\\xEF\\x89\\x81" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:231:9
-when "\\xEF\\x89\\x82" is static:
-  const
-    LV_SYMBOL_BATTERY_2* = "\\xEF\\x89\\x82" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:235:9
-else:
-  let LV_SYMBOL_BATTERY_2* = "\\xEF\\x89\\x82" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:235:9
-when "\\xEF\\x89\\x83" is static:
-  const
-    LV_SYMBOL_BATTERY_1* = "\\xEF\\x89\\x83" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:239:9
-else:
-  let LV_SYMBOL_BATTERY_1* = "\\xEF\\x89\\x83" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:239:9
-when "\\xEF\\x89\\x84" is static:
-  const
-    LV_SYMBOL_BATTERY_EMPTY* = "\\xEF\\x89\\x84" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:243:9
-else:
-  let LV_SYMBOL_BATTERY_EMPTY* = "\\xEF\\x89\\x84" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:243:9
-when "\\xEF\\x8a\\x87" is static:
-  const
-    LV_SYMBOL_USB* = "\\xEF\\x8a\\x87" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:247:9
-else:
-  let LV_SYMBOL_USB* = "\\xEF\\x8a\\x87" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:247:9
-when "\\xEF\\x8a\\x93" is static:
-  const
-    LV_SYMBOL_BLUETOOTH* = "\\xEF\\x8a\\x93" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:251:9
-else:
-  let LV_SYMBOL_BLUETOOTH* = "\\xEF\\x8a\\x93" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:251:9
-when "\\xEF\\x8B\\xAD" is static:
-  const
-    LV_SYMBOL_TRASH* = "\\xEF\\x8B\\xAD" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:255:9
-else:
-  let LV_SYMBOL_TRASH* = "\\xEF\\x8B\\xAD" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:255:9
-when "\\xEF\\x8C\\x84" is static:
-  const
-    LV_SYMBOL_EDIT* = "\\xEF\\x8C\\x84" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:259:9
-else:
-  let LV_SYMBOL_EDIT* = "\\xEF\\x8C\\x84" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:259:9
-when "\\xEF\\x95\\x9A" is static:
-  const
-    LV_SYMBOL_BACKSPACE* = "\\xEF\\x95\\x9A" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:263:9
-else:
-  let LV_SYMBOL_BACKSPACE* = "\\xEF\\x95\\x9A" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:263:9
-when "\\xEF\\x9F\\x82" is static:
-  const
-    LV_SYMBOL_SD_CARD* = "\\xEF\\x9F\\x82" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:267:9
-else:
-  let LV_SYMBOL_SD_CARD* = "\\xEF\\x9F\\x82" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:267:9
-when "\\xEF\\xA2\\xA2" is static:
-  const
-    LV_SYMBOL_NEW_LINE* = "\\xEF\\xA2\\xA2" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:271:9
-else:
-  let LV_SYMBOL_NEW_LINE* = "\\xEF\\xA2\\xA2" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:271:9
-when "\\xEF\\xA3\\xBF" is static:
-  const
-    LV_SYMBOL_DUMMY* = "\\xEF\\xA3\\xBF" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:276:9
-else:
-  let LV_SYMBOL_DUMMY* = "\\xEF\\xA3\\xBF" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:276:9
+  let LV_ANIM_TIMELINE_PROGRESS_MAX* = 65535 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/lv_anim_timeline.h:22:9
 when cast[cuint](29'i64) is static:
   const
-    internal_LV_COORD_TYPE_SHIFT* = cast[cuint](29'i64) ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../draw/../misc/lv_area.h:332:9
+    LV_COORD_TYPE_SHIFT* = cast[cuint](29'i64) ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/../draw/../misc/lv_area.h:206:9
 else:
-  let internal_LV_COORD_TYPE_SHIFT* = cast[cuint](29'i64) ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../draw/../misc/lv_area.h:332:9
+  let LV_COORD_TYPE_SHIFT* = cast[cuint](29'i64) ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/../draw/../misc/lv_area.h:206:9
 when 3 is static:
   const
-    internal_LV_COLOR_NATIVE_WITH_ALPHA_SIZE* = 3 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../draw/../misc/lv_color.h:29:9
+    LV_COLOR_NATIVE_WITH_ALPHA_SIZE* = 3 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/../draw/../misc/lv_color.h:29:9
 else:
-  let internal_LV_COLOR_NATIVE_WITH_ALPHA_SIZE* = 3 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../draw/../misc/lv_color.h:29:9
+  let LV_COLOR_NATIVE_WITH_ALPHA_SIZE* = 3 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/../draw/../misc/lv_color.h:29:9
 when 2 is static:
   const
-    LV_OPA_MIN* = 2          ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../draw/../misc/lv_color.h:62:9
+    LV_OPA_MIN* = 2          ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/../draw/../misc/lv_color.h:56:9
 else:
-  let LV_OPA_MIN* = 2        ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../draw/../misc/lv_color.h:62:9
+  let LV_OPA_MIN* = 2        ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/../draw/../misc/lv_color.h:56:9
 when 253 is static:
   const
-    LV_OPA_MAX* = 253        ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../draw/../misc/lv_color.h:63:9
+    LV_OPA_MAX* = 253        ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/../draw/../misc/lv_color.h:57:9
 else:
-  let LV_OPA_MAX* = 253      ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../draw/../misc/lv_color.h:63:9
+  let LV_OPA_MAX* = 253      ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/../draw/../misc/lv_color.h:57:9
 when 25 is static:
   const
-    LV_IMAGE_HEADER_MAGIC* = 25 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../draw/lv_image_dsc.h:25:9
+    LV_IMAGE_HEADER_MAGIC* = 25 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/../draw/lv_image_dsc.h:25:9
 else:
-  let LV_IMAGE_HEADER_MAGIC* = 25 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../draw/lv_image_dsc.h:25:9
+  let LV_IMAGE_HEADER_MAGIC* = 25 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/../draw/lv_image_dsc.h:25:9
 when 0 is static:
   const
-    LV_STRIDE_AUTO* = 0      ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../draw/lv_draw_buf.h:26:9
+    LV_STRIDE_AUTO* = 0      ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/../draw/lv_draw_buf.h:27:9
 else:
-  let LV_STRIDE_AUTO* = 0    ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/../draw/lv_draw_buf.h:26:9
+  let LV_STRIDE_AUTO* = 0    ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/misc/../draw/lv_draw_buf.h:27:9
+when "\\xE2\\x80\\xA2" is static:
+  const
+    LV_SYMBOL_BULLET* = "\\xE2\\x80\\xA2" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:19:9
+else:
+  let LV_SYMBOL_BULLET* = "\\xE2\\x80\\xA2" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:19:9
+when "\\xEF\\x80\\x81" is static:
+  const
+    LV_SYMBOL_AUDIO* = "\\xEF\\x80\\x81" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:40:9
+else:
+  let LV_SYMBOL_AUDIO* = "\\xEF\\x80\\x81" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:40:9
+when "\\xEF\\x80\\x88" is static:
+  const
+    LV_SYMBOL_VIDEO* = "\\xEF\\x80\\x88" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:44:9
+else:
+  let LV_SYMBOL_VIDEO* = "\\xEF\\x80\\x88" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:44:9
+when "\\xEF\\x80\\x8B" is static:
+  const
+    LV_SYMBOL_LIST* = "\\xEF\\x80\\x8B" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:48:9
+else:
+  let LV_SYMBOL_LIST* = "\\xEF\\x80\\x8B" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:48:9
+when "\\xEF\\x80\\x8C" is static:
+  const
+    LV_SYMBOL_OK* = "\\xEF\\x80\\x8C" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:52:9
+else:
+  let LV_SYMBOL_OK* = "\\xEF\\x80\\x8C" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:52:9
+when "\\xEF\\x80\\x8D" is static:
+  const
+    LV_SYMBOL_CLOSE* = "\\xEF\\x80\\x8D" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:56:9
+else:
+  let LV_SYMBOL_CLOSE* = "\\xEF\\x80\\x8D" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:56:9
+when "\\xEF\\x80\\x91" is static:
+  const
+    LV_SYMBOL_POWER* = "\\xEF\\x80\\x91" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:60:9
+else:
+  let LV_SYMBOL_POWER* = "\\xEF\\x80\\x91" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:60:9
+when "\\xEF\\x80\\x93" is static:
+  const
+    LV_SYMBOL_SETTINGS* = "\\xEF\\x80\\x93" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:64:9
+else:
+  let LV_SYMBOL_SETTINGS* = "\\xEF\\x80\\x93" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:64:9
+when "\\xEF\\x80\\x95" is static:
+  const
+    LV_SYMBOL_HOME* = "\\xEF\\x80\\x95" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:68:9
+else:
+  let LV_SYMBOL_HOME* = "\\xEF\\x80\\x95" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:68:9
+when "\\xEF\\x80\\x99" is static:
+  const
+    LV_SYMBOL_DOWNLOAD* = "\\xEF\\x80\\x99" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:72:9
+else:
+  let LV_SYMBOL_DOWNLOAD* = "\\xEF\\x80\\x99" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:72:9
+when "\\xEF\\x80\\x9C" is static:
+  const
+    LV_SYMBOL_DRIVE* = "\\xEF\\x80\\x9C" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:76:9
+else:
+  let LV_SYMBOL_DRIVE* = "\\xEF\\x80\\x9C" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:76:9
+when "\\xEF\\x80\\xA1" is static:
+  const
+    LV_SYMBOL_REFRESH* = "\\xEF\\x80\\xA1" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:80:9
+else:
+  let LV_SYMBOL_REFRESH* = "\\xEF\\x80\\xA1" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:80:9
+when "\\xEF\\x80\\xA6" is static:
+  const
+    LV_SYMBOL_MUTE* = "\\xEF\\x80\\xA6" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:84:9
+else:
+  let LV_SYMBOL_MUTE* = "\\xEF\\x80\\xA6" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:84:9
+when "\\xEF\\x80\\xA7" is static:
+  const
+    LV_SYMBOL_VOLUME_MID* = "\\xEF\\x80\\xA7" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:88:9
+else:
+  let LV_SYMBOL_VOLUME_MID* = "\\xEF\\x80\\xA7" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:88:9
+when "\\xEF\\x80\\xA8" is static:
+  const
+    LV_SYMBOL_VOLUME_MAX* = "\\xEF\\x80\\xA8" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:92:9
+else:
+  let LV_SYMBOL_VOLUME_MAX* = "\\xEF\\x80\\xA8" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:92:9
+when "\\xEF\\x80\\xBE" is static:
+  const
+    LV_SYMBOL_IMAGE* = "\\xEF\\x80\\xBE" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:96:9
+else:
+  let LV_SYMBOL_IMAGE* = "\\xEF\\x80\\xBE" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:96:9
+when "\\xEF\\x81\\x83" is static:
+  const
+    LV_SYMBOL_TINT* = "\\xEF\\x81\\x83" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:100:9
+else:
+  let LV_SYMBOL_TINT* = "\\xEF\\x81\\x83" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:100:9
+when "\\xEF\\x81\\x88" is static:
+  const
+    LV_SYMBOL_PREV* = "\\xEF\\x81\\x88" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:104:9
+else:
+  let LV_SYMBOL_PREV* = "\\xEF\\x81\\x88" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:104:9
+when "\\xEF\\x81\\x8B" is static:
+  const
+    LV_SYMBOL_PLAY* = "\\xEF\\x81\\x8B" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:108:9
+else:
+  let LV_SYMBOL_PLAY* = "\\xEF\\x81\\x8B" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:108:9
+when "\\xEF\\x81\\x8C" is static:
+  const
+    LV_SYMBOL_PAUSE* = "\\xEF\\x81\\x8C" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:112:9
+else:
+  let LV_SYMBOL_PAUSE* = "\\xEF\\x81\\x8C" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:112:9
+when "\\xEF\\x81\\x8D" is static:
+  const
+    LV_SYMBOL_STOP* = "\\xEF\\x81\\x8D" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:116:9
+else:
+  let LV_SYMBOL_STOP* = "\\xEF\\x81\\x8D" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:116:9
+when "\\xEF\\x81\\x91" is static:
+  const
+    LV_SYMBOL_NEXT* = "\\xEF\\x81\\x91" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:120:9
+else:
+  let LV_SYMBOL_NEXT* = "\\xEF\\x81\\x91" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:120:9
+when "\\xEF\\x81\\x92" is static:
+  const
+    LV_SYMBOL_EJECT* = "\\xEF\\x81\\x92" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:124:9
+else:
+  let LV_SYMBOL_EJECT* = "\\xEF\\x81\\x92" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:124:9
+when "\\xEF\\x81\\x93" is static:
+  const
+    LV_SYMBOL_LEFT* = "\\xEF\\x81\\x93" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:128:9
+else:
+  let LV_SYMBOL_LEFT* = "\\xEF\\x81\\x93" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:128:9
+when "\\xEF\\x81\\x94" is static:
+  const
+    LV_SYMBOL_RIGHT* = "\\xEF\\x81\\x94" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:132:9
+else:
+  let LV_SYMBOL_RIGHT* = "\\xEF\\x81\\x94" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:132:9
+when "\\xEF\\x81\\xA7" is static:
+  const
+    LV_SYMBOL_PLUS* = "\\xEF\\x81\\xA7" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:136:9
+else:
+  let LV_SYMBOL_PLUS* = "\\xEF\\x81\\xA7" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:136:9
+when "\\xEF\\x81\\xA8" is static:
+  const
+    LV_SYMBOL_MINUS* = "\\xEF\\x81\\xA8" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:140:9
+else:
+  let LV_SYMBOL_MINUS* = "\\xEF\\x81\\xA8" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:140:9
+when "\\xEF\\x81\\xAE" is static:
+  const
+    LV_SYMBOL_EYE_OPEN* = "\\xEF\\x81\\xAE" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:144:9
+else:
+  let LV_SYMBOL_EYE_OPEN* = "\\xEF\\x81\\xAE" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:144:9
+when "\\xEF\\x81\\xB0" is static:
+  const
+    LV_SYMBOL_EYE_CLOSE* = "\\xEF\\x81\\xB0" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:148:9
+else:
+  let LV_SYMBOL_EYE_CLOSE* = "\\xEF\\x81\\xB0" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:148:9
+when "\\xEF\\x81\\xB1" is static:
+  const
+    LV_SYMBOL_WARNING* = "\\xEF\\x81\\xB1" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:152:9
+else:
+  let LV_SYMBOL_WARNING* = "\\xEF\\x81\\xB1" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:152:9
+when "\\xEF\\x81\\xB4" is static:
+  const
+    LV_SYMBOL_SHUFFLE* = "\\xEF\\x81\\xB4" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:156:9
+else:
+  let LV_SYMBOL_SHUFFLE* = "\\xEF\\x81\\xB4" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:156:9
+when "\\xEF\\x81\\xB7" is static:
+  const
+    LV_SYMBOL_UP* = "\\xEF\\x81\\xB7" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:160:9
+else:
+  let LV_SYMBOL_UP* = "\\xEF\\x81\\xB7" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:160:9
+when "\\xEF\\x81\\xB8" is static:
+  const
+    LV_SYMBOL_DOWN* = "\\xEF\\x81\\xB8" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:164:9
+else:
+  let LV_SYMBOL_DOWN* = "\\xEF\\x81\\xB8" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:164:9
+when "\\xEF\\x81\\xB9" is static:
+  const
+    LV_SYMBOL_LOOP* = "\\xEF\\x81\\xB9" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:168:9
+else:
+  let LV_SYMBOL_LOOP* = "\\xEF\\x81\\xB9" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:168:9
+when "\\xEF\\x81\\xBB" is static:
+  const
+    LV_SYMBOL_DIRECTORY* = "\\xEF\\x81\\xBB" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:172:9
+else:
+  let LV_SYMBOL_DIRECTORY* = "\\xEF\\x81\\xBB" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:172:9
+when "\\xEF\\x82\\x93" is static:
+  const
+    LV_SYMBOL_UPLOAD* = "\\xEF\\x82\\x93" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:176:9
+else:
+  let LV_SYMBOL_UPLOAD* = "\\xEF\\x82\\x93" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:176:9
+when "\\xEF\\x82\\x95" is static:
+  const
+    LV_SYMBOL_CALL* = "\\xEF\\x82\\x95" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:180:9
+else:
+  let LV_SYMBOL_CALL* = "\\xEF\\x82\\x95" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:180:9
+when "\\xEF\\x83\\x84" is static:
+  const
+    LV_SYMBOL_CUT* = "\\xEF\\x83\\x84" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:184:9
+else:
+  let LV_SYMBOL_CUT* = "\\xEF\\x83\\x84" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:184:9
+when "\\xEF\\x83\\x85" is static:
+  const
+    LV_SYMBOL_COPY* = "\\xEF\\x83\\x85" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:188:9
+else:
+  let LV_SYMBOL_COPY* = "\\xEF\\x83\\x85" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:188:9
+when "\\xEF\\x83\\x87" is static:
+  const
+    LV_SYMBOL_SAVE* = "\\xEF\\x83\\x87" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:192:9
+else:
+  let LV_SYMBOL_SAVE* = "\\xEF\\x83\\x87" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:192:9
+when "\\xEF\\x83\\x89" is static:
+  const
+    LV_SYMBOL_BARS* = "\\xEF\\x83\\x89" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:196:9
+else:
+  let LV_SYMBOL_BARS* = "\\xEF\\x83\\x89" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:196:9
+when "\\xEF\\x83\\xA0" is static:
+  const
+    LV_SYMBOL_ENVELOPE* = "\\xEF\\x83\\xA0" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:200:9
+else:
+  let LV_SYMBOL_ENVELOPE* = "\\xEF\\x83\\xA0" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:200:9
+when "\\xEF\\x83\\xA7" is static:
+  const
+    LV_SYMBOL_CHARGE* = "\\xEF\\x83\\xA7" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:204:9
+else:
+  let LV_SYMBOL_CHARGE* = "\\xEF\\x83\\xA7" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:204:9
+when "\\xEF\\x83\\xAA" is static:
+  const
+    LV_SYMBOL_PASTE* = "\\xEF\\x83\\xAA" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:208:9
+else:
+  let LV_SYMBOL_PASTE* = "\\xEF\\x83\\xAA" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:208:9
+when "\\xEF\\x83\\xB3" is static:
+  const
+    LV_SYMBOL_BELL* = "\\xEF\\x83\\xB3" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:212:9
+else:
+  let LV_SYMBOL_BELL* = "\\xEF\\x83\\xB3" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:212:9
+when "\\xEF\\x84\\x9C" is static:
+  const
+    LV_SYMBOL_KEYBOARD* = "\\xEF\\x84\\x9C" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:216:9
+else:
+  let LV_SYMBOL_KEYBOARD* = "\\xEF\\x84\\x9C" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:216:9
+when "\\xEF\\x84\\xA4" is static:
+  const
+    LV_SYMBOL_GPS* = "\\xEF\\x84\\xA4" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:220:9
+else:
+  let LV_SYMBOL_GPS* = "\\xEF\\x84\\xA4" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:220:9
+when "\\xEF\\x85\\x9B" is static:
+  const
+    LV_SYMBOL_FILE* = "\\xEF\\x85\\x9B" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:224:9
+else:
+  let LV_SYMBOL_FILE* = "\\xEF\\x85\\x9B" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:224:9
+when "\\xEF\\x87\\xAB" is static:
+  const
+    LV_SYMBOL_WIFI* = "\\xEF\\x87\\xAB" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:228:9
+else:
+  let LV_SYMBOL_WIFI* = "\\xEF\\x87\\xAB" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:228:9
+when "\\xEF\\x89\\x80" is static:
+  const
+    LV_SYMBOL_BATTERY_FULL* = "\\xEF\\x89\\x80" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:232:9
+else:
+  let LV_SYMBOL_BATTERY_FULL* = "\\xEF\\x89\\x80" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:232:9
+when "\\xEF\\x89\\x81" is static:
+  const
+    LV_SYMBOL_BATTERY_3* = "\\xEF\\x89\\x81" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:236:9
+else:
+  let LV_SYMBOL_BATTERY_3* = "\\xEF\\x89\\x81" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:236:9
+when "\\xEF\\x89\\x82" is static:
+  const
+    LV_SYMBOL_BATTERY_2* = "\\xEF\\x89\\x82" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:240:9
+else:
+  let LV_SYMBOL_BATTERY_2* = "\\xEF\\x89\\x82" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:240:9
+when "\\xEF\\x89\\x83" is static:
+  const
+    LV_SYMBOL_BATTERY_1* = "\\xEF\\x89\\x83" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:244:9
+else:
+  let LV_SYMBOL_BATTERY_1* = "\\xEF\\x89\\x83" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:244:9
+when "\\xEF\\x89\\x84" is static:
+  const
+    LV_SYMBOL_BATTERY_EMPTY* = "\\xEF\\x89\\x84" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:248:9
+else:
+  let LV_SYMBOL_BATTERY_EMPTY* = "\\xEF\\x89\\x84" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:248:9
+when "\\xEF\\x8a\\x87" is static:
+  const
+    LV_SYMBOL_USB* = "\\xEF\\x8a\\x87" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:252:9
+else:
+  let LV_SYMBOL_USB* = "\\xEF\\x8a\\x87" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:252:9
+when "\\xEF\\x8a\\x93" is static:
+  const
+    LV_SYMBOL_BLUETOOTH* = "\\xEF\\x8a\\x93" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:256:9
+else:
+  let LV_SYMBOL_BLUETOOTH* = "\\xEF\\x8a\\x93" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:256:9
+when "\\xEF\\x8B\\xAD" is static:
+  const
+    LV_SYMBOL_TRASH* = "\\xEF\\x8B\\xAD" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:260:9
+else:
+  let LV_SYMBOL_TRASH* = "\\xEF\\x8B\\xAD" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:260:9
+when "\\xEF\\x8C\\x84" is static:
+  const
+    LV_SYMBOL_EDIT* = "\\xEF\\x8C\\x84" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:264:9
+else:
+  let LV_SYMBOL_EDIT* = "\\xEF\\x8C\\x84" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:264:9
+when "\\xEF\\x95\\x9A" is static:
+  const
+    LV_SYMBOL_BACKSPACE* = "\\xEF\\x95\\x9A" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:268:9
+else:
+  let LV_SYMBOL_BACKSPACE* = "\\xEF\\x95\\x9A" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:268:9
+when "\\xEF\\x9F\\x82" is static:
+  const
+    LV_SYMBOL_SD_CARD* = "\\xEF\\x9F\\x82" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:272:9
+else:
+  let LV_SYMBOL_SD_CARD* = "\\xEF\\x9F\\x82" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:272:9
+when "\\xEF\\xA2\\xA2" is static:
+  const
+    LV_SYMBOL_NEW_LINE* = "\\xEF\\xA2\\xA2" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:276:9
+else:
+  let LV_SYMBOL_NEW_LINE* = "\\xEF\\xA2\\xA2" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:276:9
+when "\\xEF\\xA3\\xBF" is static:
+  const
+    LV_SYMBOL_DUMMY* = "\\xEF\\xA3\\xBF" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:281:9
+else:
+  let LV_SYMBOL_DUMMY* = "\\xEF\\xA3\\xBF" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../font/lv_symbol_def.h:281:9
 when 1 is static:
   const
-    LV_TXT_ENC_UTF8* = 1     ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/lv_text.h:27:9
+    LV_TXT_ENC_UTF8* = 1     ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/lv_text.h:27:9
 else:
-  let LV_TXT_ENC_UTF8* = 1   ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/lv_text.h:27:9
+  let LV_TXT_ENC_UTF8* = 1   ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/lv_text.h:27:9
 when 2 is static:
   const
-    LV_TXT_ENC_ASCII* = 2    ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/lv_text.h:28:9
+    LV_TXT_ENC_ASCII* = 2    ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/lv_text.h:28:9
 else:
-  let LV_TXT_ENC_ASCII* = 2  ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/lv_text.h:28:9
+  let LV_TXT_ENC_ASCII* = 2  ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/lv_text.h:28:9
 when "\\xE2\\x80\\xAD" is static:
   const
-    LV_BIDI_LRO* = "\\xE2\\x80\\xAD" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/lv_bidi.h:25:9
+    LV_BIDI_LRO* = "\\xE2\\x80\\xAD" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/lv_bidi.h:25:9
 else:
-  let LV_BIDI_LRO* = "\\xE2\\x80\\xAD" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/lv_bidi.h:25:9
+  let LV_BIDI_LRO* = "\\xE2\\x80\\xAD" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/lv_bidi.h:25:9
 when "\\xE2\\x80\\xAE" is static:
   const
-    LV_BIDI_RLO* = "\\xE2\\x80\\xAE" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/lv_bidi.h:26:9
+    LV_BIDI_RLO* = "\\xE2\\x80\\xAE" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/lv_bidi.h:26:9
 else:
-  let LV_BIDI_RLO* = "\\xE2\\x80\\xAE" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/lv_bidi.h:26:9
+  let LV_BIDI_RLO* = "\\xE2\\x80\\xAE" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/lv_bidi.h:26:9
 when LV_COORD_MAX is typedesc:
   type
-    LV_GRID_TEMPLATE_LAST* = LV_COORD_MAX ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../layouts/grid/lv_grid.h:34:9
+    LV_GRID_TEMPLATE_LAST* = LV_COORD_MAX ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../layouts/grid/lv_grid.h:34:9
 else:
   when LV_COORD_MAX is static:
     const
-      LV_GRID_TEMPLATE_LAST* = LV_COORD_MAX ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../layouts/grid/lv_grid.h:34:9
+      LV_GRID_TEMPLATE_LAST* = LV_COORD_MAX ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../layouts/grid/lv_grid.h:34:9
   else:
-    let LV_GRID_TEMPLATE_LAST* = LV_COORD_MAX ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../layouts/grid/lv_grid.h:34:9
+    let LV_GRID_TEMPLATE_LAST* = LV_COORD_MAX ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/../layouts/grid/lv_grid.h:34:9
 when 2864434397 is static:
   const
-    LV_STYLE_SENTINEL_VALUE* = 2864434397'i64 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/lv_style.h:30:9
+    LV_STYLE_SENTINEL_VALUE* = 2864434397'i64 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/lv_style.h:30:9
 else:
-  let LV_STYLE_SENTINEL_VALUE* = 2864434397'i64 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/lv_style.h:30:9
+  let LV_STYLE_SENTINEL_VALUE* = 2864434397'i64 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/lv_style.h:30:9
 when 0 is static:
   const
-    LV_STYLE_PROP_FLAG_NONE* = 0 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/lv_style.h:37:9
+    LV_STYLE_PROP_FLAG_NONE* = 0 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/lv_style.h:35:9
 else:
-  let LV_STYLE_PROP_FLAG_NONE* = 0 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/lv_style.h:37:9
+  let LV_STYLE_PROP_FLAG_NONE* = 0 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/lv_style.h:35:9
 when 63 is static:
   const
-    LV_STYLE_PROP_FLAG_ALL* = 63 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/lv_style.h:44:9
+    LV_STYLE_PROP_FLAG_ALL* = 63 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/lv_style.h:42:9
 else:
-  let LV_STYLE_PROP_FLAG_ALL* = 63 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/lv_style.h:44:9
+  let LV_STYLE_PROP_FLAG_ALL* = 63 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/lv_style.h:42:9
 when 256 is static:
   const
-    LV_SCALE_NONE* = 256     ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/lv_style.h:49:9
+    LV_SCALE_NONE* = 256     ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/lv_style.h:47:9
 else:
-  let LV_SCALE_NONE* = 256   ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/lv_style.h:49:9
+  let LV_SCALE_NONE* = 256   ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../misc/lv_style.h:47:9
 when 64 is static:
   const
-    LV_FS_MAX_FN_LENGTH* = 64 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/../misc/lv_fs.h:22:9
+    LV_FS_MAX_FN_LENGTH* = 64 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/../misc/lv_fs.h:22:9
 else:
-  let LV_FS_MAX_FN_LENGTH* = 64 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/../misc/lv_fs.h:22:9
+  let LV_FS_MAX_FN_LENGTH* = 64 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/../misc/lv_fs.h:22:9
 when 256 is static:
   const
-    LV_FS_MAX_PATH_LENGTH* = 256 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/../misc/lv_fs.h:23:9
+    LV_FS_MAX_PATH_LENGTH* = 256 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/../misc/lv_fs.h:23:9
 else:
-  let LV_FS_MAX_PATH_LENGTH* = 256 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/../misc/lv_fs.h:23:9
+  let LV_FS_MAX_PATH_LENGTH* = 256 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/../misc/lv_fs.h:23:9
 when cast[cuint](4294967295'i64) is static:
   const
     UINT32_MAX* = cast[cuint](4294967295'i64) ## Generated based on /usr/include/stdint.h:118:10
@@ -3259,48 +2852,53 @@ else:
   let UINT32_MAX* = cast[cuint](4294967295'i64) ## Generated based on /usr/include/stdint.h:118:10
 when 0 is static:
   const
-    LV_DRAW_UNIT_NONE* = 0   ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/lv_draw.h:29:9
+    LV_DRAW_UNIT_NONE* = 0   ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/lv_draw.h:34:9
 else:
-  let LV_DRAW_UNIT_NONE* = 0 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/lv_draw.h:29:9
+  let LV_DRAW_UNIT_NONE* = 0 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/lv_draw.h:34:9
+when -1 is static:
+  const
+    LV_DRAW_UNIT_IDLE* = -1  ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/lv_draw.h:35:9
+else:
+  let LV_DRAW_UNIT_IDLE* = -1 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/lv_draw.h:35:9
 when 32767 is static:
   const
-    LV_RADIUS_CIRCLE* = 32767 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/lv_draw_rect.h:25:9
+    LV_RADIUS_CIRCLE* = 32767 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../draw/lv_draw_rect.h:25:9
 else:
-  let LV_RADIUS_CIRCLE* = 32767 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/lv_draw_rect.h:25:9
+  let LV_RADIUS_CIRCLE* = 32767 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../draw/lv_draw_rect.h:25:9
 when 65535 is static:
   const
-    LV_DRAW_LABEL_NO_TXT_SEL* = 65535 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/lv_draw_label.h:25:9
+    LV_DRAW_LABEL_NO_TXT_SEL* = 65535 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../draw/lv_draw_label.h:26:9
 else:
-  let LV_DRAW_LABEL_NO_TXT_SEL* = 65535 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../display/../draw/lv_draw_label.h:25:9
+  let LV_DRAW_LABEL_NO_TXT_SEL* = 65535 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../draw/lv_draw_label.h:26:9
 when 3 is static:
   const
-    LV_LABEL_DOT_NUM* = 3    ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/bar/../label/lv_label.h:30:9
+    LV_LABEL_DOT_NUM* = 3    ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/bar/../label/lv_label.h:30:9
 else:
-  let LV_LABEL_DOT_NUM* = 3  ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/bar/../label/lv_label.h:30:9
+  let LV_LABEL_DOT_NUM* = 3  ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/bar/../label/lv_label.h:30:9
 when 65535 is static:
   const
-    LV_LABEL_POS_LAST* = 65535 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/bar/../label/lv_label.h:31:9
+    LV_LABEL_POS_LAST* = 65535 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/bar/../label/lv_label.h:31:9
 else:
-  let LV_LABEL_POS_LAST* = 65535 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/bar/../label/lv_label.h:31:9
+  let LV_LABEL_POS_LAST* = 65535 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/bar/../label/lv_label.h:31:9
 when LV_DRAW_LABEL_NO_TXT_SEL is typedesc:
   type
-    LV_LABEL_TEXT_SELECTION_OFF* = LV_DRAW_LABEL_NO_TXT_SEL ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/bar/../label/lv_label.h:32:9
+    LV_LABEL_TEXT_SELECTION_OFF* = LV_DRAW_LABEL_NO_TXT_SEL ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/bar/../label/lv_label.h:32:9
 else:
   when LV_DRAW_LABEL_NO_TXT_SEL is static:
     const
-      LV_LABEL_TEXT_SELECTION_OFF* = LV_DRAW_LABEL_NO_TXT_SEL ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/bar/../label/lv_label.h:32:9
+      LV_LABEL_TEXT_SELECTION_OFF* = LV_DRAW_LABEL_NO_TXT_SEL ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/bar/../label/lv_label.h:32:9
   else:
-    let LV_LABEL_TEXT_SELECTION_OFF* = LV_DRAW_LABEL_NO_TXT_SEL ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/bar/../label/lv_label.h:32:9
+    let LV_LABEL_TEXT_SELECTION_OFF* = LV_DRAW_LABEL_NO_TXT_SEL ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/bar/../label/lv_label.h:32:9
 when "Text" is static:
   const
-    LV_LABEL_DEFAULT_TEXT* = "Text" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/bar/../label/lv_label.h:34:9
+    LV_LABEL_DEFAULT_TEXT* = "Text" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/bar/../label/lv_label.h:34:9
 else:
-  let LV_LABEL_DEFAULT_TEXT* = "Text" ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/bar/../label/lv_label.h:34:9
+  let LV_LABEL_DEFAULT_TEXT* = "Text" ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/bar/../label/lv_label.h:34:9
 when 65535 is static:
   const
-    LV_BUTTONMATRIX_BUTTON_NONE* = 65535 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/buttonmatrix/lv_buttonmatrix.h:25:9
+    LV_BUTTONMATRIX_BUTTON_NONE* = 65535 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/buttonmatrix/lv_buttonmatrix.h:25:9
 else:
-  let LV_BUTTONMATRIX_BUTTON_NONE* = 65535 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/buttonmatrix/lv_buttonmatrix.h:25:9
+  let LV_BUTTONMATRIX_BUTTON_NONE* = 65535 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/buttonmatrix/lv_buttonmatrix.h:25:9
 when 2147483647 is static:
   const
     INT32_MAX* = 2147483647  ## Generated based on /usr/include/stdint.h:112:10
@@ -3308,258 +2906,322 @@ else:
   let INT32_MAX* = 2147483647 ## Generated based on /usr/include/stdint.h:112:10
 when 65535 is static:
   const
-    LV_DROPDOWN_POS_LAST* = 65535 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/dropdown/lv_dropdown.h:31:9
+    LV_DROPDOWN_POS_LAST* = 65535 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/dropdown/lv_dropdown.h:31:9
 else:
-  let LV_DROPDOWN_POS_LAST* = 65535 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/dropdown/lv_dropdown.h:31:9
+  let LV_DROPDOWN_POS_LAST* = 65535 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/dropdown/lv_dropdown.h:31:9
 when 80 is static:
   const
-    LV_LED_BRIGHT_MIN* = 80  ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/led/lv_led.h:25:10
+    LV_LED_BRIGHT_MIN* = 80  ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/led/lv_led.h:25:10
 else:
-  let LV_LED_BRIGHT_MIN* = 80 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/led/lv_led.h:25:10
+  let LV_LED_BRIGHT_MIN* = 80 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/led/lv_led.h:25:10
 when 255 is static:
   const
-    LV_LED_BRIGHT_MAX* = 255 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/led/lv_led.h:30:10
+    LV_LED_BRIGHT_MAX* = 255 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/led/lv_led.h:30:10
 else:
-  let LV_LED_BRIGHT_MAX* = 255 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/led/lv_led.h:30:10
+  let LV_LED_BRIGHT_MAX* = 255 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/led/lv_led.h:30:10
 when cast[cuint](11'i64) is static:
   const
-    LV_SCALE_TOTAL_TICK_COUNT_DEFAULT* = cast[cuint](11'i64) ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/scale/lv_scale.h:29:9
+    LV_SCALE_TOTAL_TICK_COUNT_DEFAULT* = cast[cuint](11'i64) ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/scale/lv_scale.h:29:9
 else:
-  let LV_SCALE_TOTAL_TICK_COUNT_DEFAULT* = cast[cuint](11'i64) ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/scale/lv_scale.h:29:9
+  let LV_SCALE_TOTAL_TICK_COUNT_DEFAULT* = cast[cuint](11'i64) ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/scale/lv_scale.h:29:9
 when cast[cuint](5'i64) is static:
   const
-    LV_SCALE_MAJOR_TICK_EVERY_DEFAULT* = cast[cuint](5'i64) ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/scale/lv_scale.h:33:9
+    LV_SCALE_MAJOR_TICK_EVERY_DEFAULT* = cast[cuint](5'i64) ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/scale/lv_scale.h:33:9
 else:
-  let LV_SCALE_MAJOR_TICK_EVERY_DEFAULT* = cast[cuint](5'i64) ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/scale/lv_scale.h:33:9
+  let LV_SCALE_MAJOR_TICK_EVERY_DEFAULT* = cast[cuint](5'i64) ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/scale/lv_scale.h:33:9
 when cast[cuint](1'i64) is static:
   const
-    LV_SCALE_LABEL_ENABLED_DEFAULT* = cast[cuint](1'i64) ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/scale/lv_scale.h:37:9
+    LV_SCALE_LABEL_ENABLED_DEFAULT* = cast[cuint](1'i64) ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/scale/lv_scale.h:37:9
 else:
-  let LV_SCALE_LABEL_ENABLED_DEFAULT* = cast[cuint](1'i64) ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/scale/lv_scale.h:37:9
+  let LV_SCALE_LABEL_ENABLED_DEFAULT* = cast[cuint](1'i64) ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/scale/lv_scale.h:37:9
 when 32767 is static:
   const
-    LV_TEXTAREA_CURSOR_LAST* = 32767 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/spinbox/../textarea/lv_textarea.h:28:9
+    LV_TEXTAREA_CURSOR_LAST* = 32767 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/spinbox/../textarea/lv_textarea.h:28:9
 else:
-  let LV_TEXTAREA_CURSOR_LAST* = 32767 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/spinbox/../textarea/lv_textarea.h:28:9
+  let LV_TEXTAREA_CURSOR_LAST* = 32767 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/spinbox/../textarea/lv_textarea.h:28:9
 when 10 is static:
   const
-    LV_SPINBOX_MAX_DIGIT_COUNT* = 10 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/spinbox/lv_spinbox.h:28:9
+    LV_SPINBOX_MAX_DIGIT_COUNT* = 10 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/spinbox/lv_spinbox.h:28:9
 else:
-  let LV_SPINBOX_MAX_DIGIT_COUNT* = 10 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/spinbox/lv_spinbox.h:28:9
+  let LV_SPINBOX_MAX_DIGIT_COUNT* = 10 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/spinbox/lv_spinbox.h:28:9
 when 2 is static:
   const
-    internal_LV_SWITCH_KNOB_EXT_AREA_CORRECTION* = 2 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/switch/lv_switch.h:27:9
+    LV_SWITCH_KNOB_EXT_AREA_CORRECTION* = 2 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/switch/lv_switch.h:27:9
 else:
-  let internal_LV_SWITCH_KNOB_EXT_AREA_CORRECTION* = 2 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/switch/lv_switch.h:27:9
+  let LV_SWITCH_KNOB_EXT_AREA_CORRECTION* = 2 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/switch/lv_switch.h:27:9
 when 65535 is static:
   const
-    LV_TABLE_CELL_NONE* = 65535 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/table/lv_table.h:29:9
+    LV_TABLE_CELL_NONE* = 65535 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/table/lv_table.h:29:9
 else:
-  let LV_TABLE_CELL_NONE* = 65535 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/table/lv_table.h:29:9
+  let LV_TABLE_CELL_NONE* = 65535 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/widgets/table/lv_table.h:29:9
 when 7 is static:
   const
-    LV_IME_PINYIN_K9_MAX_INPUT* = 7 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/others/ime/lv_ime_pinyin.h:23:9
+    LV_IME_PINYIN_K9_MAX_INPUT* = 7 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/others/ime/lv_ime_pinyin.h:23:9
 else:
-  let LV_IME_PINYIN_K9_MAX_INPUT* = 7 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/others/ime/lv_ime_pinyin.h:23:9
+  let LV_IME_PINYIN_K9_MAX_INPUT* = 7 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/others/ime/lv_ime_pinyin.h:23:9
+when -1 is static:
+  const
+    LV_MASK_ID_INV* = -1     ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/draw/sw/blend/../lv_draw_sw_mask.h:24:9
+else:
+  let LV_MASK_ID_INV* = -1   ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/draw/sw/blend/../lv_draw_sw_mask.h:24:9
+when 16 is static:
+  const
+    LV_MASK_MAX_NUM* = 16    ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/draw/sw/blend/../lv_draw_sw_mask.h:26:10
+else:
+  let LV_MASK_MAX_NUM* = 16  ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/draw/sw/blend/../lv_draw_sw_mask.h:26:10
 when 1 is static:
   const
-    LV_SDL_MOUSEWHEEL_MODE_CROWN* = 1 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/drivers/sdl/lv_sdl_window.h:28:9
+    LV_SDL_MOUSEWHEEL_MODE_CROWN* = 1 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/drivers/sdl/lv_sdl_window.h:28:9
 else:
-  let LV_SDL_MOUSEWHEEL_MODE_CROWN* = 1 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/drivers/sdl/lv_sdl_window.h:28:9
+  let LV_SDL_MOUSEWHEEL_MODE_CROWN* = 1 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/drivers/sdl/lv_sdl_window.h:28:9
 when 32 is static:
   const
-    KEYBOARD_BUFFER_SIZE* = 32 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/drivers/sdl/lv_sdl_keyboard.h:23:9
+    KEYBOARD_BUFFER_SIZE* = 32 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/drivers/sdl/lv_sdl_keyboard.h:23:9
 else:
-  let KEYBOARD_BUFFER_SIZE* = 32 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/drivers/sdl/lv_sdl_keyboard.h:23:9
+  let KEYBOARD_BUFFER_SIZE* = 32 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/drivers/sdl/lv_sdl_keyboard.h:23:9
 when LV_DISPLAY_ROTATION_0 is typedesc:
   type
-    LV_DISP_ROTATION_0* = LV_DISPLAY_ROTATION_0 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:23:9
+    LV_DISP_ROTATION_0* = LV_DISPLAY_ROTATION_0 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:23:9
 else:
   when LV_DISPLAY_ROTATION_0 is static:
     const
-      LV_DISP_ROTATION_0* = LV_DISPLAY_ROTATION_0 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:23:9
+      LV_DISP_ROTATION_0* = LV_DISPLAY_ROTATION_0 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:23:9
   else:
-    let LV_DISP_ROTATION_0* = LV_DISPLAY_ROTATION_0 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:23:9
+    let LV_DISP_ROTATION_0* = LV_DISPLAY_ROTATION_0 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:23:9
 when LV_DISPLAY_ROTATION_90 is typedesc:
   type
-    LV_DISP_ROTATION_90* = LV_DISPLAY_ROTATION_90 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:24:9
+    LV_DISP_ROTATION_90* = LV_DISPLAY_ROTATION_90 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:24:9
 else:
   when LV_DISPLAY_ROTATION_90 is static:
     const
-      LV_DISP_ROTATION_90* = LV_DISPLAY_ROTATION_90 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:24:9
+      LV_DISP_ROTATION_90* = LV_DISPLAY_ROTATION_90 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:24:9
   else:
-    let LV_DISP_ROTATION_90* = LV_DISPLAY_ROTATION_90 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:24:9
+    let LV_DISP_ROTATION_90* = LV_DISPLAY_ROTATION_90 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:24:9
 when LV_DISPLAY_ROTATION_180 is typedesc:
   type
-    LV_DISP_ROTATION_180* = LV_DISPLAY_ROTATION_180 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:25:9
+    LV_DISP_ROTATION_180* = LV_DISPLAY_ROTATION_180 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:25:9
 else:
   when LV_DISPLAY_ROTATION_180 is static:
     const
-      LV_DISP_ROTATION_180* = LV_DISPLAY_ROTATION_180 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:25:9
+      LV_DISP_ROTATION_180* = LV_DISPLAY_ROTATION_180 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:25:9
   else:
-    let LV_DISP_ROTATION_180* = LV_DISPLAY_ROTATION_180 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:25:9
+    let LV_DISP_ROTATION_180* = LV_DISPLAY_ROTATION_180 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:25:9
 when LV_DISPLAY_ROTATION_270 is typedesc:
   type
-    LV_DISP_ROTATION_270* = LV_DISPLAY_ROTATION_270 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:26:9
+    LV_DISP_ROTATION_270* = LV_DISPLAY_ROTATION_270 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:26:9
 else:
   when LV_DISPLAY_ROTATION_270 is static:
     const
-      LV_DISP_ROTATION_270* = LV_DISPLAY_ROTATION_270 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:26:9
+      LV_DISP_ROTATION_270* = LV_DISPLAY_ROTATION_270 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:26:9
   else:
-    let LV_DISP_ROTATION_270* = LV_DISPLAY_ROTATION_270 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:26:9
+    let LV_DISP_ROTATION_270* = LV_DISPLAY_ROTATION_270 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:26:9
 when LV_DISPLAY_RENDER_MODE_PARTIAL is typedesc:
   type
-    LV_DISP_RENDER_MODE_PARTIAL* = LV_DISPLAY_RENDER_MODE_PARTIAL ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:28:9
+    LV_DISP_RENDER_MODE_PARTIAL* = LV_DISPLAY_RENDER_MODE_PARTIAL ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:28:9
 else:
   when LV_DISPLAY_RENDER_MODE_PARTIAL is static:
     const
-      LV_DISP_RENDER_MODE_PARTIAL* = LV_DISPLAY_RENDER_MODE_PARTIAL ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:28:9
+      LV_DISP_RENDER_MODE_PARTIAL* = LV_DISPLAY_RENDER_MODE_PARTIAL ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:28:9
   else:
-    let LV_DISP_RENDER_MODE_PARTIAL* = LV_DISPLAY_RENDER_MODE_PARTIAL ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:28:9
+    let LV_DISP_RENDER_MODE_PARTIAL* = LV_DISPLAY_RENDER_MODE_PARTIAL ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:28:9
 when LV_DISPLAY_RENDER_MODE_DIRECT is typedesc:
   type
-    LV_DISP_RENDER_MODE_DIRECT* = LV_DISPLAY_RENDER_MODE_DIRECT ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:29:9
+    LV_DISP_RENDER_MODE_DIRECT* = LV_DISPLAY_RENDER_MODE_DIRECT ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:29:9
 else:
   when LV_DISPLAY_RENDER_MODE_DIRECT is static:
     const
-      LV_DISP_RENDER_MODE_DIRECT* = LV_DISPLAY_RENDER_MODE_DIRECT ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:29:9
+      LV_DISP_RENDER_MODE_DIRECT* = LV_DISPLAY_RENDER_MODE_DIRECT ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:29:9
   else:
-    let LV_DISP_RENDER_MODE_DIRECT* = LV_DISPLAY_RENDER_MODE_DIRECT ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:29:9
+    let LV_DISP_RENDER_MODE_DIRECT* = LV_DISPLAY_RENDER_MODE_DIRECT ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:29:9
 when LV_DISPLAY_RENDER_MODE_FULL is typedesc:
   type
-    LV_DISP_RENDER_MODE_FULL* = LV_DISPLAY_RENDER_MODE_FULL ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:30:9
+    LV_DISP_RENDER_MODE_FULL* = LV_DISPLAY_RENDER_MODE_FULL ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:30:9
 else:
   when LV_DISPLAY_RENDER_MODE_FULL is static:
     const
-      LV_DISP_RENDER_MODE_FULL* = LV_DISPLAY_RENDER_MODE_FULL ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:30:9
+      LV_DISP_RENDER_MODE_FULL* = LV_DISPLAY_RENDER_MODE_FULL ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:30:9
   else:
-    let LV_DISP_RENDER_MODE_FULL* = LV_DISPLAY_RENDER_MODE_FULL ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:30:9
+    let LV_DISP_RENDER_MODE_FULL* = LV_DISPLAY_RENDER_MODE_FULL ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:30:9
 when LV_BUTTONMATRIX_BUTTON_NONE is typedesc:
   type
-    LV_BTNMATRIX_BTN_NONE* = LV_BUTTONMATRIX_BUTTON_NONE ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:33:9
+    LV_BTNMATRIX_BTN_NONE* = LV_BUTTONMATRIX_BUTTON_NONE ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:33:9
 else:
   when LV_BUTTONMATRIX_BUTTON_NONE is static:
     const
-      LV_BTNMATRIX_BTN_NONE* = LV_BUTTONMATRIX_BUTTON_NONE ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:33:9
+      LV_BTNMATRIX_BTN_NONE* = LV_BUTTONMATRIX_BUTTON_NONE ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:33:9
   else:
-    let LV_BTNMATRIX_BTN_NONE* = LV_BUTTONMATRIX_BUTTON_NONE ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:33:9
+    let LV_BTNMATRIX_BTN_NONE* = LV_BUTTONMATRIX_BUTTON_NONE ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:33:9
 when LV_BUTTONMATRIX_CTRL_HIDDEN is typedesc:
   type
-    LV_BTNMATRIX_CTRL_HIDDEN* = LV_BUTTONMATRIX_CTRL_HIDDEN ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:35:9
+    LV_BTNMATRIX_CTRL_HIDDEN* = LV_BUTTONMATRIX_CTRL_HIDDEN ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:35:9
 else:
   when LV_BUTTONMATRIX_CTRL_HIDDEN is static:
     const
-      LV_BTNMATRIX_CTRL_HIDDEN* = LV_BUTTONMATRIX_CTRL_HIDDEN ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:35:9
+      LV_BTNMATRIX_CTRL_HIDDEN* = LV_BUTTONMATRIX_CTRL_HIDDEN ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:35:9
   else:
-    let LV_BTNMATRIX_CTRL_HIDDEN* = LV_BUTTONMATRIX_CTRL_HIDDEN ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:35:9
+    let LV_BTNMATRIX_CTRL_HIDDEN* = LV_BUTTONMATRIX_CTRL_HIDDEN ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:35:9
 when LV_BUTTONMATRIX_CTRL_NO_REPEAT is typedesc:
   type
-    LV_BTNMATRIX_CTRL_NO_REPEAT* = LV_BUTTONMATRIX_CTRL_NO_REPEAT ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:36:9
+    LV_BTNMATRIX_CTRL_NO_REPEAT* = LV_BUTTONMATRIX_CTRL_NO_REPEAT ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:36:9
 else:
   when LV_BUTTONMATRIX_CTRL_NO_REPEAT is static:
     const
-      LV_BTNMATRIX_CTRL_NO_REPEAT* = LV_BUTTONMATRIX_CTRL_NO_REPEAT ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:36:9
+      LV_BTNMATRIX_CTRL_NO_REPEAT* = LV_BUTTONMATRIX_CTRL_NO_REPEAT ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:36:9
   else:
-    let LV_BTNMATRIX_CTRL_NO_REPEAT* = LV_BUTTONMATRIX_CTRL_NO_REPEAT ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:36:9
+    let LV_BTNMATRIX_CTRL_NO_REPEAT* = LV_BUTTONMATRIX_CTRL_NO_REPEAT ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:36:9
 when LV_BUTTONMATRIX_CTRL_DISABLED is typedesc:
   type
-    LV_BTNMATRIX_CTRL_DISABLED* = LV_BUTTONMATRIX_CTRL_DISABLED ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:37:9
+    LV_BTNMATRIX_CTRL_DISABLED* = LV_BUTTONMATRIX_CTRL_DISABLED ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:37:9
 else:
   when LV_BUTTONMATRIX_CTRL_DISABLED is static:
     const
-      LV_BTNMATRIX_CTRL_DISABLED* = LV_BUTTONMATRIX_CTRL_DISABLED ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:37:9
+      LV_BTNMATRIX_CTRL_DISABLED* = LV_BUTTONMATRIX_CTRL_DISABLED ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:37:9
   else:
-    let LV_BTNMATRIX_CTRL_DISABLED* = LV_BUTTONMATRIX_CTRL_DISABLED ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:37:9
+    let LV_BTNMATRIX_CTRL_DISABLED* = LV_BUTTONMATRIX_CTRL_DISABLED ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:37:9
 when LV_BUTTONMATRIX_CTRL_CHECKABLE is typedesc:
   type
-    LV_BTNMATRIX_CTRL_CHECKABLE* = LV_BUTTONMATRIX_CTRL_CHECKABLE ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:38:9
+    LV_BTNMATRIX_CTRL_CHECKABLE* = LV_BUTTONMATRIX_CTRL_CHECKABLE ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:38:9
 else:
   when LV_BUTTONMATRIX_CTRL_CHECKABLE is static:
     const
-      LV_BTNMATRIX_CTRL_CHECKABLE* = LV_BUTTONMATRIX_CTRL_CHECKABLE ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:38:9
+      LV_BTNMATRIX_CTRL_CHECKABLE* = LV_BUTTONMATRIX_CTRL_CHECKABLE ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:38:9
   else:
-    let LV_BTNMATRIX_CTRL_CHECKABLE* = LV_BUTTONMATRIX_CTRL_CHECKABLE ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:38:9
+    let LV_BTNMATRIX_CTRL_CHECKABLE* = LV_BUTTONMATRIX_CTRL_CHECKABLE ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:38:9
 when LV_BUTTONMATRIX_CTRL_CHECKED is typedesc:
   type
-    LV_BTNMATRIX_CTRL_CHECKED* = LV_BUTTONMATRIX_CTRL_CHECKED ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:39:9
+    LV_BTNMATRIX_CTRL_CHECKED* = LV_BUTTONMATRIX_CTRL_CHECKED ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:39:9
 else:
   when LV_BUTTONMATRIX_CTRL_CHECKED is static:
     const
-      LV_BTNMATRIX_CTRL_CHECKED* = LV_BUTTONMATRIX_CTRL_CHECKED ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:39:9
+      LV_BTNMATRIX_CTRL_CHECKED* = LV_BUTTONMATRIX_CTRL_CHECKED ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:39:9
   else:
-    let LV_BTNMATRIX_CTRL_CHECKED* = LV_BUTTONMATRIX_CTRL_CHECKED ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:39:9
+    let LV_BTNMATRIX_CTRL_CHECKED* = LV_BUTTONMATRIX_CTRL_CHECKED ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:39:9
 when LV_BUTTONMATRIX_CTRL_CLICK_TRIG is typedesc:
   type
-    LV_BTNMATRIX_CTRL_CLICK_TRIG* = LV_BUTTONMATRIX_CTRL_CLICK_TRIG ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:40:9
+    LV_BTNMATRIX_CTRL_CLICK_TRIG* = LV_BUTTONMATRIX_CTRL_CLICK_TRIG ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:40:9
 else:
   when LV_BUTTONMATRIX_CTRL_CLICK_TRIG is static:
     const
-      LV_BTNMATRIX_CTRL_CLICK_TRIG* = LV_BUTTONMATRIX_CTRL_CLICK_TRIG ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:40:9
+      LV_BTNMATRIX_CTRL_CLICK_TRIG* = LV_BUTTONMATRIX_CTRL_CLICK_TRIG ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:40:9
   else:
-    let LV_BTNMATRIX_CTRL_CLICK_TRIG* = LV_BUTTONMATRIX_CTRL_CLICK_TRIG ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:40:9
+    let LV_BTNMATRIX_CTRL_CLICK_TRIG* = LV_BUTTONMATRIX_CTRL_CLICK_TRIG ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:40:9
 when LV_BUTTONMATRIX_CTRL_POPOVER is typedesc:
   type
-    LV_BTNMATRIX_CTRL_POPOVER* = LV_BUTTONMATRIX_CTRL_POPOVER ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:41:9
+    LV_BTNMATRIX_CTRL_POPOVER* = LV_BUTTONMATRIX_CTRL_POPOVER ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:41:9
 else:
   when LV_BUTTONMATRIX_CTRL_POPOVER is static:
     const
-      LV_BTNMATRIX_CTRL_POPOVER* = LV_BUTTONMATRIX_CTRL_POPOVER ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:41:9
+      LV_BTNMATRIX_CTRL_POPOVER* = LV_BUTTONMATRIX_CTRL_POPOVER ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:41:9
   else:
-    let LV_BTNMATRIX_CTRL_POPOVER* = LV_BUTTONMATRIX_CTRL_POPOVER ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:41:9
+    let LV_BTNMATRIX_CTRL_POPOVER* = LV_BUTTONMATRIX_CTRL_POPOVER ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:41:9
 when LV_BUTTONMATRIX_CTRL_CUSTOM_1 is typedesc:
   type
-    LV_BTNMATRIX_CTRL_CUSTOM_1* = LV_BUTTONMATRIX_CTRL_CUSTOM_1 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:42:9
+    LV_BTNMATRIX_CTRL_CUSTOM_1* = LV_BUTTONMATRIX_CTRL_CUSTOM_1 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:42:9
 else:
   when LV_BUTTONMATRIX_CTRL_CUSTOM_1 is static:
     const
-      LV_BTNMATRIX_CTRL_CUSTOM_1* = LV_BUTTONMATRIX_CTRL_CUSTOM_1 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:42:9
+      LV_BTNMATRIX_CTRL_CUSTOM_1* = LV_BUTTONMATRIX_CTRL_CUSTOM_1 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:42:9
   else:
-    let LV_BTNMATRIX_CTRL_CUSTOM_1* = LV_BUTTONMATRIX_CTRL_CUSTOM_1 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:42:9
+    let LV_BTNMATRIX_CTRL_CUSTOM_1* = LV_BUTTONMATRIX_CTRL_CUSTOM_1 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:42:9
 when LV_BUTTONMATRIX_CTRL_CUSTOM_2 is typedesc:
   type
-    LV_BTNMATRIX_CTRL_CUSTOM_2* = LV_BUTTONMATRIX_CTRL_CUSTOM_2 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:43:9
+    LV_BTNMATRIX_CTRL_CUSTOM_2* = LV_BUTTONMATRIX_CTRL_CUSTOM_2 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:43:9
 else:
   when LV_BUTTONMATRIX_CTRL_CUSTOM_2 is static:
     const
-      LV_BTNMATRIX_CTRL_CUSTOM_2* = LV_BUTTONMATRIX_CTRL_CUSTOM_2 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:43:9
+      LV_BTNMATRIX_CTRL_CUSTOM_2* = LV_BUTTONMATRIX_CTRL_CUSTOM_2 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:43:9
   else:
-    let LV_BTNMATRIX_CTRL_CUSTOM_2* = LV_BUTTONMATRIX_CTRL_CUSTOM_2 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:43:9
+    let LV_BTNMATRIX_CTRL_CUSTOM_2* = LV_BUTTONMATRIX_CTRL_CUSTOM_2 ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:43:9
+when LV_IMAGEBUTTON_STATE_RELEASED is typedesc:
+  type
+    LV_IMGBTN_STATE_RELEASED* = LV_IMAGEBUTTON_STATE_RELEASED ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:63:9
+else:
+  when LV_IMAGEBUTTON_STATE_RELEASED is static:
+    const
+      LV_IMGBTN_STATE_RELEASED* = LV_IMAGEBUTTON_STATE_RELEASED ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:63:9
+  else:
+    let LV_IMGBTN_STATE_RELEASED* = LV_IMAGEBUTTON_STATE_RELEASED ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:63:9
+when LV_IMAGEBUTTON_STATE_PRESSED is typedesc:
+  type
+    LV_IMGBTN_STATE_PRESSED* = LV_IMAGEBUTTON_STATE_PRESSED ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:64:9
+else:
+  when LV_IMAGEBUTTON_STATE_PRESSED is static:
+    const
+      LV_IMGBTN_STATE_PRESSED* = LV_IMAGEBUTTON_STATE_PRESSED ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:64:9
+  else:
+    let LV_IMGBTN_STATE_PRESSED* = LV_IMAGEBUTTON_STATE_PRESSED ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:64:9
+when LV_IMAGEBUTTON_STATE_DISABLED is typedesc:
+  type
+    LV_IMGBTN_STATE_DISABLED* = LV_IMAGEBUTTON_STATE_DISABLED ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:65:9
+else:
+  when LV_IMAGEBUTTON_STATE_DISABLED is static:
+    const
+      LV_IMGBTN_STATE_DISABLED* = LV_IMAGEBUTTON_STATE_DISABLED ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:65:9
+  else:
+    let LV_IMGBTN_STATE_DISABLED* = LV_IMAGEBUTTON_STATE_DISABLED ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:65:9
+when LV_IMAGEBUTTON_STATE_CHECKED_RELEASED is typedesc:
+  type
+    LV_IMGBTN_STATE_CHECKED_RELEASED* = LV_IMAGEBUTTON_STATE_CHECKED_RELEASED ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:66:9
+else:
+  when LV_IMAGEBUTTON_STATE_CHECKED_RELEASED is static:
+    const
+      LV_IMGBTN_STATE_CHECKED_RELEASED* = LV_IMAGEBUTTON_STATE_CHECKED_RELEASED ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:66:9
+  else:
+    let LV_IMGBTN_STATE_CHECKED_RELEASED* = LV_IMAGEBUTTON_STATE_CHECKED_RELEASED ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:66:9
+when LV_IMAGEBUTTON_STATE_CHECKED_PRESSED is typedesc:
+  type
+    LV_IMGBTN_STATE_CHECKED_PRESSED* = LV_IMAGEBUTTON_STATE_CHECKED_PRESSED ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:67:9
+else:
+  when LV_IMAGEBUTTON_STATE_CHECKED_PRESSED is static:
+    const
+      LV_IMGBTN_STATE_CHECKED_PRESSED* = LV_IMAGEBUTTON_STATE_CHECKED_PRESSED ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:67:9
+  else:
+    let LV_IMGBTN_STATE_CHECKED_PRESSED* = LV_IMAGEBUTTON_STATE_CHECKED_PRESSED ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:67:9
+when LV_IMAGEBUTTON_STATE_CHECKED_DISABLED is typedesc:
+  type
+    LV_IMGBTN_STATE_CHECKED_DISABLED* = LV_IMAGEBUTTON_STATE_CHECKED_DISABLED ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:68:9
+else:
+  when LV_IMAGEBUTTON_STATE_CHECKED_DISABLED is static:
+    const
+      LV_IMGBTN_STATE_CHECKED_DISABLED* = LV_IMAGEBUTTON_STATE_CHECKED_DISABLED ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:68:9
+  else:
+    let LV_IMGBTN_STATE_CHECKED_DISABLED* = LV_IMAGEBUTTON_STATE_CHECKED_DISABLED ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:68:9
 when LV_RESULT_OK is typedesc:
   type
-    LV_RES_OK* = LV_RESULT_OK ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:102:9
+    LV_RES_OK* = LV_RESULT_OK ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:111:9
 else:
   when LV_RESULT_OK is static:
     const
-      LV_RES_OK* = LV_RESULT_OK ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:102:9
+      LV_RES_OK* = LV_RESULT_OK ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:111:9
   else:
-    let LV_RES_OK* = LV_RESULT_OK ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:102:9
+    let LV_RES_OK* = LV_RESULT_OK ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:111:9
 when LV_RESULT_INVALID is typedesc:
   type
-    LV_RES_INV* = LV_RESULT_INVALID ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:103:9
+    LV_RES_INV* = LV_RESULT_INVALID ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:112:9
 else:
   when LV_RESULT_INVALID is static:
     const
-      LV_RES_INV* = LV_RESULT_INVALID ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:103:9
+      LV_RES_INV* = LV_RESULT_INVALID ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:112:9
   else:
-    let LV_RES_INV* = LV_RESULT_INVALID ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:103:9
+    let LV_RES_INV* = LV_RESULT_INVALID ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:112:9
 when LV_INDEV_STATE_PRESSED is typedesc:
   type
-    LV_INDEV_STATE_PR* = LV_INDEV_STATE_PRESSED ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:105:9
+    LV_INDEV_STATE_PR* = LV_INDEV_STATE_PRESSED ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:114:9
 else:
   when LV_INDEV_STATE_PRESSED is static:
     const
-      LV_INDEV_STATE_PR* = LV_INDEV_STATE_PRESSED ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:105:9
+      LV_INDEV_STATE_PR* = LV_INDEV_STATE_PRESSED ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:114:9
   else:
-    let LV_INDEV_STATE_PR* = LV_INDEV_STATE_PRESSED ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:105:9
+    let LV_INDEV_STATE_PR* = LV_INDEV_STATE_PRESSED ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:114:9
 when LV_INDEV_STATE_RELEASED is typedesc:
   type
-    LV_INDEV_STATE_REL* = LV_INDEV_STATE_RELEASED ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:106:9
+    LV_INDEV_STATE_REL* = LV_INDEV_STATE_RELEASED ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:115:9
 else:
   when LV_INDEV_STATE_RELEASED is static:
     const
-      LV_INDEV_STATE_REL* = LV_INDEV_STATE_RELEASED ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:106:9
+      LV_INDEV_STATE_REL* = LV_INDEV_STATE_RELEASED ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:115:9
   else:
-    let LV_INDEV_STATE_REL* = LV_INDEV_STATE_RELEASED ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:106:9
+    let LV_INDEV_STATE_REL* = LV_INDEV_STATE_RELEASED ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:115:9
 proc lv_obj_delete*(obj: ptr lv_obj_t): void {.cdecl, importc: "lv_obj_delete".}
 proc lv_obj_delete_async*(obj: ptr lv_obj_t): void {.cdecl,
     importc: "lv_obj_delete_async".}
@@ -3632,8 +3294,15 @@ proc lv_display_enable_invalidation*(disp: ptr lv_display_t; en: bool): void {.
     cdecl, importc: "lv_display_enable_invalidation".}
 proc lv_display_is_invalidation_enabled*(disp: ptr lv_display_t): bool {.cdecl,
     importc: "lv_display_is_invalidation_enabled".}
-proc internal_lv_display_refr_timer*(timer: ptr lv_timer_t): void {.cdecl,
-    importc: "_lv_display_refr_timer".}
+when lv_display_refr_timer is typedesc:
+  type
+    lv_disp_refr_timer* = lv_display_refr_timer ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:155:9
+else:
+  when lv_display_refr_timer is static:
+    const
+      lv_disp_refr_timer* = lv_display_refr_timer ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:155:9
+  else:
+    let lv_disp_refr_timer* = lv_display_refr_timer ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:155:9
 proc lv_display_get_refr_timer*(disp: ptr lv_display_t): ptr lv_timer_t {.cdecl,
     importc: "lv_display_get_refr_timer".}
 proc lv_timer_delete*(timer: ptr lv_timer_t): void {.cdecl,
@@ -3683,6 +3352,24 @@ proc lv_image_get_scale*(obj: ptr lv_obj_t): int32 {.cdecl,
     importc: "lv_image_get_scale".}
 proc lv_image_get_antialias*(obj: ptr lv_obj_t): bool {.cdecl,
     importc: "lv_image_get_antialias".}
+proc lv_imagebutton_create*(parent: ptr lv_obj_t): ptr lv_obj_t {.cdecl,
+    importc: "lv_imagebutton_create".}
+proc lv_imagebutton_set_src*(imagebutton: ptr lv_obj_t;
+                             state: lv_imagebutton_state_t; src_left: pointer;
+                             src_mid: pointer; src_right: pointer): void {.
+    cdecl, importc: "lv_imagebutton_set_src".}
+proc lv_imagebutton_set_state*(imagebutton: ptr lv_obj_t;
+                               state: lv_imagebutton_state_t): void {.cdecl,
+    importc: "lv_imagebutton_set_state".}
+proc lv_imagebutton_get_src_left*(imagebutton: ptr lv_obj_t;
+                                  state: lv_imagebutton_state_t): pointer {.
+    cdecl, importc: "lv_imagebutton_get_src_left".}
+proc lv_imagebutton_get_src_middle*(imagebutton: ptr lv_obj_t;
+                                    state: lv_imagebutton_state_t): pointer {.
+    cdecl, importc: "lv_imagebutton_get_src_middle".}
+proc lv_imagebutton_get_src_right*(imagebutton: ptr lv_obj_t;
+                                   state: lv_imagebutton_state_t): pointer {.
+    cdecl, importc: "lv_imagebutton_get_src_right".}
 proc lv_list_set_button_text*(list: ptr lv_obj_t; btn: ptr lv_obj_t;
                               txt: cstring): void {.cdecl,
     importc: "lv_list_set_button_text".}
@@ -3771,67 +3458,67 @@ proc lv_obj_delete_anim_completed_cb*(a: ptr lv_anim_t): void {.cdecl,
     importc: "lv_obj_delete_anim_completed_cb".}
 when LV_STYLE_ANIM_DURATION is typedesc:
   type
-    LV_STYLE_ANIM_TIME* = LV_STYLE_ANIM_DURATION ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:242:9
+    LV_STYLE_ANIM_TIME* = LV_STYLE_ANIM_DURATION ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:260:9
 else:
   when LV_STYLE_ANIM_DURATION is static:
     const
-      LV_STYLE_ANIM_TIME* = LV_STYLE_ANIM_DURATION ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:242:9
+      LV_STYLE_ANIM_TIME* = LV_STYLE_ANIM_DURATION ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:260:9
   else:
-    let LV_STYLE_ANIM_TIME* = LV_STYLE_ANIM_DURATION ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:242:9
+    let LV_STYLE_ANIM_TIME* = LV_STYLE_ANIM_DURATION ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:260:9
 when LV_STYLE_IMAGE_OPA is typedesc:
   type
-    LV_STYLE_IMG_OPA* = LV_STYLE_IMAGE_OPA ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:243:9
+    LV_STYLE_IMG_OPA* = LV_STYLE_IMAGE_OPA ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:261:9
 else:
   when LV_STYLE_IMAGE_OPA is static:
     const
-      LV_STYLE_IMG_OPA* = LV_STYLE_IMAGE_OPA ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:243:9
+      LV_STYLE_IMG_OPA* = LV_STYLE_IMAGE_OPA ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:261:9
   else:
-    let LV_STYLE_IMG_OPA* = LV_STYLE_IMAGE_OPA ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:243:9
+    let LV_STYLE_IMG_OPA* = LV_STYLE_IMAGE_OPA ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:261:9
 when LV_STYLE_IMAGE_RECOLOR is typedesc:
   type
-    LV_STYLE_IMG_RECOLOR* = LV_STYLE_IMAGE_RECOLOR ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:244:9
+    LV_STYLE_IMG_RECOLOR* = LV_STYLE_IMAGE_RECOLOR ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:262:9
 else:
   when LV_STYLE_IMAGE_RECOLOR is static:
     const
-      LV_STYLE_IMG_RECOLOR* = LV_STYLE_IMAGE_RECOLOR ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:244:9
+      LV_STYLE_IMG_RECOLOR* = LV_STYLE_IMAGE_RECOLOR ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:262:9
   else:
-    let LV_STYLE_IMG_RECOLOR* = LV_STYLE_IMAGE_RECOLOR ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:244:9
+    let LV_STYLE_IMG_RECOLOR* = LV_STYLE_IMAGE_RECOLOR ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:262:9
 when LV_STYLE_IMAGE_RECOLOR_OPA is typedesc:
   type
-    LV_STYLE_IMG_RECOLOR_OPA* = LV_STYLE_IMAGE_RECOLOR_OPA ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:245:9
+    LV_STYLE_IMG_RECOLOR_OPA* = LV_STYLE_IMAGE_RECOLOR_OPA ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:263:9
 else:
   when LV_STYLE_IMAGE_RECOLOR_OPA is static:
     const
-      LV_STYLE_IMG_RECOLOR_OPA* = LV_STYLE_IMAGE_RECOLOR_OPA ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:245:9
+      LV_STYLE_IMG_RECOLOR_OPA* = LV_STYLE_IMAGE_RECOLOR_OPA ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:263:9
   else:
-    let LV_STYLE_IMG_RECOLOR_OPA* = LV_STYLE_IMAGE_RECOLOR_OPA ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:245:9
+    let LV_STYLE_IMG_RECOLOR_OPA* = LV_STYLE_IMAGE_RECOLOR_OPA ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:263:9
 when LV_STYLE_SHADOW_OFFSET_X is typedesc:
   type
-    LV_STYLE_SHADOW_OFS_X* = LV_STYLE_SHADOW_OFFSET_X ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:246:9
+    LV_STYLE_SHADOW_OFS_X* = LV_STYLE_SHADOW_OFFSET_X ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:264:9
 else:
   when LV_STYLE_SHADOW_OFFSET_X is static:
     const
-      LV_STYLE_SHADOW_OFS_X* = LV_STYLE_SHADOW_OFFSET_X ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:246:9
+      LV_STYLE_SHADOW_OFS_X* = LV_STYLE_SHADOW_OFFSET_X ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:264:9
   else:
-    let LV_STYLE_SHADOW_OFS_X* = LV_STYLE_SHADOW_OFFSET_X ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:246:9
+    let LV_STYLE_SHADOW_OFS_X* = LV_STYLE_SHADOW_OFFSET_X ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:264:9
 when LV_STYLE_SHADOW_OFFSET_Y is typedesc:
   type
-    LV_STYLE_SHADOW_OFS_Y* = LV_STYLE_SHADOW_OFFSET_Y ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:247:9
+    LV_STYLE_SHADOW_OFS_Y* = LV_STYLE_SHADOW_OFFSET_Y ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:265:9
 else:
   when LV_STYLE_SHADOW_OFFSET_Y is static:
     const
-      LV_STYLE_SHADOW_OFS_Y* = LV_STYLE_SHADOW_OFFSET_Y ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:247:9
+      LV_STYLE_SHADOW_OFS_Y* = LV_STYLE_SHADOW_OFFSET_Y ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:265:9
   else:
-    let LV_STYLE_SHADOW_OFS_Y* = LV_STYLE_SHADOW_OFFSET_Y ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:247:9
+    let LV_STYLE_SHADOW_OFS_Y* = LV_STYLE_SHADOW_OFFSET_Y ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:265:9
 when LV_STYLE_TRANSFORM_ROTATION is typedesc:
   type
-    LV_STYLE_TRANSFORM_ANGLE* = LV_STYLE_TRANSFORM_ROTATION ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:248:9
+    LV_STYLE_TRANSFORM_ANGLE* = LV_STYLE_TRANSFORM_ROTATION ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:266:9
 else:
   when LV_STYLE_TRANSFORM_ROTATION is static:
     const
-      LV_STYLE_TRANSFORM_ANGLE* = LV_STYLE_TRANSFORM_ROTATION ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:248:9
+      LV_STYLE_TRANSFORM_ANGLE* = LV_STYLE_TRANSFORM_ROTATION ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:266:9
   else:
-    let LV_STYLE_TRANSFORM_ANGLE* = LV_STYLE_TRANSFORM_ROTATION ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:248:9
+    let LV_STYLE_TRANSFORM_ANGLE* = LV_STYLE_TRANSFORM_ROTATION ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:266:9
 proc lv_obj_get_style_anim_duration*(obj: ptr lv_obj_t; part: lv_part_t): uint32 {.
     cdecl, importc: "lv_obj_get_style_anim_duration".}
 proc lv_obj_get_style_image_opa*(obj: ptr lv_obj_t; part: lv_part_t): lv_opa_t {.
@@ -3915,13 +3602,13 @@ proc lv_keyboard_get_button_text*(obj: ptr lv_obj_t; btn_id: uint32): cstring {.
     cdecl, importc: "lv_keyboard_get_button_text".}
 when LV_SCALE_NONE is typedesc:
   type
-    LV_ZOOM_NONE* = LV_SCALE_NONE ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:291:9
+    LV_ZOOM_NONE* = LV_SCALE_NONE ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:309:9
 else:
   when LV_SCALE_NONE is static:
     const
-      LV_ZOOM_NONE* = LV_SCALE_NONE ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:291:9
+      LV_ZOOM_NONE* = LV_SCALE_NONE ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:309:9
   else:
-    let LV_ZOOM_NONE* = LV_SCALE_NONE ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:291:9
+    let LV_ZOOM_NONE* = LV_SCALE_NONE ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v8.h:309:9
 proc lv_bin_decoder_open*(decoder: ptr lv_image_decoder_t;
                           dsc: ptr lv_image_decoder_dsc_t): lv_result_t {.cdecl,
     importc: "lv_bin_decoder_open".}
@@ -3936,28 +3623,282 @@ proc lv_obj_bind_checked*(obj: ptr lv_obj_t; subject: ptr lv_subject_t): ptr lv_
     cdecl, importc: "lv_obj_bind_checked".}
 when LV_DRAW_BUF_DEFINE_STATIC is typedesc:
   type
-    LV_DRAW_BUF_DEFINE* = LV_DRAW_BUF_DEFINE_STATIC ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_0.h:42:9
+    LV_DRAW_BUF_DEFINE* = LV_DRAW_BUF_DEFINE_STATIC ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_0.h:42:9
 else:
   when LV_DRAW_BUF_DEFINE_STATIC is static:
     const
-      LV_DRAW_BUF_DEFINE* = LV_DRAW_BUF_DEFINE_STATIC ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_0.h:42:9
+      LV_DRAW_BUF_DEFINE* = LV_DRAW_BUF_DEFINE_STATIC ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_0.h:42:9
   else:
-    let LV_DRAW_BUF_DEFINE* = LV_DRAW_BUF_DEFINE_STATIC ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_0.h:42:9
-when -1 is static:
-  const
-    LV_MASK_ID_INV* = -1     ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../draw/sw/blend/../lv_draw_sw_mask.h:24:9
+    let LV_DRAW_BUF_DEFINE* = LV_DRAW_BUF_DEFINE_STATIC ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_0.h:42:9
+proc lv_utils_bsearch*(key: pointer; base: pointer; n: csize_t; size: csize_t;
+                       cmp: proc (a0: pointer; a1: pointer): cint {.cdecl.}): pointer {.
+    cdecl, importc: "lv_utils_bsearch".}
+proc lv_draw_buf_align_ex*(handlers: ptr lv_draw_buf_handlers_t; buf: pointer;
+                           color_format: lv_color_format_t): pointer {.cdecl,
+    importc: "lv_draw_buf_align_ex".}
+proc lv_draw_buf_create_ex*(handlers: ptr lv_draw_buf_handlers_t; w: uint32;
+                            h: uint32; cf: lv_color_format_t; stride: uint32): ptr lv_draw_buf_t {.
+    cdecl, importc: "lv_draw_buf_create_ex".}
+proc lv_draw_buf_width_to_stride_ex*(handlers: ptr lv_draw_buf_handlers_t;
+                                     w: uint32; color_format: lv_color_format_t): uint32 {.
+    cdecl, importc: "lv_draw_buf_width_to_stride_ex".}
+proc lv_draw_buf_dup_ex*(handlers: ptr lv_draw_buf_handlers_t;
+                         draw_buf: ptr lv_draw_buf_t): ptr lv_draw_buf_t {.
+    cdecl, importc: "lv_draw_buf_dup_ex".}
+when LV_EVENT_LAST is typedesc:
+  type
+    internal_LV_EVENT_LAST* = LV_EVENT_LAST ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_1.h:38:9
 else:
-  let LV_MASK_ID_INV* = -1   ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../draw/sw/blend/../lv_draw_sw_mask.h:24:9
-when 16 is static:
-  const
-    internal_LV_MASK_MAX_NUM* = 16 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../draw/sw/blend/../lv_draw_sw_mask.h:26:10
+  when LV_EVENT_LAST is static:
+    const
+      internal_LV_EVENT_LAST* = LV_EVENT_LAST ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_1.h:38:9
+  else:
+    let internal_LV_EVENT_LAST* = LV_EVENT_LAST ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_1.h:38:9
+when lv_obj_t is typedesc:
+  type
+    internal_lv_obj_t* = lv_obj_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_1.h:39:9
 else:
-  let internal_LV_MASK_MAX_NUM* = 16 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/../draw/sw/blend/../lv_draw_sw_mask.h:26:10
-when 2712847316 is static:
-  const
-    ZERO_MEM_SENTINEL* = 2712847316'i64 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/lv_global.h:46:9
+  when lv_obj_t is static:
+    const
+      internal_lv_obj_t* = lv_obj_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_1.h:39:9
+  else:
+    let internal_lv_obj_t* = lv_obj_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_1.h:39:9
+when lv_obj_class_t is typedesc:
+  type
+    internal_lv_obj_class_t* = lv_obj_class_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_1.h:40:9
 else:
-  let ZERO_MEM_SENTINEL* = 2712847316'i64 ## Generated based on /home/jose/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/core/lv_global.h:46:9
+  when lv_obj_class_t is static:
+    const
+      internal_lv_obj_class_t* = lv_obj_class_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_1.h:40:9
+  else:
+    let internal_lv_obj_class_t* = lv_obj_class_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_1.h:40:9
+when lv_event_t is typedesc:
+  type
+    internal_lv_event_t* = lv_event_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_1.h:41:9
+else:
+  when lv_event_t is static:
+    const
+      internal_lv_event_t* = lv_event_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_1.h:41:9
+  else:
+    let internal_lv_event_t* = lv_event_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_1.h:41:9
+when lv_event_code_t is typedesc:
+  type
+    internal_lv_event_code_t* = lv_event_code_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_1.h:42:9
+else:
+  when lv_event_code_t is static:
+    const
+      internal_lv_event_code_t* = lv_event_code_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_1.h:42:9
+  else:
+    let internal_lv_event_code_t* = lv_event_code_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_1.h:42:9
+when lv_event_mark_deleted is typedesc:
+  type
+    internal_lv_event_mark_deleted* = lv_event_mark_deleted ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_1.h:43:9
+else:
+  when lv_event_mark_deleted is static:
+    const
+      internal_lv_event_mark_deleted* = lv_event_mark_deleted ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_1.h:43:9
+  else:
+    let internal_lv_event_mark_deleted* = lv_event_mark_deleted ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_1.h:43:9
+proc lv_obj_add_event_cb*(obj: ptr lv_obj_t; event_cb: lv_event_cb_t;
+                          filter: lv_event_code_t; user_data: pointer): ptr lv_event_dsc_t {.
+    cdecl, importc: "lv_obj_add_event_cb".}
+when lv_anim_t is typedesc:
+  type
+    internal_lv_anim_t* = lv_anim_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_1.h:46:9
+else:
+  when lv_anim_t is static:
+    const
+      internal_lv_anim_t* = lv_anim_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_1.h:46:9
+  else:
+    let internal_lv_anim_t* = lv_anim_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_1.h:46:9
+when LV_STYLE_LAST_BUILT_IN_PROP is typedesc:
+  type
+    internal_LV_STYLE_LAST_BUILT_IN_PROP* = LV_STYLE_LAST_BUILT_IN_PROP ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_1.h:48:9
+else:
+  when LV_STYLE_LAST_BUILT_IN_PROP is static:
+    const
+      internal_LV_STYLE_LAST_BUILT_IN_PROP* = LV_STYLE_LAST_BUILT_IN_PROP ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_1.h:48:9
+  else:
+    let internal_LV_STYLE_LAST_BUILT_IN_PROP* = LV_STYLE_LAST_BUILT_IN_PROP ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_1.h:48:9
+when LV_FLEX_REVERSE is typedesc:
+  type
+    internal_LV_FLEX_REVERSE* = LV_FLEX_REVERSE ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_1.h:49:9
+else:
+  when LV_FLEX_REVERSE is static:
+    const
+      internal_LV_FLEX_REVERSE* = LV_FLEX_REVERSE ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_1.h:49:9
+  else:
+    let internal_LV_FLEX_REVERSE* = LV_FLEX_REVERSE ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_1.h:49:9
+when LV_FLEX_WRAP is typedesc:
+  type
+    internal_LV_FLEX_WRAP* = LV_FLEX_WRAP ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_1.h:50:9
+else:
+  when LV_FLEX_WRAP is static:
+    const
+      internal_LV_FLEX_WRAP* = LV_FLEX_WRAP ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_1.h:50:9
+  else:
+    let internal_LV_FLEX_WRAP* = LV_FLEX_WRAP ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_1.h:50:9
+when LV_FLEX_COLUMN is typedesc:
+  type
+    internal_LV_FLEX_COLUMN* = LV_FLEX_COLUMN ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_1.h:51:9
+else:
+  when LV_FLEX_COLUMN is static:
+    const
+      internal_LV_FLEX_COLUMN* = LV_FLEX_COLUMN ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_1.h:51:9
+  else:
+    let internal_LV_FLEX_COLUMN* = LV_FLEX_COLUMN ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_1.h:51:9
+when lv_area_is_equal is typedesc:
+  type
+    internal_lv_area_is_equal* = lv_area_is_equal ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_1.h:53:9
+else:
+  when lv_area_is_equal is static:
+    const
+      internal_lv_area_is_equal* = lv_area_is_equal ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_1.h:53:9
+  else:
+    let internal_lv_area_is_equal* = lv_area_is_equal ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_1.h:53:9
+when lv_area_is_in is typedesc:
+  type
+    internal_lv_area_is_in* = lv_area_is_in ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_1.h:54:9
+else:
+  when lv_area_is_in is static:
+    const
+      internal_lv_area_is_in* = lv_area_is_in ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_1.h:54:9
+  else:
+    let internal_lv_area_is_in* = lv_area_is_in ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_1.h:54:9
+when lv_area_intersect is typedesc:
+  type
+    internal_lv_area_intersect* = lv_area_intersect ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_1.h:55:9
+else:
+  when lv_area_intersect is static:
+    const
+      internal_lv_area_intersect* = lv_area_intersect ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_1.h:55:9
+  else:
+    let internal_lv_area_intersect* = lv_area_intersect ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_1.h:55:9
+when lv_area_is_point_on is typedesc:
+  type
+    internal_lv_area_is_point_on* = lv_area_is_point_on ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_1.h:56:9
+else:
+  when lv_area_is_point_on is static:
+    const
+      internal_lv_area_is_point_on* = lv_area_is_point_on ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_1.h:56:9
+  else:
+    let internal_lv_area_is_point_on* = lv_area_is_point_on ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_1.h:56:9
+when lv_area_join is typedesc:
+  type
+    internal_lv_area_join* = lv_area_join ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_1.h:57:9
+else:
+  when lv_area_join is static:
+    const
+      internal_lv_area_join* = lv_area_join ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_1.h:57:9
+  else:
+    let internal_lv_area_join* = lv_area_join ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_1.h:57:9
+when lv_image_buf_get_transformed_area is typedesc:
+  type
+    internal_lv_image_buf_get_transformed_area* = lv_image_buf_get_transformed_area ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_1.h:58:9
+else:
+  when lv_image_buf_get_transformed_area is static:
+    const
+      internal_lv_image_buf_get_transformed_area* = lv_image_buf_get_transformed_area ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_1.h:58:9
+  else:
+    let internal_lv_image_buf_get_transformed_area* = lv_image_buf_get_transformed_area ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_1.h:58:9
+proc lv_ll_init*(ll_p: ptr lv_ll_t; node_size: uint32): void {.cdecl,
+    importc: "lv_ll_init".}
+proc lv_ll_ins_head*(ll_p: ptr lv_ll_t): pointer {.cdecl,
+    importc: "lv_ll_ins_head".}
+proc lv_ll_ins_prev*(ll_p: ptr lv_ll_t; n_act: pointer): pointer {.cdecl,
+    importc: "lv_ll_ins_prev".}
+proc lv_ll_ins_tail*(ll_p: ptr lv_ll_t): pointer {.cdecl,
+    importc: "lv_ll_ins_tail".}
+proc lv_ll_get_head*(ll_p: ptr lv_ll_t): pointer {.cdecl,
+    importc: "lv_ll_get_head".}
+proc lv_ll_get_tail*(ll_p: ptr lv_ll_t): pointer {.cdecl,
+    importc: "lv_ll_get_tail".}
+proc lv_ll_get_next*(ll_p: ptr lv_ll_t; n_act: pointer): pointer {.cdecl,
+    importc: "lv_ll_get_next".}
+proc lv_ll_get_prev*(ll_p: ptr lv_ll_t; n_act: pointer): pointer {.cdecl,
+    importc: "lv_ll_get_prev".}
+proc lv_ll_get_len*(ll_p: ptr lv_ll_t): uint32 {.cdecl, importc: "lv_ll_get_len".}
+proc lv_ll_move_before*(ll_p: ptr lv_ll_t; n_act: pointer; n_after: pointer): void {.
+    cdecl, importc: "lv_ll_move_before".}
+proc lv_ll_is_empty*(ll_p: ptr lv_ll_t): bool {.cdecl, importc: "lv_ll_is_empty".}
+proc lv_ll_clear*(ll_p: ptr lv_ll_t): void {.cdecl, importc: "lv_ll_clear".}
+proc lv_ll_remove*(ll_p: ptr lv_ll_t; node_p: pointer): void {.cdecl,
+    importc: "lv_ll_remove".}
+proc lv_ll_chg_list*(ll_ori_p: ptr lv_ll_t; ll_new_p: ptr lv_ll_t;
+                     node: pointer; head: bool): void {.cdecl,
+    importc: "lv_ll_chg_list".}
+when LV_LL_READ is typedesc:
+  type
+    internal_LV_LL_READ* = LV_LL_READ ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_1.h:74:9
+else:
+  when LV_LL_READ is static:
+    const
+      internal_LV_LL_READ* = LV_LL_READ ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_1.h:74:9
+  else:
+    let internal_LV_LL_READ* = LV_LL_READ ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_1.h:74:9
+when LV_LL_READ_BACK is typedesc:
+  type
+    internal_LV_LL_READ_BACK* = LV_LL_READ_BACK ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_1.h:75:9
+else:
+  when LV_LL_READ_BACK is static:
+    const
+      internal_LV_LL_READ_BACK* = LV_LL_READ_BACK ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_1.h:75:9
+  else:
+    let internal_LV_LL_READ_BACK* = LV_LL_READ_BACK ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_1.h:75:9
+when lv_obj_scroll_by_raw is typedesc:
+  type
+    internal_lv_obj_scroll_by_raw* = lv_obj_scroll_by_raw ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_1.h:77:9
+else:
+  when lv_obj_scroll_by_raw is static:
+    const
+      internal_lv_obj_scroll_by_raw* = lv_obj_scroll_by_raw ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_1.h:77:9
+  else:
+    let internal_lv_obj_scroll_by_raw* = lv_obj_scroll_by_raw ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_1.h:77:9
+when lv_obj_get_ext_draw_size is typedesc:
+  type
+    internal_lv_obj_get_ext_draw_size* = lv_obj_get_ext_draw_size ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_1.h:78:9
+else:
+  when lv_obj_get_ext_draw_size is static:
+    const
+      internal_lv_obj_get_ext_draw_size* = lv_obj_get_ext_draw_size ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_1.h:78:9
+  else:
+    let internal_lv_obj_get_ext_draw_size* = lv_obj_get_ext_draw_size ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_1.h:78:9
+when lv_indev_scroll_handler is typedesc:
+  type
+    internal_lv_indev_scroll_handler* = lv_indev_scroll_handler ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_1.h:79:9
+else:
+  when lv_indev_scroll_handler is static:
+    const
+      internal_lv_indev_scroll_handler* = lv_indev_scroll_handler ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_1.h:79:9
+  else:
+    let internal_lv_indev_scroll_handler* = lv_indev_scroll_handler ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_1.h:79:9
+when lv_display_t is typedesc:
+  type
+    internal_lv_display_t* = lv_display_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_1.h:81:9
+else:
+  when lv_display_t is static:
+    const
+      internal_lv_display_t* = lv_display_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_1.h:81:9
+  else:
+    let internal_lv_display_t* = lv_display_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_1.h:81:9
+when lv_timer_t is typedesc:
+  type
+    internal_lv_timer_t* = lv_timer_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_1.h:86:9
+else:
+  when lv_timer_t is static:
+    const
+      internal_lv_timer_t* = lv_timer_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_1.h:86:9
+  else:
+    let internal_lv_timer_t* = lv_timer_t ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_1.h:86:9
+when lv_inv_area is typedesc:
+  type
+    internal_lv_inv_area* = lv_inv_area ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_1.h:88:9
+else:
+  when lv_inv_area is static:
+    const
+      internal_lv_inv_area* = lv_inv_area ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_1.h:88:9
+  else:
+    let internal_lv_inv_area* = lv_inv_area ## Generated based on /home/jose/Documentos/src/nimlang/lvgl.nim/src/lvgl/submodules/lvgl/src/lv_api_map_v9_1.h:88:9
 proc lv_init*(): void {.cdecl, importc: "lv_init".}
 proc lv_deinit*(): void {.cdecl, importc: "lv_deinit".}
 proc lv_is_initialized*(): bool {.cdecl, importc: "lv_is_initialized".}
@@ -3967,7 +3908,7 @@ proc lv_memset*(dst: pointer; v: uint8; len: csize_t): void {.cdecl,
     importc: "lv_memset".}
 proc lv_memmove*(dst: pointer; src: pointer; len: csize_t): pointer {.cdecl,
     importc: "lv_memmove".}
-proc lv_memcmp*(p1: pointer; p2: pointer; len: csize_t): int32 {.cdecl,
+proc lv_memcmp*(p1: pointer; p2: pointer; len: csize_t): cint {.cdecl,
     importc: "lv_memcmp".}
 proc lv_memzero*(dst: pointer; len: csize_t): void {.cdecl,
     importc: "lv_memzero".}
@@ -3978,7 +3919,7 @@ proc lv_strncpy*(dst: cstring; src: cstring; dest_size: csize_t): cstring {.
     cdecl, importc: "lv_strncpy".}
 proc lv_strcpy*(dst: cstring; src: cstring): cstring {.cdecl,
     importc: "lv_strcpy".}
-proc lv_strcmp*(s1: cstring; s2: cstring): int32 {.cdecl, importc: "lv_strcmp".}
+proc lv_strcmp*(s1: cstring; s2: cstring): cint {.cdecl, importc: "lv_strcmp".}
 proc lv_strdup*(src: cstring): cstring {.cdecl, importc: "lv_strdup".}
 proc lv_strcat*(dst: cstring; src: cstring): cstring {.cdecl,
     importc: "lv_strcat".}
@@ -4013,9 +3954,9 @@ proc lv_vsnprintf*(buffer: cstring; count: csize_t; format: cstring): cint {.
 proc lv_log_register_print_cb*(print_cb: lv_log_print_g_cb_t): void {.cdecl,
     importc: "lv_log_register_print_cb".}
 proc lv_log*(format: cstring): void {.cdecl, varargs, importc: "lv_log".}
-proc internal_lv_log_add*(level: lv_log_level_t; file: cstring; line: cint;
-                          func_arg: cstring; format: cstring): void {.cdecl,
-    varargs, importc: "_lv_log_add".}
+proc lv_log_add*(level: lv_log_level_t; file: cstring; line: cint;
+                 func_arg: cstring; format: cstring): void {.cdecl, varargs,
+    importc: "lv_log_add".}
 proc lv_tick_inc*(tick_period: uint32): void {.cdecl, importc: "lv_tick_inc".}
 proc lv_tick_get*(): uint32 {.cdecl, importc: "lv_tick_get".}
 proc lv_tick_elaps*(prev_tick: uint32): uint32 {.cdecl, importc: "lv_tick_elaps".}
@@ -4024,43 +3965,9 @@ proc lv_tick_set_cb*(cb: lv_tick_get_cb_t): void {.cdecl,
     importc: "lv_tick_set_cb".}
 proc lv_delay_set_cb*(cb: lv_delay_cb_t): void {.cdecl,
     importc: "lv_delay_set_cb".}
-proc internal_lv_ll_init*(ll_p: ptr lv_ll_t; node_size: uint32): void {.cdecl,
-    importc: "_lv_ll_init".}
-proc internal_lv_ll_ins_head*(ll_p: ptr lv_ll_t): pointer {.cdecl,
-    importc: "_lv_ll_ins_head".}
-proc internal_lv_ll_ins_prev*(ll_p: ptr lv_ll_t; n_act: pointer): pointer {.
-    cdecl, importc: "_lv_ll_ins_prev".}
-proc internal_lv_ll_ins_tail*(ll_p: ptr lv_ll_t): pointer {.cdecl,
-    importc: "_lv_ll_ins_tail".}
-proc internal_lv_ll_remove*(ll_p: ptr lv_ll_t; node_p: pointer): void {.cdecl,
-    importc: "_lv_ll_remove".}
-proc internal_lv_ll_clear_custom*(ll_p: ptr lv_ll_t;
-                                  cleanup: proc (a0: pointer): void {.cdecl.}): void {.
-    cdecl, importc: "_lv_ll_clear_custom".}
-proc internal_lv_ll_clear*(ll_p: ptr lv_ll_t): void {.cdecl,
-    importc: "_lv_ll_clear".}
-proc internal_lv_ll_chg_list*(ll_ori_p: ptr lv_ll_t; ll_new_p: ptr lv_ll_t;
-                              node: pointer; head: bool): void {.cdecl,
-    importc: "_lv_ll_chg_list".}
-proc internal_lv_ll_get_head*(ll_p: ptr lv_ll_t): pointer {.cdecl,
-    importc: "_lv_ll_get_head".}
-proc internal_lv_ll_get_tail*(ll_p: ptr lv_ll_t): pointer {.cdecl,
-    importc: "_lv_ll_get_tail".}
-proc internal_lv_ll_get_next*(ll_p: ptr lv_ll_t; n_act: pointer): pointer {.
-    cdecl, importc: "_lv_ll_get_next".}
-proc internal_lv_ll_get_prev*(ll_p: ptr lv_ll_t; n_act: pointer): pointer {.
-    cdecl, importc: "_lv_ll_get_prev".}
-proc internal_lv_ll_get_len*(ll_p: ptr lv_ll_t): uint32 {.cdecl,
-    importc: "_lv_ll_get_len".}
-proc internal_lv_ll_move_before*(ll_p: ptr lv_ll_t; n_act: pointer;
-                                 n_after: pointer): void {.cdecl,
-    importc: "_lv_ll_move_before".}
-proc internal_lv_ll_is_empty*(ll_p: ptr lv_ll_t): bool {.cdecl,
-    importc: "_lv_ll_is_empty".}
-proc internal_lv_timer_core_init*(): void {.cdecl,
-    importc: "_lv_timer_core_init".}
-proc internal_lv_timer_core_deinit*(): void {.cdecl,
-    importc: "_lv_timer_core_deinit".}
+proc lv_ll_clear_custom*(ll_p: ptr lv_ll_t;
+                         cleanup: proc (a0: pointer): void {.cdecl.}): void {.
+    cdecl, importc: "lv_ll_clear_custom".}
 proc lv_timer_handler*(): uint32 {.cdecl, importc: "lv_timer_handler".}
 proc lv_timer_handler_run_in_period*(period: uint32): uint32 {.cdecl,
     importc: "lv_timer_handler_run_in_period".}
@@ -4117,48 +4024,47 @@ proc lv_map*(x: int32; min_in: int32; max_in: int32; min_out: int32;
              max_out: int32): int32 {.cdecl, importc: "lv_map".}
 proc lv_rand_set_seed*(seed: uint32): void {.cdecl, importc: "lv_rand_set_seed".}
 proc lv_rand*(min: uint32; max: uint32): uint32 {.cdecl, importc: "lv_rand".}
-proc lv_array_init*(array: ptr lv_array_t; capacity: uint32;
+proc lv_array_init*(array_arg: ptr lv_array_t; capacity: uint32;
                     element_size: uint32): void {.cdecl,
     importc: "lv_array_init".}
-proc lv_array_resize*(array: ptr lv_array_t; new_capacity: uint32): void {.
+proc lv_array_resize*(array_arg: ptr lv_array_t; new_capacity: uint32): void {.
     cdecl, importc: "lv_array_resize".}
-proc lv_array_deinit*(array: ptr lv_array_t): void {.cdecl,
+proc lv_array_deinit*(array_arg: ptr lv_array_t): void {.cdecl,
     importc: "lv_array_deinit".}
-proc lv_array_size*(array: ptr lv_array_t): uint32 {.cdecl,
+proc lv_array_size*(array_arg: ptr lv_array_t): uint32 {.cdecl,
     importc: "lv_array_size".}
-proc lv_array_capacity*(array: ptr lv_array_t): uint32 {.cdecl,
+proc lv_array_capacity*(array_arg: ptr lv_array_t): uint32 {.cdecl,
     importc: "lv_array_capacity".}
-proc lv_array_is_empty*(array: ptr lv_array_t): bool {.cdecl,
+proc lv_array_is_empty*(array_arg: ptr lv_array_t): bool {.cdecl,
     importc: "lv_array_is_empty".}
-proc lv_array_is_full*(array: ptr lv_array_t): bool {.cdecl,
+proc lv_array_is_full*(array_arg: ptr lv_array_t): bool {.cdecl,
     importc: "lv_array_is_full".}
 proc lv_array_copy*(target: ptr lv_array_t; source: ptr lv_array_t): void {.
     cdecl, importc: "lv_array_copy".}
-proc lv_array_clear*(array: ptr lv_array_t): void {.cdecl,
+proc lv_array_clear*(array_arg: ptr lv_array_t): void {.cdecl,
     importc: "lv_array_clear".}
-proc lv_array_remove*(array: ptr lv_array_t; index: uint32): lv_result_t {.
+proc lv_array_shrink*(array_arg: ptr lv_array_t): void {.cdecl,
+    importc: "lv_array_shrink".}
+proc lv_array_remove*(array_arg: ptr lv_array_t; index: uint32): lv_result_t {.
     cdecl, importc: "lv_array_remove".}
-proc lv_array_erase*(array: ptr lv_array_t; start: uint32; end_arg: uint32): lv_result_t {.
+proc lv_array_erase*(array_arg: ptr lv_array_t; start: uint32; end_arg: uint32): lv_result_t {.
     cdecl, importc: "lv_array_erase".}
-proc lv_array_concat*(array: ptr lv_array_t; other: ptr lv_array_t): lv_result_t {.
+proc lv_array_concat*(array_arg: ptr lv_array_t; other: ptr lv_array_t): lv_result_t {.
     cdecl, importc: "lv_array_concat".}
-proc lv_array_push_back*(array: ptr lv_array_t; element: pointer): lv_result_t {.
+proc lv_array_push_back*(array_arg: ptr lv_array_t; element: pointer): lv_result_t {.
     cdecl, importc: "lv_array_push_back".}
-proc lv_array_assign*(array: ptr lv_array_t; index: uint32; value: pointer): lv_result_t {.
+proc lv_array_assign*(array_arg: ptr lv_array_t; index: uint32; value: pointer): lv_result_t {.
     cdecl, importc: "lv_array_assign".}
-proc lv_array_at*(array: ptr lv_array_t; index: uint32): pointer {.cdecl,
+proc lv_array_at*(array_arg: ptr lv_array_t; index: uint32): pointer {.cdecl,
     importc: "lv_array_at".}
-proc lv_array_front*(array: ptr lv_array_t): pointer {.cdecl,
+proc lv_array_front*(array_arg: ptr lv_array_t): pointer {.cdecl,
     importc: "lv_array_front".}
-proc lv_array_back*(array: ptr lv_array_t): pointer {.cdecl,
+proc lv_array_back*(array_arg: ptr lv_array_t): pointer {.cdecl,
     importc: "lv_array_back".}
 proc lv_async_call*(async_xcb: lv_async_cb_t; user_data: pointer): lv_result_t {.
     cdecl, importc: "lv_async_call".}
 proc lv_async_call_cancel*(async_xcb: lv_async_cb_t; user_data: pointer): lv_result_t {.
     cdecl, importc: "lv_async_call_cancel".}
-proc internal_lv_anim_core_init*(): void {.cdecl, importc: "_lv_anim_core_init".}
-proc internal_lv_anim_core_deinit*(): void {.cdecl,
-    importc: "_lv_anim_core_deinit".}
 proc lv_anim_init*(a: ptr lv_anim_t): void {.cdecl, importc: "lv_anim_init".}
 proc lv_anim_set_var*(a: ptr lv_anim_t; var_arg: pointer): void {.cdecl,
     importc: "lv_anim_set_var".}
@@ -4224,6 +4130,8 @@ proc lv_anim_count_running*(): uint16 {.cdecl, importc: "lv_anim_count_running".
 proc lv_anim_speed*(speed: uint32): uint32 {.cdecl, importc: "lv_anim_speed".}
 proc lv_anim_speed_clamped*(speed: uint32; min_time: uint32; max_time: uint32): uint32 {.
     cdecl, importc: "lv_anim_speed_clamped".}
+proc lv_anim_speed_to_time*(speed: uint32; start: int32; end_arg: int32): uint32 {.
+    cdecl, importc: "lv_anim_speed_to_time".}
 proc lv_anim_refr_now*(): void {.cdecl, importc: "lv_anim_refr_now".}
 proc lv_anim_path_linear*(a: ptr lv_anim_t): int32 {.cdecl,
     importc: "lv_anim_path_linear".}
@@ -4254,6 +4162,11 @@ proc lv_anim_timeline_pause*(at: ptr lv_anim_timeline_t): void {.cdecl,
     importc: "lv_anim_timeline_pause".}
 proc lv_anim_timeline_set_reverse*(at: ptr lv_anim_timeline_t; reverse: bool): void {.
     cdecl, importc: "lv_anim_timeline_set_reverse".}
+proc lv_anim_timeline_set_repeat_count*(at: ptr lv_anim_timeline_t; cnt: uint32): void {.
+    cdecl, importc: "lv_anim_timeline_set_repeat_count".}
+proc lv_anim_timeline_set_repeat_delay*(at: ptr lv_anim_timeline_t;
+                                        delay: uint32): void {.cdecl,
+    importc: "lv_anim_timeline_set_repeat_delay".}
 proc lv_anim_timeline_set_progress*(at: ptr lv_anim_timeline_t; progress: uint16): void {.
     cdecl, importc: "lv_anim_timeline_set_progress".}
 proc lv_anim_timeline_get_playtime*(at: ptr lv_anim_timeline_t): uint32 {.cdecl,
@@ -4262,6 +4175,10 @@ proc lv_anim_timeline_get_reverse*(at: ptr lv_anim_timeline_t): bool {.cdecl,
     importc: "lv_anim_timeline_get_reverse".}
 proc lv_anim_timeline_get_progress*(at: ptr lv_anim_timeline_t): uint16 {.cdecl,
     importc: "lv_anim_timeline_get_progress".}
+proc lv_anim_timeline_get_repeat_count*(at: ptr lv_anim_timeline_t): uint32 {.
+    cdecl, importc: "lv_anim_timeline_get_repeat_count".}
+proc lv_anim_timeline_get_repeat_delay*(at: ptr lv_anim_timeline_t): uint32 {.
+    cdecl, importc: "lv_anim_timeline_get_repeat_delay".}
 proc lv_rb_init*(tree: ptr lv_rb_t; compare: lv_rb_compare_t; node_size: csize_t): bool {.
     cdecl, importc: "lv_rb_init".}
 proc lv_rb_insert*(tree: ptr lv_rb_t; key: pointer): ptr lv_rb_node_t {.cdecl,
@@ -4297,36 +4214,12 @@ proc lv_area_set_width*(area_p: ptr lv_area_t; w: int32): void {.cdecl,
     importc: "lv_area_set_width".}
 proc lv_area_set_height*(area_p: ptr lv_area_t; h: int32): void {.cdecl,
     importc: "lv_area_set_height".}
-proc internal_lv_area_set_pos*(area_p: ptr lv_area_t; x: int32; y: int32): void {.
-    cdecl, importc: "_lv_area_set_pos".}
 proc lv_area_get_size*(area_p: ptr lv_area_t): uint32 {.cdecl,
     importc: "lv_area_get_size".}
 proc lv_area_increase*(area: ptr lv_area_t; w_extra: int32; h_extra: int32): void {.
     cdecl, importc: "lv_area_increase".}
 proc lv_area_move*(area: ptr lv_area_t; x_ofs: int32; y_ofs: int32): void {.
     cdecl, importc: "lv_area_move".}
-proc internal_lv_area_intersect*(res_p: ptr lv_area_t; a1_p: ptr lv_area_t;
-                                 a2_p: ptr lv_area_t): bool {.cdecl,
-    importc: "_lv_area_intersect".}
-proc internal_lv_area_diff*(res_p: ptr UncheckedArray[lv_area_t];
-                            a1_p: ptr lv_area_t; a2_p: ptr lv_area_t): int8 {.
-    cdecl, importc: "_lv_area_diff".}
-proc internal_lv_area_join*(a_res_p: ptr lv_area_t; a1_p: ptr lv_area_t;
-                            a2_p: ptr lv_area_t): void {.cdecl,
-    importc: "_lv_area_join".}
-proc internal_lv_area_is_point_on*(a_p: ptr lv_area_t; p_p: ptr lv_point_t;
-                                   radius: int32): bool {.cdecl,
-    importc: "_lv_area_is_point_on".}
-proc internal_lv_area_is_on*(a1_p: ptr lv_area_t; a2_p: ptr lv_area_t): bool {.
-    cdecl, importc: "_lv_area_is_on".}
-proc internal_lv_area_is_in*(ain_p: ptr lv_area_t; aholder_p: ptr lv_area_t;
-                             radius: int32): bool {.cdecl,
-    importc: "_lv_area_is_in".}
-proc internal_lv_area_is_out*(aout_p: ptr lv_area_t; aholder_p: ptr lv_area_t;
-                              radius: int32): bool {.cdecl,
-    importc: "_lv_area_is_out".}
-proc internal_lv_area_is_equal*(a: ptr lv_area_t; b: ptr lv_area_t): bool {.
-    cdecl, importc: "_lv_area_is_equal".}
 proc lv_area_align*(base: ptr lv_area_t; to_align: ptr lv_area_t;
                     align: lv_align_t; ofs_x: int32; ofs_y: int32): void {.
     cdecl, importc: "lv_area_align".}
@@ -4419,45 +4312,32 @@ proc lv_color_filter_dsc_init*(dsc: ptr lv_color_filter_dsc_t;
                                cb: lv_color_filter_cb_t): void {.cdecl,
     importc: "lv_color_filter_dsc_init".}
 var lv_color_filter_shade* {.importc: "lv_color_filter_shade".}: lv_color_filter_dsc_t
-proc internal_lv_draw_buf_init_handlers*(): void {.cdecl,
-    importc: "_lv_draw_buf_init_handlers".}
 proc lv_draw_buf_init_with_default_handlers*(
     handlers: ptr lv_draw_buf_handlers_t): void {.cdecl,
     importc: "lv_draw_buf_init_with_default_handlers".}
-proc lv_draw_buf_init_handlers*(handlers: ptr lv_draw_buf_handlers_t;
+proc lv_draw_buf_handlers_init*(handlers: ptr lv_draw_buf_handlers_t;
                                 buf_malloc_cb: lv_draw_buf_malloc_cb;
                                 buf_free_cb: lv_draw_buf_free_cb;
                                 align_pointer_cb: lv_draw_buf_align_cb;
     invalidate_cache_cb: lv_draw_buf_cache_operation_cb;
                                 flush_cache_cb: lv_draw_buf_cache_operation_cb;
     width_to_stride_cb: lv_draw_buf_width_to_stride_cb): void {.cdecl,
-    importc: "lv_draw_buf_init_handlers".}
+    importc: "lv_draw_buf_handlers_init".}
 proc lv_draw_buf_get_handlers*(): ptr lv_draw_buf_handlers_t {.cdecl,
     importc: "lv_draw_buf_get_handlers".}
+proc lv_draw_buf_get_font_handlers*(): ptr lv_draw_buf_handlers_t {.cdecl,
+    importc: "lv_draw_buf_get_font_handlers".}
+proc lv_draw_buf_get_image_handlers*(): ptr lv_draw_buf_handlers_t {.cdecl,
+    importc: "lv_draw_buf_get_image_handlers".}
 proc lv_draw_buf_align*(buf: pointer; color_format: lv_color_format_t): pointer {.
     cdecl, importc: "lv_draw_buf_align".}
-proc lv_draw_buf_align_user*(handlers: ptr lv_draw_buf_handlers_t; buf: pointer;
-                             color_format: lv_color_format_t): pointer {.cdecl,
-    importc: "lv_draw_buf_align_user".}
 proc lv_draw_buf_invalidate_cache*(draw_buf: ptr lv_draw_buf_t;
                                    area: ptr lv_area_t): void {.cdecl,
     importc: "lv_draw_buf_invalidate_cache".}
-proc lv_draw_buf_invalidate_cache_user*(handlers: ptr lv_draw_buf_handlers_t;
-                                        draw_buf: ptr lv_draw_buf_t;
-                                        area: ptr lv_area_t): void {.cdecl,
-    importc: "lv_draw_buf_invalidate_cache_user".}
 proc lv_draw_buf_flush_cache*(draw_buf: ptr lv_draw_buf_t; area: ptr lv_area_t): void {.
     cdecl, importc: "lv_draw_buf_flush_cache".}
-proc lv_draw_buf_flush_cache_user*(handlers: ptr lv_draw_buf_handlers_t;
-                                   draw_buf: ptr lv_draw_buf_t;
-                                   area: ptr lv_area_t): void {.cdecl,
-    importc: "lv_draw_buf_flush_cache_user".}
 proc lv_draw_buf_width_to_stride*(w: uint32; color_format: lv_color_format_t): uint32 {.
     cdecl, importc: "lv_draw_buf_width_to_stride".}
-proc lv_draw_buf_width_to_stride_user*(handlers: ptr lv_draw_buf_handlers_t;
-                                       w: uint32;
-                                       color_format: lv_color_format_t): uint32 {.
-    cdecl, importc: "lv_draw_buf_width_to_stride_user".}
 proc lv_draw_buf_clear*(draw_buf: ptr lv_draw_buf_t; a: ptr lv_area_t): void {.
     cdecl, importc: "lv_draw_buf_clear".}
 proc lv_draw_buf_copy*(dest: ptr lv_draw_buf_t; dest_area: ptr lv_area_t;
@@ -4466,14 +4346,8 @@ proc lv_draw_buf_copy*(dest: ptr lv_draw_buf_t; dest_area: ptr lv_area_t;
 proc lv_draw_buf_create*(w: uint32; h: uint32; cf: lv_color_format_t;
                          stride: uint32): ptr lv_draw_buf_t {.cdecl,
     importc: "lv_draw_buf_create".}
-proc lv_draw_buf_create_user*(handlers: ptr lv_draw_buf_handlers_t; w: uint32;
-                              h: uint32; cf: lv_color_format_t; stride: uint32): ptr lv_draw_buf_t {.
-    cdecl, importc: "lv_draw_buf_create_user".}
 proc lv_draw_buf_dup*(draw_buf: ptr lv_draw_buf_t): ptr lv_draw_buf_t {.cdecl,
     importc: "lv_draw_buf_dup".}
-proc lv_draw_buf_dup_user*(handlers: ptr lv_draw_buf_handlers_t;
-                           draw_buf: ptr lv_draw_buf_t): ptr lv_draw_buf_t {.
-    cdecl, importc: "lv_draw_buf_dup_user".}
 proc lv_draw_buf_init*(draw_buf: ptr lv_draw_buf_t; w: uint32; h: uint32;
                        cf: lv_color_format_t; stride: uint32; data: pointer;
                        data_size: uint32): lv_result_t {.cdecl,
@@ -4481,11 +4355,8 @@ proc lv_draw_buf_init*(draw_buf: ptr lv_draw_buf_t; w: uint32; h: uint32;
 proc lv_draw_buf_reshape*(draw_buf: ptr lv_draw_buf_t; cf: lv_color_format_t;
                           w: uint32; h: uint32; stride: uint32): ptr lv_draw_buf_t {.
     cdecl, importc: "lv_draw_buf_reshape".}
-proc lv_draw_buf_destroy*(buf: ptr lv_draw_buf_t): void {.cdecl,
+proc lv_draw_buf_destroy*(draw_buf: ptr lv_draw_buf_t): void {.cdecl,
     importc: "lv_draw_buf_destroy".}
-proc lv_draw_buf_destroy_user*(handlers: ptr lv_draw_buf_handlers_t;
-                               buf: ptr lv_draw_buf_t): void {.cdecl,
-    importc: "lv_draw_buf_destroy_user".}
 proc lv_draw_buf_goto_xy*(buf: ptr lv_draw_buf_t; x: uint32; y: uint32): pointer {.
     cdecl, importc: "lv_draw_buf_goto_xy".}
 proc lv_draw_buf_adjust_stride*(src: ptr lv_draw_buf_t; stride: uint32): lv_result_t {.
@@ -4510,6 +4381,8 @@ proc lv_image_buf_set_palette*(dsc: ptr lv_image_dsc_t; id: uint8;
     importc: "lv_image_buf_set_palette".}
 proc lv_image_buf_free*(dsc: ptr lv_image_dsc_t): void {.cdecl,
     importc: "lv_image_buf_free".}
+proc lv_draw_buf_save_to_file*(draw_buf: ptr lv_draw_buf_t; path: cstring): lv_result_t {.
+    cdecl, importc: "lv_draw_buf_save_to_file".}
 proc lv_thread_init*(thread: ptr lv_thread_t; prio: lv_thread_prio_t;
                      callback: proc (a0: pointer): void {.cdecl.};
                      stack_size: csize_t; user_data: pointer): lv_result_t {.
@@ -4532,6 +4405,8 @@ proc lv_thread_sync_wait*(sync: ptr lv_thread_sync_t): lv_result_t {.cdecl,
     importc: "lv_thread_sync_wait".}
 proc lv_thread_sync_signal*(sync: ptr lv_thread_sync_t): lv_result_t {.cdecl,
     importc: "lv_thread_sync_signal".}
+proc lv_thread_sync_signal_isr*(sync: ptr lv_thread_sync_t): lv_result_t {.
+    cdecl, importc: "lv_thread_sync_signal_isr".}
 proc lv_thread_sync_delete*(sync: ptr lv_thread_sync_t): lv_result_t {.cdecl,
     importc: "lv_thread_sync_delete".}
 proc lv_lock*(): void {.cdecl, importc: "lv_lock".}
@@ -4671,12 +4546,8 @@ proc lv_font_default*(): ptr lv_font_t {.cdecl, importc: "lv_font_default".}
 proc lv_bidi_calculate_align*(align: ptr lv_text_align_t;
                               base_dir: ptr lv_base_dir_t; txt: cstring): void {.
     cdecl, importc: "lv_bidi_calculate_align".}
-proc internal_lv_layout_init*(): void {.cdecl, importc: "_lv_layout_init".}
-proc internal_lv_layout_deinit*(): void {.cdecl, importc: "_lv_layout_deinit".}
 proc lv_layout_register*(cb: lv_layout_update_cb_t; user_data: pointer): uint32 {.
     cdecl, importc: "lv_layout_register".}
-proc internal_lv_layout_apply*(obj: ptr lv_obj_t): void {.cdecl,
-    importc: "_lv_layout_apply".}
 proc lv_flex_init*(): void {.cdecl, importc: "lv_flex_init".}
 proc lv_obj_set_flex_flow*(obj: ptr lv_obj_t; flow: lv_flex_flow_t): void {.
     cdecl, importc: "lv_obj_set_flex_flow".}
@@ -4730,435 +4601,217 @@ proc lv_style_get_prop_inlined*(style: ptr lv_style_t; prop: lv_style_prop_t;
     cdecl, importc: "lv_style_get_prop_inlined".}
 proc lv_style_is_empty*(style: ptr lv_style_t): bool {.cdecl,
     importc: "lv_style_is_empty".}
-proc internal_lv_style_get_prop_group*(prop: lv_style_prop_t): uint32 {.cdecl,
-    importc: "_lv_style_get_prop_group".}
-proc internal_lv_style_prop_lookup_flags*(prop: lv_style_prop_t): uint8 {.cdecl,
-    importc: "_lv_style_prop_lookup_flags".}
+proc lv_style_get_prop_group*(prop: lv_style_prop_t): uint32 {.cdecl,
+    importc: "lv_style_get_prop_group".}
+proc lv_style_prop_lookup_flags*(prop: lv_style_prop_t): uint8 {.cdecl,
+    importc: "lv_style_prop_lookup_flags".}
 proc lv_style_set_width*(style: ptr lv_style_t; value: int32): void {.cdecl,
     importc: "lv_style_set_width".}
-var internal_lv_style_const_prop_id_WIDTH*
-    {.importc: "_lv_style_const_prop_id_WIDTH".}: lv_style_prop_t
 proc lv_style_set_min_width*(style: ptr lv_style_t; value: int32): void {.cdecl,
     importc: "lv_style_set_min_width".}
-var internal_lv_style_const_prop_id_MIN_WIDTH*
-    {.importc: "_lv_style_const_prop_id_MIN_WIDTH".}: lv_style_prop_t
 proc lv_style_set_max_width*(style: ptr lv_style_t; value: int32): void {.cdecl,
     importc: "lv_style_set_max_width".}
-var internal_lv_style_const_prop_id_MAX_WIDTH*
-    {.importc: "_lv_style_const_prop_id_MAX_WIDTH".}: lv_style_prop_t
 proc lv_style_set_height*(style: ptr lv_style_t; value: int32): void {.cdecl,
     importc: "lv_style_set_height".}
-var internal_lv_style_const_prop_id_HEIGHT*
-    {.importc: "_lv_style_const_prop_id_HEIGHT".}: lv_style_prop_t
 proc lv_style_set_min_height*(style: ptr lv_style_t; value: int32): void {.
     cdecl, importc: "lv_style_set_min_height".}
-var internal_lv_style_const_prop_id_MIN_HEIGHT*
-    {.importc: "_lv_style_const_prop_id_MIN_HEIGHT".}: lv_style_prop_t
 proc lv_style_set_max_height*(style: ptr lv_style_t; value: int32): void {.
     cdecl, importc: "lv_style_set_max_height".}
-var internal_lv_style_const_prop_id_MAX_HEIGHT*
-    {.importc: "_lv_style_const_prop_id_MAX_HEIGHT".}: lv_style_prop_t
 proc lv_style_set_length*(style: ptr lv_style_t; value: int32): void {.cdecl,
     importc: "lv_style_set_length".}
-var internal_lv_style_const_prop_id_LENGTH*
-    {.importc: "_lv_style_const_prop_id_LENGTH".}: lv_style_prop_t
 proc lv_style_set_x*(style: ptr lv_style_t; value: int32): void {.cdecl,
     importc: "lv_style_set_x".}
-var internal_lv_style_const_prop_id_X* {.importc: "_lv_style_const_prop_id_X".}: lv_style_prop_t
 proc lv_style_set_y*(style: ptr lv_style_t; value: int32): void {.cdecl,
     importc: "lv_style_set_y".}
-var internal_lv_style_const_prop_id_Y* {.importc: "_lv_style_const_prop_id_Y".}: lv_style_prop_t
 proc lv_style_set_align*(style: ptr lv_style_t; value: lv_align_t): void {.
     cdecl, importc: "lv_style_set_align".}
-var internal_lv_style_const_prop_id_ALIGN*
-    {.importc: "_lv_style_const_prop_id_ALIGN".}: lv_style_prop_t
 proc lv_style_set_transform_width*(style: ptr lv_style_t; value: int32): void {.
     cdecl, importc: "lv_style_set_transform_width".}
-var internal_lv_style_const_prop_id_TRANSFORM_WIDTH*
-    {.importc: "_lv_style_const_prop_id_TRANSFORM_WIDTH".}: lv_style_prop_t
 proc lv_style_set_transform_height*(style: ptr lv_style_t; value: int32): void {.
     cdecl, importc: "lv_style_set_transform_height".}
-var internal_lv_style_const_prop_id_TRANSFORM_HEIGHT*
-    {.importc: "_lv_style_const_prop_id_TRANSFORM_HEIGHT".}: lv_style_prop_t
 proc lv_style_set_translate_x*(style: ptr lv_style_t; value: int32): void {.
     cdecl, importc: "lv_style_set_translate_x".}
-var internal_lv_style_const_prop_id_TRANSLATE_X*
-    {.importc: "_lv_style_const_prop_id_TRANSLATE_X".}: lv_style_prop_t
 proc lv_style_set_translate_y*(style: ptr lv_style_t; value: int32): void {.
     cdecl, importc: "lv_style_set_translate_y".}
-var internal_lv_style_const_prop_id_TRANSLATE_Y*
-    {.importc: "_lv_style_const_prop_id_TRANSLATE_Y".}: lv_style_prop_t
 proc lv_style_set_transform_scale_x*(style: ptr lv_style_t; value: int32): void {.
     cdecl, importc: "lv_style_set_transform_scale_x".}
-var internal_lv_style_const_prop_id_TRANSFORM_SCALE_X*
-    {.importc: "_lv_style_const_prop_id_TRANSFORM_SCALE_X".}: lv_style_prop_t
 proc lv_style_set_transform_scale_y*(style: ptr lv_style_t; value: int32): void {.
     cdecl, importc: "lv_style_set_transform_scale_y".}
-var internal_lv_style_const_prop_id_TRANSFORM_SCALE_Y*
-    {.importc: "_lv_style_const_prop_id_TRANSFORM_SCALE_Y".}: lv_style_prop_t
-var internal_lv_style_const_prop_id_TRANSFORM_ROTATION*
-    {.importc: "_lv_style_const_prop_id_TRANSFORM_ROTATION".}: lv_style_prop_t
 proc lv_style_set_transform_pivot_x*(style: ptr lv_style_t; value: int32): void {.
     cdecl, importc: "lv_style_set_transform_pivot_x".}
-var internal_lv_style_const_prop_id_TRANSFORM_PIVOT_X*
-    {.importc: "_lv_style_const_prop_id_TRANSFORM_PIVOT_X".}: lv_style_prop_t
 proc lv_style_set_transform_pivot_y*(style: ptr lv_style_t; value: int32): void {.
     cdecl, importc: "lv_style_set_transform_pivot_y".}
-var internal_lv_style_const_prop_id_TRANSFORM_PIVOT_Y*
-    {.importc: "_lv_style_const_prop_id_TRANSFORM_PIVOT_Y".}: lv_style_prop_t
 proc lv_style_set_transform_skew_x*(style: ptr lv_style_t; value: int32): void {.
     cdecl, importc: "lv_style_set_transform_skew_x".}
-var internal_lv_style_const_prop_id_TRANSFORM_SKEW_X*
-    {.importc: "_lv_style_const_prop_id_TRANSFORM_SKEW_X".}: lv_style_prop_t
 proc lv_style_set_transform_skew_y*(style: ptr lv_style_t; value: int32): void {.
     cdecl, importc: "lv_style_set_transform_skew_y".}
-var internal_lv_style_const_prop_id_TRANSFORM_SKEW_Y*
-    {.importc: "_lv_style_const_prop_id_TRANSFORM_SKEW_Y".}: lv_style_prop_t
 proc lv_style_set_pad_top*(style: ptr lv_style_t; value: int32): void {.cdecl,
     importc: "lv_style_set_pad_top".}
-var internal_lv_style_const_prop_id_PAD_TOP*
-    {.importc: "_lv_style_const_prop_id_PAD_TOP".}: lv_style_prop_t
 proc lv_style_set_pad_bottom*(style: ptr lv_style_t; value: int32): void {.
     cdecl, importc: "lv_style_set_pad_bottom".}
-var internal_lv_style_const_prop_id_PAD_BOTTOM*
-    {.importc: "_lv_style_const_prop_id_PAD_BOTTOM".}: lv_style_prop_t
 proc lv_style_set_pad_left*(style: ptr lv_style_t; value: int32): void {.cdecl,
     importc: "lv_style_set_pad_left".}
-var internal_lv_style_const_prop_id_PAD_LEFT*
-    {.importc: "_lv_style_const_prop_id_PAD_LEFT".}: lv_style_prop_t
 proc lv_style_set_pad_right*(style: ptr lv_style_t; value: int32): void {.cdecl,
     importc: "lv_style_set_pad_right".}
-var internal_lv_style_const_prop_id_PAD_RIGHT*
-    {.importc: "_lv_style_const_prop_id_PAD_RIGHT".}: lv_style_prop_t
 proc lv_style_set_pad_row*(style: ptr lv_style_t; value: int32): void {.cdecl,
     importc: "lv_style_set_pad_row".}
-var internal_lv_style_const_prop_id_PAD_ROW*
-    {.importc: "_lv_style_const_prop_id_PAD_ROW".}: lv_style_prop_t
 proc lv_style_set_pad_column*(style: ptr lv_style_t; value: int32): void {.
     cdecl, importc: "lv_style_set_pad_column".}
-var internal_lv_style_const_prop_id_PAD_COLUMN*
-    {.importc: "_lv_style_const_prop_id_PAD_COLUMN".}: lv_style_prop_t
 proc lv_style_set_margin_top*(style: ptr lv_style_t; value: int32): void {.
     cdecl, importc: "lv_style_set_margin_top".}
-var internal_lv_style_const_prop_id_MARGIN_TOP*
-    {.importc: "_lv_style_const_prop_id_MARGIN_TOP".}: lv_style_prop_t
 proc lv_style_set_margin_bottom*(style: ptr lv_style_t; value: int32): void {.
     cdecl, importc: "lv_style_set_margin_bottom".}
-var internal_lv_style_const_prop_id_MARGIN_BOTTOM*
-    {.importc: "_lv_style_const_prop_id_MARGIN_BOTTOM".}: lv_style_prop_t
 proc lv_style_set_margin_left*(style: ptr lv_style_t; value: int32): void {.
     cdecl, importc: "lv_style_set_margin_left".}
-var internal_lv_style_const_prop_id_MARGIN_LEFT*
-    {.importc: "_lv_style_const_prop_id_MARGIN_LEFT".}: lv_style_prop_t
 proc lv_style_set_margin_right*(style: ptr lv_style_t; value: int32): void {.
     cdecl, importc: "lv_style_set_margin_right".}
-var internal_lv_style_const_prop_id_MARGIN_RIGHT*
-    {.importc: "_lv_style_const_prop_id_MARGIN_RIGHT".}: lv_style_prop_t
 proc lv_style_set_bg_color*(style: ptr lv_style_t; value: lv_color_t): void {.
     cdecl, importc: "lv_style_set_bg_color".}
-var internal_lv_style_const_prop_id_BG_COLOR*
-    {.importc: "_lv_style_const_prop_id_BG_COLOR".}: lv_style_prop_t
 proc lv_style_set_bg_opa*(style: ptr lv_style_t; value: lv_opa_t): void {.cdecl,
     importc: "lv_style_set_bg_opa".}
-var internal_lv_style_const_prop_id_BG_OPA*
-    {.importc: "_lv_style_const_prop_id_BG_OPA".}: lv_style_prop_t
 proc lv_style_set_bg_grad_color*(style: ptr lv_style_t; value: lv_color_t): void {.
     cdecl, importc: "lv_style_set_bg_grad_color".}
-var internal_lv_style_const_prop_id_BG_GRAD_COLOR*
-    {.importc: "_lv_style_const_prop_id_BG_GRAD_COLOR".}: lv_style_prop_t
 proc lv_style_set_bg_grad_dir*(style: ptr lv_style_t; value: lv_grad_dir_t): void {.
     cdecl, importc: "lv_style_set_bg_grad_dir".}
-var internal_lv_style_const_prop_id_BG_GRAD_DIR*
-    {.importc: "_lv_style_const_prop_id_BG_GRAD_DIR".}: lv_style_prop_t
 proc lv_style_set_bg_main_stop*(style: ptr lv_style_t; value: int32): void {.
     cdecl, importc: "lv_style_set_bg_main_stop".}
-var internal_lv_style_const_prop_id_BG_MAIN_STOP*
-    {.importc: "_lv_style_const_prop_id_BG_MAIN_STOP".}: lv_style_prop_t
 proc lv_style_set_bg_grad_stop*(style: ptr lv_style_t; value: int32): void {.
     cdecl, importc: "lv_style_set_bg_grad_stop".}
-var internal_lv_style_const_prop_id_BG_GRAD_STOP*
-    {.importc: "_lv_style_const_prop_id_BG_GRAD_STOP".}: lv_style_prop_t
 proc lv_style_set_bg_main_opa*(style: ptr lv_style_t; value: lv_opa_t): void {.
     cdecl, importc: "lv_style_set_bg_main_opa".}
-var internal_lv_style_const_prop_id_BG_MAIN_OPA*
-    {.importc: "_lv_style_const_prop_id_BG_MAIN_OPA".}: lv_style_prop_t
 proc lv_style_set_bg_grad_opa*(style: ptr lv_style_t; value: lv_opa_t): void {.
     cdecl, importc: "lv_style_set_bg_grad_opa".}
-var internal_lv_style_const_prop_id_BG_GRAD_OPA*
-    {.importc: "_lv_style_const_prop_id_BG_GRAD_OPA".}: lv_style_prop_t
 proc lv_style_set_bg_grad*(style: ptr lv_style_t; value: ptr lv_grad_dsc_t): void {.
     cdecl, importc: "lv_style_set_bg_grad".}
-var internal_lv_style_const_prop_id_BG_GRAD*
-    {.importc: "_lv_style_const_prop_id_BG_GRAD".}: lv_style_prop_t
-var internal_lv_style_const_prop_id_BG_IMAGE_SRC*
-    {.importc: "_lv_style_const_prop_id_BG_IMAGE_SRC".}: lv_style_prop_t
 proc lv_style_set_bg_image_opa*(style: ptr lv_style_t; value: lv_opa_t): void {.
     cdecl, importc: "lv_style_set_bg_image_opa".}
-var internal_lv_style_const_prop_id_BG_IMAGE_OPA*
-    {.importc: "_lv_style_const_prop_id_BG_IMAGE_OPA".}: lv_style_prop_t
-var internal_lv_style_const_prop_id_BG_IMAGE_RECOLOR*
-    {.importc: "_lv_style_const_prop_id_BG_IMAGE_RECOLOR".}: lv_style_prop_t
-var internal_lv_style_const_prop_id_BG_IMAGE_RECOLOR_OPA*
-    {.importc: "_lv_style_const_prop_id_BG_IMAGE_RECOLOR_OPA".}: lv_style_prop_t
 proc lv_style_set_bg_image_tiled*(style: ptr lv_style_t; value: bool): void {.
     cdecl, importc: "lv_style_set_bg_image_tiled".}
-var internal_lv_style_const_prop_id_BG_IMAGE_TILED*
-    {.importc: "_lv_style_const_prop_id_BG_IMAGE_TILED".}: lv_style_prop_t
 proc lv_style_set_border_color*(style: ptr lv_style_t; value: lv_color_t): void {.
     cdecl, importc: "lv_style_set_border_color".}
-var internal_lv_style_const_prop_id_BORDER_COLOR*
-    {.importc: "_lv_style_const_prop_id_BORDER_COLOR".}: lv_style_prop_t
 proc lv_style_set_border_opa*(style: ptr lv_style_t; value: lv_opa_t): void {.
     cdecl, importc: "lv_style_set_border_opa".}
-var internal_lv_style_const_prop_id_BORDER_OPA*
-    {.importc: "_lv_style_const_prop_id_BORDER_OPA".}: lv_style_prop_t
 proc lv_style_set_border_width*(style: ptr lv_style_t; value: int32): void {.
     cdecl, importc: "lv_style_set_border_width".}
-var internal_lv_style_const_prop_id_BORDER_WIDTH*
-    {.importc: "_lv_style_const_prop_id_BORDER_WIDTH".}: lv_style_prop_t
 proc lv_style_set_border_side*(style: ptr lv_style_t; value: lv_border_side_t): void {.
     cdecl, importc: "lv_style_set_border_side".}
-var internal_lv_style_const_prop_id_BORDER_SIDE*
-    {.importc: "_lv_style_const_prop_id_BORDER_SIDE".}: lv_style_prop_t
 proc lv_style_set_border_post*(style: ptr lv_style_t; value: bool): void {.
     cdecl, importc: "lv_style_set_border_post".}
-var internal_lv_style_const_prop_id_BORDER_POST*
-    {.importc: "_lv_style_const_prop_id_BORDER_POST".}: lv_style_prop_t
 proc lv_style_set_outline_width*(style: ptr lv_style_t; value: int32): void {.
     cdecl, importc: "lv_style_set_outline_width".}
-var internal_lv_style_const_prop_id_OUTLINE_WIDTH*
-    {.importc: "_lv_style_const_prop_id_OUTLINE_WIDTH".}: lv_style_prop_t
 proc lv_style_set_outline_color*(style: ptr lv_style_t; value: lv_color_t): void {.
     cdecl, importc: "lv_style_set_outline_color".}
-var internal_lv_style_const_prop_id_OUTLINE_COLOR*
-    {.importc: "_lv_style_const_prop_id_OUTLINE_COLOR".}: lv_style_prop_t
 proc lv_style_set_outline_opa*(style: ptr lv_style_t; value: lv_opa_t): void {.
     cdecl, importc: "lv_style_set_outline_opa".}
-var internal_lv_style_const_prop_id_OUTLINE_OPA*
-    {.importc: "_lv_style_const_prop_id_OUTLINE_OPA".}: lv_style_prop_t
 proc lv_style_set_outline_pad*(style: ptr lv_style_t; value: int32): void {.
     cdecl, importc: "lv_style_set_outline_pad".}
-var internal_lv_style_const_prop_id_OUTLINE_PAD*
-    {.importc: "_lv_style_const_prop_id_OUTLINE_PAD".}: lv_style_prop_t
 proc lv_style_set_shadow_width*(style: ptr lv_style_t; value: int32): void {.
     cdecl, importc: "lv_style_set_shadow_width".}
-var internal_lv_style_const_prop_id_SHADOW_WIDTH*
-    {.importc: "_lv_style_const_prop_id_SHADOW_WIDTH".}: lv_style_prop_t
-var internal_lv_style_const_prop_id_SHADOW_OFFSET_X*
-    {.importc: "_lv_style_const_prop_id_SHADOW_OFFSET_X".}: lv_style_prop_t
-var internal_lv_style_const_prop_id_SHADOW_OFFSET_Y*
-    {.importc: "_lv_style_const_prop_id_SHADOW_OFFSET_Y".}: lv_style_prop_t
 proc lv_style_set_shadow_spread*(style: ptr lv_style_t; value: int32): void {.
     cdecl, importc: "lv_style_set_shadow_spread".}
-var internal_lv_style_const_prop_id_SHADOW_SPREAD*
-    {.importc: "_lv_style_const_prop_id_SHADOW_SPREAD".}: lv_style_prop_t
 proc lv_style_set_shadow_color*(style: ptr lv_style_t; value: lv_color_t): void {.
     cdecl, importc: "lv_style_set_shadow_color".}
-var internal_lv_style_const_prop_id_SHADOW_COLOR*
-    {.importc: "_lv_style_const_prop_id_SHADOW_COLOR".}: lv_style_prop_t
 proc lv_style_set_shadow_opa*(style: ptr lv_style_t; value: lv_opa_t): void {.
     cdecl, importc: "lv_style_set_shadow_opa".}
-var internal_lv_style_const_prop_id_SHADOW_OPA*
-    {.importc: "_lv_style_const_prop_id_SHADOW_OPA".}: lv_style_prop_t
-var internal_lv_style_const_prop_id_IMAGE_OPA*
-    {.importc: "_lv_style_const_prop_id_IMAGE_OPA".}: lv_style_prop_t
-var internal_lv_style_const_prop_id_IMAGE_RECOLOR*
-    {.importc: "_lv_style_const_prop_id_IMAGE_RECOLOR".}: lv_style_prop_t
-var internal_lv_style_const_prop_id_IMAGE_RECOLOR_OPA*
-    {.importc: "_lv_style_const_prop_id_IMAGE_RECOLOR_OPA".}: lv_style_prop_t
 proc lv_style_set_line_width*(style: ptr lv_style_t; value: int32): void {.
     cdecl, importc: "lv_style_set_line_width".}
-var internal_lv_style_const_prop_id_LINE_WIDTH*
-    {.importc: "_lv_style_const_prop_id_LINE_WIDTH".}: lv_style_prop_t
 proc lv_style_set_line_dash_width*(style: ptr lv_style_t; value: int32): void {.
     cdecl, importc: "lv_style_set_line_dash_width".}
-var internal_lv_style_const_prop_id_LINE_DASH_WIDTH*
-    {.importc: "_lv_style_const_prop_id_LINE_DASH_WIDTH".}: lv_style_prop_t
 proc lv_style_set_line_dash_gap*(style: ptr lv_style_t; value: int32): void {.
     cdecl, importc: "lv_style_set_line_dash_gap".}
-var internal_lv_style_const_prop_id_LINE_DASH_GAP*
-    {.importc: "_lv_style_const_prop_id_LINE_DASH_GAP".}: lv_style_prop_t
 proc lv_style_set_line_rounded*(style: ptr lv_style_t; value: bool): void {.
     cdecl, importc: "lv_style_set_line_rounded".}
-var internal_lv_style_const_prop_id_LINE_ROUNDED*
-    {.importc: "_lv_style_const_prop_id_LINE_ROUNDED".}: lv_style_prop_t
 proc lv_style_set_line_color*(style: ptr lv_style_t; value: lv_color_t): void {.
     cdecl, importc: "lv_style_set_line_color".}
-var internal_lv_style_const_prop_id_LINE_COLOR*
-    {.importc: "_lv_style_const_prop_id_LINE_COLOR".}: lv_style_prop_t
 proc lv_style_set_line_opa*(style: ptr lv_style_t; value: lv_opa_t): void {.
     cdecl, importc: "lv_style_set_line_opa".}
-var internal_lv_style_const_prop_id_LINE_OPA*
-    {.importc: "_lv_style_const_prop_id_LINE_OPA".}: lv_style_prop_t
 proc lv_style_set_arc_width*(style: ptr lv_style_t; value: int32): void {.cdecl,
     importc: "lv_style_set_arc_width".}
-var internal_lv_style_const_prop_id_ARC_WIDTH*
-    {.importc: "_lv_style_const_prop_id_ARC_WIDTH".}: lv_style_prop_t
 proc lv_style_set_arc_rounded*(style: ptr lv_style_t; value: bool): void {.
     cdecl, importc: "lv_style_set_arc_rounded".}
-var internal_lv_style_const_prop_id_ARC_ROUNDED*
-    {.importc: "_lv_style_const_prop_id_ARC_ROUNDED".}: lv_style_prop_t
 proc lv_style_set_arc_color*(style: ptr lv_style_t; value: lv_color_t): void {.
     cdecl, importc: "lv_style_set_arc_color".}
-var internal_lv_style_const_prop_id_ARC_COLOR*
-    {.importc: "_lv_style_const_prop_id_ARC_COLOR".}: lv_style_prop_t
 proc lv_style_set_arc_opa*(style: ptr lv_style_t; value: lv_opa_t): void {.
     cdecl, importc: "lv_style_set_arc_opa".}
-var internal_lv_style_const_prop_id_ARC_OPA*
-    {.importc: "_lv_style_const_prop_id_ARC_OPA".}: lv_style_prop_t
 proc lv_style_set_arc_image_src*(style: ptr lv_style_t; value: pointer): void {.
     cdecl, importc: "lv_style_set_arc_image_src".}
-var internal_lv_style_const_prop_id_ARC_IMAGE_SRC*
-    {.importc: "_lv_style_const_prop_id_ARC_IMAGE_SRC".}: lv_style_prop_t
 proc lv_style_set_text_color*(style: ptr lv_style_t; value: lv_color_t): void {.
     cdecl, importc: "lv_style_set_text_color".}
-var internal_lv_style_const_prop_id_TEXT_COLOR*
-    {.importc: "_lv_style_const_prop_id_TEXT_COLOR".}: lv_style_prop_t
 proc lv_style_set_text_opa*(style: ptr lv_style_t; value: lv_opa_t): void {.
     cdecl, importc: "lv_style_set_text_opa".}
-var internal_lv_style_const_prop_id_TEXT_OPA*
-    {.importc: "_lv_style_const_prop_id_TEXT_OPA".}: lv_style_prop_t
 proc lv_style_set_text_font*(style: ptr lv_style_t; value: ptr lv_font_t): void {.
     cdecl, importc: "lv_style_set_text_font".}
-var internal_lv_style_const_prop_id_TEXT_FONT*
-    {.importc: "_lv_style_const_prop_id_TEXT_FONT".}: lv_style_prop_t
 proc lv_style_set_text_letter_space*(style: ptr lv_style_t; value: int32): void {.
     cdecl, importc: "lv_style_set_text_letter_space".}
-var internal_lv_style_const_prop_id_TEXT_LETTER_SPACE*
-    {.importc: "_lv_style_const_prop_id_TEXT_LETTER_SPACE".}: lv_style_prop_t
 proc lv_style_set_text_line_space*(style: ptr lv_style_t; value: int32): void {.
     cdecl, importc: "lv_style_set_text_line_space".}
-var internal_lv_style_const_prop_id_TEXT_LINE_SPACE*
-    {.importc: "_lv_style_const_prop_id_TEXT_LINE_SPACE".}: lv_style_prop_t
 proc lv_style_set_text_decor*(style: ptr lv_style_t; value: lv_text_decor_t): void {.
     cdecl, importc: "lv_style_set_text_decor".}
-var internal_lv_style_const_prop_id_TEXT_DECOR*
-    {.importc: "_lv_style_const_prop_id_TEXT_DECOR".}: lv_style_prop_t
 proc lv_style_set_text_align*(style: ptr lv_style_t; value: lv_text_align_t): void {.
     cdecl, importc: "lv_style_set_text_align".}
-var internal_lv_style_const_prop_id_TEXT_ALIGN*
-    {.importc: "_lv_style_const_prop_id_TEXT_ALIGN".}: lv_style_prop_t
 proc lv_style_set_radius*(style: ptr lv_style_t; value: int32): void {.cdecl,
     importc: "lv_style_set_radius".}
-var internal_lv_style_const_prop_id_RADIUS*
-    {.importc: "_lv_style_const_prop_id_RADIUS".}: lv_style_prop_t
 proc lv_style_set_clip_corner*(style: ptr lv_style_t; value: bool): void {.
     cdecl, importc: "lv_style_set_clip_corner".}
-var internal_lv_style_const_prop_id_CLIP_CORNER*
-    {.importc: "_lv_style_const_prop_id_CLIP_CORNER".}: lv_style_prop_t
 proc lv_style_set_opa*(style: ptr lv_style_t; value: lv_opa_t): void {.cdecl,
     importc: "lv_style_set_opa".}
-var internal_lv_style_const_prop_id_OPA* {.
-    importc: "_lv_style_const_prop_id_OPA".}: lv_style_prop_t
 proc lv_style_set_opa_layered*(style: ptr lv_style_t; value: lv_opa_t): void {.
     cdecl, importc: "lv_style_set_opa_layered".}
-var internal_lv_style_const_prop_id_OPA_LAYERED*
-    {.importc: "_lv_style_const_prop_id_OPA_LAYERED".}: lv_style_prop_t
 proc lv_style_set_color_filter_dsc*(style: ptr lv_style_t;
                                     value: ptr lv_color_filter_dsc_t): void {.
     cdecl, importc: "lv_style_set_color_filter_dsc".}
-var internal_lv_style_const_prop_id_COLOR_FILTER_DSC*
-    {.importc: "_lv_style_const_prop_id_COLOR_FILTER_DSC".}: lv_style_prop_t
 proc lv_style_set_color_filter_opa*(style: ptr lv_style_t; value: lv_opa_t): void {.
     cdecl, importc: "lv_style_set_color_filter_opa".}
-var internal_lv_style_const_prop_id_COLOR_FILTER_OPA*
-    {.importc: "_lv_style_const_prop_id_COLOR_FILTER_OPA".}: lv_style_prop_t
 proc lv_style_set_anim*(style: ptr lv_style_t; value: ptr lv_anim_t): void {.
     cdecl, importc: "lv_style_set_anim".}
-var internal_lv_style_const_prop_id_ANIM*
-    {.importc: "_lv_style_const_prop_id_ANIM".}: lv_style_prop_t
-var internal_lv_style_const_prop_id_ANIM_DURATION*
-    {.importc: "_lv_style_const_prop_id_ANIM_DURATION".}: lv_style_prop_t
 proc lv_style_set_transition*(style: ptr lv_style_t;
                               value: ptr lv_style_transition_dsc_t): void {.
     cdecl, importc: "lv_style_set_transition".}
-var internal_lv_style_const_prop_id_TRANSITION*
-    {.importc: "_lv_style_const_prop_id_TRANSITION".}: lv_style_prop_t
 proc lv_style_set_blend_mode*(style: ptr lv_style_t; value: lv_blend_mode_t): void {.
     cdecl, importc: "lv_style_set_blend_mode".}
-var internal_lv_style_const_prop_id_BLEND_MODE*
-    {.importc: "_lv_style_const_prop_id_BLEND_MODE".}: lv_style_prop_t
 proc lv_style_set_layout*(style: ptr lv_style_t; value: uint16): void {.cdecl,
     importc: "lv_style_set_layout".}
-var internal_lv_style_const_prop_id_LAYOUT*
-    {.importc: "_lv_style_const_prop_id_LAYOUT".}: lv_style_prop_t
 proc lv_style_set_base_dir*(style: ptr lv_style_t; value: lv_base_dir_t): void {.
     cdecl, importc: "lv_style_set_base_dir".}
-var internal_lv_style_const_prop_id_BASE_DIR*
-    {.importc: "_lv_style_const_prop_id_BASE_DIR".}: lv_style_prop_t
 proc lv_style_set_bitmap_mask_src*(style: ptr lv_style_t; value: pointer): void {.
     cdecl, importc: "lv_style_set_bitmap_mask_src".}
-var internal_lv_style_const_prop_id_BITMAP_MASK_SRC*
-    {.importc: "_lv_style_const_prop_id_BITMAP_MASK_SRC".}: lv_style_prop_t
 proc lv_style_set_rotary_sensitivity*(style: ptr lv_style_t; value: uint32): void {.
     cdecl, importc: "lv_style_set_rotary_sensitivity".}
-var internal_lv_style_const_prop_id_ROTARY_SENSITIVITY*
-    {.importc: "_lv_style_const_prop_id_ROTARY_SENSITIVITY".}: lv_style_prop_t
 proc lv_style_set_flex_flow*(style: ptr lv_style_t; value: lv_flex_flow_t): void {.
     cdecl, importc: "lv_style_set_flex_flow".}
-var internal_lv_style_const_prop_id_FLEX_FLOW*
-    {.importc: "_lv_style_const_prop_id_FLEX_FLOW".}: lv_style_prop_t
 proc lv_style_set_flex_main_place*(style: ptr lv_style_t; value: lv_flex_align_t): void {.
     cdecl, importc: "lv_style_set_flex_main_place".}
-var internal_lv_style_const_prop_id_FLEX_MAIN_PLACE*
-    {.importc: "_lv_style_const_prop_id_FLEX_MAIN_PLACE".}: lv_style_prop_t
 proc lv_style_set_flex_cross_place*(style: ptr lv_style_t;
                                     value: lv_flex_align_t): void {.cdecl,
     importc: "lv_style_set_flex_cross_place".}
-var internal_lv_style_const_prop_id_FLEX_CROSS_PLACE*
-    {.importc: "_lv_style_const_prop_id_FLEX_CROSS_PLACE".}: lv_style_prop_t
 proc lv_style_set_flex_track_place*(style: ptr lv_style_t;
                                     value: lv_flex_align_t): void {.cdecl,
     importc: "lv_style_set_flex_track_place".}
-var internal_lv_style_const_prop_id_FLEX_TRACK_PLACE*
-    {.importc: "_lv_style_const_prop_id_FLEX_TRACK_PLACE".}: lv_style_prop_t
 proc lv_style_set_flex_grow*(style: ptr lv_style_t; value: uint8): void {.cdecl,
     importc: "lv_style_set_flex_grow".}
-var internal_lv_style_const_prop_id_FLEX_GROW*
-    {.importc: "_lv_style_const_prop_id_FLEX_GROW".}: lv_style_prop_t
 proc lv_style_set_grid_column_dsc_array*(style: ptr lv_style_t; value: ptr int32): void {.
     cdecl, importc: "lv_style_set_grid_column_dsc_array".}
-var internal_lv_style_const_prop_id_GRID_COLUMN_DSC_ARRAY*
-    {.importc: "_lv_style_const_prop_id_GRID_COLUMN_DSC_ARRAY".}: lv_style_prop_t
 proc lv_style_set_grid_column_align*(style: ptr lv_style_t;
                                      value: lv_grid_align_t): void {.cdecl,
     importc: "lv_style_set_grid_column_align".}
-var internal_lv_style_const_prop_id_GRID_COLUMN_ALIGN*
-    {.importc: "_lv_style_const_prop_id_GRID_COLUMN_ALIGN".}: lv_style_prop_t
 proc lv_style_set_grid_row_dsc_array*(style: ptr lv_style_t; value: ptr int32): void {.
     cdecl, importc: "lv_style_set_grid_row_dsc_array".}
-var internal_lv_style_const_prop_id_GRID_ROW_DSC_ARRAY*
-    {.importc: "_lv_style_const_prop_id_GRID_ROW_DSC_ARRAY".}: lv_style_prop_t
 proc lv_style_set_grid_row_align*(style: ptr lv_style_t; value: lv_grid_align_t): void {.
     cdecl, importc: "lv_style_set_grid_row_align".}
-var internal_lv_style_const_prop_id_GRID_ROW_ALIGN*
-    {.importc: "_lv_style_const_prop_id_GRID_ROW_ALIGN".}: lv_style_prop_t
 proc lv_style_set_grid_cell_column_pos*(style: ptr lv_style_t; value: int32): void {.
     cdecl, importc: "lv_style_set_grid_cell_column_pos".}
-var internal_lv_style_const_prop_id_GRID_CELL_COLUMN_POS*
-    {.importc: "_lv_style_const_prop_id_GRID_CELL_COLUMN_POS".}: lv_style_prop_t
 proc lv_style_set_grid_cell_x_align*(style: ptr lv_style_t;
                                      value: lv_grid_align_t): void {.cdecl,
     importc: "lv_style_set_grid_cell_x_align".}
-var internal_lv_style_const_prop_id_GRID_CELL_X_ALIGN*
-    {.importc: "_lv_style_const_prop_id_GRID_CELL_X_ALIGN".}: lv_style_prop_t
 proc lv_style_set_grid_cell_column_span*(style: ptr lv_style_t; value: int32): void {.
     cdecl, importc: "lv_style_set_grid_cell_column_span".}
-var internal_lv_style_const_prop_id_GRID_CELL_COLUMN_SPAN*
-    {.importc: "_lv_style_const_prop_id_GRID_CELL_COLUMN_SPAN".}: lv_style_prop_t
 proc lv_style_set_grid_cell_row_pos*(style: ptr lv_style_t; value: int32): void {.
     cdecl, importc: "lv_style_set_grid_cell_row_pos".}
-var internal_lv_style_const_prop_id_GRID_CELL_ROW_POS*
-    {.importc: "_lv_style_const_prop_id_GRID_CELL_ROW_POS".}: lv_style_prop_t
 proc lv_style_set_grid_cell_y_align*(style: ptr lv_style_t;
                                      value: lv_grid_align_t): void {.cdecl,
     importc: "lv_style_set_grid_cell_y_align".}
-var internal_lv_style_const_prop_id_GRID_CELL_Y_ALIGN*
-    {.importc: "_lv_style_const_prop_id_GRID_CELL_Y_ALIGN".}: lv_style_prop_t
 proc lv_style_set_grid_cell_row_span*(style: ptr lv_style_t; value: int32): void {.
     cdecl, importc: "lv_style_set_grid_cell_row_span".}
-var internal_lv_style_const_prop_id_GRID_CELL_ROW_SPAN*
-    {.importc: "_lv_style_const_prop_id_GRID_CELL_ROW_SPAN".}: lv_style_prop_t
 proc lv_style_set_size*(style: ptr lv_style_t; width: int32; height: int32): void {.
     cdecl, importc: "lv_style_set_size".}
 proc lv_style_set_pad_all*(style: ptr lv_style_t; value: int32): void {.cdecl,
@@ -5172,10 +4825,6 @@ proc lv_style_set_pad_gap*(style: ptr lv_style_t; value: int32): void {.cdecl,
 proc lv_style_prop_has_flag*(prop: lv_style_prop_t; flag: uint8): bool {.cdecl,
     importc: "lv_style_prop_has_flag".}
 var lv_style_const_prop_id_inv* {.importc: "lv_style_const_prop_id_inv".}: lv_style_prop_t
-proc internal_lv_event_push*(e: ptr lv_event_t): void {.cdecl,
-    importc: "_lv_event_push".}
-proc internal_lv_event_pop*(e: ptr lv_event_t): void {.cdecl,
-    importc: "_lv_event_pop".}
 proc lv_event_send*(list: ptr lv_event_list_t; e: ptr lv_event_t;
                     preprocess: bool): lv_result_t {.cdecl,
     importc: "lv_event_send".}
@@ -5211,10 +4860,6 @@ proc lv_event_stop_bubbling*(e: ptr lv_event_t): void {.cdecl,
 proc lv_event_stop_processing*(e: ptr lv_event_t): void {.cdecl,
     importc: "lv_event_stop_processing".}
 proc lv_event_register_id*(): uint32 {.cdecl, importc: "lv_event_register_id".}
-proc internal_lv_event_mark_deleted*(target: pointer): void {.cdecl,
-    importc: "_lv_event_mark_deleted".}
-proc internal_lv_fs_init*(): void {.cdecl, importc: "_lv_fs_init".}
-proc internal_lv_fs_deinit*(): void {.cdecl, importc: "_lv_fs_deinit".}
 proc lv_fs_drv_init*(drv: ptr lv_fs_drv_t): void {.cdecl,
     importc: "lv_fs_drv_init".}
 proc lv_fs_drv_register*(drv: ptr lv_fs_drv_t): void {.cdecl,
@@ -5248,11 +4893,6 @@ proc lv_fs_get_letters*(buf: cstring): cstring {.cdecl,
 proc lv_fs_get_ext*(fn: cstring): cstring {.cdecl, importc: "lv_fs_get_ext".}
 proc lv_fs_up*(path: cstring): cstring {.cdecl, importc: "lv_fs_up".}
 proc lv_fs_get_last*(path: cstring): cstring {.cdecl, importc: "lv_fs_get_last".}
-proc internal_lv_image_decoder_init*(image_cache_size: uint32;
-                                     image_header_count: uint32): void {.cdecl,
-    importc: "_lv_image_decoder_init".}
-proc internal_lv_image_decoder_deinit*(): void {.cdecl,
-    importc: "_lv_image_decoder_deinit".}
 proc lv_image_decoder_get_info*(src: pointer; header: ptr lv_image_header_t): lv_result_t {.
     cdecl, importc: "lv_image_decoder_get_info".}
 proc lv_image_decoder_open*(dsc: ptr lv_image_decoder_dsc_t; src: pointer;
@@ -5304,8 +4944,12 @@ proc lv_draw_dispatch_layer*(disp: ptr lv_display_t; layer: ptr lv_layer_t): boo
     cdecl, importc: "lv_draw_dispatch_layer".}
 proc lv_draw_dispatch_wait_for_request*(): void {.cdecl,
     importc: "lv_draw_dispatch_wait_for_request".}
+proc lv_draw_wait_for_finish*(): void {.cdecl,
+                                        importc: "lv_draw_wait_for_finish".}
 proc lv_draw_dispatch_request*(): void {.cdecl,
     importc: "lv_draw_dispatch_request".}
+proc lv_draw_get_unit_count*(): uint32 {.cdecl,
+    importc: "lv_draw_get_unit_count".}
 proc lv_draw_get_next_available_task*(layer: ptr lv_layer_t;
                                       t_prev: ptr lv_draw_task_t;
                                       draw_unit_id: uint8): ptr lv_draw_task_t {.
@@ -5319,105 +4963,12 @@ proc lv_draw_layer_alloc_buf*(layer: ptr lv_layer_t): pointer {.cdecl,
     importc: "lv_draw_layer_alloc_buf".}
 proc lv_draw_layer_go_to_xy*(layer: ptr lv_layer_t; x: int32; y: int32): pointer {.
     cdecl, importc: "lv_draw_layer_go_to_xy".}
-proc lv_gradient_color_calculate*(dsc: ptr lv_grad_dsc_t; range: int32;
-                                  frac: int32; color_out: ptr lv_grad_color_t;
-                                  opa_out: ptr lv_opa_t): void {.cdecl,
-    importc: "lv_gradient_color_calculate".}
-proc lv_gradient_get*(gradient: ptr lv_grad_dsc_t; w: int32; h: int32): ptr lv_grad_t {.
-    cdecl, importc: "lv_gradient_get".}
-proc lv_gradient_cleanup*(grad: ptr lv_grad_t): void {.cdecl,
-    importc: "lv_gradient_cleanup".}
-proc lv_gradient_init_stops*(grad: ptr lv_grad_dsc_t;
-                             colors: ptr UncheckedArray[lv_color_t];
-                             opa: ptr UncheckedArray[lv_opa_t];
-                             fracs: ptr UncheckedArray[uint8]; num_stops: cint): void {.
-    cdecl, importc: "lv_gradient_init_stops".}
-proc lv_draw_rect_dsc_init*(dsc: ptr lv_draw_rect_dsc_t): void {.cdecl,
-    importc: "lv_draw_rect_dsc_init".}
-proc lv_draw_fill_dsc_init*(dsc: ptr lv_draw_fill_dsc_t): void {.cdecl,
-    importc: "lv_draw_fill_dsc_init".}
-proc lv_draw_task_get_fill_dsc*(task: ptr lv_draw_task_t): ptr lv_draw_fill_dsc_t {.
-    cdecl, importc: "lv_draw_task_get_fill_dsc".}
-proc lv_draw_border_dsc_init*(dsc: ptr lv_draw_border_dsc_t): void {.cdecl,
-    importc: "lv_draw_border_dsc_init".}
-proc lv_draw_task_get_border_dsc*(task: ptr lv_draw_task_t): ptr lv_draw_border_dsc_t {.
-    cdecl, importc: "lv_draw_task_get_border_dsc".}
-proc lv_draw_box_shadow_dsc_init*(dsc: ptr lv_draw_box_shadow_dsc_t): void {.
-    cdecl, importc: "lv_draw_box_shadow_dsc_init".}
-proc lv_draw_task_get_box_shadow_dsc*(task: ptr lv_draw_task_t): ptr lv_draw_box_shadow_dsc_t {.
-    cdecl, importc: "lv_draw_task_get_box_shadow_dsc".}
-proc lv_draw_rect*(layer: ptr lv_layer_t; dsc: ptr lv_draw_rect_dsc_t;
-                   coords: ptr lv_area_t): void {.cdecl, importc: "lv_draw_rect".}
-proc lv_draw_label_dsc_init*(dsc: ptr lv_draw_label_dsc_t): void {.cdecl,
-    importc: "lv_draw_label_dsc_init".}
-proc lv_draw_task_get_label_dsc*(task: ptr lv_draw_task_t): ptr lv_draw_label_dsc_t {.
-    cdecl, importc: "lv_draw_task_get_label_dsc".}
-proc lv_draw_glyph_dsc_init*(dsc: ptr lv_draw_glyph_dsc_t): void {.cdecl,
-    importc: "lv_draw_glyph_dsc_init".}
-proc lv_draw_label*(layer: ptr lv_layer_t; dsc: ptr lv_draw_label_dsc_t;
-                    coords: ptr lv_area_t): void {.cdecl,
-    importc: "lv_draw_label".}
-proc lv_draw_character*(layer: ptr lv_layer_t; dsc: ptr lv_draw_label_dsc_t;
-                        point: ptr lv_point_t; unicode_letter: uint32): void {.
-    cdecl, importc: "lv_draw_character".}
-proc lv_draw_label_iterate_characters*(draw_unit: ptr lv_draw_unit_t;
-                                       dsc: ptr lv_draw_label_dsc_t;
-                                       coords: ptr lv_area_t;
-                                       cb: lv_draw_glyph_cb_t): void {.cdecl,
-    importc: "lv_draw_label_iterate_characters".}
-proc lv_draw_image_dsc_init*(dsc: ptr lv_draw_image_dsc_t): void {.cdecl,
-    importc: "lv_draw_image_dsc_init".}
-proc lv_draw_task_get_image_dsc*(task: ptr lv_draw_task_t): ptr lv_draw_image_dsc_t {.
-    cdecl, importc: "lv_draw_task_get_image_dsc".}
-proc lv_draw_image*(layer: ptr lv_layer_t; dsc: ptr lv_draw_image_dsc_t;
-                    coords: ptr lv_area_t): void {.cdecl,
-    importc: "lv_draw_image".}
-proc lv_draw_layer*(layer: ptr lv_layer_t; dsc: ptr lv_draw_image_dsc_t;
-                    coords: ptr lv_area_t): void {.cdecl,
-    importc: "lv_draw_layer".}
-proc lv_image_src_get_type*(src: pointer): lv_image_src_t {.cdecl,
-    importc: "lv_image_src_get_type".}
-proc internal_lv_draw_image_normal_helper*(draw_unit: ptr lv_draw_unit_t;
-    draw_dsc: ptr lv_draw_image_dsc_t; coords: ptr lv_area_t;
-    draw_core_cb: lv_draw_image_core_cb): void {.cdecl,
-    importc: "_lv_draw_image_normal_helper".}
-proc internal_lv_draw_image_tiled_helper*(draw_unit: ptr lv_draw_unit_t;
-    draw_dsc: ptr lv_draw_image_dsc_t; coords: ptr lv_area_t;
-    draw_core_cb: lv_draw_image_core_cb): void {.cdecl,
-    importc: "_lv_draw_image_tiled_helper".}
-proc internal_lv_image_buf_get_transformed_area*(res: ptr lv_area_t; w: int32;
-    h: int32; angle: int32; scale_x: uint16; scale_y: uint16;
-    pivot: ptr lv_point_t): void {.cdecl, importc: "_lv_image_buf_get_transformed_area".}
-proc lv_draw_arc_dsc_init*(dsc: ptr lv_draw_arc_dsc_t): void {.cdecl,
-    importc: "lv_draw_arc_dsc_init".}
-proc lv_draw_task_get_arc_dsc*(task: ptr lv_draw_task_t): ptr lv_draw_arc_dsc_t {.
-    cdecl, importc: "lv_draw_task_get_arc_dsc".}
-proc lv_draw_arc*(layer: ptr lv_layer_t; dsc: ptr lv_draw_arc_dsc_t): void {.
-    cdecl, importc: "lv_draw_arc".}
-proc lv_draw_arc_get_area*(x: int32; y: int32; radius: uint16;
-                           start_angle: lv_value_precise_t;
-                           end_angle: lv_value_precise_t; w: int32;
-                           rounded: bool; area: ptr lv_area_t): void {.cdecl,
-    importc: "lv_draw_arc_get_area".}
-proc lv_draw_line_dsc_init*(dsc: ptr lv_draw_line_dsc_t): void {.cdecl,
-    importc: "lv_draw_line_dsc_init".}
-proc lv_draw_task_get_line_dsc*(task: ptr lv_draw_task_t): ptr lv_draw_line_dsc_t {.
-    cdecl, importc: "lv_draw_task_get_line_dsc".}
-proc lv_draw_line*(layer: ptr lv_layer_t; dsc: ptr lv_draw_line_dsc_t): void {.
-    cdecl, importc: "lv_draw_line".}
-proc lv_draw_triangle_dsc_init*(draw_dsc: ptr lv_draw_triangle_dsc_t): void {.
-    cdecl, importc: "lv_draw_triangle_dsc_init".}
-proc lv_draw_task_get_triangle_dsc*(task: ptr lv_draw_task_t): ptr lv_draw_triangle_dsc_t {.
-    cdecl, importc: "lv_draw_task_get_triangle_dsc".}
-proc lv_draw_triangle*(layer: ptr lv_layer_t;
-                       draw_dsc: ptr lv_draw_triangle_dsc_t): void {.cdecl,
-    importc: "lv_draw_triangle".}
-proc lv_draw_mask_rect_dsc_init*(dsc: ptr lv_draw_mask_rect_dsc_t): void {.
-    cdecl, importc: "lv_draw_mask_rect_dsc_init".}
-proc lv_draw_task_get_mask_rect_dsc*(task: ptr lv_draw_task_t): ptr lv_draw_mask_rect_dsc_t {.
-    cdecl, importc: "lv_draw_task_get_mask_rect_dsc".}
-proc lv_draw_mask_rect*(layer: ptr lv_layer_t; dsc: ptr lv_draw_mask_rect_dsc_t): void {.
-    cdecl, importc: "lv_draw_mask_rect".}
+proc lv_draw_task_get_type*(t: ptr lv_draw_task_t): lv_draw_task_type_t {.cdecl,
+    importc: "lv_draw_task_get_type".}
+proc lv_draw_task_get_draw_dsc*(t: ptr lv_draw_task_t): pointer {.cdecl,
+    importc: "lv_draw_task_get_draw_dsc".}
+proc lv_draw_task_get_area*(t: ptr lv_draw_task_t; area: ptr lv_area_t): void {.
+    cdecl, importc: "lv_draw_task_get_area".}
 proc lv_display_create*(hor_res: int32; ver_res: int32): ptr lv_display_t {.
     cdecl, importc: "lv_display_create".}
 proc lv_display_set_resolution*(disp: ptr lv_display_t; hor_res: int32;
@@ -5522,7 +5073,7 @@ proc lv_obj_get_index_by_type*(obj: ptr lv_obj_t; class_p: ptr lv_obj_class_t): 
 proc lv_obj_tree_walk*(start_obj: ptr lv_obj_t; cb: lv_obj_tree_walk_cb_t;
                        user_data: pointer): void {.cdecl,
     importc: "lv_obj_tree_walk".}
-proc lv_obj_dump_tree*(start_ob: ptr lv_obj_t): void {.cdecl,
+proc lv_obj_dump_tree*(start_obj: ptr lv_obj_t): void {.cdecl,
     importc: "lv_obj_dump_tree".}
 proc lv_obj_set_pos*(obj: ptr lv_obj_t; x: int32; y: int32): void {.cdecl,
     importc: "lv_obj_set_pos".}
@@ -5669,8 +5220,6 @@ proc lv_obj_scroll_to_view*(obj: ptr lv_obj_t; anim_en: lv_anim_enable_t): void 
 proc lv_obj_scroll_to_view_recursive*(obj: ptr lv_obj_t;
                                       anim_en: lv_anim_enable_t): void {.cdecl,
     importc: "lv_obj_scroll_to_view_recursive".}
-proc internal_lv_obj_scroll_by_raw*(obj: ptr lv_obj_t; x: int32; y: int32): lv_result_t {.
-    cdecl, importc: "_lv_obj_scroll_by_raw".}
 proc lv_obj_is_scrolling*(obj: ptr lv_obj_t): bool {.cdecl,
     importc: "lv_obj_is_scrolling".}
 proc lv_obj_update_snap*(obj: ptr lv_obj_t; anim_en: lv_anim_enable_t): void {.
@@ -5682,9 +5231,6 @@ proc lv_obj_scrollbar_invalidate*(obj: ptr lv_obj_t): void {.cdecl,
     importc: "lv_obj_scrollbar_invalidate".}
 proc lv_obj_readjust_scroll*(obj: ptr lv_obj_t; anim_en: lv_anim_enable_t): void {.
     cdecl, importc: "lv_obj_readjust_scroll".}
-proc internal_lv_obj_style_init*(): void {.cdecl, importc: "_lv_obj_style_init".}
-proc internal_lv_obj_style_deinit*(): void {.cdecl,
-    importc: "_lv_obj_style_deinit".}
 proc lv_obj_add_style*(obj: ptr lv_obj_t; style: ptr lv_style_t;
                        selector: lv_style_selector_t): void {.cdecl,
     importc: "lv_obj_add_style".}
@@ -5721,16 +5267,9 @@ proc lv_obj_get_local_style_prop*(obj: ptr lv_obj_t; prop: lv_style_prop_t;
 proc lv_obj_remove_local_style_prop*(obj: ptr lv_obj_t; prop: lv_style_prop_t;
                                      selector: lv_style_selector_t): bool {.
     cdecl, importc: "lv_obj_remove_local_style_prop".}
-proc internal_lv_obj_style_apply_color_filter*(obj: ptr lv_obj_t;
-    part: lv_part_t; v: lv_style_value_t): lv_style_value_t {.cdecl,
-    importc: "_lv_obj_style_apply_color_filter".}
-proc internal_lv_obj_style_create_transition*(obj: ptr lv_obj_t;
-    part: lv_part_t; prev_state: lv_state_t; new_state: lv_state_t;
-    tr: ptr internal_lv_obj_style_transition_dsc_t): void {.cdecl,
-    importc: "_lv_obj_style_create_transition".}
-proc internal_lv_obj_style_state_compare*(obj: ptr lv_obj_t; state1: lv_state_t;
-    state2: lv_state_t): internal_lv_style_state_cmp_t {.cdecl,
-    importc: "_lv_obj_style_state_compare".}
+proc lv_obj_style_apply_color_filter*(obj: ptr lv_obj_t; part: lv_part_t;
+                                      v: lv_style_value_t): lv_style_value_t {.
+    cdecl, importc: "lv_obj_style_apply_color_filter".}
 proc lv_obj_fade_in*(obj: ptr lv_obj_t; time: uint32; delay: uint32): void {.
     cdecl, importc: "lv_obj_fade_in".}
 proc lv_obj_fade_out*(obj: ptr lv_obj_t; time: uint32; delay: uint32): void {.
@@ -6303,8 +5842,81 @@ proc lv_obj_get_style_transform_scale_y_safe*(obj: ptr lv_obj_t; part: lv_part_t
     cdecl, importc: "lv_obj_get_style_transform_scale_y_safe".}
 proc lv_obj_get_style_opa_recursive*(obj: ptr lv_obj_t; part: lv_part_t): lv_opa_t {.
     cdecl, importc: "lv_obj_get_style_opa_recursive".}
-proc internal_lv_obj_update_layer_type*(obj: ptr lv_obj_t): void {.cdecl,
-    importc: "_lv_obj_update_layer_type".}
+proc lv_gradient_color_calculate*(dsc: ptr lv_grad_dsc_t; range_arg: int32;
+                                  frac: int32; color_out: ptr lv_grad_color_t;
+                                  opa_out: ptr lv_opa_t): void {.cdecl,
+    importc: "lv_gradient_color_calculate".}
+proc lv_gradient_get*(gradient: ptr lv_grad_dsc_t; w: int32; h: int32): ptr lv_grad_t {.
+    cdecl, importc: "lv_gradient_get".}
+proc lv_gradient_cleanup*(grad: ptr lv_grad_t): void {.cdecl,
+    importc: "lv_gradient_cleanup".}
+proc lv_gradient_init_stops*(grad: ptr lv_grad_dsc_t;
+                             colors: ptr UncheckedArray[lv_color_t];
+                             opa: ptr UncheckedArray[lv_opa_t];
+                             fracs: ptr UncheckedArray[uint8]; num_stops: cint): void {.
+    cdecl, importc: "lv_gradient_init_stops".}
+proc lv_draw_rect_dsc_init*(dsc: ptr lv_draw_rect_dsc_t): void {.cdecl,
+    importc: "lv_draw_rect_dsc_init".}
+proc lv_draw_fill_dsc_init*(dsc: ptr lv_draw_fill_dsc_t): void {.cdecl,
+    importc: "lv_draw_fill_dsc_init".}
+proc lv_draw_task_get_fill_dsc*(task: ptr lv_draw_task_t): ptr lv_draw_fill_dsc_t {.
+    cdecl, importc: "lv_draw_task_get_fill_dsc".}
+proc lv_draw_border_dsc_init*(dsc: ptr lv_draw_border_dsc_t): void {.cdecl,
+    importc: "lv_draw_border_dsc_init".}
+proc lv_draw_task_get_border_dsc*(task: ptr lv_draw_task_t): ptr lv_draw_border_dsc_t {.
+    cdecl, importc: "lv_draw_task_get_border_dsc".}
+proc lv_draw_box_shadow_dsc_init*(dsc: ptr lv_draw_box_shadow_dsc_t): void {.
+    cdecl, importc: "lv_draw_box_shadow_dsc_init".}
+proc lv_draw_task_get_box_shadow_dsc*(task: ptr lv_draw_task_t): ptr lv_draw_box_shadow_dsc_t {.
+    cdecl, importc: "lv_draw_task_get_box_shadow_dsc".}
+proc lv_draw_rect*(layer: ptr lv_layer_t; dsc: ptr lv_draw_rect_dsc_t;
+                   coords: ptr lv_area_t): void {.cdecl, importc: "lv_draw_rect".}
+proc lv_draw_label_dsc_init*(dsc: ptr lv_draw_label_dsc_t): void {.cdecl,
+    importc: "lv_draw_label_dsc_init".}
+proc lv_draw_task_get_label_dsc*(task: ptr lv_draw_task_t): ptr lv_draw_label_dsc_t {.
+    cdecl, importc: "lv_draw_task_get_label_dsc".}
+proc lv_draw_glyph_dsc_init*(dsc: ptr lv_draw_glyph_dsc_t): void {.cdecl,
+    importc: "lv_draw_glyph_dsc_init".}
+proc lv_draw_label*(layer: ptr lv_layer_t; dsc: ptr lv_draw_label_dsc_t;
+                    coords: ptr lv_area_t): void {.cdecl,
+    importc: "lv_draw_label".}
+proc lv_draw_character*(layer: ptr lv_layer_t; dsc: ptr lv_draw_label_dsc_t;
+                        point: ptr lv_point_t; unicode_letter: uint32): void {.
+    cdecl, importc: "lv_draw_character".}
+proc lv_draw_label_iterate_characters*(draw_unit: ptr lv_draw_unit_t;
+                                       dsc: ptr lv_draw_label_dsc_t;
+                                       coords: ptr lv_area_t;
+                                       cb: lv_draw_glyph_cb_t): void {.cdecl,
+    importc: "lv_draw_label_iterate_characters".}
+proc lv_draw_image_dsc_init*(dsc: ptr lv_draw_image_dsc_t): void {.cdecl,
+    importc: "lv_draw_image_dsc_init".}
+proc lv_draw_task_get_image_dsc*(task: ptr lv_draw_task_t): ptr lv_draw_image_dsc_t {.
+    cdecl, importc: "lv_draw_task_get_image_dsc".}
+proc lv_draw_image*(layer: ptr lv_layer_t; dsc: ptr lv_draw_image_dsc_t;
+                    coords: ptr lv_area_t): void {.cdecl,
+    importc: "lv_draw_image".}
+proc lv_draw_layer*(layer: ptr lv_layer_t; dsc: ptr lv_draw_image_dsc_t;
+                    coords: ptr lv_area_t): void {.cdecl,
+    importc: "lv_draw_layer".}
+proc lv_image_src_get_type*(src: pointer): lv_image_src_t {.cdecl,
+    importc: "lv_image_src_get_type".}
+proc lv_draw_line_dsc_init*(dsc: ptr lv_draw_line_dsc_t): void {.cdecl,
+    importc: "lv_draw_line_dsc_init".}
+proc lv_draw_task_get_line_dsc*(task: ptr lv_draw_task_t): ptr lv_draw_line_dsc_t {.
+    cdecl, importc: "lv_draw_task_get_line_dsc".}
+proc lv_draw_line*(layer: ptr lv_layer_t; dsc: ptr lv_draw_line_dsc_t): void {.
+    cdecl, importc: "lv_draw_line".}
+proc lv_draw_arc_dsc_init*(dsc: ptr lv_draw_arc_dsc_t): void {.cdecl,
+    importc: "lv_draw_arc_dsc_init".}
+proc lv_draw_task_get_arc_dsc*(task: ptr lv_draw_task_t): ptr lv_draw_arc_dsc_t {.
+    cdecl, importc: "lv_draw_task_get_arc_dsc".}
+proc lv_draw_arc*(layer: ptr lv_layer_t; dsc: ptr lv_draw_arc_dsc_t): void {.
+    cdecl, importc: "lv_draw_arc".}
+proc lv_draw_arc_get_area*(x: int32; y: int32; radius: uint16;
+                           start_angle: lv_value_precise_t;
+                           end_angle: lv_value_precise_t; w: int32;
+                           rounded: bool; area: ptr lv_area_t): void {.cdecl,
+    importc: "lv_draw_arc_get_area".}
 proc lv_obj_init_draw_rect_dsc*(obj: ptr lv_obj_t; part: lv_part_t;
                                 draw_dsc: ptr lv_draw_rect_dsc_t): void {.cdecl,
     importc: "lv_obj_init_draw_rect_dsc".}
@@ -6324,22 +5936,14 @@ proc lv_obj_calculate_ext_draw_size*(obj: ptr lv_obj_t; part: lv_part_t): int32 
     cdecl, importc: "lv_obj_calculate_ext_draw_size".}
 proc lv_obj_refresh_ext_draw_size*(obj: ptr lv_obj_t): void {.cdecl,
     importc: "lv_obj_refresh_ext_draw_size".}
-proc internal_lv_obj_get_ext_draw_size*(obj: ptr lv_obj_t): int32 {.cdecl,
-    importc: "_lv_obj_get_ext_draw_size".}
-proc internal_lv_obj_get_layer_type*(obj: ptr lv_obj_t): lv_layer_type_t {.
-    cdecl, importc: "_lv_obj_get_layer_type".}
 proc lv_obj_class_create_obj*(class_p: ptr lv_obj_class_t; parent: ptr lv_obj_t): ptr lv_obj_t {.
     cdecl, importc: "lv_obj_class_create_obj".}
 proc lv_obj_class_init_obj*(obj: ptr lv_obj_t): void {.cdecl,
     importc: "lv_obj_class_init_obj".}
-proc internal_lv_obj_destruct*(obj: ptr lv_obj_t): void {.cdecl,
-    importc: "_lv_obj_destruct".}
 proc lv_obj_is_editable*(obj: ptr lv_obj_t): bool {.cdecl,
     importc: "lv_obj_is_editable".}
 proc lv_obj_is_group_def*(obj: ptr lv_obj_t): bool {.cdecl,
     importc: "lv_obj_is_group_def".}
-proc internal_lv_group_init*(): void {.cdecl, importc: "_lv_group_init".}
-proc internal_lv_group_deinit*(): void {.cdecl, importc: "_lv_group_deinit".}
 proc lv_group_create*(): ptr lv_group_t {.cdecl, importc: "lv_group_create".}
 proc lv_group_set_default*(group: ptr lv_group_t): void {.cdecl,
     importc: "lv_group_set_default".}
@@ -6386,6 +5990,8 @@ proc lv_group_get_wrap*(group: ptr lv_group_t): bool {.cdecl,
     importc: "lv_group_get_wrap".}
 proc lv_group_get_obj_count*(group: ptr lv_group_t): uint32 {.cdecl,
     importc: "lv_group_get_obj_count".}
+proc lv_group_get_obj_by_index*(group: ptr lv_group_t; index: uint32): ptr lv_obj_t {.
+    cdecl, importc: "lv_group_get_obj_by_index".}
 proc lv_group_get_count*(): uint32 {.cdecl, importc: "lv_group_get_count".}
 proc lv_group_by_index*(index: uint32): ptr lv_group_t {.cdecl,
     importc: "lv_group_by_index".}
@@ -6408,6 +6014,13 @@ proc lv_indev_set_user_data*(indev: ptr lv_indev_t; user_data: pointer): void {.
     cdecl, importc: "lv_indev_set_user_data".}
 proc lv_indev_set_driver_data*(indev: ptr lv_indev_t; driver_data: pointer): void {.
     cdecl, importc: "lv_indev_set_driver_data".}
+proc lv_indev_set_long_press_time*(indev: ptr lv_indev_t;
+                                   long_press_time: uint16): void {.cdecl,
+    importc: "lv_indev_set_long_press_time".}
+proc lv_indev_set_scroll_limit*(indev: ptr lv_indev_t; scroll_limit: uint8): void {.
+    cdecl, importc: "lv_indev_set_scroll_limit".}
+proc lv_indev_set_scroll_throw*(indev: ptr lv_indev_t; scroll_throw: uint8): void {.
+    cdecl, importc: "lv_indev_set_scroll_throw".}
 proc lv_indev_get_type*(indev: ptr lv_indev_t): lv_indev_type_t {.cdecl,
     importc: "lv_indev_get_type".}
 proc lv_indev_get_read_cb*(indev: ptr lv_indev_t): lv_indev_read_cb_t {.cdecl,
@@ -6422,8 +6035,12 @@ proc lv_indev_get_user_data*(indev: ptr lv_indev_t): pointer {.cdecl,
     importc: "lv_indev_get_user_data".}
 proc lv_indev_get_driver_data*(indev: ptr lv_indev_t): pointer {.cdecl,
     importc: "lv_indev_get_driver_data".}
+proc lv_indev_get_press_moved*(indev: ptr lv_indev_t): bool {.cdecl,
+    importc: "lv_indev_get_press_moved".}
 proc lv_indev_reset*(indev: ptr lv_indev_t; obj: ptr lv_obj_t): void {.cdecl,
     importc: "lv_indev_reset".}
+proc lv_indev_stop_processing*(indev: ptr lv_indev_t): void {.cdecl,
+    importc: "lv_indev_stop_processing".}
 proc lv_indev_reset_long_press*(indev: ptr lv_indev_t): void {.cdecl,
     importc: "lv_indev_reset_long_press".}
 proc lv_indev_set_cursor*(indev: ptr lv_indev_t; cur_obj: ptr lv_obj_t): void {.
@@ -6481,9 +6098,6 @@ proc lv_event_get_current_target_obj*(e: ptr lv_event_t): ptr lv_obj_t {.cdecl,
     importc: "lv_event_get_current_target_obj".}
 proc lv_event_get_target_obj*(e: ptr lv_event_t): ptr lv_obj_t {.cdecl,
     importc: "lv_event_get_target_obj".}
-proc lv_obj_add_event_cb*(obj: ptr lv_obj_t; event_cb: lv_event_cb_t;
-                          filter: lv_event_code_t; user_data: pointer): ptr lv_event_dsc_t {.
-    cdecl, importc: "lv_obj_add_event_cb".}
 proc lv_obj_get_event_count*(obj: ptr lv_obj_t): uint32 {.cdecl,
     importc: "lv_obj_get_event_count".}
 proc lv_obj_get_event_dsc*(obj: ptr lv_obj_t; index: uint32): ptr lv_event_dsc_t {.
@@ -6556,18 +6170,12 @@ proc lv_obj_get_class*(obj: ptr lv_obj_t): ptr lv_obj_class_t {.cdecl,
     importc: "lv_obj_get_class".}
 proc lv_obj_is_valid*(obj: ptr lv_obj_t): bool {.cdecl,
     importc: "lv_obj_is_valid".}
-proc internal_lv_refr_init*(): void {.cdecl, importc: "_lv_refr_init".}
-proc internal_lv_refr_deinit*(): void {.cdecl, importc: "_lv_refr_deinit".}
+proc lv_obj_null_on_delete*(obj_ptr: ptr ptr lv_obj_t): void {.cdecl,
+    importc: "lv_obj_null_on_delete".}
 proc lv_refr_now*(disp: ptr lv_display_t): void {.cdecl, importc: "lv_refr_now".}
 proc lv_obj_redraw*(layer: ptr lv_layer_t; obj: ptr lv_obj_t): void {.cdecl,
     importc: "lv_obj_redraw".}
-proc internal_lv_inv_area*(disp: ptr lv_display_t; area_p: ptr lv_area_t): void {.
-    cdecl, importc: "_lv_inv_area".}
-proc internal_lv_refr_get_disp_refreshing*(): ptr lv_display_t {.cdecl,
-    importc: "_lv_refr_get_disp_refreshing".}
-proc internal_lv_refr_set_disp_refreshing*(disp: ptr lv_display_t): void {.
-    cdecl, importc: "_lv_refr_set_disp_refreshing".}
-proc lv_binfont_create*(font_name: cstring): ptr lv_font_t {.cdecl,
+proc lv_binfont_create*(path: cstring): ptr lv_font_t {.cdecl,
     importc: "lv_binfont_create".}
 proc lv_binfont_create_from_buffer*(buffer: pointer; size: uint32): ptr lv_font_t {.
     cdecl, importc: "lv_binfont_create_from_buffer".}
@@ -6582,8 +6190,6 @@ proc lv_font_get_glyph_dsc_fmt_txt*(font: ptr lv_font_t;
                                     unicode_letter_next: uint32): bool {.cdecl,
     importc: "lv_font_get_glyph_dsc_fmt_txt".}
 var lv_image_class* {.importc: "lv_image_class".}: lv_obj_class_t
-proc internal_lv_image_set_pivot*(obj: ptr lv_obj_t; pivot: ptr lv_point_t): void {.
-    cdecl, importc: "_lv_image_set_pivot".}
 proc lv_image_set_scale_x*(obj: ptr lv_obj_t; zoom: uint32): void {.cdecl,
     importc: "lv_image_set_scale_x".}
 proc lv_image_set_scale_y*(obj: ptr lv_obj_t; zoom: uint32): void {.cdecl,
@@ -6592,8 +6198,6 @@ proc lv_image_set_blend_mode*(obj: ptr lv_obj_t; blend_mode: lv_blend_mode_t): v
     cdecl, importc: "lv_image_set_blend_mode".}
 proc lv_image_set_bitmap_map_src*(obj: ptr lv_obj_t; src: ptr lv_image_dsc_t): void {.
     cdecl, importc: "lv_image_set_bitmap_map_src".}
-proc internal_lv_image_get_pivot*(obj: ptr lv_obj_t): lv_point_t {.cdecl,
-    importc: "_lv_image_get_pivot".}
 proc lv_image_get_scale_x*(obj: ptr lv_obj_t): int32 {.cdecl,
     importc: "lv_image_get_scale_x".}
 proc lv_image_get_scale_y*(obj: ptr lv_obj_t): int32 {.cdecl,
@@ -6622,6 +6226,8 @@ proc lv_animimg_get_duration*(img: ptr lv_obj_t): uint32 {.cdecl,
     importc: "lv_animimg_get_duration".}
 proc lv_animimg_get_repeat_count*(img: ptr lv_obj_t): uint32 {.cdecl,
     importc: "lv_animimg_get_repeat_count".}
+proc lv_animimg_get_anim*(img: ptr lv_obj_t): ptr lv_anim_t {.cdecl,
+    importc: "lv_animimg_get_anim".}
 var lv_arc_class* {.importc: "lv_arc_class".}: lv_obj_class_t
 proc lv_arc_create*(parent: ptr lv_obj_t): ptr lv_obj_t {.cdecl,
     importc: "lv_arc_create".}
@@ -6847,6 +6453,9 @@ proc lv_chart_hide_series*(chart: ptr lv_obj_t; series: ptr lv_chart_series_t;
 proc lv_chart_set_series_color*(chart: ptr lv_obj_t;
                                 series: ptr lv_chart_series_t; color: lv_color_t): void {.
     cdecl, importc: "lv_chart_set_series_color".}
+proc lv_chart_get_series_color*(chart: ptr lv_obj_t;
+                                series: ptr lv_chart_series_t): lv_color_t {.
+    cdecl, importc: "lv_chart_get_series_color".}
 proc lv_chart_set_x_start_point*(obj: ptr lv_obj_t; ser: ptr lv_chart_series_t;
                                  id: uint32): void {.cdecl,
     importc: "lv_chart_set_x_start_point".}
@@ -6880,11 +6489,11 @@ proc lv_chart_set_value_by_id2*(obj: ptr lv_obj_t; ser: ptr lv_chart_series_t;
                                 id: uint32; x_value: int32; y_value: int32): void {.
     cdecl, importc: "lv_chart_set_value_by_id2".}
 proc lv_chart_set_ext_y_array*(obj: ptr lv_obj_t; ser: ptr lv_chart_series_t;
-                               array: ptr UncheckedArray[int32]): void {.cdecl,
-    importc: "lv_chart_set_ext_y_array".}
+                               array_arg: ptr UncheckedArray[int32]): void {.
+    cdecl, importc: "lv_chart_set_ext_y_array".}
 proc lv_chart_set_ext_x_array*(obj: ptr lv_obj_t; ser: ptr lv_chart_series_t;
-                               array: ptr UncheckedArray[int32]): void {.cdecl,
-    importc: "lv_chart_set_ext_x_array".}
+                               array_arg: ptr UncheckedArray[int32]): void {.
+    cdecl, importc: "lv_chart_set_ext_x_array".}
 proc lv_chart_get_y_array*(obj: ptr lv_obj_t; ser: ptr lv_chart_series_t): ptr int32 {.
     cdecl, importc: "lv_chart_get_y_array".}
 proc lv_chart_get_x_array*(obj: ptr lv_obj_t; ser: ptr lv_chart_series_t): ptr int32 {.
@@ -6950,24 +6559,6 @@ proc lv_dropdown_close*(obj: ptr lv_obj_t): void {.cdecl,
 proc lv_dropdown_is_open*(obj: ptr lv_obj_t): bool {.cdecl,
     importc: "lv_dropdown_is_open".}
 var lv_imagebutton_class* {.importc: "lv_imagebutton_class".}: lv_obj_class_t
-proc lv_imagebutton_create*(parent: ptr lv_obj_t): ptr lv_obj_t {.cdecl,
-    importc: "lv_imagebutton_create".}
-proc lv_imagebutton_set_src*(imagebutton: ptr lv_obj_t;
-                             state: lv_imagebutton_state_t; src_left: pointer;
-                             src_mid: pointer; src_right: pointer): void {.
-    cdecl, importc: "lv_imagebutton_set_src".}
-proc lv_imagebutton_set_state*(imagebutton: ptr lv_obj_t;
-                               state: lv_imagebutton_state_t): void {.cdecl,
-    importc: "lv_imagebutton_set_state".}
-proc lv_imagebutton_get_src_left*(imagebutton: ptr lv_obj_t;
-                                  state: lv_imagebutton_state_t): pointer {.
-    cdecl, importc: "lv_imagebutton_get_src_left".}
-proc lv_imagebutton_get_src_middle*(imagebutton: ptr lv_obj_t;
-                                    state: lv_imagebutton_state_t): pointer {.
-    cdecl, importc: "lv_imagebutton_get_src_middle".}
-proc lv_imagebutton_get_src_right*(imagebutton: ptr lv_obj_t;
-                                   state: lv_imagebutton_state_t): pointer {.
-    cdecl, importc: "lv_imagebutton_get_src_right".}
 var lv_keyboard_class* {.importc: "lv_keyboard_class".}: lv_obj_class_t
 proc lv_keyboard_create*(parent: ptr lv_obj_t): ptr lv_obj_t {.cdecl,
     importc: "lv_keyboard_create".}
@@ -6985,8 +6576,8 @@ proc lv_keyboard_get_textarea*(kb: ptr lv_obj_t): ptr lv_obj_t {.cdecl,
     importc: "lv_keyboard_get_textarea".}
 proc lv_keyboard_get_mode*(kb: ptr lv_obj_t): lv_keyboard_mode_t {.cdecl,
     importc: "lv_keyboard_get_mode".}
-proc lv_buttonmatrix_get_popovers*(obj: ptr lv_obj_t): bool {.cdecl,
-    importc: "lv_buttonmatrix_get_popovers".}
+proc lv_keyboard_get_popovers*(obj: ptr lv_obj_t): bool {.cdecl,
+    importc: "lv_keyboard_get_popovers".}
 proc lv_keyboard_get_map_array*(kb: ptr lv_obj_t): ptr cstring {.cdecl,
     importc: "lv_keyboard_get_map_array".}
 proc lv_keyboard_def_event_cb*(e: ptr lv_event_t): void {.cdecl,
@@ -7235,6 +6826,8 @@ proc lv_spangroup_set_mode*(obj: ptr lv_obj_t; mode: lv_span_mode_t): void {.
     cdecl, importc: "lv_spangroup_set_mode".}
 proc lv_spangroup_set_max_lines*(obj: ptr lv_obj_t; lines: int32): void {.cdecl,
     importc: "lv_spangroup_set_max_lines".}
+proc lv_span_get_style*(span: ptr lv_span_t): ptr lv_style_t {.cdecl,
+    importc: "lv_span_get_style".}
 proc lv_spangroup_get_child*(obj: ptr lv_obj_t; id: int32): ptr lv_span_t {.
     cdecl, importc: "lv_spangroup_get_child".}
 proc lv_spangroup_get_span_count*(obj: ptr lv_obj_t): uint32 {.cdecl,
@@ -7500,7 +7093,7 @@ proc lv_subject_add_observer_obj*(subject: ptr lv_subject_t;
                                   obj: ptr lv_obj_t; user_data: pointer): ptr lv_observer_t {.
     cdecl, importc: "lv_subject_add_observer_obj".}
 proc lv_subject_add_observer_with_target*(subject: ptr lv_subject_t;
-    cb: lv_observer_cb_t; target: pointer; user_data: pointer): ptr lv_observer_t {.
+    observer_cb: lv_observer_cb_t; target: pointer; user_data: pointer): ptr lv_observer_t {.
     cdecl, importc: "lv_subject_add_observer_with_target".}
 proc lv_observer_remove*(observer: ptr lv_observer_t): void {.cdecl,
     importc: "lv_observer_remove".}
@@ -7510,6 +7103,8 @@ proc lv_observer_get_target*(observer: ptr lv_observer_t): pointer {.cdecl,
     importc: "lv_observer_get_target".}
 proc lv_observer_get_target_obj*(observer: ptr lv_observer_t): ptr lv_obj_t {.
     cdecl, importc: "lv_observer_get_target_obj".}
+proc lv_observer_get_user_data*(observer: ptr lv_observer_t): pointer {.cdecl,
+    importc: "lv_observer_get_user_data".}
 proc lv_subject_notify*(subject: ptr lv_subject_t): void {.cdecl,
     importc: "lv_subject_notify".}
 proc lv_obj_bind_flag_if_eq*(obj: ptr lv_obj_t; subject: ptr lv_subject_t;
@@ -7537,10 +7132,6 @@ proc lv_dropdown_bind_value*(obj: ptr lv_obj_t; subject: ptr lv_subject_t): ptr 
     cdecl, importc: "lv_dropdown_bind_value".}
 proc lv_sysmon_create*(disp: ptr lv_display_t): ptr lv_obj_t {.cdecl,
     importc: "lv_sysmon_create".}
-proc internal_lv_sysmon_builtin_init*(): void {.cdecl,
-    importc: "_lv_sysmon_builtin_init".}
-proc internal_lv_sysmon_builtin_deinit*(): void {.cdecl,
-    importc: "_lv_sysmon_builtin_deinit".}
 proc lv_monkey_config_init*(config: ptr lv_monkey_config_t): void {.cdecl,
     importc: "lv_monkey_config_init".}
 proc lv_monkey_create*(config: ptr lv_monkey_config_t): ptr lv_monkey_t {.cdecl,
@@ -7688,7 +7279,8 @@ proc lv_barcode_get_light_color*(obj: ptr lv_obj_t): lv_color_t {.cdecl,
 proc lv_barcode_get_scale*(obj: ptr lv_obj_t): uint16 {.cdecl,
     importc: "lv_barcode_get_scale".}
 proc lv_bin_decoder_init*(): void {.cdecl, importc: "lv_bin_decoder_init".}
-proc lv_bin_decoder_info*(decoder: ptr lv_image_decoder_t; src: pointer;
+proc lv_bin_decoder_info*(decoder: ptr lv_image_decoder_t;
+                          dsc: ptr lv_image_decoder_dsc_t;
                           header: ptr lv_image_header_t): lv_result_t {.cdecl,
     importc: "lv_bin_decoder_info".}
 proc lv_bin_decoder_get_area*(decoder: ptr lv_image_decoder_t;
@@ -7723,6 +7315,12 @@ proc lv_gif_set_src*(obj: ptr lv_obj_t; src: pointer): void {.cdecl,
 proc lv_gif_restart*(obj: ptr lv_obj_t): void {.cdecl, importc: "lv_gif_restart".}
 proc lv_gif_pause*(obj: ptr lv_obj_t): void {.cdecl, importc: "lv_gif_pause".}
 proc lv_gif_resume*(obj: ptr lv_obj_t): void {.cdecl, importc: "lv_gif_resume".}
+proc lv_gif_is_loaded*(obj: ptr lv_obj_t): bool {.cdecl,
+    importc: "lv_gif_is_loaded".}
+proc lv_gif_get_loop_count*(obj: ptr lv_obj_t): int32 {.cdecl,
+    importc: "lv_gif_get_loop_count".}
+proc lv_gif_set_loop_count*(obj: ptr lv_obj_t; count: int32): void {.cdecl,
+    importc: "lv_gif_set_loop_count".}
 var lv_qrcode_class* {.importc: "lv_qrcode_class".}: lv_obj_class_t
 proc lv_qrcode_create*(parent: ptr lv_obj_t): ptr lv_obj_t {.cdecl,
     importc: "lv_qrcode_create".}
@@ -7747,18 +7345,6 @@ proc lv_tiny_ttf_set_size*(font: ptr lv_font_t; font_size: int32): void {.cdecl,
     importc: "lv_tiny_ttf_set_size".}
 proc lv_tiny_ttf_destroy*(font: ptr lv_font_t): void {.cdecl,
     importc: "lv_tiny_ttf_destroy".}
-proc lv_matrix_identity*(matrix: ptr lv_matrix_t): void {.cdecl,
-    importc: "lv_matrix_identity".}
-proc lv_matrix_translate*(matrix: ptr lv_matrix_t; tx: cfloat; ty: cfloat): void {.
-    cdecl, importc: "lv_matrix_translate".}
-proc lv_matrix_scale*(matrix: ptr lv_matrix_t; scale_x: cfloat; scale_y: cfloat): void {.
-    cdecl, importc: "lv_matrix_scale".}
-proc lv_matrix_rotate*(matrix: ptr lv_matrix_t; degree: cfloat): void {.cdecl,
-    importc: "lv_matrix_rotate".}
-proc lv_matrix_skew*(matrix: ptr lv_matrix_t; skew_x: cfloat; skew_y: cfloat): void {.
-    cdecl, importc: "lv_matrix_skew".}
-proc lv_matrix_multiply*(matrix: ptr lv_matrix_t; matrix2: ptr lv_matrix_t): void {.
-    cdecl, importc: "lv_matrix_multiply".}
 proc lv_matrix_transform_point*(matrix: ptr lv_matrix_t; point: ptr lv_fpoint_t): void {.
     cdecl, importc: "lv_matrix_transform_point".}
 proc lv_matrix_transform_path*(matrix: ptr lv_matrix_t;
@@ -7892,9 +7478,100 @@ proc lv_vector_clear_area*(dsc: ptr lv_vector_dsc_t; rect: ptr lv_area_t): void 
     cdecl, importc: "lv_vector_clear_area".}
 proc lv_draw_vector*(dsc: ptr lv_vector_dsc_t): void {.cdecl,
     importc: "lv_draw_vector".}
-proc internal_lv_vector_for_each_destroy_tasks*(task_list: ptr lv_ll_t;
-    cb: vector_draw_task_cb; data: pointer): void {.cdecl,
-    importc: "_lv_vector_for_each_destroy_tasks".}
+proc lv_draw_triangle_dsc_init*(draw_dsc: ptr lv_draw_triangle_dsc_t): void {.
+    cdecl, importc: "lv_draw_triangle_dsc_init".}
+proc lv_draw_task_get_triangle_dsc*(task: ptr lv_draw_task_t): ptr lv_draw_triangle_dsc_t {.
+    cdecl, importc: "lv_draw_task_get_triangle_dsc".}
+proc lv_draw_triangle*(layer: ptr lv_layer_t;
+                       draw_dsc: ptr lv_draw_triangle_dsc_t): void {.cdecl,
+    importc: "lv_draw_triangle".}
+proc lv_draw_sw_init*(): void {.cdecl, importc: "lv_draw_sw_init".}
+proc lv_draw_sw_deinit*(): void {.cdecl, importc: "lv_draw_sw_deinit".}
+proc lv_draw_sw_fill*(draw_unit: ptr lv_draw_unit_t;
+                      dsc: ptr lv_draw_fill_dsc_t; coords: ptr lv_area_t): void {.
+    cdecl, importc: "lv_draw_sw_fill".}
+proc lv_draw_sw_border*(draw_unit: ptr lv_draw_unit_t;
+                        dsc: ptr lv_draw_border_dsc_t; coords: ptr lv_area_t): void {.
+    cdecl, importc: "lv_draw_sw_border".}
+proc lv_draw_sw_box_shadow*(draw_unit: ptr lv_draw_unit_t;
+                            dsc: ptr lv_draw_box_shadow_dsc_t;
+                            coords: ptr lv_area_t): void {.cdecl,
+    importc: "lv_draw_sw_box_shadow".}
+proc lv_draw_sw_image*(draw_unit: ptr lv_draw_unit_t;
+                       draw_dsc: ptr lv_draw_image_dsc_t; coords: ptr lv_area_t): void {.
+    cdecl, importc: "lv_draw_sw_image".}
+proc lv_draw_sw_label*(draw_unit: ptr lv_draw_unit_t;
+                       dsc: ptr lv_draw_label_dsc_t; coords: ptr lv_area_t): void {.
+    cdecl, importc: "lv_draw_sw_label".}
+proc lv_draw_sw_arc*(draw_unit: ptr lv_draw_unit_t; dsc: ptr lv_draw_arc_dsc_t;
+                     coords: ptr lv_area_t): void {.cdecl,
+    importc: "lv_draw_sw_arc".}
+proc lv_draw_sw_line*(draw_unit: ptr lv_draw_unit_t; dsc: ptr lv_draw_line_dsc_t): void {.
+    cdecl, importc: "lv_draw_sw_line".}
+proc lv_draw_sw_layer*(draw_unit: ptr lv_draw_unit_t;
+                       draw_dsc: ptr lv_draw_image_dsc_t; coords: ptr lv_area_t): void {.
+    cdecl, importc: "lv_draw_sw_layer".}
+proc lv_draw_sw_triangle*(draw_unit: ptr lv_draw_unit_t;
+                          dsc: ptr lv_draw_triangle_dsc_t): void {.cdecl,
+    importc: "lv_draw_sw_triangle".}
+proc lv_draw_sw_mask_rect*(draw_unit: ptr lv_draw_unit_t;
+                           dsc: ptr lv_draw_mask_rect_dsc_t;
+                           coords: ptr lv_area_t): void {.cdecl,
+    importc: "lv_draw_sw_mask_rect".}
+proc lv_draw_sw_transform*(draw_unit: ptr lv_draw_unit_t;
+                           dest_area: ptr lv_area_t; src_buf: pointer;
+                           src_w: int32; src_h: int32; src_stride: int32;
+                           draw_dsc: ptr lv_draw_image_dsc_t;
+                           sup: ptr lv_draw_image_sup_t; cf: lv_color_format_t;
+                           dest_buf: pointer): void {.cdecl,
+    importc: "lv_draw_sw_transform".}
+proc lv_draw_sw_vector*(draw_unit: ptr lv_draw_unit_t;
+                        dsc: ptr lv_draw_vector_task_dsc_t): void {.cdecl,
+    importc: "lv_draw_sw_vector".}
+proc lv_draw_sw_rgb565_swap*(buf: pointer; buf_size_px: uint32): void {.cdecl,
+    importc: "lv_draw_sw_rgb565_swap".}
+proc lv_draw_sw_i1_invert*(buf: pointer; buf_size: uint32): void {.cdecl,
+    importc: "lv_draw_sw_i1_invert".}
+proc lv_draw_sw_rotate*(src: pointer; dest: pointer; src_width: int32;
+                        src_height: int32; src_stride: int32;
+                        dest_stride: int32; rotation: lv_display_rotation_t;
+                        color_format: lv_color_format_t): void {.cdecl,
+    importc: "lv_draw_sw_rotate".}
+proc lv_draw_sw_mask_init*(): void {.cdecl, importc: "lv_draw_sw_mask_init".}
+proc lv_draw_sw_mask_deinit*(): void {.cdecl, importc: "lv_draw_sw_mask_deinit".}
+proc lv_draw_sw_mask_apply*(masks: ptr UncheckedArray[pointer];
+                            mask_buf: ptr lv_opa_t; abs_x: int32; abs_y: int32;
+                            len: int32): lv_draw_sw_mask_res_t {.cdecl,
+    importc: "lv_draw_sw_mask_apply".}
+proc lv_draw_sw_mask_free_param*(p: pointer): void {.cdecl,
+    importc: "lv_draw_sw_mask_free_param".}
+proc lv_draw_sw_mask_line_points_init*(param: ptr lv_draw_sw_mask_line_param_t;
+                                       p1x: int32; p1y: int32; p2x: int32;
+                                       p2y: int32;
+                                       side: lv_draw_sw_mask_line_side_t): void {.
+    cdecl, importc: "lv_draw_sw_mask_line_points_init".}
+proc lv_draw_sw_mask_line_angle_init*(param: ptr lv_draw_sw_mask_line_param_t;
+                                      px: int32; py: int32; angle: int16;
+                                      side: lv_draw_sw_mask_line_side_t): void {.
+    cdecl, importc: "lv_draw_sw_mask_line_angle_init".}
+proc lv_draw_sw_mask_angle_init*(param: ptr lv_draw_sw_mask_angle_param_t;
+                                 vertex_x: int32; vertex_y: int32;
+                                 start_angle: int32; end_angle: int32): void {.
+    cdecl, importc: "lv_draw_sw_mask_angle_init".}
+proc lv_draw_sw_mask_radius_init*(param: ptr lv_draw_sw_mask_radius_param_t;
+                                  rect: ptr lv_area_t; radius: int32; inv: bool): void {.
+    cdecl, importc: "lv_draw_sw_mask_radius_init".}
+proc lv_draw_sw_mask_fade_init*(param: ptr lv_draw_sw_mask_fade_param_t;
+                                coords: ptr lv_area_t; opa_top: lv_opa_t;
+                                y_top: int32; opa_bottom: lv_opa_t;
+                                y_bottom: int32): void {.cdecl,
+    importc: "lv_draw_sw_mask_fade_init".}
+proc lv_draw_sw_mask_map_init*(param: ptr lv_draw_sw_mask_map_param_t;
+                               coords: ptr lv_area_t; map: ptr lv_opa_t): void {.
+    cdecl, importc: "lv_draw_sw_mask_map_init".}
+proc lv_draw_sw_blend*(draw_unit: ptr lv_draw_unit_t;
+                       dsc: ptr lv_draw_sw_blend_dsc_t): void {.cdecl,
+    importc: "lv_draw_sw_blend".}
 proc lv_theme_get_from_obj*(obj: ptr lv_obj_t): ptr lv_theme_t {.cdecl,
     importc: "lv_theme_get_from_obj".}
 proc lv_theme_apply*(obj: ptr lv_obj_t): void {.cdecl, importc: "lv_theme_apply".}
@@ -7943,8 +7620,6 @@ proc lv_sdl_window_set_zoom*(disp: ptr lv_display_t; zoom: uint8): void {.cdecl,
     importc: "lv_sdl_window_set_zoom".}
 proc lv_sdl_window_get_zoom*(disp: ptr lv_display_t): uint8 {.cdecl,
     importc: "lv_sdl_window_get_zoom".}
-proc internal_lv_sdl_get_disp_from_win_id*(win_id: uint32): ptr lv_display_t {.
-    cdecl, importc: "_lv_sdl_get_disp_from_win_id".}
 proc lv_sdl_window_set_title*(disp: ptr lv_display_t; title: cstring): void {.
     cdecl, importc: "lv_sdl_window_set_title".}
 proc lv_sdl_window_get_renderer*(disp: ptr lv_display_t): pointer {.cdecl,
@@ -7961,128 +7636,6 @@ proc lv_obj_move_foreground*(obj: ptr lv_obj_t): void {.cdecl,
     importc: "lv_obj_move_foreground".}
 proc lv_obj_move_background*(obj: ptr lv_obj_t): void {.cdecl,
     importc: "lv_obj_move_background".}
-proc lv_draw_sw_init*(): void {.cdecl, importc: "lv_draw_sw_init".}
-proc lv_draw_sw_deinit*(): void {.cdecl, importc: "lv_draw_sw_deinit".}
-proc lv_draw_sw_fill*(draw_unit: ptr lv_draw_unit_t;
-                      dsc: ptr lv_draw_fill_dsc_t; coords: ptr lv_area_t): void {.
-    cdecl, importc: "lv_draw_sw_fill".}
-proc lv_draw_sw_border*(draw_unit: ptr lv_draw_unit_t;
-                        dsc: ptr lv_draw_border_dsc_t; coords: ptr lv_area_t): void {.
-    cdecl, importc: "lv_draw_sw_border".}
-proc lv_draw_sw_box_shadow*(draw_unit: ptr lv_draw_unit_t;
-                            dsc: ptr lv_draw_box_shadow_dsc_t;
-                            coords: ptr lv_area_t): void {.cdecl,
-    importc: "lv_draw_sw_box_shadow".}
-proc lv_draw_sw_image*(draw_unit: ptr lv_draw_unit_t;
-                       draw_dsc: ptr lv_draw_image_dsc_t; coords: ptr lv_area_t): void {.
-    cdecl, importc: "lv_draw_sw_image".}
-proc lv_draw_sw_label*(draw_unit: ptr lv_draw_unit_t;
-                       dsc: ptr lv_draw_label_dsc_t; coords: ptr lv_area_t): void {.
-    cdecl, importc: "lv_draw_sw_label".}
-proc lv_draw_sw_arc*(draw_unit: ptr lv_draw_unit_t; dsc: ptr lv_draw_arc_dsc_t;
-                     coords: ptr lv_area_t): void {.cdecl,
-    importc: "lv_draw_sw_arc".}
-proc lv_draw_sw_line*(draw_unit: ptr lv_draw_unit_t; dsc: ptr lv_draw_line_dsc_t): void {.
-    cdecl, importc: "lv_draw_sw_line".}
-proc lv_draw_sw_layer*(draw_unit: ptr lv_draw_unit_t;
-                       draw_dsc: ptr lv_draw_image_dsc_t; coords: ptr lv_area_t): void {.
-    cdecl, importc: "lv_draw_sw_layer".}
-proc lv_draw_sw_triangle*(draw_unit: ptr lv_draw_unit_t;
-                          dsc: ptr lv_draw_triangle_dsc_t): void {.cdecl,
-    importc: "lv_draw_sw_triangle".}
-proc lv_draw_sw_mask_rect*(draw_unit: ptr lv_draw_unit_t;
-                           dsc: ptr lv_draw_mask_rect_dsc_t;
-                           coords: ptr lv_area_t): void {.cdecl,
-    importc: "lv_draw_sw_mask_rect".}
-proc lv_draw_sw_transform*(draw_unit: ptr lv_draw_unit_t;
-                           dest_area: ptr lv_area_t; src_buf: pointer;
-                           src_w: int32; src_h: int32; src_stride: int32;
-                           draw_dsc: ptr lv_draw_image_dsc_t;
-                           sup: ptr lv_draw_image_sup_t; cf: lv_color_format_t;
-                           dest_buf: pointer): void {.cdecl,
-    importc: "lv_draw_sw_transform".}
-proc lv_draw_sw_vector*(draw_unit: ptr lv_draw_unit_t;
-                        dsc: ptr lv_draw_vector_task_dsc_t): void {.cdecl,
-    importc: "lv_draw_sw_vector".}
-proc lv_draw_sw_rgb565_swap*(buf: pointer; buf_size_px: uint32): void {.cdecl,
-    importc: "lv_draw_sw_rgb565_swap".}
-proc lv_draw_sw_rotate*(src: pointer; dest: pointer; src_width: int32;
-                        src_height: int32; src_stride: int32;
-                        dest_stride: int32; rotation: lv_display_rotation_t;
-                        color_format: lv_color_format_t): void {.cdecl,
-    importc: "lv_draw_sw_rotate".}
-proc lv_draw_sw_mask_init*(): void {.cdecl, importc: "lv_draw_sw_mask_init".}
-proc lv_draw_sw_mask_deinit*(): void {.cdecl, importc: "lv_draw_sw_mask_deinit".}
-proc lv_draw_sw_mask_apply*(masks: ptr UncheckedArray[pointer];
-                            mask_buf: ptr lv_opa_t; abs_x: int32; abs_y: int32;
-                            len: int32): lv_draw_sw_mask_res_t {.cdecl,
-    importc: "lv_draw_sw_mask_apply".}
-proc lv_draw_sw_mask_free_param*(p: pointer): void {.cdecl,
-    importc: "lv_draw_sw_mask_free_param".}
-proc internal_lv_draw_sw_mask_cleanup*(): void {.cdecl,
-    importc: "_lv_draw_sw_mask_cleanup".}
-proc lv_draw_sw_mask_line_points_init*(param: ptr lv_draw_sw_mask_line_param_t;
-                                       p1x: int32; p1y: int32; p2x: int32;
-                                       p2y: int32;
-                                       side: lv_draw_sw_mask_line_side_t): void {.
-    cdecl, importc: "lv_draw_sw_mask_line_points_init".}
-proc lv_draw_sw_mask_line_angle_init*(param: ptr lv_draw_sw_mask_line_param_t;
-                                      p1x: int32; py: int32; angle: int16;
-                                      side: lv_draw_sw_mask_line_side_t): void {.
-    cdecl, importc: "lv_draw_sw_mask_line_angle_init".}
-proc lv_draw_sw_mask_angle_init*(param: ptr lv_draw_sw_mask_angle_param_t;
-                                 vertex_x: int32; vertex_y: int32;
-                                 start_angle: int32; end_angle: int32): void {.
-    cdecl, importc: "lv_draw_sw_mask_angle_init".}
-proc lv_draw_sw_mask_radius_init*(param: ptr lv_draw_sw_mask_radius_param_t;
-                                  rect: ptr lv_area_t; radius: int32; inv: bool): void {.
-    cdecl, importc: "lv_draw_sw_mask_radius_init".}
-proc lv_draw_sw_mask_fade_init*(param: ptr lv_draw_sw_mask_fade_param_t;
-                                coords: ptr lv_area_t; opa_top: lv_opa_t;
-                                y_top: int32; opa_bottom: lv_opa_t;
-                                y_bottom: int32): void {.cdecl,
-    importc: "lv_draw_sw_mask_fade_init".}
-proc lv_draw_sw_mask_map_init*(param: ptr lv_draw_sw_mask_map_param_t;
-                               coords: ptr lv_area_t; map: ptr lv_opa_t): void {.
-    cdecl, importc: "lv_draw_sw_mask_map_init".}
-proc lv_draw_sw_blend*(draw_unit: ptr lv_draw_unit_t;
-                       dsc: ptr lv_draw_sw_blend_dsc_t): void {.cdecl,
-    importc: "lv_draw_sw_blend".}
-proc lv_tlsf_create*(mem: pointer): lv_tlsf_t {.cdecl, importc: "lv_tlsf_create".}
-proc lv_tlsf_create_with_pool*(mem: pointer; bytes: csize_t): lv_tlsf_t {.cdecl,
-    importc: "lv_tlsf_create_with_pool".}
-proc lv_tlsf_destroy*(tlsf: lv_tlsf_t): void {.cdecl, importc: "lv_tlsf_destroy".}
-proc lv_tlsf_get_pool*(tlsf: lv_tlsf_t): lv_pool_t {.cdecl,
-    importc: "lv_tlsf_get_pool".}
-proc lv_tlsf_add_pool*(tlsf: lv_tlsf_t; mem: pointer; bytes: csize_t): lv_pool_t {.
-    cdecl, importc: "lv_tlsf_add_pool".}
-proc lv_tlsf_remove_pool*(tlsf: lv_tlsf_t; pool: lv_pool_t): void {.cdecl,
-    importc: "lv_tlsf_remove_pool".}
-proc lv_tlsf_malloc*(tlsf: lv_tlsf_t; bytes: csize_t): pointer {.cdecl,
-    importc: "lv_tlsf_malloc".}
-proc lv_tlsf_memalign*(tlsf: lv_tlsf_t; align: csize_t; bytes: csize_t): pointer {.
-    cdecl, importc: "lv_tlsf_memalign".}
-proc lv_tlsf_realloc*(tlsf: lv_tlsf_t; ptr_arg: pointer; size: csize_t): pointer {.
-    cdecl, importc: "lv_tlsf_realloc".}
-proc lv_tlsf_free*(tlsf: lv_tlsf_t; ptr_arg: pointer): csize_t {.cdecl,
-    importc: "lv_tlsf_free".}
-proc lv_tlsf_block_size*(ptr_arg: pointer): csize_t {.cdecl,
-    importc: "lv_tlsf_block_size".}
-proc lv_tlsf_size*(): csize_t {.cdecl, importc: "lv_tlsf_size".}
-proc lv_tlsf_align_size*(): csize_t {.cdecl, importc: "lv_tlsf_align_size".}
-proc lv_tlsf_block_size_min*(): csize_t {.cdecl,
-    importc: "lv_tlsf_block_size_min".}
-proc lv_tlsf_block_size_max*(): csize_t {.cdecl,
-    importc: "lv_tlsf_block_size_max".}
-proc lv_tlsf_pool_overhead*(): csize_t {.cdecl, importc: "lv_tlsf_pool_overhead".}
-proc lv_tlsf_alloc_overhead*(): csize_t {.cdecl,
-    importc: "lv_tlsf_alloc_overhead".}
-proc lv_tlsf_walk_pool*(pool: lv_pool_t; walker: lv_tlsf_walker; user: pointer): void {.
-    cdecl, importc: "lv_tlsf_walk_pool".}
-proc lv_tlsf_check*(tlsf: lv_tlsf_t): cint {.cdecl, importc: "lv_tlsf_check".}
-proc lv_tlsf_check_pool*(pool: lv_pool_t): cint {.cdecl,
-    importc: "lv_tlsf_check_pool".}
-var lv_global* {.importc: "lv_global".}: lv_global_t
 proc lv_version_major*(): cint {.cdecl, importc: "lv_version_major".}
 proc lv_version_minor*(): cint {.cdecl, importc: "lv_version_minor".}
 proc lv_version_patch*(): cint {.cdecl, importc: "lv_version_patch".}

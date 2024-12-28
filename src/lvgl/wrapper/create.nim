@@ -2,7 +2,7 @@
 import futhark,os
 
 importc:
-  outputPath currentSourcePath.parentDir / "lvgl_9_1_1.nim"
+  outputPath currentSourcePath.parentDir / "lvgl_9_2.nim"
   #path "/usr/include/igraph"
   path "../submodules/lvgl/"
   "lvgl.h"

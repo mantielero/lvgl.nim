@@ -13,7 +13,7 @@ proc main =
   lv_style_init(addr(style))
   lv_style_set_radius(addr(style), 5)
   ## Make a gradient
-  lv_style_set_bg_opa(addr(style), LV_OPA_COVER)
+  lv_style_set_bg_opa(addr(style), LV_OPA_COVER.lv_opa_t)
   var grad: lv_grad_dsc_t
   grad.dir = LV_GRAD_DIR_VER
   grad.stops_count = 2
@@ -24,7 +24,7 @@ proc main =
   grad.stops[1].frac = 192
   lv_style_set_bg_grad(addr(style), addr(grad))
   ## Create an object with the new style
-  var obj: ptr lv_obj_t = lv_obj_create(lv_scr_act())
+  var obj: ptr lv_obj_t = lv_obj_create(lv_screen_active())
   lv_obj_add_style(obj, addr(style), 0)
   lv_obj_center(obj)
 
