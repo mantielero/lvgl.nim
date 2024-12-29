@@ -17,7 +17,7 @@ proc main =
   lv_style_set_bg_color(addr(style), lv_palette_main(LV_PALETTE_GREEN))
   lv_style_set_border_color(addr(style), lv_palette_lighten(LV_PALETTE_GREEN, 3))
   lv_style_set_border_width(addr(style), 3)
-  var obj: ptr lv_obj_t = lv_obj_create(lv_scr_act())
+  var obj: ptr lv_obj_t = lv_obj_create(lv_screen_active())
   lv_obj_add_style(obj, addr(style), 0)
   ## Overwrite the background color locally
   lv_obj_set_style_bg_color(obj, 
