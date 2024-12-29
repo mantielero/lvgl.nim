@@ -20,13 +20,13 @@ proc main =
   lv_init()
   halInit(400,300)
 
-  var btn: ptr lv_obj_t = lv_btn_create(lv_scr_act())
+  var btn: ptr lv_obj_t = lv_button_create(lv_screen_active())
   lv_obj_set_size(btn, 100, 50)
   lv_obj_center(btn)
   var cnt = create int
   cnt[] = 1
   defer: dealloc(cnt)  
-  btn.lv_obj_add_event(event_cb, LV_EVENT_CLICKED, cnt)
+  var res = btn.lv_obj_add_event_cb(event_cb, LV_EVENT_CLICKED, cnt)
   var label: ptr lv_obj_t = lv_label_create(btn)
   lv_label_set_text(label, "Click me!")
   lv_obj_center(label)

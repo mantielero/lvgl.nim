@@ -17,7 +17,7 @@ proc main =
   lv_style_set_arc_color(addr(style), lv_palette_main(LV_PALETTE_RED))
   lv_style_set_arc_width(addr(style), 4)
   ## Create an object with the new style
-  var obj: ptr lv_obj_t = lv_arc_create(lv_scr_act())
+  var obj: ptr lv_obj_t = lv_arc_create(lv_screen_active())
   lv_obj_add_style(obj, addr(style), 0)
   lv_obj_center(obj)
 
