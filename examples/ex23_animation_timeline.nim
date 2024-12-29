@@ -114,7 +114,7 @@ proc main =
   halInit(400,300)
 
 
-  var par: ptr lv_obj_t = lv_scr_act()
+  var par: ptr lv_obj_t = lv_screen_active()
   lv_obj_set_flex_flow(par, LV_FLEX_FLOW_ROW)
   lv_obj_set_flex_align(par, LV_FLEX_ALIGN_SPACE_AROUND, LV_FLEX_ALIGN_CENTER,
                         LV_FLEX_ALIGN_CENTER)

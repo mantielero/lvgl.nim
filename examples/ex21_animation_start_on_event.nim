@@ -32,10 +32,10 @@ proc main =
   lv_init()
   halInit(400,300)
 
-  var label: ptr lv_obj_t = lv_label_create(lv_scr_act())
+  var label: ptr lv_obj_t = lv_label_create(lv_screen_active())
   lv_label_set_text(label, "Hello animations!")
   lv_obj_set_pos(label, 100, 10)
-  var sw: ptr lv_obj_t = lv_switch_create(lv_scr_act())
+  var sw: ptr lv_obj_t = lv_switch_create(lv_screen_active())
   lv_obj_center(sw)
   lv_obj_add_state(sw, LV_STATE_CHECKED)
   lv_obj_add_event(sw, sw_event_cb, LV_EVENT_VALUE_CHANGED, label)

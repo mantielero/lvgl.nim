@@ -15,7 +15,7 @@ proc main =
   halInit(400,300)
 
 
-  var obj: ptr lv_obj_t = lv_obj_create(lv_scr_act())
+  var obj: ptr lv_obj_t = lv_obj_create(lv_screen_active())
   lv_obj_set_style_bg_color(obj, lv_palette_main(LV_PALETTE_RED), 0)
   lv_obj_set_style_radius(obj, LV_RADIUS_CIRCLE, 0)
   lv_obj_align(obj, LV_ALIGN_LEFT_MID, 10, 0)
