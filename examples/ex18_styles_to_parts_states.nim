@@ -23,7 +23,7 @@ proc main =
   lv_style_set_shadow_width(addr(style_indic_pr), 10)
   lv_style_set_shadow_spread(addr(style_indic_pr), 3)
   ## Create an object with the new style_pr
-  var obj: ptr lv_obj_t = lv_slider_create(lv_scr_act())
+  var obj: ptr lv_obj_t = lv_slider_create(lv_screen_active())
   lv_obj_add_style(obj, addr(style_indic), LV_PART_INDICATOR.lv_style_selector_t)
   lv_obj_add_style(obj, addr(style_indic_pr),
                    LV_PART_INDICATOR.int or LV_STATE_PRESSED.int)   # https://nim-lang.org/docs/bitops.html
